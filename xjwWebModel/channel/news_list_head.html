@@ -1,0 +1,57 @@
+<header class="head-repeat-x">
+	<!-- 顶部条 -->
+	<div class="header-topbar">
+		<!-- 带链接的顶部 -->
+		<ul class="head-top-nav" style="width:700px;">
+			<li>
+				<a href="/" title="首页" class="b" target="_blank">首页</a>
+			</li>
+			<li>
+				<a href="/news" title="新闻" target="_blank">新闻</a>
+			</li>
+			[@cms_channel_list]
+			[#list tag_list as a]
+			<li>
+				<a href="${a.url}" title="${a.name}" class="b" target="_blank">${a.name}</a>
+			</li>
+			[/#list]
+			[/@cms_channel_list]
+			<li>
+				<a href="http://bbs.xinjiangnet.com.cn/" title="论坛" target="_blank">论坛</a>
+			</li>
+			<li style="z-index:1000;position:absolute; width:150px; height:26px; text-align:left;">
+				<a id="gengduo">更多></a>
+			</li>
+		</ul>
+		<script>
+			$("#gengduo").hover(function() {
+				$(this).html("<div style='width:150px;z-index;10000;position:absolute;background-color:#000;height:180px;'><div style='width:150px; height:30px;text-align:left;'><a>更多></a></div><div class='dhy'><span><a href='http://www.xinjiangnet.com.cn/qc/' target='_blank'>汽车</a></span><span><a href='http://www.xinjiangnet.com.cn/fcpd/' ' target='_blank'>房产</a></span><span><a href='http://www.xinjiangnet.com.cn/cjpd/' target='_blank'>财经</a></span><span><a href='http://www.xinjiangnet.com.cn/qfj/' target='_blank'>7坊街</a></span><span><a href='http://www.xinjiangnet.com.cn/qnw/' target='_blank'>旅游</a></span><span><a href='http://www.xinjiangnet.com.cn/xwzx/jt/' target='_blank'>交通</a></span><span><a href='http://www.xinjiangnet.com.cn/mspd/' target='_blank'>美食</a></span><span><a href='http://www.xinjiangnet.com.cn/xjhpp/' target='_blank'>好品牌</a></span><span><a href='http://www.xinjiangnet.com.cn/qzpd/' target='_blank'>亲子</a></span><span><a href='http://www.xinjiangnet.com.cn/jypd/' target='_blank'>教育</a></span><span><a href='http://www.xinjiangnet.com.cn/cgpd/' target='_blank'>出国</a></span><span><a href='http://www.xinjiangnet.com.cn/xjzjy/' target='_blank'>小记者</a></span><span><a href='http://www.xinjiangnet.com.cn/hstx/' target='_blank'>评论</a></span><span><a href='http://www.xinjiangnet.com.cn/jkpd/' target='_blank'>健康</a></span><span><a href='http://www.xinjiangnet.com.cn/yoblh/' target='_blank'>亚欧博览会</a></span><span><a href='http://www.xinjiangnet.com.cn/health/ys/' target='_blank'>养生</a></span><span><a href='http://www.xinjiangnet.com.cn/mspd/' target='_blank'>美食</a></span><span><a href='http://swzl.xinjiangnet.com.cn' target='_blank'>失物招领</a></span></div></div>");
+			}, function() {
+				$(this).html("更多");
+			})
+		</script>
+		<ul class="denglu">
+			<li>
+				<a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=login" title="登录" target="_blank">登录</a>
+			</li>
+			<li>
+				<a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=register" title="注册" target="_blank">注册</a>
+			</li>
+		</ul>
+		<!-- 带分享的顶部   #include virtual="/include/search.shtml"   -->
+		<!-- end带分享的顶部 -->
+		<!-- end带链接的顶部 -->
+	</div>
+	<!-- end顶部条 -->
+	<!-- 不带logo的banner -->
+	<div class="full-banner">
+		<!-- Banner广告 -->
+		<div class="ad">
+			<IMG src="http://upload.xinjiangnet.com.cn/2015/0304/1425437968799.jpg" width="980" height="90" />
+		</div>
+	</div>
+	<!-- end不带logo的banner -->
+	<!-- 顶部背景条, -->
+	<div class="top-block"></div>
+	<!-- end顶部背景条 -->
+</header>

@@ -1,0 +1,45 @@
+<head>
+		<meta charset="UTF-8">
+		<title>${content.title!} </title>
+		<meta name="keywords" content="${content.tagStr!}" />
+		<link rel="shortcut icon" href="http://www.xinjiangnet.com.cn/favicon.ico" />
+		<meta name="description" content="${content.description!}"/>
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-article.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-comment-mode.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-right-common.css" />
+		<!--[if lt IE 9 ]>
+			<script type="text/javascript" src="js/helper/modernizr.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="/${res}/js/config.js"></script>
+		<script type="text/javascript" src="/${res}/js/jquery.js"></script>
+		<script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/${res}/js/cmstop-common.js"></script>
+		<script type="text/javascript">
+			var contentid = '2075453'; // 文章ID
+			var title = "\u65b0\u7586\u68c0\u5bdf\u7cfb\u7edf\u6210\u529f\u7763\u529e\u9996\u8d77\u201c12309\u201d\u70ed\u7ebf\u53d7\u7406\u8fd4\u8fd8\u6263\u62bc\u6b3e\u7533\u8bc9\u6848\u4ef6"; //文章标题
+			var topicid = '2021197'; // 评论主题
+			var context = ''; //全文内容缓存
+			var content = ''; //第一页内容缓存
+			var _IMG_URL = 'http://img.xinjiangnet.com.cn/templates/default';
+		</script>
+		<script type="text/javascript" src="/${res}/js/cmstop-imagezoom.js"></script>
+		<script type="text/javascript" src="/${res}/js/fet.js"></script>
+		<script type="text/javascript" src="/${res}/js/repos.js"></script>
+		<script type="text/javascript">
+			fet.setAlias({
+				IMG_URL: "http://img.xinjiangnet.com.cn/"
+			})
+		</script>
+
+		<script type="text/javascript">
+			$(function() {
+				Cms.checkPerm("${base}", "${content.id}");
+				Cms.collectCsi("${base}", "collectCsiDiv", "collect_csi", "${content.id}");
+				Cms.attachment("${base}", "${content.id}", "${content.attachments?size}", "attach");
+				Cms.viewCount("${base}", "${content.id}");
+				Cms.siteFlow("${base}", location.href, document.referrer, "${site.config.flowSwitch?string}");
+			});
+		</script>
+
+	</head>

@@ -1,0 +1,62 @@
+body,
+p {
+	margin: 0;
+	padding: 0;
+	color: #333;
+	font-family: '宋体';
+	font-size: 12px;
+	background-color: transparent
+}
+
+.bd-logo,
+.bd-logo2,
+.bd-logo3 {
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 2147483647
+}
+
+.bd-logo {
+	height: 18px;
+	width: 68px;
+	background: url(//res1.adyun.com/res1/bg.png) no-repeat left top;
+	background-position: 0 0;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="//res1.adyun.com/res1/light.png", sizingMethod="crop");
+	_background: 0
+}
+
+.bd-logo:hover {
+	background-position: -70px 0;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="//res1.adyun.com/res1/dark.png", sizingMethod="crop")
+}
+
+.bd-logo2 {
+	height: 18px;
+	width: 18px;
+	background: url(//res1.adyun.com/res1/bg.png) no-repeat left top;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="//res1.adyun.com/res1/light.png", sizingMethod="crop")
+}
+
+.bd-logo2:hover {
+	background-position: -70px 0;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="//res1.adyun.com/res1/dark.png", sizingMethod="crop");
+	_background: 0
+}
+
+.bd-logo3 {
+	height: 18px;
+	width: 18px;
+	background: url(//res1.adyun.com/res1/bg.png) no-repeat left top;
+	background-position: -70px 0;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="//res1.adyun.com/res1/dark.png", sizingMethod="crop");
+	_background: 0
+}
+
+.bd-logo3:hover {
+	width: 68px
+}

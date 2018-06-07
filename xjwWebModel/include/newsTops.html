@@ -1,0 +1,20 @@
+<div class="top"></div>
+<div class="toptitle">新闻排行<img src="/${res}/img/gd.gif"></div>
+<div class="tiao">
+	<ul class="list">
+		[@cms_content_list count='10' titLen='25' channelId='75' orderBy='9' channelOption='1' typeId='1']
+		[#list tag_list as a]
+		<li class="item">
+			[#if a_index<3]
+				<em class="ico n1">${a_index+1}</em>
+			[#else]
+				<em class="ico">${a_index+1}</em>
+			[/#if]
+			
+			<a href="${a.url}" target="_blank" title="${a.title}" class="title">[@text_cut s=a.title len=titLen append=append/]</a>
+		</li>
+		[/#list]
+		[/@cms_content_list]
+	</ul>
+</div>
+<div style="width:300px; height:25px; clear:both"></div>

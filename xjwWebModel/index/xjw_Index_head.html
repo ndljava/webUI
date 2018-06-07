@@ -1,0 +1,75 @@
+<div class="head">
+	<div class="head_left">
+		<div class="head_left_250">
+			<div class="head_left_250_left">
+				&nbsp;&nbsp;今日看点:
+			</div>
+			<div class="head_left_250_right">
+				<div class="shell">
+					<div id="div1">
+						<ul>
+							[@cms_content_list count='3' channelId='75' titLen='20' typeId='1'] 
+								[#list tag_list as a]
+									<li>
+ 										<a href="${a.url}" title="${a.title}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+										
+									</li>
+								[/#list]
+ 							[/@cms_content_list]
+						</ul>
+					</div>
+				</div>
+				<script>
+					var c, _ = Function;
+					with(o = document.getElementById("div1")) {
+							innerHTML += innerHTML;
+							onmouseover = _("c=1");
+							onmouseout = _("c=0");
+						}
+						(F = _("if(#%32||!c)#++,#%=o.scrollHeight>>1;setTimeout(F,#%32?10:1500);".replace(/#/g, "o.scrollTop")))();
+				</script>
+			</div>
+		</div>
+	</div>
+	<div class="head_right">
+		<!--<div id="search" class="head_right_search">
+            <!--include virtual="/include/search.shtml"--
+        </div>-->
+		<div class="head_right_dl">
+			<script language>
+				function y2k(number) {
+					return(number < 1000) ? number + 1900 : number;
+				}
+				var now = new Date();
+				var dd = now.getDate(),
+					mt = now.getMonth() + 1,
+					yy = y2k(now.getYear()),
+					weekVal = now.getDay();
+				document.write('<span class="head_right_dl_t">\n');
+				document.write(yy + "年" + mt + "月");
+				document.write(dd + "日");
+				document.write("</span>");
+			</script>
+			<span class="head_right_dl_t">
+                <a href="http://app.xinjiangnet.com.cn/?app=search&controller=index&action=search&type=all&wd=" target="_blank">搜索</a>
+            </span>|
+			<span class="head_right_dl_t">
+                <a href="http://www.xinjiangnet.com.cn/txypd/" target="_blank">我要投稿</a>
+            </span>|
+			<!--<span class="head_right_dl_t">
+                <a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=login" target="_blank">登录</a>
+            </span>|
+            <span class="head_right_dl_t">
+                <a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=register" target="_blank">注册</a>
+            </span>-->
+		</div>
+	</div>
+	<div class="head_rights">
+		<img src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20170605jbdh.png" style="margin-top:5px;" border="0" usemap="#planetmap" />
+		<map name="planetmap" id="planetmap">
+            <area shape="rect" coords="222,-8,332,252" href ="http://www.xinjiangnet.com.cn/2016/1130/1698395.shtml"  />
+            <area shape="rect" coords="109,-8,219,202" href ="http://www.xjwljb.com/home/"  />
+            <area shape="rect" coords="2,1,112,261" href ="http://www.12377.cn/"  />
+        </map>
+	</div>
+</div>

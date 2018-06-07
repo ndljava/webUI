@@ -1,0 +1,482 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh-CN">
+	<!--<![endif]-->
+
+	<head>
+		<meta charset="UTF-8">
+		<title>${channel.title!} </title>
+		<meta name="keywords" content="${channel.keywords!}" />
+		<base target="_blank">
+		<meta name="description" content="${channel.description!}" />
+		<link rel="shortcut icon" href="http://www.xinjiangnet.com.cn/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-article.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-list-text.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-comment-mode.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-right-common.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-list-pic-text.css" />
+		<script type="text/javascript" src="/${res}/js/config.js"></script>
+		<script type="text/javascript" src="/${res}/js/jquery.js"></script>
+		<script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
+		<!--[if lt IE 9 ]>
+			<script type="text/javascript" src="/${res}/js/modernizr.js"></script>
+		<![endif]-->
+		
+		<!--link href="http://bdimg.share.baidu.com/static/css/bdsstyle.css?cdnversion=20131219" rel="stylesheet" type="text/css">
+		<script src="http://bdimg.share.baidu.com/static/js/logger.js?cdnversion=424519"></script-->
+	</head>
+
+	<body>
+		<!-- 头部 -->
+		[#include 'news_list_head.html']
+		<!-- 面包屑 -->
+		<div class="programa-crumb ov">
+			<div style="clear:both;width:980px; height:10px;">
+			</div>
+			<div class="crumb">
+				<div style="float:left;">
+					<span style="float:left;"><a href="http://www.xinjiangnet.com.cn/"><img src="/${res}/img/xjw_nr_logo.gif" border="0"></a></span>
+					<span style="margin-top:8px; float:right; display:block;">
+						&nbsp;&nbsp;<em>&gt;</em>
+						[#list channel.nodeList as n]
+							<a href='${n.url}' target='_blank'>${n.name}</a>
+							[#if n_has_next] 
+								&nbsp;&nbsp;<em>&gt;</em>
+							[/#if]
+						[/#list]
+						<em>&gt;</em> <span>正文</span>
+					</span>
+				</div>
+				<div style="float:right;">
+					<div class="fl-l header-search-input ov ">
+						<form id="head_search" name="head_search" action="http://app.xinjiangnet.com.cn/" method="GET">
+							<input type="hidden" name="app" value="search">
+							<input type="hidden" name="controller" value="index">
+							<input type="hidden" name="action" value="search">
+							<input type="hidden" id="type" name="type" value="all">
+							<div class="divicon icon16x16 fl-r"></div>
+							<input type="text" id="head_wd" name="wd" class="searinput" style="margin-top:2px;" />
+						</form>
+					</div>
+					<a href="" class="m-header-search js-headsearch fl-l icon16x16"></a>
+					<script type="text/javascript">
+						$('#head_search .divicon').click(function() {
+							$('#head_search').submit();
+						});
+						$('#head_search').attr('Action', APP_URL);
+					</script>
+				</div>
+			</div>
+			<div style="clear:both;width:980px; height:5px; ">
+			</div>
+		</div>
+		<!-- end 面包屑 -->
+		<div class="programa-Layout">
+			<section class="column">
+				<section class="column-main">
+					<!-- 左侧列表 -->
+					<section class="list-text-box">
+						<div class="list-pic-text">
+							[@cms_content_page channelId=channel.id count='3' titLen='25' append='...'  orderBy='2'  dateFormat='yyyy-MM-dd hh:mm:ss'  channelOption='1']
+							[#list tag_pagination.list as a]
+							<div class="h-pic ov">
+								<div>
+									<p title="a.title " class="title">
+										<a href="${a.url}">[@text_cut s=a.title len=titLen append=append/]</a>
+									</p>
+								</div>
+								<div style="margin-top:15px;">
+									[#if a.typeImg??]
+									<a href="${a.url}" title="${a.title}">
+										<img src="${a.typeImg!site.defImg}" class="thumb" alt="${a.title}" width="140" height="95">
+									</a>
+									[/#if]
+									<div class="summary">[@text_cut s=a.desc len=95 append=append/]
+										<a href="${a.url}" class="more">[详细]</a>
+									</div>
+								</div>
+								<div class="fx">
+									<span class="riqi">${a.date?string(dateFormat)}</span>
+									<!-- Baidu Button BEGIN -->
+									<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+										<span class="bds_more">分享到：</span>
+									</div>
+									[#if a_index==0]
+										<script type="text/javascript" id="bdshare_js" data="type=tools" src="http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=424519"></script>
+									[#else]
+										<script type="text/javascript" id="bdshare_js" data="type=tools"></script>
+                              			<script type="text/javascript" id="bdshell_js"></script>
+									[/#if]
+									<script type="text/javascript">
+										var bds_config = {
+											'snsKey': {
+												'tsina': '4085538946'
+											}
+										};
+										document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+									</script>
+									<!-- Baidu Button END -->
+								</div>
+							</div>
+ 							[/#list]
+							
+							<div class="page-box clear">
+								[#assign n=5/]
+								[#assign m=3/]
+								[#assign b=2/]
+								[#assign p=tag_pagination/]
+								<ul class="page">
+ 
+								[#if p.firstPage]
+									<li>
+										<a disabled="disabled" class="prev disable">上一页</a>
+									</li>
+								[#else]
+									<li>
+										<a href="#" target="_self" onclick="location.href=encodeURI('${hrefFormer}[#if p.prePage gt 1]_${p.prePage}[/#if]${hrefLatter}');">上一页</a>[#t/]
+									</li>
+								[/#if]
+
+ 								[#if p.totalPage gte n]
+									[#if p.pageNo lte m]
+										[#list 1..n as page]
+										<li>
+											<a target="_self" [#if page==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${page}${hrefLatter}');" [/#if]>${page!}</a>&nbsp;
+										</li>
+										[/#list]
+										<li>
+											<a target="_self">...</a>
+										</li>
+										<li>
+											<a target="_self" [#if p.totalPage==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${p.totalPage}${hrefLatter}');"[/#if]>${p.totalPage!}</a>&nbsp;
+										</li>
+									[#elseif p.pageNo>p.totalPage-m]
+										<li>
+											<a target="_self" [#if 1==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}${hrefLatter}');"[/#if]>1</a>&nbsp;
+										</li>
+										<li>
+											<a target="_self">...</a>
+										</li>
+										[#list p.totalPage-n+1..p.totalPage as page]
+										<li>
+											<a target="_self" [#if page==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${page}${hrefLatter}');"[/#if]>${page!}</a>&nbsp;
+										</li>
+										[/#list]
+									[#else]
+										<li>
+											<a target="_self" [#if 1==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}${hrefLatter}');"[/#if]>1</a>&nbsp;
+										</li>
+										<li>
+											<a target="_self">...</a>
+										</li>
+										
+										[#list p.pageNo-b..p.pageNo+b as page]
+										<li>
+											<a target="_self" [#if page==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${page}${hrefLatter}');"[/#if]>${page!}</a>&nbsp;
+										</li>
+										[/#list]
+										<li>
+											<a target="_self">...</a>
+										</li>
+										<li>
+											<a target="_self" [#if p.totalPage==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${p.totalPage}${hrefLatter}');"[/#if]>${p.totalPage!}</a>&nbsp;
+										</li>
+									[/#if]
+								[#else]
+									[#list 1..p.totalPage as page]
+									<li>
+										<a target="_self" [#if page==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${page}${hrefLatter}');"[/#if]>${page!}</a>&nbsp;
+									</li>
+									[/#list]
+								[/#if]
+								
+								[#if p.lastPage]
+									<li>
+										<a disabled="disabled" class="prev disable">下一页</a>
+									</li>
+								[#else]
+									<li>
+										<a href="#" target="_self" onclick="location.href=encodeURI('${hrefFormer}_${p.nextPage}${hrefLatter}');">下一页</a>
+									</li>
+								[/#if]
+
+								</ul>
+								 
+							</div>
+							[/@cms_content_page]
+							<!-- @end 分页 -->
+						</div>
+						<!-- 分页 -->
+					</section>
+					<!-- 左侧列表 -->
+				</section>
+				<aside class="column-aside">
+					<div class="add">
+						<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="300" height="495" align="absbottom">
+    						<param name="movie" value="img/adv_nr/20150812qnwzxgy.swf" />
+    						<param name=wmode value=opaque />
+    						<param name="quality" value="high" />
+    						<param name="SCALE" value="exactfit" />
+    						<embed src="/${res}/img/adv_nr/20150812qnwzxgy.swf" width="300" height="495" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+						</object>
+					</div>
+					<div class="ph">
+						[#include '../include/newsTops.html']
+						<div class="ph">
+							<div class="top"></div>
+							<div class="toptitle">视觉焦点<img src="/${res}/img/gd.gif"></div>
+							<div class="lyjt_240_176">
+								<ul>
+									<li>
+										<div class="lyjt_240_176_tp">
+											<div class="lyjt_240_176_tp_left">
+												<a href="http://www.xinjiangnet.com.cn/2018/0505/2070310.shtml">
+													<IMG src="http://upload.xinjiangnet.com.cn/2018/0505/thumb_569_327_1525494107578.jpg" width="137" height="93">
+												</a>
+												<div class="lyjt_240_176_tp_bg"></div>
+												<!-- 背景補丁層 -->
+												<div class="lyjt_240_176_tp_writing">
+													<p>
+														<a href="http://www.xinjiangnet.com.cn/2018/0505/2070310.shtml" target="_blank">托乎拉苏草原景色绝美</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="lyjt_240_176_tp">
+											<div class="lyjt_240_176_tp_left">
+												<a href="http://www.xinjiangnet.com.cn/2018/0505/2070278.shtml">
+													<IMG src="http://upload.xinjiangnet.com.cn/2018/0505/thumb_569_327_1525491254253.png" width="137" height="93">
+												</a>
+												<div class="lyjt_240_176_tp_bg"></div>
+												<!-- 背景補丁層 -->
+												<div class="lyjt_240_176_tp_writing">
+													<p>
+														<a href="http://www.xinjiangnet.com.cn/2018/0505/2070278.shtml" target="_blank"> 林中精灵</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="lyjt_240_176_tp">
+											<div class="lyjt_240_176_tp_left">
+												<a href="http://www.xinjiangnet.com.cn/2018/0505/2070280.shtml">
+													<IMG src="http://upload.xinjiangnet.com.cn/2018/0505/thumb_569_327_1525491262591.png" width="137" height="93">
+												</a>
+												<div class="lyjt_240_176_tp_bg"></div>
+												<!-- 背景補丁層 -->
+												<div class="lyjt_240_176_tp_writing">
+													<p>
+														<a href="http://www.xinjiangnet.com.cn/2018/0505/2070280.shtml" target="_blank">西湖睡莲成片绽放</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="lyjt_240_176_tp">
+											<div class="lyjt_240_176_tp_left">
+												<a href="http://www.xinjiangnet.com.cn/2018/0505/2070277.shtml">
+													<IMG src="http://upload.xinjiangnet.com.cn/2018/0505/thumb_569_327_1525491246336.png" width="137" height="93">
+												</a>
+												<div class="lyjt_240_176_tp_bg"></div>
+												<!-- 背景補丁層 -->
+												<div class="lyjt_240_176_tp_writing">
+													<p>
+														<a href="http://www.xinjiangnet.com.cn/2018/0505/2070277.shtml" target="_blank"> “树上”图书展</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div style="width:300px; height:25px; clear:both"></div>
+						<div class="ph">
+							<div class="top"></div>
+							<div class="toptitle">视频精选<img src="/${res}/img/gd.gif"></div>
+							<div class="lyjt_240_176">
+								<ul>
+									<li>
+										<div class="lyjt_240_176_tp">
+											<div class="lyjt_240_176_tp_left">
+												<a href="http://www.xinjiangnet.com.cn/2015/0615/1412646.shtml">
+													<IMG src="http://upload.xinjiangnet.com.cn/2015/0610/thumb_569_327_1433916395986.jpg" width="137" height="93">
+												</a>
+												<div class="lyjt_240_176_tp_bg"></div>
+												<!-- 背景補丁層 -->
+												<div class="lyjt_240_176_tp_writing">
+													<p>
+														<a href="http://www.xinjiangnet.com.cn/2015/0615/1412646.shtml" target="_blank">谎言包装下的迁徙圣战路</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="lyjt_240_176_tp">
+											<div class="lyjt_240_176_tp_left">
+												<a href="http://www.xinjiangnet.com.cn/2015/0619/1414590.shtml">
+													<IMG src="http://upload.xinjiangnet.com.cn/2015/0619/1434676878893.jpg" width="137" height="93">
+												</a>
+												<div class="lyjt_240_176_tp_bg"></div>
+												<!-- 背景補丁層 -->
+												<div class="lyjt_240_176_tp_writing">
+													<p>
+														<a href="http://www.xinjiangnet.com.cn/2015/0619/1414590.shtml" target="_blank">留一盏灯温暖他人</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="lyjt_240_176_tp">
+											<div class="lyjt_240_176_tp_left">
+												<a href="http://www.xinjiangnet.com.cn/2015/0601/1406949.shtml">
+													<IMG src="http://upload.xinjiangnet.com.cn/2015/0610/1433916422202.png" width="137" height="93">
+												</a>
+												<div class="lyjt_240_176_tp_bg"></div>
+												<!-- 背景補丁層 -->
+												<div class="lyjt_240_176_tp_writing">
+													<p>
+														<a href="http://www.xinjiangnet.com.cn/2015/0601/1406949.shtml" target="_blank">新疆疆湖第九期</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="lyjt_240_176_tp">
+											<div class="lyjt_240_176_tp_left">
+												<a href="http://www.xinjiangnet.com.cn/2015/0611/1411574.shtml">
+													<IMG src="http://upload.xinjiangnet.com.cn/2015/0612/1434092022475.jpg" width="137" height="93">
+												</a>
+												<div class="lyjt_240_176_tp_bg"></div>
+												<!-- 背景補丁層 -->
+												<div class="lyjt_240_176_tp_writing">
+													<p>
+														<a href="http://www.xinjiangnet.com.cn/2015/0611/1411574.shtml" target="_blank">幼童被老师订书机钉穿</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div style="width:300px; height:25px; clear:both"></div>
+						<div class="ph">
+							<div class="top"></div>
+							<div class="toptitle">论坛精华<img src="/${res}/img/gd.gif"></div>
+							<div class="lyjt_240_1761">
+								<ul>
+									<li>
+										<div class="lyjt_240_176_tp">
+											<div class="lyjt_240_176_tp_left">
+												<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159412&extra=page%3D1&_dsign=20a2acfc">
+													<IMG src="http://upload.xinjiangnet.com.cn/2016/1216/1481853505892.jpg" width="118" height="86">
+												</a>
+												<div class="lyjt_240_176_tp_bg"></div>
+												<!-- 背景補丁層 -->
+												<div class="lyjt_240_176_tp_writing">
+													<p>
+														<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159412&extra=page%3D1&_dsign=20a2acfc" target="_blank">她不是罗尔</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="lyjt_240_176_tp">
+											<div class="lyjt_240_176_tp_left">
+												<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159397&extra=page%3D1&_dsign=ff068276">
+													<IMG src="http://upload.xinjiangnet.com.cn/2016/1216/thumb_569_327_1481852540449.jpg" width="118" height="86">
+												</a>
+												<div class="lyjt_240_176_tp_bg"></div>
+												<!-- 背景補丁層 -->
+												<div class="lyjt_240_176_tp_writing">
+													<p>
+														<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159397&extra=page%3D1&_dsign=ff068276" target="_blank">司机注意了</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="width675_right_clear20">
+							</div>
+							<div class="lyjt_240_150">
+								<ul>
+									<li>
+										&nbsp;&middot;&nbsp;
+										<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159397&extra=page%3D1&_dsign=ff068276" target="_blank">司机注意了</a>
+									</li>
+									<li>
+										&nbsp;&middot;&nbsp;
+										<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159420&extra=page%3D1&_dsign=ae5d7b1c" target="_blank">“抢票战”第一天 乌市出疆卧铺票售罄</a>
+									</li>
+									<li>
+										&nbsp;&middot;&nbsp;
+										<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1157927&extra=page%3D1&_dsign=f8136405" target="_blank">这项监测 能争分夺秒挽救患者生命</a>
+									</li>
+									<li>
+										&nbsp;&middot;&nbsp;
+										<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1158030&extra=page%3D1&_dsign=82be37ac" target="_blank">一毒驾一酒驾，两司机都有奇葩理由</a>
+									</li>
+									<li>
+										&nbsp;&middot;&nbsp;
+										<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1157985&extra=&_dsign=1442dd2f" target="_blank">汽柴油零售价迎近四年最大涨幅</a>
+									</li>
+									<li>
+										&nbsp;&middot;&nbsp;
+										<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1156796&extra=&_dsign=3e88a008" target="_blank">“师傅，我把你车挂了，请和我联系”</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div style="width:300px; height:25px; clear:both"></div>
+						<div class="ph">
+							<div class="top"></div>
+							<div class="toptitle">热点专题<img src="/${res}/img/gd.gif"></div>
+							<div class="bix">
+								<IMG src="http://upload.xinjiangnet.com.cn/2016/0304/thumb_137_93_1457065903512.jpg" width="90" height="60">
+								<div class="wwn">
+									<a href="http://special.xinjiangnet.com.cn/151209/" target="_blank">信息丝绸之路建设论坛暨百位网络媒体总编辑看新疆活动</a>
+								</div>
+							</div>
+							<div class="bix">
+								<IMG src="http://upload.xinjiangnet.com.cn/2016/0304/thumb_137_93_1457066308148.jpg" width="90" height="60">
+								<div class="wwn">
+									<a href="http://special.xinjiangnet.com.cn/150615/" target="_blank">新疆“一把手”讲“三严三实”专题党课</a>
+								</div>
+							</div>
+							<div class="bix">
+								<IMG src="http://upload.xinjiangnet.com.cn/2016/0304/thumb_137_93_1457066144366.png" width="90" height="60">
+								<div class="wwn">
+									<a href="http://special.xinjiangnet.com.cn/150201-30/" target="_blank">“共有一座城 共爱一个家”——乌鲁木齐创建全国文明城市 </a>
+								</div>
+							</div>
+							<div class="bix">
+								<IMG src="http://upload.xinjiangnet.com.cn/2016/0304/thumb_137_93_1457066265444.png" width="90" height="60">
+								<div class="wwn">
+									<a href="http://special.xinjiangnet.com.cn/150202-4/" target="_blank">“新疆礼物 温暖你的心”大型公益活动</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+			</section>
+		</div>
+		<!-- footer -->
+		[#include 'news_list_footer.html'/]
+	</body>
+
+</html>

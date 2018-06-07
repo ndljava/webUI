@@ -1,0 +1,472 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh-CN">
+	<!--<![endif]-->
+	[#include "news_content_head.html"/]
+	<body>
+		<!-- 头部 -->
+		[#include "news_header.html"/]
+		<!-- @end头部 -->
+		<section class="column article">
+			<div style="clear:both;width:980px; height:10px;">
+			</div>
+			<div class="crumb">
+				<div style="float:left;">
+					<span style="float:left;"><a href="http://www.xinjiangnet.com.cn/"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjw_nr_logo.gif" border="0"></a></span>
+					<span style="margin-top:8px; float:right; display:block;">
+						&nbsp;&nbsp;<em>&gt;</em>
+						[#list channel.nodeList as n]
+							<a href='${n.url}' target='_blank'>${n.name}</a>
+							[#if n_has_next] 
+								&nbsp;&nbsp;<em>&gt;</em>
+							[/#if]
+						[/#list]
+						<em>&gt;</em> <span>正文</span>
+					</span>
+				</div>
+				<div style="float:right;">
+					<div class="fl-l header-search-input ov ">
+						<form id="head_search" name="head_search" action="http://app.xinjiangnet.com.cn/" method="GET">
+							<input type="hidden" name="app" value="search">
+							<input type="hidden" name="controller" value="index">
+							<input type="hidden" name="action" value="search">
+							<input type="hidden" id="type" name="type" value="all">
+							<div class="divicon icon16x16 fl-r"></div>
+							<input type="text" id="head_wd" name="wd" class="searinput" style="margin-top:2px;" />
+						</form>
+					</div>
+					<a href="" class="m-header-search js-headsearch fl-l icon16x16"></a>
+					<script type="text/javascript">
+						$('#head_search .divicon').click(function() {
+							$('#head_search').submit();
+						});
+						$('#head_search').attr('Action', APP_URL);
+					</script>
+				</div>
+			</div>
+			<div style="clear:both;width:980px; height:10px; border-bottom:1px solid #999;">
+			</div>
+			<div style="clear:both;width:980px; height:10px;">
+			</div>
+			<!-- 主内容区域 -->
+			<section class="column-main">
+				<!-- 文章区域 -->
+				<article class="article-main">
+					<div class="inner">
+						<h1 class="article-title">${content.title!}</h1>
+						<!-- 文章相关信息 -->
+						<div class="article-infos">
+							<span class="date">${content.releaseDate} </span>
+							<span class="source"><a target="_blank" href="${content.originUrl!}">${content.origin!'本站原创'}</a> </span>
+							<span class="editors">${content.author!'本站编辑'} </span>
+							<!--<a href="#comment">我要评论<span><em id="changyan_count_unit" class="comments">0</em></span></a>-->
+							<div id="scan-handset" class="scan-handset">
+								<a href="javascript:void(0)" class="scan-icon">扫描到手持设备</a>
+							</div>
+							<div id="scan-layer" class="scan-layer">
+								<div data-dropdialog="arrow" class="dropdialog-arrow"></div>
+								<div class="scan-pic">
+									<div class="scan-img"><img width="122" height="122" src="http://upload.xinjiangnet.com.cn/" alt=""></div>
+								</div>
+							</div>
+							<div class="fontsize">
+								<span class="f-l">字号：</span>
+								<span class="small" title="切换到小字号" onClick="changeFont(this);return false;"></span>
+								<span class="big bactive" onClick="changeFont(this);return false;" title="切换到大字号"></span>
+							</div>
+							<!-- sactive 当前小字号，bactive当前大字号 -->
+						</div>
+						<!-- @end文章相关信息 -->
+						<!-- 描述 -->
+						<p class="describe"><strong>核心提示：</strong>
+							[@text_cut s=content.description len='50' append='...'/]
+						</p>
+						<!-- 文章内容 -->
+						<div class="article-content fontSizeSmall BSHARE_POP">
+							${txt!}
+						</div>
+						<!-- @end 文章内容 -->
+						<div style="width:628px;border:1px solid #ccc;margin-top:10px;margin-bottom:10px; color:#666;">
+							<div style="width:608px;padding:10px;text-align:left; font-size:12px; line-height:26px;">
+								&nbsp;&nbsp;&nbsp;&nbsp;法律声明：新疆网转载其他媒体之稿件，意在为公众传递更多信息、服务大众，并不代表新疆网赞同其观点和对其真实性负责。如因作品内容、版权和其它问题需要同本网联系的，请务必在相关作品发表之日起30日内进行，我们将在24小时内移除相关争议内容。
+								<a href="http://www.xinjiangnet.com.cn/aboutus/company/201110/t20111028_2226839.shtml" target="_blank" class="littith" style="color:#666;font-size:12px; line-height:26px;">[详细]</a>
+							</div>
+						</div>
+						<div class="editor">
+							<span>责任编辑：李卫疆</span>
+						</div>
+						<!-- 相关阅读 -->
+						<div class="mod-list rel-news topblank">
+							<div class="hd ov">
+								<strong class="rel-title">相关新闻</strong>
+								<div class="keywords"><strong>关键词：</strong>			
+									<a href="http://app.xinjiangnet.com.cn/tags.php?tag=${content.tagStr!}" title="${content.tagStr!}" target="_blank">${content.tagStr!}</a>
+								</div>
+							</div>
+							<div style="width:600px; height:6px;">
+							</div>
+							<div class="bd">
+								<ul class="list list-point">
+									[@cms_content_list count='10' titLen='25' dateFormat='yyyy-MM-dd' channelId=content.channel.id orderBy='9' channelOption='1' typeId='1'] 
+									[#list tag_list as a]
+									<li class="item">
+										<span class="ico"></span>
+										<a href="${a.url}" class="title" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+										<span class="date">${a.date?string(dateFormat)}</span>
+									</li>
+									[/#list] 
+									[/@cms_content_list]
+								</ul>
+							</div>
+						</div>
+						<!-- @end 相关阅读 -->
+					</div>
+					<!-- 底部分享，复制 -->
+					<div class="copy-share">
+						<div class="copy">
+							<a href="javascript:;" id="zeroclipboard" class="c-ico" onClick="copyToClipboard(window.location.href);return false" data-clipboard-text="">复制网址</a>
+							<a href="http://app.xinjiangnet.com.cn/print.php?contentid=2075453" class="t-ico" target="_blank">打印</a>
+							<a href="javascript:;" onClick="addfavorite();return false;" class="s-ico">收藏</a>
+						</div>
+						<div class="share">
+							<!-- Baidu Button BEGIN -->
+							<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare"><span class="bds_more">分享到：</span>
+								<a class="bds_qzone"></a>
+								<a class="bds_tsina"></a>
+								<a class="bds_tqq"></a>
+								<a class="bds_renren"></a>
+								<a class="bds_t163"></a>
+								<a class="shareCount"></a>
+							</div>
+							<script type="text/javascript" id="bdshare_js" data="type=tools&uid=0"></script>
+							<script type="text/javascript" id="bdshell_js"></script>
+							<script type="text/javascript">
+								document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000);
+							</script>
+							<!-- Baidu Button END -->
+						</div>
+						<!-- 支持数-->
+						<a class="agree" id="supports" href="javascript:digg.set(2075453,'supports')">${content.ups!}</a>
+					</div>
+				</article>
+				<!-- @end文章区域 -->
+				<div class="basehr"></div>
+				<div class="rphtbt">
+					&nbsp;热评话题
+				</div>
+				<div class="rpht">
+					<ul>
+						<li>&middot
+							<a class="icon-blank" href="http://www.xinjiangnet.com.cn/2016/0303/1530835.shtml">红山体育场公共停车库运行</a>
+						</li>
+						<li>&middot
+							<a class="icon-blank" href="http://opinion.huanqiu.com/special/wgyb2015/index.html">2015年度网络正能量精品投票</a>
+						</li>
+						<li>&middot
+							<a class="icon-blank" href="http://www.xinjiangnet.com.cn/2016/0303/1531133.shtml#g1531133=1">春日“雪景” 樱桃花开</a>
+						</li>
+						<li>&middot
+							<a class="icon-blank" href="http://www.xinjiangnet.com.cn/2016/0304/1531698.shtml">新疆婚姻登记网上预约</a>
+						</li>
+						<li>&middot
+							<a class="icon-blank" href="http://www.xinjiangnet.com.cn/2016/0304/1531478.shtml">新疆女篮赛场传递文明</a>
+						</li>
+						<li>&middot
+							<a class="icon-blank" href="http://www.xinjiangnet.com.cn/2016/0304/1531568.shtml">乌市地铁4号线一期工程今年开工</a>
+						</li>
+						<li>&middot
+							<a class="icon-blank" href="http://www.xinjiangnet.com.cn/2016/0303/1531290.shtml">美佛州现最大“米老鼠”</a>
+						</li>
+						<li>&middot
+							<a class="icon-blank" href="http://www.xinjiangnet.com.cn/2016/0304/1531585.shtml">江西高校“食堂女神”走红</a>
+						</li>
+						<li>&middot
+							<a class="icon-blank" href="http://www.xinjiangnet.com.cn/2016/0304/1531691.shtml#g1531691=1">“上会神器”造型各异！</a>
+						</li>
+						<li>&middot
+							<a class="icon-blank" href="http://www.xinjiangnet.com.cn/2016/0304/1531538.shtml#g1531538=1">波音客机“降落”武汉街头</a>
+						</li>
+					</ul>
+				</div>
+				<div style="width:650px; height:30px; background-color:#F4F4F4;font-size:14px; clear:both; color:#4E7A93; font-size:14px;line-height:30px;">
+					<div style="text-align:left; width:646px;height:24px; text-align:center; margin-top:48px;font-size:14px;line-height:30px;">
+						<form action="http://bbs.wlmqwb.com/newscomment1.php" method="post" name="xwdrlt">
+							<input type="hidden" name="fid" value="207" />
+							<input type="hidden" name="wcmtname" value="" />
+							<input type="hidden" name="wcmtid" value="" />
+							<input type="hidden" name="wcmnr" value="" />
+						</form>
+						点此进入
+						<a href="javascript:document.xwdrlt.submit();" onClick="javascript:document.xwdrlt.submit();" style="color:#F2591F;">胡杨林社区</a>发表评论
+						<br>
+					</div>
+			</section>
+			<!-- 右侧区域 -->
+			<aside class="column-aside">
+				<div class="add"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="300" height="495" align="absbottom">
+    			<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_nr/songyue.swf" />
+    			<param name=wmode value=opaque />
+    			<param name="quality" value="high" />
+    			<param name="SCALE" value="exactfit" />
+    			<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_nr/songyue.swf" width="300" height="495" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+			</object>
+				</div>
+				<div class="ph">
+					[#include '../include/newsTops.html']
+					<div class="ph">
+						<div class="top"></div>
+						<div class="toptitle">视觉焦点<img src="http://img.xinjiangnet.com.cn/templates/default/img/gd.gif"></div>
+						<div class="lyjt_240_176">
+							<ul>
+								<li>
+									<div class="lyjt_240_176_tp">
+										<div class="lyjt_240_176_tp_left">
+											<a href="http://www.xinjiangnet.com.cn/2018/0505/2070310.shtml">
+												<IMG src="http://upload.xinjiangnet.com.cn/2018/0505/thumb_569_327_1525494107578.jpg" width="137" height="93">
+											</a>
+											<div class="lyjt_240_176_tp_bg"></div>
+											<!-- 背景補丁層 -->
+											<div class="lyjt_240_176_tp_writing">
+												<p>
+													<a href="http://www.xinjiangnet.com.cn/2018/0505/2070310.shtml" target="_blank">托乎拉苏草原景色绝美</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="lyjt_240_176_tp">
+										<div class="lyjt_240_176_tp_left">
+											<a href="http://www.xinjiangnet.com.cn/2018/0505/2070278.shtml">
+												<IMG src="http://upload.xinjiangnet.com.cn/2018/0505/thumb_569_327_1525491254253.png" width="137" height="93">
+											</a>
+											<div class="lyjt_240_176_tp_bg"></div>
+											<!-- 背景補丁層 -->
+											<div class="lyjt_240_176_tp_writing">
+												<p>
+													<a href="http://www.xinjiangnet.com.cn/2018/0505/2070278.shtml" target="_blank"> 林中精灵</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="lyjt_240_176_tp">
+										<div class="lyjt_240_176_tp_left">
+											<a href="http://www.xinjiangnet.com.cn/2018/0505/2070280.shtml">
+												<IMG src="http://upload.xinjiangnet.com.cn/2018/0505/thumb_569_327_1525491262591.png" width="137" height="93">
+											</a>
+											<div class="lyjt_240_176_tp_bg"></div>
+											<!-- 背景補丁層 -->
+											<div class="lyjt_240_176_tp_writing">
+												<p>
+													<a href="http://www.xinjiangnet.com.cn/2018/0505/2070280.shtml" target="_blank">西湖睡莲成片绽放</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="lyjt_240_176_tp">
+										<div class="lyjt_240_176_tp_left">
+											<a href="http://www.xinjiangnet.com.cn/2018/0505/2070277.shtml">
+												<IMG src="http://upload.xinjiangnet.com.cn/2018/0505/thumb_569_327_1525491246336.png" width="137" height="93">
+											</a>
+											<div class="lyjt_240_176_tp_bg"></div>
+											<!-- 背景補丁層 -->
+											<div class="lyjt_240_176_tp_writing">
+												<p>
+													<a href="http://www.xinjiangnet.com.cn/2018/0505/2070277.shtml" target="_blank"> “树上”图书展</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div style="width:300px; height:25px; clear:both"></div>
+					<div class="ph">
+						<div class="top"></div>
+						<div class="toptitle">视频精选<img src="http://img.xinjiangnet.com.cn/templates/default/img/gd.gif"></div>
+						<div class="lyjt_240_176">
+							<ul>
+								<li>
+									<div class="lyjt_240_176_tp">
+										<div class="lyjt_240_176_tp_left">
+											<a href="http://www.xinjiangnet.com.cn/2015/0615/1412646.shtml">
+												<IMG src="http://upload.xinjiangnet.com.cn/2015/0610/thumb_569_327_1433916395986.jpg" width="137" height="93">
+											</a>
+											<div class="lyjt_240_176_tp_bg"></div>
+											<!-- 背景補丁層 -->
+											<div class="lyjt_240_176_tp_writing">
+												<p>
+													<a href="http://www.xinjiangnet.com.cn/2015/0615/1412646.shtml" target="_blank">谎言包装下的迁徙圣战路</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="lyjt_240_176_tp">
+										<div class="lyjt_240_176_tp_left">
+											<a href="http://www.xinjiangnet.com.cn/2015/0619/1414590.shtml">
+												<IMG src="http://upload.xinjiangnet.com.cn/2015/0619/1434676878893.jpg" width="137" height="93">
+											</a>
+											<div class="lyjt_240_176_tp_bg"></div>
+											<!-- 背景補丁層 -->
+											<div class="lyjt_240_176_tp_writing">
+												<p>
+													<a href="http://www.xinjiangnet.com.cn/2015/0619/1414590.shtml" target="_blank">留一盏灯温暖他人</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="lyjt_240_176_tp">
+										<div class="lyjt_240_176_tp_left">
+											<a href="http://www.xinjiangnet.com.cn/2015/0601/1406949.shtml">
+												<IMG src="http://upload.xinjiangnet.com.cn/2015/0610/1433916422202.png" width="137" height="93">
+											</a>
+											<div class="lyjt_240_176_tp_bg"></div>
+											<!-- 背景補丁層 -->
+											<div class="lyjt_240_176_tp_writing">
+												<p>
+													<a href="http://www.xinjiangnet.com.cn/2015/0601/1406949.shtml" target="_blank">新疆疆湖第九期</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="lyjt_240_176_tp">
+										<div class="lyjt_240_176_tp_left">
+											<a href="http://www.xinjiangnet.com.cn/2015/0611/1411574.shtml">
+												<IMG src="http://upload.xinjiangnet.com.cn/2015/0612/1434092022475.jpg" width="137" height="93">
+											</a>
+											<div class="lyjt_240_176_tp_bg"></div>
+											<!-- 背景補丁層 -->
+											<div class="lyjt_240_176_tp_writing">
+												<p>
+													<a href="http://www.xinjiangnet.com.cn/2015/0611/1411574.shtml" target="_blank">幼童被老师订书机钉穿</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div style="width:300px; height:25px; clear:both"></div>
+					<div class="ph">
+						<div class="top"></div>
+						<div class="toptitle">论坛精华<img src="http://img.xinjiangnet.com.cn/templates/default/img/gd.gif"></div>
+						<div class="lyjt_240_1761">
+							<ul>
+								<li>
+									<div class="lyjt_240_176_tp">
+										<div class="lyjt_240_176_tp_left">
+											<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159412&extra=page%3D1&_dsign=20a2acfc">
+												<IMG src="http://upload.xinjiangnet.com.cn/2016/1216/1481853505892.jpg" width="118" height="86">
+											</a>
+											<div class="lyjt_240_176_tp_bg"></div>
+											<!-- 背景補丁層 -->
+											<div class="lyjt_240_176_tp_writing">
+												<p>
+													<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159412&extra=page%3D1&_dsign=20a2acfc" target="_blank">她不是罗尔</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="lyjt_240_176_tp">
+										<div class="lyjt_240_176_tp_left">
+											<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159397&extra=page%3D1&_dsign=ff068276">
+												<IMG src="http://upload.xinjiangnet.com.cn/2016/1216/thumb_569_327_1481852540449.jpg" width="118" height="86">
+											</a>
+											<div class="lyjt_240_176_tp_bg"></div>
+											<!-- 背景補丁層 -->
+											<div class="lyjt_240_176_tp_writing">
+												<p>
+													<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159397&extra=page%3D1&_dsign=ff068276" target="_blank">司机注意了</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="width675_right_clear20">
+						</div>
+						<div class="lyjt_240_150">
+							<ul>
+								<li>
+									&nbsp;&middot;&nbsp;
+									<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159397&extra=page%3D1&_dsign=ff068276" target="_blank">司机注意了</a>
+								</li>
+								<li>
+									&nbsp;&middot;&nbsp;
+									<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1159420&extra=page%3D1&_dsign=ae5d7b1c" target="_blank">“抢票战”第一天 乌市出疆卧铺票售罄</a>
+								</li>
+								<li>
+									&nbsp;&middot;&nbsp;
+									<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1157927&extra=page%3D1&_dsign=f8136405" target="_blank">这项监测 能争分夺秒挽救患者生命</a>
+								</li>
+								<li>
+									&nbsp;&middot;&nbsp;
+									<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1158030&extra=page%3D1&_dsign=82be37ac" target="_blank">一毒驾一酒驾，两司机都有奇葩理由</a>
+								</li>
+								<li>
+									&nbsp;&middot;&nbsp;
+									<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1157985&extra=&_dsign=1442dd2f" target="_blank">汽柴油零售价迎近四年最大涨幅</a>
+								</li>
+								<li>
+									&nbsp;&middot;&nbsp;
+									<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=viewthread&tid=1156796&extra=&_dsign=3e88a008" target="_blank">“师傅，我把你车挂了，请和我联系”</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div style="width:300px; height:25px; clear:both"></div>
+					<div class="ph">
+						<div class="top"></div>
+						<div class="toptitle">热点专题<img src="http://img.xinjiangnet.com.cn/templates/default/img/gd.gif"></div>
+						<div class="bix">
+							<IMG src="http://upload.xinjiangnet.com.cn/2016/0304/thumb_137_93_1457065903512.jpg" width="90" height="60">
+							<div class="wwn">
+								<a href="http://special.xinjiangnet.com.cn/151209/" target="_blank">信息丝绸之路建设论坛暨百位网络媒体总编辑看新疆活动</a>
+							</div>
+						</div>
+						<div class="bix">
+							<IMG src="http://upload.xinjiangnet.com.cn/2016/0304/thumb_137_93_1457066308148.jpg" width="90" height="60">
+							<div class="wwn">
+								<a href="http://special.xinjiangnet.com.cn/150615/" target="_blank">新疆“一把手”讲“三严三实”专题党课</a>
+							</div>
+						</div>
+						<div class="bix">
+							<IMG src="http://upload.xinjiangnet.com.cn/2016/0304/thumb_137_93_1457066144366.png" width="90" height="60">
+							<div class="wwn">
+								<a href="http://special.xinjiangnet.com.cn/150201-30/" target="_blank">“共有一座城 共爱一个家”——乌鲁木齐创建全国文明城市 </a>
+							</div>
+						</div>
+						<div class="bix">
+							<IMG src="http://upload.xinjiangnet.com.cn/2016/0304/thumb_137_93_1457066265444.png" width="90" height="60">
+							<div class="wwn">
+								<a href="http://special.xinjiangnet.com.cn/150202-4/" target="_blank">“新疆礼物 温暖你的心”大型公益活动</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</section>
+		<!-- footer -->
+	[#include "news_content_footer.html"/]
+	
+	</body>
+
+</html>

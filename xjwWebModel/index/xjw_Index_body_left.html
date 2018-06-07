@@ -1,0 +1,1146 @@
+<div style="width:675px; float:left;">
+	<!--滚动图-->
+	<div class="gdt">
+		<DIV id="idContainer2" class="container">	
+			<TABLE id="idSlider2" border="0" cellSpacing="0" cellPadding="0">
+				<TBODY>
+					<TR>
+						[@cms_content_list count='6' titLen='25' channelId='75' channelOption='1' descLen='63' typeId='2'] 
+						[#list tag_list as a]
+						<TD class="td_f">
+							<div class="gdt_bt">
+								<div class="gdt_bt_t">
+									<div class="gdt_bt_t1">
+										<a href="${a.url}" target="_blank" style="">[@text_cut s=a.title len=titLen append=append/]</a>
+									</div>
+								</div>
+								<div class="gdt_bt_abs">
+									<div class="gdt_bt_abs1">[@text_cut s=a.desc len=descLen append=append/]...
+										<a href="${a.url}" target="_blank">[详细]</a>
+									</div>
+								</div>
+							</div>
+							<div class="gdt_bt_pic">
+								<a href="${a.url}" title="${a.title}" target="_blank">
+									<IMG src="${a.typeImg}" width="675" height="300">
+								</a>
+							</div>
+						</TD>      
+						[/#list] 
+						[/@cms_content_list]
+						<div style="display:none">
+							<img src="http://g.cn.miaozhen.com/x/k=2023964&p=75RVq&dx=0&rt=2&o=" width="1" height="1" border="0" />
+						</div>
+
+					</TR>
+				</TBODY>
+			</TABLE>
+			<UL id="idNum" class="num"></UL>
+		</DIV>
+		<SCRIPT>
+			function kongzhi1() {
+				var forEach = function(array, callback, thisObject) {
+					if(array.forEach) {
+						array.forEach(callback, thisObject);
+					} else {
+						for(var i = 0, len = array.length; i < len; i++) {
+							callback.call(thisObject, array[i], i, array);
+						}
+					}
+				}
+				var st = new SlideTrans("idContainer2", "idSlider2", 6, {
+					Vertical: false
+				});
+				var nums = [];
+				//插入数字
+				for(var i = 0, n = st._count - 1; i <= n;) {
+					(nums[i] = getById("idNum").appendChild(document.createElement("li"))).innerHTML = ++i;
+				}
+				forEach(nums, function(o, i) {
+					o.onmouseover = function() {
+						o.className = "on";
+						st.Auto = false;
+						st.Run(i);
+					}
+					o.onmouseout = function() {
+						o.className = "";
+						st.Auto = true;
+						st.Run();
+					}
+				})
+				//设置按钮样式
+				st.onStart = function() {
+					forEach(nums, function(o, i) {
+						o.className = st.Index == i ? "on" : "";
+					})
+				}
+				st.Run();
+			}
+		</SCRIPT>
+	</div>
+	<!--滚动图-->
+	<div class="leftjj">
+	</div>
+	<!--广告位一-->
+	<div class="adv675">
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="675" height="90" align="absbottom">
+    		<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180104myly_zzxgyxzh.swf" />
+    		<param name=wmode value=opaque />
+    		<param name="quality" value="high" />
+    		<param name="SCALE" value="exactfit" />
+    		<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180104myly_zzxgyxzh.swf" width="675" height="90" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+		</object>
+	</div>
+	<!--广告位一-->
+	<div class="leftjj">
+	</div>
+	<div style="width:675px;">
+		<!--左-->
+		<div class="left_l">
+			<!--新疆新闻切换-->
+			<script type="text/javascript">
+				function picdisplay(num1) {
+					for(jj = 1; jj < 4; jj++) {
+						document.getElementById("xjxw" + jj).style.borderBottom = "2px solid #dddddd";
+						document.getElementById("xjxwa" + jj).style.display = "none"
+					}
+					document.getElementById("xjxw" + num1).style.borderBottom = "2px solid #F00";
+					document.getElementById("xjxwa" + num1).style.display = "block"
+				}
+			</script>
+			<div style="width:400px; height:40px;">
+				<div class="left_l_q_85r" id="xjxw1">
+					<span class="left_l_xjxw" onMouseMove="javascript:picdisplay(1)"><a href="http://www.xinjiangnet.com.cn/xwzx/xjdz/" target="_blank">新疆新闻</a></span>
+				</div>
+				<div class="left_l_40">
+				</div>
+				<div class="left_l_q_85b" id="xjxw2">
+					<span class="left_l_xjxw" onMouseMove="javascript:picdisplay(2)"><a href="http://www.xinjiangnet.com.cn/xwzx/" target="_blank">国内国际</a></span>
+				</div>
+				<div class="left_l_40">
+				</div>
+				<div class="left_l_q_85b" id="xjxw3">
+					<span class="left_l_xjxw" onMouseMove="javascript:picdisplay(3)"><a href="http://www.xinjiangnet.com.cn/wlmq/" target="_blank">乌鲁木齐</a></span>
+				</div>
+				<div class="left_l_q_65b">
+				</div>
+			</div>
+			<!--新疆新闻切换-->
+			
+			<div class="left_l_xjxw_block" id="xjxwa1">
+				<div class="left_l_xjxw_block_b" style="height:360px;">
+					<div class="left_l_xjxw_18">
+					</div>
+					<div class="left_l_xjxw_400_118">
+						<div class="left_l_xjxw_400_112_solid" style="height:123px;">
+							[@cms_content_list count='15' titLen='63' channelId='94' channelOption='1' descLen='158' typeId='2'] 
+							<div class="left_l_xjxw_400_60">
+								<div class="left">
+									<a href="${tag_list[0].url}">
+										<IMG src="${tag_list[0].typeImg}" width="80" height="58">
+									</a>
+								</div>
+								<div class="left_l_xjxw_400_60_bt">
+									<a href="${tag_list[0].url}" target="_blank">[@text_cut s=tag_list[0].title len=titLen append=append/]</a>
+								</div>
+							</div>
+							[/@cms_content_list]
+							[@cms_content_list count='15' titLen='63' channelId='94' channelOption='1' descLen='158' typeId='1'] 
+							<div class="left_l_xjxw_bt_lit">
+								&nbsp;<span><a href="${tag_list[1].url}" target="_blank">[@text_cut s=tag_list[1].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[2].url}" target="_blank">[@text_cut s=tag_list[2].title len=titLen append=append/]</a>&nbsp;</span>
+								<br /> &nbsp;
+								<span><a href="${tag_list[3].url}" target="_blank">[@text_cut s=tag_list[3].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[4].url}" target="_blank">[@text_cut s=tag_list[4].title len=titLen append=append/] </a>&nbsp;</span>
+								<br />
+							</div>
+						</div>
+						<div class="left_l_xjxw_400_112_solid">
+							<div class="left_l_xjxw_bt_10">
+							</div>
+							<div class="left_l_xjxw_bt">
+								<span><a href="${tag_list[5].url}" target="_blank">[@text_cut s=tag_list[5].title len=titLen append=append/]</a></span>
+							</div>
+							<div class="left_l_xjxw_bt_lit">
+								&nbsp;<span><a href="${tag_list[6].url}" target="_blank">[@text_cut s=tag_list[6].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[7].url}" target="_blank">[@text_cut s=tag_list[7].title len=titLen append=append/]</a>&nbsp;</span>
+								<br /> &nbsp;
+								<span><a href="${tag_list[8].url}" target="_blank">[@text_cut s=tag_list[8].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[9].url}" target="_blank">[@text_cut s=tag_list[9].title len=titLen append=append/]</a>&nbsp;</span>
+								<br />
+							</div>
+						</div>
+						<div class="left_l_xjxw_400_112">
+							<div class="left_l_xjxw_bt_10">
+							</div>
+							<div class="left_l_xjxw_bt">
+								<span><a href="${tag_list[10].url}" target="_blank">[@text_cut s=tag_list[10].title len=titLen append=append/]</a></span>
+							</div>
+							<div class="left_l_xjxw_bt_lit">
+								&nbsp;<span><a href="${tag_list[11].url}" target="_blank">[@text_cut s=tag_list[11].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[12].url}" target="_blank">[@text_cut s=tag_list[12].title len=titLen append=append/]</a>&nbsp;</span>
+								<br /> &nbsp;
+								<span><a href="${tag_list[13].url}" target="_blank">[@text_cut s=tag_list[13].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[14].url}" target="_blank">[@text_cut s=tag_list[14].title len=titLen append=append/]</a>&nbsp;</span>
+								<br />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			[/@cms_content_list]
+			<div class="left_l_xjxw_none" id="xjxwa2">
+				<div class="left_l_xjxw_block_b" style="height:360px;">
+					<div class="left_l_xjxw_18">
+					</div>
+					<div class="left_l_xjxw_400_118">
+						<div class="left_l_xjxw_400_112_solid" style="height:123px;">
+							[@cms_content_list count='15' titLen='63' channelId='94' channelOption='1' descLen='158' typeId='2'] 
+							<div class="left_l_xjxw_400_60">
+								<div class="left">
+									<a href="${tag_list[0].url}">
+										<IMG src="${tag_list[0].typeImg}" width="80" height="58">
+									</a>
+								</div>
+								<div class="left_l_xjxw_400_60_bt">
+									<a href="${tag_list[0].url}" target="_blank">2[@text_cut s=tag_list[0].title len=titLen append=append/]</a>
+								</div>
+							</div>
+							[/@cms_content_list]
+							[@cms_content_list count='15' titLen='63' channelId='94' channelOption='1' descLen='158' typeId='1'] 
+							<div class="left_l_xjxw_bt_lit">
+								&nbsp;<span><a href="${tag_list[1].url}" target="_blank">[@text_cut s=tag_list[1].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[2].url}" target="_blank">[@text_cut s=tag_list[2].title len=titLen append=append/]</a>&nbsp;</span>
+								<br /> &nbsp;
+								<span><a href="${tag_list[3].url}" target="_blank">[@text_cut s=tag_list[3].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[4].url}" target="_blank">[@text_cut s=tag_list[4].title len=titLen append=append/] </a>&nbsp;</span>
+								<br />
+							</div>
+						</div>
+						<div class="left_l_xjxw_400_112_solid">
+							<div class="left_l_xjxw_bt_10">
+							</div>
+							<div class="left_l_xjxw_bt">
+								<span><a href="${tag_list[5].url}" target="_blank">[@text_cut s=tag_list[5].title len=titLen append=append/]</a></span>
+							</div>
+							<div class="left_l_xjxw_bt_lit">
+								&nbsp;<span><a href="${tag_list[6].url}" target="_blank">[@text_cut s=tag_list[6].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[7].url}" target="_blank">[@text_cut s=tag_list[7].title len=titLen append=append/]</a>&nbsp;</span>
+								<br /> &nbsp;
+								<span><a href="${tag_list[8].url}" target="_blank">[@text_cut s=tag_list[8].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[9].url}" target="_blank">[@text_cut s=tag_list[9].title len=titLen append=append/]</a>&nbsp;</span>
+								<br />
+							</div>
+						</div>
+						<div class="left_l_xjxw_400_112">
+							<div class="left_l_xjxw_bt_10">
+							</div>
+							<div class="left_l_xjxw_bt">
+								<span><a href="${tag_list[10].url}" target="_blank">[@text_cut s=tag_list[10].title len=titLen append=append/]</a></span>
+							</div>
+							<div class="left_l_xjxw_bt_lit">
+								&nbsp;<span><a href="${tag_list[11].url}" target="_blank">[@text_cut s=tag_list[11].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[12].url}" target="_blank">[@text_cut s=tag_list[12].title len=titLen append=append/]</a>&nbsp;</span>
+								<br /> &nbsp;
+								<span><a href="${tag_list[13].url}" target="_blank">[@text_cut s=tag_list[13].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[14].url}" target="_blank">[@text_cut s=tag_list[14].title len=titLen append=append/]</a>&nbsp;</span>
+								<br />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			[/@cms_content_list]
+			
+			<div class="left_l_xjxw_none" id="xjxwa3">
+				<div class="left_l_xjxw_block_b" style="height:360px;">
+					<div class="left_l_xjxw_18">
+					</div>
+					<div class="left_l_xjxw_400_118">
+						<div class="left_l_xjxw_400_112_solid" style="height:123px;">
+							[@cms_content_list count='15' titLen='63' channelId='94' channelOption='1' descLen='158' typeId='2'] 
+							<div class="left_l_xjxw_400_60">
+								<div class="left">
+									<a href="${tag_list[0].url}">
+										<IMG src="${tag_list[0].typeImg}" width="80" height="58">
+									</a>
+								</div>
+								<div class="left_l_xjxw_400_60_bt">
+									<a href="${tag_list[0].url}" target="_blank">3[@text_cut s=tag_list[0].title len=titLen append=append/]</a>
+								</div>
+							</div>
+							[/@cms_content_list]
+							[@cms_content_list count='15' titLen='63' channelId='94' channelOption='1' descLen='158' typeId='1'] 
+							<div class="left_l_xjxw_bt_lit">
+								&nbsp;<span><a href="${tag_list[1].url}" target="_blank">[@text_cut s=tag_list[1].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[2].url}" target="_blank">[@text_cut s=tag_list[2].title len=titLen append=append/]</a>&nbsp;</span>
+								<br /> &nbsp;
+								<span><a href="${tag_list[3].url}" target="_blank">[@text_cut s=tag_list[3].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[4].url}" target="_blank">[@text_cut s=tag_list[4].title len=titLen append=append/] </a>&nbsp;</span>
+								<br />
+							</div>
+						</div>
+						<div class="left_l_xjxw_400_112_solid">
+							<div class="left_l_xjxw_bt_10">
+							</div>
+							<div class="left_l_xjxw_bt">
+								<span><a href="${tag_list[5].url}" target="_blank">[@text_cut s=tag_list[5].title len=titLen append=append/]</a></span>
+							</div>
+							<div class="left_l_xjxw_bt_lit">
+								&nbsp;<span><a href="${tag_list[6].url}" target="_blank">[@text_cut s=tag_list[6].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[7].url}" target="_blank">[@text_cut s=tag_list[7].title len=titLen append=append/]</a>&nbsp;</span>
+								<br /> &nbsp;
+								<span><a href="${tag_list[8].url}" target="_blank">[@text_cut s=tag_list[8].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[9].url}" target="_blank">[@text_cut s=tag_list[9].title len=titLen append=append/]</a>&nbsp;</span>
+								<br />
+							</div>
+						</div>
+						<div class="left_l_xjxw_400_112">
+							<div class="left_l_xjxw_bt_10">
+							</div>
+							<div class="left_l_xjxw_bt">
+								<span><a href="${tag_list[10].url}" target="_blank">[@text_cut s=tag_list[10].title len=titLen append=append/]</a></span>
+							</div>
+							<div class="left_l_xjxw_bt_lit">
+								&nbsp;<span><a href="${tag_list[11].url}" target="_blank">[@text_cut s=tag_list[11].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[12].url}" target="_blank">[@text_cut s=tag_list[12].title len=titLen append=append/]</a>&nbsp;</span>
+								<br /> &nbsp;
+								<span><a href="${tag_list[13].url}" target="_blank">[@text_cut s=tag_list[13].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[14].url}" target="_blank">[@text_cut s=tag_list[14].title len=titLen append=append/]</a>&nbsp;</span>
+								<br />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			[/@cms_content_list]
+			<div style="width:400px; height:40px; margin-top:10px;">
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="400" height="40" align="absbottom">
+    				<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20170221yl.swf" />
+    				<param name="wmode" value="opaque" />
+    				<param name="quality" value="high" />
+    				<param name="SCALE" value="exactfit" />
+    				<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20170221yl.swf" width="400" height="40" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+				</object>
+			</div>
+			<!--本地生活bdsh-->
+			<div class="bdsh">
+				<div class="bdsh_40">
+					<div class="bdsh_85left" id="bdsh1">
+						<span class="bdsh_85left_bt"><a href="http://www.xinjiangnet.com.cn/gwpd/" target="_blank">本地生活</a></span>
+					</div>
+					<div class="bdsh_85left_10">
+					</div>
+					<div class="bdsh_85left1" id="bdsh2">
+						<span class="bdsh_85left_bt"><a href="http://www.xinjiangnet.com.cn/xjhpp/" target="_blank">好品牌</a></span>
+					</div>
+					<div class="bdsh_85left_10">
+					</div>
+					<div class="bdsh_85left1" id="bdsh3">
+					</div>
+					<div class="bdsh_85left_125">
+					</div>
+				</div>
+				<div class="bdsh_400_block">
+					<div class="bdsh_400_20">
+					</div>
+					<div class="bdsh_400_160">
+						<ul>
+							[@cms_content_list count='2' channelId='75' titLen='10' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
+								<li>
+									<a href="${a.url}">
+										<IMG src="${a.typeImg}" width="184" height="120">
+									</a>
+									<br>
+									<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+								</li>
+							[/#list] 
+							[/@cms_content_list]
+						</ul>
+					</div>
+					<div class="bdsh_400_100">
+						<ul>
+ 
+						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+						[#if a_index%2==0]
+							<li>
+ 								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="float: left; margin: 13px 8px 13px 13px;">
+						[/#if]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+						[#if a_index%2==0&&a_index!=0]
+							</li>
+						[/#if]
+						[/#list] 
+						[/@cms_content_list]
+						
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--本地生活-->
+		</div>
+		<!--左-->
+		<!--右-->
+		<div class="bjtj_245">
+			<div class="bjtj_245_t_l">
+				<span class="bjtj_245_t_l_bt">编辑推荐</span>
+			</div>
+			<div class="bjtj_245_t_r">
+				<span class="bjtj_245_t_r_bt"><a href="http://wlmq.wenming.cn/" target="_blank"><img src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20160629wlmqwmw.jpg" style="margin-top:13px;"></a>&nbsp;</span>
+			</div>
+			<div class="bjtj_245_t_nr">
+				<div class="width675_right_clear20" style="height: 10px;"></div>
+				<style>
+					.lyjt_240_600 ul li {
+						font-size: 14px;
+						line-height: 22px;
+						font-weight: 100;
+					}
+					
+					.lyjt_240_600 .temp {
+						height: 20px;
+						border-bottom: 0px dashed #000;
+					}
+					
+					.lyjt_240_600 .titlecolor {
+						color: #000
+					}
+				</style>
+				<div class="lyjt_240_600">
+					<ul>
+					[@cms_content_list count='16' channelId='75' titLen='16' channelOption='1' typeId='2'] 
+					[#list tag_list as a]
+						
+							[#if a_index==0]
+								<li style="font-weight:bold; ">
+							 	<div class="width675_right_tp1" style="height: 180px;display: block; ">
+							[#else]
+							<li style="font-weight:100; ">
+								<div class="width675_right_tp1" style="height: 180px;display: none; ">
+							[/#if]
+								<div class="width675_right_tp1_pic">
+									<a href="${a.url}">
+										<IMG src="${a.typeImg}" width="240" height="170">
+									</a>
+								</div>
+							</div>
+							<!--<span style="float: left;display: none; ">&middot;&nbsp;</span>-->
+							<a href="${a.url}" target="_blank" class="titlecolor">[@text_cut s=a.title len=titLen append=append/]</a>
+						</li>
+						
+						[#if a_index%5==0&&a_index!=0]
+						<li class="temp"></li>
+						[/#if]
+					[/#list] 
+					[/@cms_content_list]
+					</ul>
+				</div>
+				<script language="javascript">
+					$(function() {
+						$(".lyjt_240_600 li").mouseenter(function() {
+							if($(this).attr('class') == "temp")
+								return;
+							$(this).parent().find("div").hide();
+							$(this).find("div").eq(0).show();
+							$(this).find("div").eq(0).find("div").show();
+							$(this).parent().find("li .titlecolor").css('font-weight', '100');
+							$(this).find(".titlecolor").css('font-weight', 'bold');
+							//$(this).parent().find("li span").show();
+							//$(this).find("span").hide(); 
+						});
+					});
+				</script>
+			</div>
+		</div>
+		<!--右-->
+	</div>
+	<div class="clear675_30">
+	</div>
+	<!--广告位一-->
+	<div class="adv675clear">
+		<script type="text/javascript">
+			var NowImg = 1; //表示当前显示的div
+			var MaxImg = 3; //表示div的个数
+			function show400160() {
+				for(var i = 1; i <= MaxImg; i++) {
+					if(NowImg == i)
+						document.getElementById("divabs" + NowImg).style.display = 'block'; //当前显示的div
+					else
+						document.getElementById("divabs" + i).style.display = 'none';
+				}
+				if(NowImg == MaxImg) //判断当前div是否是最后一个，如果是则从第一个重新轮回显示
+					NowImg = 1;
+				else
+					NowImg++; //设置下一个显示的图片
+			}
+			theTimer = setInterval("show400160()", 3000); //设置定时器，显示下一个图片，10000表示每间隔10秒，可以改的。。。
+		</script>
+		<div style="width:670px; height:160px;margin:0px auto;">
+			<div id="divabs1" style="display:block;">
+				<a href="http://e.cn.miaozhen.com/r/k=2043372&p=77N8f&dx=__IPDX__&rt=&o=http://www.ehaier.com/" target="_blank">
+					<img src="http://g.cn.miaozhen.com/x/k=2043372&p=77N8f&dx=__IPDX__&rt=2&o=http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180402haierjkj.jpg" />
+				</a>
+			</div>
+			<div id="divabs2" style="display:none;">
+				<a href="http://special.xinjiangnet.com.cn/160613/" target="_blank">
+					<img src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20170531zw135-2.jpg" />
+				</a>
+			</div>
+			<div id="divabs3" style="display:none;">
+				<a href="http://special.xinjiangnet.com.cn/171024/" target="_blank">
+					<img src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20171031wdjcbbmmzb.jpg" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<!--广告位一-->
+	<div class="clear675_30">
+	</div>
+	<div class="width675">
+		<div class="width675_left">
+			<!--公益-->
+			<div class="width675_left_80">
+				<div class="width675_left_80_l">
+					<a href="http://www.xinjiangnet.com.cn/gypd/" target="_blank">
+						<img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_gy.jpg" border="0">
+					</a>
+				</div>
+				<div class="width675_left_80_r">
+					<ul>
+						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+						[#if a_index%2==0]
+							<li>
+						[/#if]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
+						[#if a_index%2==0&&a_index!=0]
+							</li>
+						[/#if]
+						[/#list] 
+						[/@cms_content_list]
+					</ul>
+				</div>
+			</div>
+			<div class="width675_left_80_clear30">
+			</div>
+			<!--房产-->
+			<div class="width675_left_80">
+				<div class="width675_left_80_l">
+					<a href="http://www.xinjiangnet.com.cn/fcpd/" target="_blank"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_fc.jpg" border="0"></a>
+				</div>
+				<div class="width675_left_80_r">
+					<ul>
+						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+						[#if a_index%2==0]
+							<li>
+						[/#if]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
+						[#if a_index%2==0&&a_index!=0]
+							</li>
+						[/#if]
+						[/#list] 
+						[/@cms_content_list]
+					</ul>
+				</div>
+			</div>
+			<div class="width675_left_80_clear30">
+			</div>
+			<!--汽车-->
+			<div class="width675_left_80">
+				<div class="width675_left_80_l">
+					<a href="http://www.xinjiangnet.com.cn/qc/" target="_blank"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_qc.jpg" border="0"></a>
+				</div>
+				<div class="width675_left_80_r">
+					<ul>
+						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+						[#if a_index%2==0]
+							<li>
+						[/#if]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
+						[#if a_index%2==0&&a_index!=0]
+							</li>
+						[/#if]
+						[/#list] 
+						[/@cms_content_list]
+					</ul>
+				</div>
+			</div>
+			<div class="width675_left_80_clear20">
+			</div>
+			<div class="xjw_adv400_160">
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="400" height="160" align="absbottom">
+    										<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20161208shy_z.swf" />
+    										<param name=wmode value=opaque />
+    										<param name="quality" value="high" />
+    										<param name="SCALE" value="exactfit" />
+    										<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20161208shy_z.swf" width="400" height="160" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+										</object>
+			</div>
+			<div class="width675_left_80_clear20">
+			</div>
+			<!--婚恋-->
+			<div class="width675_left_80">
+				<div class="width675_left_80_l">
+					<a href="http://www.xinjiangnet.com.cn/xwzx/xz/" target="_blank"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_xz.jpg" border="0"></a>
+				</div>
+				<div class="width675_left_80_r">
+					<ul>
+						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+						[#if a_index%2==0]
+							<li>
+						[/#if]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
+						[#if a_index%2==0&&a_index!=0]
+							</li>
+						[/#if]
+						[/#list] 
+						[/@cms_content_list]
+					</ul>
+				</div>
+			</div>
+			<div class="width675_left_80_clear30">
+			</div>
+			<!--亲子-->
+			<div class="width675_left_80">
+				<div class="width675_left_80_l">
+					<a href="http://www.xinjiangnet.com.cn/qzpd/" target="_blank"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_qz.jpg" border="0"></a>
+				</div>
+				<div class="width675_left_80_r">
+					<ul>
+						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+						[#if a_index%2==0]
+							<li>
+						[/#if]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
+						[#if a_index%2==0&&a_index!=0]
+							</li>
+						[/#if]
+						[/#list] 
+						[/@cms_content_list]
+					</ul>
+				</div>
+			</div>
+			<div class="width675_left_80_clear30">
+			</div>
+			<!--健康-->
+			<div class="width675_left_80">
+				<div class="width675_left_80_l">
+					<a href="http://www.xinjiangnet.com.cn/jkpd/"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_jk.jpg" border="0"></a>
+				</div>
+				<div class="width675_left_80_r">
+					<ul>
+						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+						[#if a_index%2==0]
+							<li>
+						[/#if]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
+						[#if a_index%2==0&&a_index!=0]
+							</li>
+						[/#if]
+						[/#list] 
+						[/@cms_content_list]
+					</ul>
+				</div>
+			</div>
+			<div class="width675_left_80_clear20">
+			</div>
+			<!--本地生活bdsh-->
+			<div class="bdsh">
+				<script type="text/javascript">
+					function picdisplay1(num2) {
+						for(jj1 = 1; jj1 < 3; jj1++) {
+							document.getElementById("bdshs" + jj1).style.borderBottom = "2px solid #dddddd";
+							document.getElementById("bdshas" + jj1).style.display = "none"
+						}
+						document.getElementById("bdshs" + num2).style.borderBottom = "2px solid #F00";
+						document.getElementById("bdshas" + num2).style.display = "block"
+					}
+				</script>
+				<div class="bdsh_40">
+					<div class="bdsh_85left" id="bdshs1" style="width:45">
+						<span class="bdsh_85left_bt" onMouseMove="javascript:picdisplay1(1)"><a href="http://www.xinjiangnet.com.cn/ylpd/">娱乐</a></span>
+					</div>
+					<div class="bdsh_85left_10">
+					</div>
+					<div class="bdsh_85left1" id="bdshs2" style="width:45">
+						<span class="bdsh_85left_bt" onMouseMove="javascript:picdisplay1(2)"><a href="http://www.xinjiangnet.com.cn/typd/" target="_blank">体育</a></span>
+					</div>
+					<div class="bdsh_85left_10">
+					</div>
+					<div class="bdsh_85left1" style="width:105">
+					</div>
+					<div class="bdsh_85left_125">
+					</div>
+				</div>
+				<div class="bdsh_400_block" id="bdshas1">
+					<div class="bdsh_400_20">
+					</div>
+					<div class="bdsh_400_160">
+						<ul>
+							[@cms_content_list count='2' channelId='75' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
+							<li>
+								<a href="${a.url}">
+									<IMG src="${a.typeImg}" width="184" height="120">
+								</a>
+								<br>
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=12 append=append/]</a>
+							</li>
+							[/#list] 
+							[/@cms_content_list]
+						</ul>
+					</div>
+					<div class="bdsh_400_150">
+						<ul>
+						[@cms_content_list count='10' channelId='75' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+						[#if a_index%2==0]
+							<li style="overflow: hidden;">
+								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="margin: 13px 0px;">
+						[/#if]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+						[#if a_index%2==0&&a_index!=0]
+							</li>
+						[#else]
+							&nbsp;
+						[/#if]
+						[/#list] 
+						[/@cms_content_list]
+						</ul>
+					</div>
+				</div>
+				<div class="bdsh_400_none" id="bdshas2">
+					<div class="bdsh_400_20">
+					</div>
+					<div class="bdsh_400_160">
+						<ul>
+							[@cms_content_list count='2' channelId='75' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
+							<li>
+								<a href="${a.url}">
+									<IMG src="${a.typeImg}" width="184" height="120">
+								</a>
+								<br>
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+							</li>
+							[/#list] 
+							[/@cms_content_list]
+						</ul>
+					</div>
+					<div class="bdsh_400_150">
+						<ul>
+						[@cms_content_list count='10' channelId='75' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+						[#if a_index%2==0]
+							<li style="overflow: hidden;">
+								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="margin: 13px 0px;">
+						[/#if]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+						[#if a_index%2==0&&a_index!=0]
+							</li>
+						[#else]
+							&nbsp;
+						[/#if]
+						[/#list] 
+						[/@cms_content_list]
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="width675_left_80_clear20">
+			</div>
+			<div class="xjw_adv400_160">
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="400" height="160" align="absbottom">
+    				<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180502byds.swf" />
+    				<param name=wmode value=opaque />
+    				<param name="quality" value="high" />
+    				<param name="SCALE" value="exactfit" />
+    				<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180502byds.swf" width="400" height="160" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+				</object>
+			</div>
+			<div class="width675_left_80_clear20">
+			</div>
+			<div class="xjw_cj">
+				<div class="xjw_cjleft">
+					<span class="xjw_cjleft_bt">财经</span>
+				</div>
+				<div class="xjw_cjleft1" style="text-align:left;">
+				</div>
+				<div class="xjw_cjleft_gd">
+					<span class="xjw_cjleft_gd_bt"><a href="http://www.xinjiangnet.com.cn/cjpd/" target="_blank">更多</a></span>
+				</div>
+			</div>
+			<div class="width675_left_80_clear10">
+			</div>
+			<div class="width675_cjnr">
+				<div class="width675_cjnr_left">
+					[@cms_content_list count='1' channelId='75' titLen='12' channelOption='1' typeId='2'] 
+					[#list tag_list as a]
+					<a href="${a.url}">
+						<IMG src="${a.typeImg}" width="185" height="120">
+					</a>
+					<div class="width675_cjnr_left_bg"></div>
+					<!-- 背景補丁層 -->
+					<div class="width675_cjnr_left_writing">
+						<p>
+							<a href="${a.url}" target="_blank" class="white">[@text_cut s=a.title len=titLen append=append/]</a>
+						</p>
+					</div>
+					[/#list] 
+					[/@cms_content_list]
+				</div>
+				<div class="width675_cjnr_right" style="margin-top:5px;">
+					<ul>
+						[@cms_content_list count='5' channelId='75' titLen='12' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+						
+							<li>
+								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style=" margin: 10px 0px;">
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+							</li>
+							 
+						[/#list] 
+						[/@cms_content_list]
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="width675_right">
+			<!--每日调查-->
+			<div class="xjw_mrdc">
+				<div class="xjw_mrdcleft">
+					<span class="xjw_mrdcleft_bt">每日调查</span>
+				</div>
+				<div class="xjw_mrdcleft1">
+				</div>
+				<div class="xjw_mrdcleft_gd">
+					<span class="xjw_mrdcleft_gd_bt"><a href="http://www.xinjiangnet.com.cn/xwzx/mrdc/" target="_blank">更多</a></span>
+				</div>
+			</div>
+			<div class="width675_right_clear10">
+			</div>
+			<!--每日调查内容-->
+			<div class="width675_mrdcnr">
+				<div class="right_hei">
+					<form id="vote8" action="http://app.xinjiangnet.com.cn/?app=vote&controller=vote&action=ajaxvote" method="GET" onsubmit="return false;">
+						<input name="app" type="hidden" value="vote" />
+						<input name="controller" type="hidden" value="vote" />
+						<input name="action" type="hidden" value="ajaxvote" />
+						<input name="contentid" type="hidden" value="2073824" />
+						<input name="type" type="hidden" value="radio" />
+						<input id="image_action" type="hidden" action="image" />
+						<input name="maxoptions" type="hidden" value="1" />
+						<div style="font-weight:bold;font-size:14px;line-height: 24px;">你是否被微信工作群“绑架”？</div>
+						<label style="display: block;padding: 4px 0;font-size: 14px;line-height: 22px;">
+            <input type="radio" name="optionid" value="2159">
+            生活被工作群“绑架”                    </label>
+						<label style="display: block;padding: 4px 0;font-size: 14px;line-height: 22px;">
+            <input type="radio" name="optionid" value="2160">
+            除了工作还要帮同事投票！                    </label>
+						<label style="display: block;padding: 4px 0;font-size: 14px;line-height: 22px;">
+            <input type="radio" name="optionid" value="2161">
+            怀念之前没有微信工作群的日子                    </label>
+						<div style="display:none;">
+							<input type="text" class="check-txt" name="seccode" style="float: left;width: 100px;" />
+							<img src="http://app.xinjiangnet.com.cn/?app=system&controller=seccode&action=image" id="seccodeimg" onclick="this.src = 'http://app.xinjiangnet.com.cn/?app=system&controller=seccode&action=image&id=' + Math.random() * 5;" style="cursor:pointer;padding-left: 5px;" alt="验证码,看不清楚?请点击刷新验证码" align="absmiddle" />
+							<a href="javascript:;" onclick="$(this).prev().click();" class="other">换一张？</a>
+						</div>
+						<div class="center" style="padding: 5px 0 0 0;">
+							<button href="javascript:void(0);" data-role="submit" style="border:0;padding: 0px;"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/toupiao_03.jpg"></button>
+							<button onclick="window.open('http://www.xinjiangnet.com.cn/2018/0517/2073824.shtml');" style="border:0;padding: 0px;"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/chakan_06.jpg" ></button>
+							<button onclick="submit11(this)" style="border:0;display: none;">投票</button>&nbsp;&nbsp;
+							<span class="vote-message" style="display:none">投票成功，感谢您的参与</span>
+						</div>
+					</form>
+				</div>
+				<script type="text/javascript">
+					$.ajaxSetup({
+						jsonp: 'jsoncallback'
+					});
+
+					function vote(url, data, callback) {
+						$.getJSON(url + (url.indexOf('?') > -1 ? '&' : '?') + 'jsoncallback=?', data, function(json) {
+							$.isFunction(callback) && callback(json);
+						});
+					}
+
+					function submit11(obj) {
+						if(obj === null)
+							obj = form.find('[data-role=submit]');
+						var form = $('#vote8'),
+							url = form.attr('action'),
+							type = form.find('[name=type]').val(),
+							maxoptions = parseInt(form.find('[name=maxoptions]').val()),
+							lock = false;
+						contentid = form.find('[name=contentid]').val();
+						if(lock)
+							return false;
+						var checkedLength = form.find(':checked').length;
+						if(!checkedLength) {
+							alert('请选择投票选项');
+							return false;
+						}
+						if(type == 'checkbox' && maxoptions && maxoptions < checkedLength) {
+							alert('最多可以选择 ' + maxoptions + ' 项');
+							return false;
+						}
+						lock = true;
+						vote(url, decodeURIComponent(form.serialize()), function(json) {
+							if(json && json.state) {
+								if(typeof(obj) == "undefined")
+									obj = $('#vote8').find('[data-role=submit]');
+								var button = obj;
+								button.onclick = null;
+								$('.vote-message').show();
+								button.remove()
+							} else {
+								lock = false;
+								alert(json && json.error || '投票失败，请重新尝试');
+							}
+						});
+						return false;
+					}
+					var form = $('#vote8'),
+						url = form.attr('action'),
+						button2 = form.find('[data-role=submit]');
+					button2.seccode({
+						form: form,
+						validate: submit11
+					});
+				</script>
+			</div>
+			<div class="width675_right_clear20">
+			</div>
+			<!--图片-->
+			<div class="width675_right_tp">
+				<div>
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="240" height="80" align="absbottom">
+    					<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180102shy_shf.swf" />
+    					<param name=wmode value=opaque />
+    					<param name="quality" value="high" />
+    					<param name="SCALE" value="exactfit" />
+    					<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180102shy_shf.swf" width="240" height="80" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+					</object>
+				</div>
+				<div class="width675_right_clear10">
+				</div>
+				<div>
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="240" height="80" align="absbottom">
+    					<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180502_ydyl_240 80.swf" />
+    					<param name=wmode value=opaque />
+    					<param name="quality" value="high" />
+    					<param name="SCALE" value="exactfit" />
+    					<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180502_ydyl_240 80.swf" width="240" height="80" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+					</object>
+				</div>
+			</div>
+			<div class="width675_right_clear20">
+			</div>
+			<!--图片-->
+			<div class="width675_right_tp">
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="240" height="160" align="absbottom">
+    				<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180329shouy_damei_gaoxin.swf" />
+    				<param name=wmode value=opaque />
+    				<param name="quality" value="high" />
+    				<param name="SCALE" value="exactfit" />
+    				<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180329shouy_damei_gaoxin.swf" width="240" height="160" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+				</object>
+			</div>
+			<div class="width675_right_clear20">
+			</div>
+			<!--美食-->
+			<div class="xjw_mrdc">
+				<div class="xjw_mrdcleft" style="width:45px;">
+					<span class="xjw_mrdcleft_bt"><a href="http://www.xinjiangnet.com.cn/mspd/" target="_blank">美食</a></span>
+				</div>
+				<div class="xjw_mrdcleft1" style="width:155px;text-align:left;">
+					<span class="xjw_mrdcleft_bt">&nbsp;&nbsp;&nbsp;<a href="http://www.xinjiangnet.com.cn/qnw/" target="_blank">喜乐咖</a></span>
+				</div>
+				<div class="xjw_mrdcleft_gd">
+				</div>
+			</div>
+			<div class="width675_right_clear20">
+			</div>
+			<!--美食内容-->
+			<div class="xjw_msnr">
+				<div class="xjw_msnr_bt">
+					[@cms_content_list count='1' channelId='75' descLen='30' titLen='8' channelOption='1' typeId='2'] 
+					[#list tag_list as a]
+					<div class="xjw_msnr_bt_l">
+						<div class="xjw_msnr_bt_l_pic">
+							<a href="${a.url}">
+								<IMG src="${a.typeImg}" width="120" height="86">
+							</a>
+						</div>
+						<div class="xjw_msnr_bt_l_bg"></div>
+						<!-- 背景補丁層 -->
+						<div class="xjw_msnr_bt_l_writing">
+							<p>
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+							</p>
+						</div>
+					</div>
+					<div class="xjw_msnr_bt_r">
+						[@text_cut s=a.desc len=descLen append=append/]
+						<a href="${a.url}" target="_blank">[详细]</a>
+					</div>
+					[/#list] 
+					[/@cms_content_list]
+				</div>
+				<div class="width675_right_clear10">
+				</div>
+				<div class="xjw_msnr_xw">
+					<ul>
+						[@cms_content_list count='4' channelId='75' titLen='15' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+							<li>
+								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="margin: 10px 0px;">
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+							</li>
+						[/#list]
+						[/@cms_content_list]
+					</ul>
+				</div>
+			</div>
+			<div class="width675_right_clear20">
+			</div>
+			<!--图片-->
+			<div class="width675_right_tp">
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="240" height="160" align="absbottom">
+    				<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20171012kx.swf" />
+    				<param name=wmode value=opaque />
+    				<param name="quality" value="high" />
+    				<param name="SCALE" value="exactfit" />
+    				<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20171012kx.swf" width="240" height="160" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+				</object>
+			</div>
+			<div class="width675_right_clear30">
+			</div>
+			<!--旅游交通-->
+			<div class="lyjt">
+				<script type="text/javascript">
+					function lyjt(num2) {
+						for(lnum = 1; lnum < 3; lnum++) {
+							document.getElementById("lyjt" + lnum).style.borderBottom = "2px solid #dddddd";
+							document.getElementById("lyjts" + lnum).style.display = "none"
+						}
+						document.getElementById("lyjt" + num2).style.borderBottom = "2px solid #F00";
+						document.getElementById("lyjts" + num2).style.display = "block"
+					}
+				</script>
+				<div class="lyjt_240">
+					<div class="lyjt_240left" id="lyjt1">
+						<span class="lyjt_240left_bt" onMouseMove="javascript:lyjt(1)"><a href="http://www.xinjiangnet.com.cn/ly/" target="_blank">旅游</a></span>
+					</div>
+					<div class="lyjt_240left_10">
+					</div>
+					<div class="lyjt_240left1" id="lyjt2">
+						<span class="lyjt_240left_bt" onMouseMove="javascript:lyjt(2)"><a href="http://www.xinjiangnet.com.cn/xwzx/jt/">交通</a></span>
+					</div>
+					<div class="lyjt_240left_100">
+					</div>
+				</div>
+				<div class="width675_right_clear20">
+				</div>
+				<div class="lyjt_240_block" id="lyjts1">
+					<div class="lyjt_240_176">
+						<ul>
+							[@cms_content_list count='4' channelId='75' titLen='8' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
+							<li>
+								<div class="lyjt_240_176_tp">
+									<div class="lyjt_240_176_tp_left" style="height: 98px;">
+										<a href="${a.url}">
+											<IMG src="${a.typeImg}" width="118" height="86">
+										</a>
+										<div class="lyjt_240_176_tp_bg"></div>
+										<!-- 背景補丁層 -->
+										<div class="lyjt_240_176_tp_writing">
+											<p>
+												<a href="${a.typeImg}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							[/#list] 
+							[/@cms_content_list]
+						</ul>
+					</div>
+					<div class="width675_right_clear20">
+					</div>
+					<div class="lyjt_240_150">
+						<ul>
+							[@cms_content_list count='10' channelId='75' titLen='16' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+							 
+							<li>
+								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="margin: 10px 0px;">
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=16 append=append/]</a>
+							</li>
+							 
+							[/#list] 
+							[/@cms_content_list]
+						</ul>
+					</div>
+				</div>
+				<div class="lyjt_240_none" id="lyjts2">
+					<div class="lyjt_240_176">
+						<div class="width675_right_tp">
+							<div class="width675_right_tp_left">
+								[@cms_content_list count='1' channelId='75' channelOption='1' typeId='2'] 
+								[#list tag_list as a]
+								<a href="${a.url}">
+									<IMG src="${a.typeImg}" width="240" height="160">
+								</a>
+								<div class="width675_right_tp_bg"></div>
+								<!-- 背景補丁層 -->
+								<div class="width675_right_tp_writing">
+									<p>
+										<a href="${a.url}" target="_blank">[@text_cut s=a.title len=15 append=append/]</a>
+									</p>
+								</div>
+								[/#list] 
+								[/@cms_content_list]
+							</div>
+						</div>
+					</div>
+					<div class="width675_right_clear20">
+					</div>
+					<div class="lyjt_240_150">
+						<ul>
+							[@cms_content_list count='7' channelId='75' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+							 
+							<li>
+								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="margin: 10px 0px;">
+								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=16 append=append/]</a>
+							</li>
+							 
+							[/#list] 
+							[/@cms_content_list]
+						</ul>
+					</div>
+				</div>
+				<div class="width675_right_clear20">
+				</div>
+				<div class="xjw_adv240_90">
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="240" height="90" align="absbottom">
+    					<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180510shy_songyuemaojin.swf" />
+    					<param name=wmode value=opaque />
+    					<param name="quality" value="high" />
+    					<param name="SCALE" value="exactfit" />
+    					<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180510shy_songyuemaojin.swf" width="240" height="90" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+					</object>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
