@@ -1,0 +1,196 @@
+/* 布局 */
+
+.programa-Layout .column .column-aside {
+	width: 300px;
+	float: right;
+	_display: inline;
+}
+
+.programa-Layout .column .column-main {
+	width: 650px;
+	float: left;
+	_display: inline;
+}
+
+.programa-Layout .column .column-aside {
+	width: 300px;
+	float: right;
+	_display: inline;
+}
+
+.programa-Layout .column .column-main {
+	width: 650px;
+	float: left;
+	_display: inline;
+}
+
+.programa-Layout .column .column-aside {
+	float: right;
+	_display: inline;
+}
+
+.programa-Layout .column .column-main .column-ov {
+	margin-left: -10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+
+/* 面包屑 */
+
+.programa-crumb {
+	width: 980px;
+	clear: both;
+	margin: 0 auto 10px;
+	border-bottom: 1px solid #999;
+	padding: 0 0 11px 0;
+	;
+}
+
+.programa-crumb .crumb {
+	margin-left: 10px;
+}
+
+.programa-crumb .crumb em {
+	padding: 0 4px;
+	font-family: SimSun;
+}
+
+.programa-crumb .crumb a:hover {
+	color: #cc0000;
+}
+
+.programa-crumb .crumb span {
+	color: #444444;
+}
+
+
+/* 左边列表 */
+
+.list-text-box {
+	border: 0;
+}
+
+.list-text-box .list-pic-text {
+	margin: 0 10px 10px 0;
+}
+
+.list-text-box .list-pic-text .h-pic {
+	border-bottom: 1px dashed #cccccc;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.list-text-box .list-pic-text .h-pic .thumb {
+	float: left;
+	_display: inline;
+	margin-right: 17px;
+}
+
+.list-text-box .list-pic-text .h-pic .title {
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color: #050505;
+	line-height: 40px;
+	height: 40px;
+}
+
+.list-text-box .list-pic-text .h-pic .summary {
+	line-height: 26px;
+	height: 85px;
+	overflow: hidden;
+	_zoom: 1;
+	margin-top: 4px;
+	font-size: 14px;
+	text-indent: 30px;
+}
+
+.list-text-box .list-pic-text .h-pic .thumb {
+	margin-top: -10px;
+}
+
+.list-text-box .list-pic-text .h-pic .title {
+	margin-top: 0;
+}
+
+.list-text-box .list-pic-text .h-pic .title a {}
+
+.list-text-box .list-pic-text .h-pic .title a:hover {
+	color: #c00;
+}
+
+.list-text-box .list-pic-text .h-pic .summary {
+	color: #666;
+}
+
+.list-text-box .list-pic-text .h-pic .summary .more {
+	color: #c30;
+}
+
+
+/*分页*/
+
+.page-box {
+	margin: 20px 115px;
+	text-align: center;
+}
+
+.page-box .page a,
+.page-box .page span {
+	padding: 2px 7px;
+	margin: 0 4px;
+	font-size: 12px;
+}
+
+.page-box .page ._now {
+	background-color: #930909;
+	color: #ffffff;
+	border-color: #930909;
+}
+
+.page-box .page a {
+	border: 1px solid #cccccc;
+	float: left;
+	_display: inline;
+}
+
+.page-box .page a:hover {
+	background-color: #930909;
+	color: #ffffff;
+	border-color: #930909;
+}
+
+.page-box .page .disable,
+.page-box .page .disable:hover {
+	color: #cccccc;
+	background-color: #FFF;
+	border: 1px solid #cccccc;
+}
+
+.page-box .page .now {
+	background-color: #930909;
+	color: #ffffff;
+	border-color: #930909;
+}
+
+.list-pic-text .page-box {
+	height: 20px;
+}
+
+.fx {
+	width: 650px;
+	margin-top: 10px;
+}
+
+.riqi {
+	float: left;
+	font-size: 14px;
+	line-height: 26px;
+	color: bbbbbb;
+}
+
+.bdshare_t {
+	float: left;
+	margin-left: 400px;
+}

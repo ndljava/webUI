@@ -1,0 +1,801 @@
+@charset "utf-8";
+/* CSS Document */
+.updiv {
+	width: 980px;
+	margin: 10px auto;
+}
+/*    导航 开始 */
+body {
+	font-family: "微软雅黑";
+}
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	font-weight: normal;
+}
+.navbox {
+	float: left;
+	width: 980px;
+	height: 40px;
+}
+#nav ul {
+	border-top: 3px solid #851616;
+	border-bottom: 1px solid #dedede;
+	border-left: 1px solid #dedede;
+	width: 980px;
+	height: 36px;
+	margin: 0;
+	padding: 0px;
+}
+#nav li {
+	width: 138px;
+	height: 36px;
+	font-size: 14px;
+	border-right: 1px solid #dedede;
+	text-align: center;
+	line-height: 36px;
+	float: left;
+	margin-left: 0px;
+	padding: 0;
+}
+#nav li#short_title {
+	width: 128px;
+}
+#nav li#short_title a {
+	width: 128px;
+}
+#nav li#long_title {
+	width: 153px;
+}
+#nav li#long_title a {
+	width: 153px;
+}
+#nav a {
+	display: block;
+	width: 138px;
+	height: 36px;
+	color: #000;
+}
+#nav a:link {
+	color: #000;
+}
+#nav a:hover {
+	color: #FFF;
+	background: #960101;
+	width: 138px;
+	height: 36px;
+}
+/*    导航 结束 */
+/*      左侧部分 开始      */
+.leftbox {
+	float: left;
+	width: 565px;
+	margin-top: 15px;
+}
+.flash {
+	float: left;
+	width: 565px;
+	height: 353px;
+	margin-bottom: 40px;
+}
+.gy_tj {
+	float: left;
+	width: 565px;
+}
+.biaoti1 {
+	float: left;
+	width: 565px;
+	height: 30px;
+	border-bottom: solid 1px #D5D5D5;
+	margin-bottom: 20px;
+}
+.bt_pic1 {
+	float: left;
+	width: 105px;
+	height: 30px;
+	border-bottom: solid 3px #AB0505;
+}
+.gd {
+	float: right;
+	width: 50px;
+	color: #676666;
+	font-size: 12px;
+	margin-top: 10px;
+}
+.temp1 {
+	float: left;
+	width: 565px;
+	height: 1px;
+	margin: 21px 0;
+	background-color: #EEE;
+}
+.wen1 {
+	float: left;
+	width: 565px;
+	height:
+}
+.wen1_left {
+	float: left;
+	width: 246px;
+	height: 148px;
+}
+.wen1_right {
+	float: right;
+	width: 305px;
+	height: 148px;
+}
+.da_bt {
+	float: left;
+	width: 305px;
+	font-size: 16px;
+	line-height: 32px;
+}
+.wen1_w {
+	float: left;
+	width: 305px;
+	color: #666;
+	font-size: 12px;
+	line-height: 20px;
+}
+.xx {
+	color: #BA2636;
+}
+.need_help {
+	float: left;
+	width: 565px;
+	margin: 50px 0 20px;
+	0;
+}
+.biaoti2 {
+	float: left;
+	width: 565px;
+	height: 30px;
+	border-bottom: solid 1px #D5D5D5;
+	margin-bottom: 15px;
+}
+.bt_pic2 {
+	float: left;
+	width: 195px;
+	height: 30px;
+	border-bottom: solid 3px #AB0505;
+}
+.help {
+	float: right;
+	width: 80px;
+	margin-top: 5px;
+}
+.buluoht {
+	float: left;
+	width: 565px;
+	height: 218px;
+	background-color: #F9F8F8;
+}
+.ht_bt {
+	float: left;
+	width: 565px;
+	height: 32px;
+	border-left: solid 1px #D3D3D3;
+	border-bottom: solid 1px #D3D3D3;
+	border-top: solid 1px #D3D3D3;
+	text-align: center;
+	line-height: 32px;
+	font-size: 14px;
+}
+.ht_bt1 {
+	float: left;
+	width: 36%;
+	height: 32px;
+	border-right: solid 1px #D3D3D3;
+}
+.ht_bt2 {
+	float: left;
+	width: 16%;
+	height: 32px;
+	border-right: solid 1px #D3D3D3;
+}
+.ht_bt3 {
+	float: left;
+	width: 18%;
+	height: 32px;
+	border-right: solid 1px #D3D3D3;
+}
+.ht_bt4 {
+	float: left;
+	width: 10%;
+	height: 32px;
+	border-right: solid 1px #D3D3D3;
+}
+.ht_bt5 {
+	float: left;
+	width: 19%;
+	height: 32px;
+	border-right: solid 1px #D3D3D3;
+}
+.ht_w {
+	float: left;
+	width: 565px;
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 20px;
+	margin: 4px 0;
+}
+.help_ht1 {
+	float: left;
+	width: 195px;
+	margin-left: 10px;
+}
+.help_ht2 {
+	float: left;
+	width: 90px;
+	text-align: center;
+	color: #326B97;
+}
+.help_ht3 {
+	float: left;
+	width: 105px;
+	text-align: center;
+	color: #326B97;
+}
+.help_ht4 {
+	float: left;
+	width: 55px;
+	text-align: center;
+}
+.help_ht5 {
+	float: left;
+	width: 110px;
+	text-align: center;
+}
+.gy_zz {
+	float: left;
+	width: 565px;
+}
+.biaoti3 {
+	float: left;
+	width: 565px;
+	height: 30px;
+	border-bottom: solid 1px #D5D5D5;
+	margin: 15px 0;
+}
+.yigong {
+	float: left;
+	width: 182px;
+	height: 54px;
+	margin-bottom: 33px;
+	margin-right: 8px;
+}
+.yigongx {
+	float: left;
+	width: 182px;
+	height: 54px;
+	margin-bottom: 33px;
+}
+.yg_biao {
+	float: left;
+	width: 52px;
+	height: 51px;
+}
+.yg_w {
+	float: right;
+	width: 120px;
+}
+.yg_ti {
+	float: right;
+	width: 120px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	text-align: center;
+}
+.yg_wen {
+	float: right;
+	width: 120px;
+	font-family: "宋体";
+	font-size: 12px;
+	color: #6E6E6E;
+	line-height: 16px;
+}
+.yg_weibo {
+	float: left;
+	width: 565px;
+	height: 191px;
+	background-color: #F7F7F5;
+}
+.gy_pic {
+	float: left;
+	width: 565px;
+}
+.picbox {
+	float: left;
+	width: 565px;
+	height: 440px;
+	margin-bottom: 20px;
+}
+.picbox_left {
+	float: left;
+	width: 184px;
+	height: 439px;
+}
+.shadou1 {
+	float: left;
+	width: 184px;
+	height: 30px;
+	background: #000;
+	display: block;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	margin-top: -35px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+}
+.picbox_mid {
+	float: left;
+	width: 201px;
+	height: 439px;
+	margin-left: 4px;
+}
+.mid1 {
+	float: left;
+	width: 201px;
+	height: 145px;
+	margin-bottom: 4px;
+}
+.shadou2 {
+	float: left;
+	width: 201px;
+	height: 30px;
+	background: #000;
+	display: block;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	margin-top: -35px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+}
+.mid2 {
+	float: left;
+	width: 201px;
+	height: 292px;
+}
+.shadou3 {
+	float: left;
+	width: 201px;
+	height: 30px;
+	background: #000;
+	display: block;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	margin-top: -35px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+}
+.picbox_right {
+	float: right;
+	width: 172px;
+	height: 439px;
+}
+.boxright1 {
+	float: right;
+	width: 172px;
+	height: 276px;
+	margin-bottom: 4px;
+}
+.shadou4 {
+	float: left;
+	width: 172px;
+	height: 30px;
+	background: #000;
+	display: block;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	margin-top: -35px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+}
+.boxright2 {
+	float: right;
+	width: 172px;
+	height: 161px;
+}
+.shadou5 {
+	float: left;
+	width: 172px;
+	height: 30px;
+	background: #000;
+	display: block;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	margin-top: -35px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+}
+/*      左侧部分 结束      */
+/*      右侧部分 开始      */
+.rightbox {
+	float: right;
+	width: 383px;
+	margin-top: 15px;
+}
+.right1 {
+	float: left;
+	width: 383px;
+	height: 350px;
+}
+.right1_t {
+	float: left;
+	width: 383px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 36px;
+}
+.right1_w {
+	float: left;
+	width: 383px;
+	font-size: 12px;
+	color: #595656;
+	line-height: 24px;
+	margin-bottom: 10px;
+	s
+}
+.right1_lb {
+	float: left;
+	width: 383px;
+	font-size: 14px;
+	line-height: 28px;
+}
+.right2 {
+	float: left;
+	width: 383px;
+	margin-top: 28px;
+}
+.biaoti3 {
+	float: left;
+	width: 383px;
+	height: 30px;
+	border-bottom: solid 1px #D5D5D5;
+	margin-bottom: 20px;
+}
+.bt_pic3 {
+	float: left;
+	width: 205px;
+	height: 30px;
+	font-size: 20px;
+	color: #AB0505;
+}
+.right2_box {
+	float: left;
+	width: 383px;
+	height: 90px;
+}
+.temp2 {
+	float: left;
+	width: 383px;
+	height: 2px;
+	border-bottom: dashed 1px #E2E2E2;
+}
+.right2_ti {
+	float: left;
+	width: 383px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 28px;
+}
+.right2_w {
+	float: left;
+	width: 383px;
+	font-size: 12px;
+	color: #474747;
+	line-height: 24px;
+}
+.right2_an {
+	float: left;
+	width: 81px;
+	height: 24px;
+	margin: 8px 0 0 15px;
+}
+.right3 {
+	float: left;
+	width: 383px;
+}
+.zhiyuanzhe {
+	float: left;
+	width: 146px;
+	height: 22px;
+	margin: 6px 0 0 60px;
+}
+.bt_pic4 {
+	float: left;
+	width: 125px;
+	height: 30px;
+	font-size: 20px;
+	color: #AB0505;
+}
+.wb_ht_box {
+	float: left;
+	width: 383px;
+	height: 130px;
+}
+.right4 {
+	float: left;
+	width: 383px;
+}
+.shehuizeren {
+	float: left;
+	width: 383px;
+	color: #3A3A3A;
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 24px;
+}
+.right5 {
+	float: left;
+	width: 383px;
+}
+.gy_wb {
+	float: left;
+	width: 383px;
+}
+.ht_pic2 {
+	float: left;
+	width: 121px;
+	height: 79px;
+	margin: 20px 0 0 10px;
+}
+.ht_w2 {
+	float: right;
+	width: 237px;
+	height: 79px;
+	margin-top: 20px;
+	font-size: 14px;
+}
+.ht_w2_ti {
+	float: left;
+	width: 200px;
+	line-height: 24px;
+}
+.ht_w2_w {
+	float: left;
+	width: 200px;
+	font-size: 12px;
+	margin-top: 5px;
+	line-height: 16px;
+}
+.ht_w2_biao {
+	float: right;
+	width: 70px;
+	margin-top: 5px;
+}
+.right6 {
+	float: left;
+	width: 383px;
+}
+.ppl {
+	float: left;
+	width: 381px;
+	height: 133px;
+	border: solid 1px #DEDEDE;
+	margin: 8px 0;
+}
+.pp1_pic {
+	float: left;
+	width: 98px;
+	height: 117px;
+	margin: 8px 0 0 8px;
+}
+.pp1_box {
+	float: right;
+	width: 260px;
+	height: 117px;
+	margin: 8px 0 0 8px;
+}
+.pp1_ti {
+	float: left;
+	width: 260px;
+	height: 32px;
+	font-size: 16px;
+	line-height: 32px;
+}
+.pp1_w {
+	float: left;
+	width: 260px;
+	font-family: "宋体";
+	font-size: 12px;
+	color: #727272;
+	line-height: 24px;
+}
+/*      右侧部分 结束      */
+/*      底下部分 开始      */
+.botbox {
+	float: left;
+	width: 980px;
+	margin-top: 35px;
+}
+.biaoti5 {
+	float: left;
+	width: 980px;
+}
+.linksback {
+	float: left;
+	width: 940px;
+	background-color: #F4F4F4;
+	margin-top: 20px;
+	padding: 20px;
+}
+.link_ti {
+	float: left;
+	font-size: 14px;
+	width: 940px;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+.link_w {
+	float: left;
+	font-size: 12px;
+	font-family: "宋体";
+	width: 940px;
+	line-height: 24px;
+}
+/*      底下部分 结束      */
+/*焦点图*/
+.focus {
+	position: relative;
+	width: 565px;
+	height: 353px;
+	background-color: #000;
+	float: left;
+}
+.focus img {
+	float: left;
+	width: 565px;
+	height: 353px;
+}
+.focus .shadow .title {
+	width: 260px;
+	height: 65px;
+	padding-left: 30px;
+	padding-top: 20px;
+}
+.focus .shadow .title a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bolder;
+	overflow: hidden;
+}
+.focus .btn {
+	position: absolute;
+	bottom: 34px;
+	left: 510px;
+	overflow: hidden;
+	zoom: 1;
+}
+.focus .btn a {
+	position: relative;
+	display: inline;
+	width: 13px;
+	height: 13px;
+	border-radius: 7px;
+	margin: 0 5px;
+	color: #B0B0B0;
+	font: 12px/15px "\5B8B\4F53";
+	text-decoration: none;
+	text-align: center;
+	outline: 0;
+	float: left;
+	background: #D9D9D9;
+}
+.focus .btn a:hover,
+.focus .btn a.current {
+	cursor: pointer;
+	background: #fc114a;
+}
+.focus .fPic {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.focus .D1fBt {
+	overflow: hidden;
+	zoom: 1;
+	height: 16px;
+	z-index: 10;
+}
+.focus .shadow {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	z-index: 10;
+	height: 80px;
+	line-height: 80px;
+	background: rgba(0, 0, 0, 0.6);
+	filter: progid:DXImageTransform.Microsoft.gradient( GradientType=0, startColorstr='#80000000', endColorstr='#80000000')\9;
+	display: block;
+	text-align: left;
+}
+.focus .shadow a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	overflow: hidden;
+	margin-left: 10px;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+.focus .fcon {
+	position: relative;
+	width: 100%;
+	float: left;
+	display: none;
+	background: #000
+}
+.focus .fcon img {
+	display: block;
+}
+.focus .fbg {
+	bottom: 25px;
+	right: 20px;
+	position: absolute;
+	height: 21px;
+	text-align: center;
+	z-index: 200;
+}
+.focus .fbg div {
+	margin: 4px auto 0;
+	overflow: hidden;
+	zoom: 1;
+	height: 14px
+}
+.focus .D1fBt a {
+	position: relative;
+	display: inline;
+	width: 12px;
+	height: 12px;
+	border-radius: 7px;
+	margin: 0 5px;
+	color: #B0B0B0;
+	font: 12px/15px "\5B8B\4F53";
+	text-decoration: none;
+	text-align: center;
+	outline: 0;
+	float: left;
+	background: #D9D9D9;
+}
+.focus .D1fBt .current,
+.focus .D1fBt a:hover {
+	background: #fc114a;
+}
+.focus .D1fBt img {
+	display: none
+}
+.focus .D1fBt i {
+	display: none;
+	font-style: normal;
+}
+/*焦点图*/
