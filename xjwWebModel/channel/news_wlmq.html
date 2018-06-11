@@ -14,17 +14,17 @@
 		<meta name="description" content="国家一类重点新闻网站。乌鲁木齐市委主管，乌鲁木齐晚报社主办，7 x 24小时不间断直播最权威国内外新闻、一带一路沿线国家经济社会发展新闻、新疆新闻及各类服务资讯。" />
 		<meta http-equiv="Access-Control-Allow-Origin" content="*">
 		<base target="_blank">
-		<link rel="stylesheet" type="text/css" href="css/cmstop-common.css" />
-		<link rel="stylesheet" type="text/css" href="css/cmstop-index.css" />
-		<link rel="stylesheet" type="text/css" href="css/xjw_wlmq.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-index.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/xjw_wlmq.css" />
 		<!--[if lt IE 9 ]>
-			<script type="text/javascript" src="js/helper/modernizr.js"></script>
+			<script type="text/javascript" src="/${res}/js/helper/modernizr.js"></script>
 		<![endif]-->
-		<script type="text/javascript" src="js/config.js"></script>
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/jquery.cookie.js"></script>
-		<script type="text/javascript" src="js/cmstop-common.js"></script>
-		<script type="text/javascript" src="js/koala.min.1.5.js"></script>
+		<script type="text/javascript" src="/${res}/js/config.js"></script>
+		<script type="text/javascript" src="/${res}/js/jquery.js"></script>
+		<script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/${res}/js/cmstop-common.js"></script>
+		<script type="text/javascript" src="/${res}/js/koala.min.1.5.js"></script>
 	</head>
 	<style>
 		.xian4 {
@@ -45,7 +45,7 @@
 
 	<body>
 		<!-- 头部 -->
-		[#include '../include/news_header.html'/]
+		[#include '../content/news_header.html'/]
 		<!-- @end头部 -->
 		<div class="top" style="margin-top: 10px;">
 			<!------------头部区域开始-------------->
@@ -73,7 +73,7 @@
 					}
 				</style>
 				<div class="headlogo">
-					<a href="http://www.xinjiangnet.com.cn/" alt="新疆网乌鲁木齐"><img src="img/xjw_logo.png" /></a>
+					<a href="http://www.xinjiangnet.com.cn/" alt="新疆网乌鲁木齐"><img src="/${res}/img/xjw_logo.png" /></a>
 					<span>乌鲁木齐</span>
 					<div style="float:right;top:10px;right:10px;width:200px;position: absolute;">
 						<div class="fl-l header-search-input ov ">
@@ -104,32 +104,14 @@
 					<!------导航开始----->
 					<div id="nav">
 						<ul>
+							[@cms_channel_list]
+							[#list tag_list as a]
 							<li>
-								<a style="width:auto;" href="http://www.xinjiangnet.com.cn/xwzx/sfwlmq/jdxws/">焦点新闻</a>
+								<a style="width:auto;" href="${a.url}">${a.name}</a>
 							</li>
-							<!--<li><a  href="http://w.xinjiangnet.com.cn/xwzx/sfwlmq/szyw/">时政要闻</a></li>-->
-							<li>
-								<a style="width:auto;" href="http://www.xinjiangnet.com.cn/xwzx/sfwlmq/shmss/">社会民生</a>
-							</li>
-							<li>
-								<a style="width:auto;" href="http://www.xinjiangnet.com.cn/xwzx/sfwlmq/shzx/">生活服务</a>
-							</li>
-							<li>
-								<a style="width:auto;" href="http://www.xinjiangnet.com.cn/xwzx/hstx/">红山塔下</a>
-							</li>
-							<li>
-								<a style="width:auto;" href="http://www.xinjiangnet.com.cn/xwzx/sfwlmq/gggs/">公告公示</a>
-							</li>
-							<li>
-								<a style="width:auto;" href="http://www.xinjiangnet.com.cn/sppd/">在线访谈</a>
-							</li>
-							<!--<li><a style="color:inherit;" href="http://w.xinjiangnet.com.cn/lt/">社区精选</a></li>-->
-							<li>
-								<a style="width:auto;" href="http://www.xinjiangnet.com.cn/xwzx/bxsy/">百姓声音</a>
-							</li>
-							<li>
-								<a style="width:auto;" href="http://www.xinjiangnet.com.cn/xwzx/sfwlmq/tssfs/">图说首府</a>
-							</li>
+							[/#list]
+							[/@cms_channel_list]
+							 
 							<li style="float:right;">
 								<a style="width:auto;" href="http://www.xinjiangnet.com.cn/xwzx/sfwlmq/wbjdt/">委办局</a>
 							</li>
@@ -159,30 +141,18 @@
 				<!------   头部幻灯特效   ---->
 				<div id="fsD1" class="focus">
 					<div id="D1pic1" class="fPic">
+						[@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
 						<div class="fcon" style="display: none;">
-							<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0419/2065421.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0419/thumb_586_319_1524071356435.png" style="opacity: 1;width: 586px; height: 319px; "></a>
-							<span class="shadow" style="height: 40px;line-height: 40px;"><a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0419/2065421.shtml">交警缓堵保畅推出“108+X”措施</a></span>
+							<a target="_blank" href="${a.url]}">
+								<img src="${a.typeImg]}" style="opacity: 1;width: 586px; height: 319px; ">
+							</a>
+							<span class="shadow" style="height: 40px;line-height: 40px;">
+								<a target="_blank" href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
+							</span>
 						</div>
-						<div class="fcon" style="display: none;">
-							<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0418/2065403.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0419/1524114407618.jpg" style="opacity: 1;width: 586px; height: 319px; "></a>
-							<span class="shadow" style="height: 40px;line-height: 40px;"><a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0418/2065403.shtml">地产野菜“抢鲜”上市</a></span>
-						</div>
-						<div class="fcon" style="display: none;">
-							<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0418/2065406.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0418/thumb_586_319_1524066715209.png" style="opacity: 1;width: 586px; height: 319px; "></a>
-							<span class="shadow" style="height: 40px;line-height: 40px;"><a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0418/2065406.shtml">拆除水磨河沿岸违建</a></span>
-						</div>
-						<div class="fcon" style="display: none;">
-							<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0418/2065024.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0418/1524028468676.jpg" style="opacity: 1;width: 586px; height: 319px; "></a>
-							<span class="shadow" style="height: 40px;line-height: 40px;"><a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0418/2065024.shtml">水磨河三期生态景观改造工程预计5月底完工</a></span>
-						</div>
-						<div class="fcon" style="display: none;">
-							<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0417/2064926.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0417/thumb_586_319_1523938759496.jpg" style="opacity: 1;width: 586px; height: 319px; "></a>
-							<span class="shadow" style="height: 40px;line-height: 40px;"><a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0417/2064926.shtml">高新区（新市区）百人共植“党员林”</a></span>
-						</div>
-						<div class="fcon" style="display: none;">
-							<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0413/2063666.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0413/thumb_586_319_1523553041177.jpg" style="opacity: 1;width: 586px; height: 319px; "></a>
-							<span class="shadow" style="height: 40px;line-height: 40px;"><a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0413/2063666.shtml">喀什路东延一期断头路年内打通</a></span>
-						</div>
+						[/#list]
+						[/@cms_content_list]
 					</div>
 					<div class="fbg" style="bottom: 6px;">
 						<div class="D1fBt" id="D1fBt" style="width:140px; position:absolute;top:0;right:0;">
@@ -197,7 +167,7 @@
 				</div>
 				<script type="text/javascript">
 					Qfast.add('widgets', {
-						path: "js/terminator2.2.min.js",
+						path: "/${res}/js/terminator2.2.min.js",
 						type: "js",
 						requires: ['fx']
 					});
@@ -481,12 +451,12 @@
 					
 					.tab_title .ly_ti {
 						color: #000;
-						background-image: url(img/baise.png);
+						background-image: url(/${res}/img/baise.png);
 					}
 					
 					.tab_title .current {
 						color: #fff;
-						background-image: url(img/heise.png);
+						background-image: url(/${res}/img/heise.png);
 					}
 					
 					.tab_title .ly_ti a:hover {
@@ -794,7 +764,7 @@ $(document).ready(function(){
 										</div>
 										<div class="houqi1_w" style="text-indent:2em; ">近些日子，有游客在乌鲁木齐南山牧...<span>&nbsp;<a href="http://www.xinjiangnet.com.cn/2016/0722/1595443.shtml">[详情]</a></span></div>
 										<div class="houqi1_tu">
-											<a href="http://www.xinjiangnet.com.cn/2016/0722/1595443.shtml"><img src="img/houqi2.gif"></a>
+											<a href="http://www.xinjiangnet.com.cn/2016/0722/1595443.shtml"><img src="/${res}/img/houqi2.gif"></a>
 										</div>
 									</div>
 								</div>
@@ -832,16 +802,16 @@ $(document).ready(function(){
 				<!------------右边内容区域开始-------------->
 				<div class="right_control">
 					<div class="rbiao_0991">
-						<div class="biaopic"><img src="img/0991_b1.png" /></div>
+						<div class="biaopic"><img src="/${res}/img/0991_b1.png" /></div>
 						<div class="biaoti2">爆料台</div>
 					</div>
-					<div class="bag"><img src="img/baoliao.jpg" /></div>
+					<div class="bag"><img src="/${res}/img/baoliao.jpg" /></div>
 				</div>
 				<div class="right_control">
 					<div class="rbiao_0991">
 						<div class="biaopic">
 							<a href="http://www.xinjiangnet.com.cn/xwzx/hstx/">
-								<img src="img/0991_b2.png" />
+								<img src="/${res}/img/0991_b2.png" />
 							</a>
 						</div>
 						<div class="biaoti2">
@@ -860,7 +830,7 @@ $(document).ready(function(){
 					<div class="rbiao_0991">
 						<div class="biaopic">
 							<a style="color:inherit;" href="http://www.xinjiangnet.com.cn/xwzx/sfwlmq/wbjdt/">
-								<img src="img/0991_b3.png" />
+								<img src="/${res}/img/0991_b3.png" />
 							</a>
 						</div>
 						<div class="biaoti2">
@@ -1011,7 +981,7 @@ $(document).ready(function(){
 					<div class="rbiao_0991">
 						<div class="biaopic">
 							<a style="color:inherit;" href="http://www.xinjiangnet.com.cn/xwzx/sfwlmq/bmcx/">
-								<img src="img/0991_b4.png" />
+								<img src="/${res}/img/0991_b4.png" />
 							</a>
 						</div>
 						<div class="biaoti2">
@@ -1067,7 +1037,7 @@ $(document).ready(function(){
 					<div class="rbiao_0991">
 						<div class="biaopic">
 							<a style="color:inherit;" href="http://www.xinjiangnet.com.cn/gwpd/">
-								<img src="img/gouwu.png" />
+								<img src="/${res}/img/gouwu.png" />
 							</a>
 						</div>
 						<div class="biaoti2">
@@ -1247,7 +1217,7 @@ $(document).ready(function(){
 			<div style="width:100%; height:10px;">
 			</div>
 			<div style="width:980px; margin:0px auto;">
-				<img src="img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
+				<img src="/${res}/img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
 				<map name="Map" id="Map">
       <area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
       <area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
@@ -1587,7 +1557,7 @@ $(document).ready(function(){
 					</tr>
 				</table>
 			</center>
-			<link rel="stylesheet" type="text/css" href="js/popmenu.css" media="all" />
+			<link rel="stylesheet" type="text/css" href="/${res}/js/popmenu.css" media="all" />
 			<script type="text/javascript" src="js/recommend.js"></script>
 			<!-- end footer -->
 		</div>

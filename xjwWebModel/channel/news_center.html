@@ -969,7 +969,7 @@
 					<li id="short_title">
 						<a href="http://www.xinjiangnet.com.cn/">首页</a>
 					</li>
-					[@cms_channel_list count=12] [#list tag_list as a]
+					[@cms_channel_list parentId=channel.id] [#list tag_list as a]
 					<li>
 						<a href="${a.url}">${a.name}</a>
 					</li>
