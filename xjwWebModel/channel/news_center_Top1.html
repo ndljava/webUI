@@ -101,16 +101,18 @@
 		</div>
 		<div class="pp">
 			<ul>
-				
+				[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+				[#list tag_list as a]
 				<li>
-					<a href="http://www.xinjiangnet.com.cn/2018/0521/2074635.shtml" target="_blank">
-						<img src="http://upload.xinjiangnet.com.cn/2018/0521/1526874668796.gif" width="165px" height="110px" style="border:0 ">
+					<a href="${a.url}" target="_blank">
+						<img src="${a.typeImg}" width="165px" height="110px" style="border:0 ">
 					</a>
 					<span>
-						<a href="http://www.xinjiangnet.com.cn/2018/0521/2074635.shtml" target="_blank" class="litth">网球比赛 小猫闯入</a>
+						<a href="${a.url}" target="_blank" class="litth">[@text_cut s=a.title len=10 append=append/]</a>
 					</span>
 				</li>
-	
+				[/#list]
+				[/@cms_content_list]
 			</ul>
 		</div>
 		<!--视频 E-->

@@ -286,30 +286,18 @@
 			</div>
 			<div class="ppy">
 				<ul>
+					[@cms_content_list count='6' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[#list tag_list as a]
 					<li>
-						<a href="http://www.xinjiangnet.com.cn/2018/0521/2074497.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0521/1526867558387.gif" width="125" height="90" style="border:0 "></a>
-						<span><a href="http://www.xinjiangnet.com.cn/2018/0521/2074497.shtml" target="_blank">阿姨教单身儿子搭讪女孩</a></span>
+						<a href="${a.url}" target="_blank">
+							<img src="${a.typeImg}" width="125" height="90" style="border:0 ">
+						</a>
+						<span>
+							<a href="${a.url}" target="_blank">[@text_cut s=a.title len=12 append=append/]</a>
+						</span>
 					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/2018/0521/2074631.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0521/thumb_125_90_1526874406254.png" width="125" height="90" style="border:0 "></a>
-						<span><a href="http://www.xinjiangnet.com.cn/2018/0521/2074631.shtml" target="_blank">大兴安岭万亩杜鹃绽放</a></span>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/2018/0521/2074635.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0521/1526874412668.gif" width="125" height="90" style="border:0 "></a>
-						<span><a href="http://www.xinjiangnet.com.cn/2018/0521/2074635.shtml" target="_blank">网球比赛 小猫闯入</a></span>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/2018/0517/2073716.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0517/thumb_125_90_1526526230665.jpg" width="125" height="90" style="border:0 "></a>
-						<span><a href="http://www.xinjiangnet.com.cn/2018/0517/2073716.shtml" target="_blank">男童坠楼瞬间</a></span>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/2018/0517/2073777.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0517/thumb_125_90_1526524445180.jpg" width="125" height="90" style="border:0 "></a>
-						<span><a href="http://www.xinjiangnet.com.cn/2018/0517/2073777.shtml" target="_blank">无人餐厅</a></span>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/2018/0517/2073786.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0517/thumb_125_90_1526524666587.jpg" width="125" height="90" style="border:0 "></a>
-						<span><a href="http://www.xinjiangnet.com.cn/2018/0517/2073786.shtml" target="_blank">首座公铁两用悬索桥</a></span>
-					</li>
+					[/#list]
+					[/@cms_content_list]
 				</ul>
 			</div>
 			<!--视频焦点 E-->
