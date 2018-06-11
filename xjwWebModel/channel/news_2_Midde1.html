@@ -13,21 +13,14 @@
 		</div>
 		<div class="lt">
 			<ul class="u">
-				<li><span style="float: right;color: #969691;font-size: 11px;">[人民网-]</span> ·
-					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075279.shtml" target="_blank">留下休养生息的时间和空间</a>
+				[@cms_content_list count='5' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+				[#list tag_list as a]
+				<li>
+					<span style="float: right;color: #969691;font-size: 11px;">[${a.origin!'本站原创'}]</span>
+					·<a href="${a.url}" target="_blank">[@text_cut s=a.title len=15 append=append/]</a>
 				</li>
-				<li><span style="float: right;color: #969691;font-size: 11px;">[法制日报]</span> ·
-					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075272.shtml" target="_blank">公民监督不能任性而为</a>
-				</li>
-				<li><span style="float: right;color: #969691;font-size: 11px;">[南方日报]</span> ·
-					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075273.shtml" target="_blank">管好出租车就得动真格</a>
-				</li>
-				<li><span style="float: right;color: #969691;font-size: 11px;">[法制日报]</span> ·
-					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075275.shtml" target="_blank">商标注册岂能亵渎传统文化</a>
-				</li>
-				<li><span style="float: right;color: #969691;font-size: 11px;">[人民网-]</span> ·
-					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075277.shtml" target="_blank">解决损害群众健康的突出环境问题</a>
-				</li>
+				[/#list]
+				[/@cms_content_list]
 			</ul>
 		</div>
 		<!--红山塔下 E-->
@@ -43,34 +36,34 @@
 			<div class="clear"></div>
 		</div>
 		<div class="lt">
+			[@cms_content_list count='1' channelId='75' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+			[#list tag_list as a]
 			<div class="il">
-				<a href="http://www.xinjiangnet.com.cn/2018/0524/2075530.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_142_99_1527128179221.jpg" width="142" height="99" style="border:0;"></a>
+				<a href="${a.url}" target="_blank">
+					<img src="${a.typeImg}" width="142" height="99" style="border:0;">
+				</a>
 			</div>
-			<h1><a href="http://www.xinjiangnet.com.cn/2018/0524/2075530.shtml" target="_blank" style="font-weight: bold;">乌鲁木齐站南广场进入地面施工阶段</a></h1>
+			<h1>
+				<a href="${a.url}" target="_blank" style="font-weight: bold;">[@text_cut s=a.title len=16 append=append/]</a>
+			</h1>
 			<p style="text-indent:2em;">
-				<a href="http://www.xinjiangnet.com.cn/2018/0524/2075530.shtml" style="color:#6e6e6e;">5月22日,占地面积近5万平方米的乌鲁木齐站南广场项目全面进入地面施工阶段,...</a>
-				<a href="http://www.xinjiangnet.com.cn/2018/0524/2075530.shtml" target="_blank">[详细]</a>
+				<a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.desc len=34 append=append/]...</a>
+				<a href="${a.url}" target="_blank">[详细]</a>
 			</p>
 			<div class="clear"></div>
+			[/#list]
+			[/@cms_content_list]
 		</div>
 		<div class="line_dashed"></div>
 		<div class="lt">
 			<ul class="u">
-				<li>·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075509.shtml" target="_blank">乌鲁木齐站南广场有望下半年迎客</a>
+				[@cms_content_list count='5' channelId='75' channelOption='1' typeId='1'] 
+				[#list tag_list as a]
+				<li>
+					·<a href="${a.url}" target="_blank">[@text_cut s=a.title len=16 append=append/]</a>
 				</li>
-				<li>·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075538.shtml" target="_blank">乌鲁木齐人民广场周边道路换新装</a>
-				</li>
-				<li>·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075535.shtml" target="_blank">环乌高速施工路段新增20处探头</a>
-				</li>
-				<li>·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075533.shtml" target="_blank">端午节小长假火车票开售</a>
-				</li>
-				<li>·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075488.shtml" target="_blank">乌鲁木齐-喀纳斯6月10日复航</a>
-				</li>
+				[/#list]
+				[/@cms_content_list]
 			</ul>
 		</div>
 		<!--交通 E-->
@@ -89,19 +82,27 @@
 			<ul>
 				<li>
 					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075457.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_158_105_1527134356321.jpg" width="158" height="105" style="border:0 "></a>
-					<span><a href="http://www.xinjiangnet.com.cn/2018/0524/2075457.shtml" target="_blank"> 马德里上演斗牛表演</a></span>
+					<span>
+						<a href="http://www.xinjiangnet.com.cn/2018/0524/2075457.shtml" target="_blank"> 马德里上演斗牛表演</a>
+					</span>
 				</li>
 				<li>
 					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075450.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_158_105_1527134337503.jpg" width="158" height="105" style="border:0 "></a>
-					<span><a href="http://www.xinjiangnet.com.cn/2018/0524/2075450.shtml" target="_blank">新疆北部牧民转场 </a></span>
+					<span>
+						<a href="http://www.xinjiangnet.com.cn/2018/0524/2075450.shtml" target="_blank">新疆北部牧民转场 </a>
+					</span>
 				</li>
 				<li>
 					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075204.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0523/thumb_158_105_1527045143473.jpg" width="158" height="105" style="border:0 "></a>
-					<span><a href="http://www.xinjiangnet.com.cn/2018/0523/2075204.shtml" target="_blank"> 西非海牛在珠海成功产子</a></span>
+					<span>
+						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075204.shtml" target="_blank"> 西非海牛在珠海成功产子</a>
+					</span>
 				</li>
 				<li>
 					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075183.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0523/thumb_158_105_1527045162243.jpg" width="158" height="105" style="border:0 "></a>
-					<span><a href="http://www.xinjiangnet.com.cn/2018/0523/2075183.shtml" target="_blank"> 德国“磨坊日”向传统技术</a></span>
+					<span>
+						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075183.shtml" target="_blank"> 德国“磨坊日”向传统技术</a>
+					</span>
 				</li>
 			</ul>
 		</div>
@@ -119,36 +120,13 @@
 		</div>
 		<div class="lt">
 			<ul class="u" style="width:330px;">
+				[@cms_content_list count='10' channelId='75' channelOption='1' typeId='1'] 
+				[#list tag_list as a]
 				<li style="width:160px;float:left;">·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075692.shtml" target="_blank">难成为知心人的星座</a>
+					<a href="${a.url}" target="_blank">[@text_cut s=a.title len=9 append=append/]</a>
 				</li>
-				<li style="width:160px;float:left;">·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075688.shtml" target="_blank">十二星座的几大特质</a>
-				</li>
-				<li style="width:160px;float:left;">·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075687.shtml" target="_blank">感情中不能得罪星座</a>
-				</li>
-				<li style="width:160px;float:left;">·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075685.shtml" target="_blank">好奇心比较强三星座</a>
-				</li>
-				<li style="width:160px;float:left;">·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075684.shtml" target="_blank">爱热闹活力十足星座</a>
-				</li>
-				<li style="width:160px;float:left;">·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075679.shtml" target="_blank">老实但有福气的星座</a>
-				</li>
-				<li style="width:160px;float:left;">·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075665.shtml" target="_blank">三大翻脸超快的星座</a>
-				</li>
-				<li style="width:160px;float:left;">·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075664.shtml" target="_blank">职场易当炮灰的星座</a>
-				</li>
-				<li style="width:160px;float:left;">·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075658.shtml" target="_blank">爱错也会爱到底星座</a>
-				</li>
-				<li style="width:160px;float:left;">·
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075656.shtml" target="_blank">最善解人意的星座女</a>
-				</li>
+ 				[/#list]
+				[/@cms_content_list]
 			</ul>
 		</div>
 		<!--星座 E-->
@@ -166,61 +144,66 @@
 				<div class="clear"></div>
 			</div>
 			<div class="mt">
+				[@cms_content_list count='1' channelId='75' channelOption='1' typeId='2'] 
+				[#list tag_list as a]
 				<div class="il">
-					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075212.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0523/thumb_108_76_1527040707229.jpg" width="108" height="76" style="border:0;"></a>
+					<a href="${a.url}" target="_blank">
+						<img src="${a.typeImg}" width="108" height="76" style="border:0;">
+					</a>
 				</div>
-				<h1><a  style="font-weight: bold;" href="http://www.xinjiangnet.com.cn/2018/0523/2075212.shtml" target="_blank">习近平这样致敬英雄</a></h1>
+				<h1>
+					<a  style="font-weight: bold;" href="${a.url}" target="_blank">[@text_cut s=a.title len=13 append=append/]</a>
+				</h1>
 				<p style="text-indent:2em;">
-					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075212.shtml" style="color:#6e6e6e;">一个有希望的民族，不能没有英雄。一个有前途的国家，不能没有先锋。</a>
-					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075212.shtml" target="_blank">[详细]</a>
+					<a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.desc len=50 append=append/]</a>
+					<a href="${a.url}" target="_blank">[详细]</a>
 				</p>
 				<div class="clear"></div>
+				[/#list]
+				[/@cms_content_list]
 			</div>
 			<div class="mt">
-				<h1><a  style="font-weight: bold;" href="http://www.xinjiangnet.com.cn/2018/0523/2075219.shtml" target="_blank">习近平讲解绵延五千多年的中华生态文化</a></h1>
+				<h1>
+					[@cms_content_list count='1' channelId='75' channelOption='1' typeId='2'] 
+					[#list tag_list as a]
+						<a  style="font-weight: bold;" href="${a.url}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
+					[/#list]
+					[/@cms_content_list]
+				</h1>
 			</div>
 			<div class="mt">
 				<ul class="u">
+					[@cms_content_list count='5' channelId='75' channelOption='1' typeId='1'] 
+					[#list tag_list as a]
 					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075215.shtml" target="_blank">永远做一个学习大国</a>
+						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
 					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075217.shtml" target="_blank">深化改革，跑出创新“加速度”</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075173.shtml" target="_blank">中国坚决向“洋垃圾”说“不”</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075206.shtml" target="_blank">中国文凭含金量日益提高</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075213.shtml" target="_blank">人民日报：让崇尚英雄成为时代风尚</a>
-					</li>
+					[/#list]
+					[/@cms_content_list]
 				</ul>
 			</div>
 			<div class="line_dashed"></div>
 			<!--国内国际 上 E-->
 			<!--国内国际下 B-->
 			<div class="mt">
-				<h1><a  style="font-weight: bold;" href="http://www.xinjiangnet.com.cn/2018/0523/2075252.shtml" target="_blank">读书成为保加利亚最流行文化生活方式</a></h1>
+				<h1>
+					[@cms_content_list count='1' channelId='75' channelOption='1' typeId='2'] 
+					[#list tag_list as a]
+						<a  style="font-weight: bold;" href="${a.url}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
+					[/#list]
+					[/@cms_content_list]
+				</h1>
 			</div>
 			<div class="mt">
 				<ul class="u">
+					[@cms_content_list count='5' channelId='75' channelOption='1' typeId='1'] 
+					[#list tag_list as a]
 					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075253.shtml" target="_blank">中国文创海外推广展在瑞典举办</a>
+						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
 					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075251.shtml" target="_blank">226年来首次！纽约证券交易所迎来女性掌门</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075238.shtml" target="_blank">中国医疗专家队巡诊柬埔寨</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075227.shtml" target="_blank">中国成为泰国榴莲出口增速最快的目的地</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075224.shtml" target="_blank">中国品牌手机加快开拓欧洲市场</a>
-					</li>
+					[/#list]
+					[/@cms_content_list]
+
 				</ul>
 			</div>
 			<!--国内国际下 E-->
@@ -236,53 +219,76 @@
 				<div class="clear"></div>
 			</div>
 			<div class="mt">
+				[@cms_content_list count='1' channelId='75' channelOption='1' typeId='2'] 
+				[#list tag_list as a]
 				<div class="il">
-					<a href="http://www.xinjiangnet.com.cn/2018/0522/2074882.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0522/thumb_108_76_1526978464759.jpg" width="108" height="76" style="border:0;"></a>
+					<a href="${a.url}" target="_blank">
+						<img src="${a.typeImg}" width="108" height="76" style="border:0;">
+					</a>
 				</div>
-				<h1><a href="http://www.xinjiangnet.com.cn/2018/0522/2074882.shtml" target="_blank" style="font-weight: bold;">重庆初一学生发明震动闹钟床</a></h1>
-				<p>吃串串数签签怎样更精准、懒人赖床只有闹钟还不够……这些生活中...
-					<a href="http://www.xinjiangnet.com.cn/2018/0522/2074882.shtml" target="_blank">[详细]</a>
+				<h1>
+					<a href="${a.url}" target="_blank" style="font-weight: bold;">[@text_cut s=a.title len=10 append=append/]</a>
+				</h1>
+				<p>
+					[@text_cut s=a.desc len=30 append=append/]...
+					<a href="${a.url}" target="_blank">[详细]</a>
 				</p>
 				<div class="clear"></div>
+				[/#list]
+				[/@cms_content_list]
 			</div>
+			[@cms_content_list count='3' channelId='75' channelOption='1' typeId='1'] 
 			<div class="mt">
-				<h4><a  style="font-weight: bold;" href="http://www.xinjiangnet.com.cn/2018/0522/2074902.shtml" >调查：85.3%受访者希望推广防闯红灯装置</a></h4>
-				<p> <span><a href="http://www.xinjiangnet.com.cn/2018/0522/2074885.shtml" target="_blank">3岁女孩从近5米高雨篷跌落</a></span> | <span><a href="http://www.xinjiangnet.com.cn/2018/0522/2074879.shtml" target="_blank">27岁小伙去世后捐献器官</a></span>
+				<h4>
+					<a  style="font-weight: bold;" href="${tag_list[0].url}" >[@text_cut s=tag_list[0].title len=20 append=append/]</a>
+				</h4>
+				
+				<p> 
+					<span>
+						<a href="${tag_list[1].url}" target="_blank">[@text_cut s=tag_list[1].title len=13 append=append/]</a>
+					</span> | 
+					<span>
+						<a href="${tag_list[2].url}" target="_blank">[@text_cut s=tag_list[2].title len=13 append=append/]</a>
+					</span>
 				</p>
 			</div>
+			[/@cms_content_list]
+			
+			[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
 			<div class="mt">
-				<h4><a  style="font-weight: bold;" href="http://www.xinjiangnet.com.cn/2018/0522/2074887.shtml" >广东手足口病逐渐进入流行高发期 </a></h4>
-				<p> <span><a href="http://www.xinjiangnet.com.cn/2018/0522/2074878.shtml" target="_blank">北京一89岁老人落水</a></span> | <span><a href="http://www.xinjiangnet.com.cn/2018/0522/2075106.shtml" target="_blank">多地频现共享单车“坟场”</a></span>
+				<h4>
+					<a  style="font-weight: bold;" href="${tag_list[3].url}" >[@text_cut s=tag_list[3].title len=20 append=append/]</a>
+				</h4>
+				
+				<p> 
+					<span>
+						<a href="${tag_list[4].url}" target="_blank">[@text_cut s=tag_list[4].title len=13 append=append/]</a>
+					</span> | 
+					<span>
+						<a href="${tag_list[5].url}" target="_blank">[@text_cut s=tag_list[5].title len=13 append=append/]</a>
+					</span>
 				</p>
 			</div>
+
+			[/@cms_content_list]
 			<div class="mt">
 				<ul class="u">
 					<li style="margin-bottom:6px;">
-						<h4><a style="font-size: 16px;font-weight: bold;" href="http://www.xinjiangnet.com.cn/2018/0522/2075107.shtml" target="_blank">“采购商”用假房产证“赊走”40万元烟酒</a></h4></li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0522/2075117.shtml" target="_blank">南宁海关查扣走私珍贵古钱币153.17公斤</a>
+						[@cms_content_list count='7' channelId='75' channelOption='1' typeId='1'] 
+						<h4>
+							<a style="font-size: 16px;font-weight: bold;" href="${tag_list[6].url}" target="_blank">[@text_cut s=tag_list[6].title len=20 append=append/]</a>
+						</h4>
+						[/@cms_content_list]
 					</li>
+					[@cms_content_list count='15' channelId='75' channelOption='1' typeId='1'] 
+					[#list tag_list as a]
+					[#if a_index>6]
 					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0522/2074875.shtml" target="_blank">武义：白云绕山岗 梯田披彩妆</a>
+						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
 					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0522/2075113.shtml" target="_blank">美团、饿了么，保护隐私为何好事不能办好？</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0522/2075111.shtml" target="_blank">“逃犯克星”张学友显威 演出现场又有逃犯被抓</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0522/2075110.shtml" target="_blank">满负荷超负荷处理 医疗废物该何去何从</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0522/2075109.shtml" target="_blank">中国娃娃鱼至少有五个物种 野生种群难觅</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0522/2075108.shtml" target="_blank">乌市警方披露五类典型网络诈骗伎俩</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0522/2075121.shtml" target="_blank">新疆南部多地降水破极值 北部局地将迎强风寒潮</a>
-					</li>
+					[/#if]
+					[/#list]
+					[/@cms_content_list]
 				</ul>
 			</div>
 			<!--社会 E-->
@@ -302,18 +308,18 @@
 			<div class="rt">
 				<div id="fsD3" class="focus" style="width:260px;height:180px;">
 					<div id="D1pic3" class="fPic">
+						[@cms_content_list count='3' channelId='75' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
 						<div class="fcon" style="display: none;">
-							<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0523/2075342.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0523/thumb_260_223_1527050279421.png" style="opacity: 1;width:260px;height:180px;"></a>
-							<span class="shadow"><a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0523/2075342.shtml">立足村情 教技能促增收</a></span>
+							<a target="_blank" href="${a.url}">
+								<img src="${a.typeImg}" style="opacity: 1;width:260px;height:180px;">
+							</a>
+							<span class="shadow">
+								<a target="_blank" href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
+							</span>
 						</div>
-						<div class="fcon" style="display: none;">
-							<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0522/2074862.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0522/thumb_260_223_1526954279490.jpg" style="opacity: 1;width:260px;height:180px;"></a>
-							<span class="shadow"><a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0522/2074862.shtml">为血液病患者打开希望之门</a></span>
-						</div>
-						<div class="fcon" style="display: none;">
-							<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0522/2075055.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0522/thumb_260_223_1526964407152.jpg" style="opacity: 1;width:260px;height:180px;"></a>
-							<span class="shadow"><a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0522/2075055.shtml">做一名好家庭医生</a></span>
-						</div>
+						[/#list]
+						[/@cms_content_list]
 					</div>
 					<div class="fbg" style="width:30px;right: 10px;">
 						<div class="D1fBt" id="D1fBt3" style="width:30px;right: 10px;">
@@ -326,8 +332,8 @@
 							<span style="width: 10px;margin-left: 0px;margin-right: 0px;">/3</span>
 						</div>
 					</div>
-					<span class="prev" style="background-image: url('img/left-1.png');background-position: 10px 5px;right: 42px;"></span>
-					<span class="next" style="background-image: url('img/right-1.png');background-position: 10px 5px;"></span>
+					<span class="prev" style="background-image: url('/${res}/img/left-1.png');background-position: 10px 5px;right: 42px;"></span>
+					<span class="next" style="background-image: url('/${res}/img/right-1.png');background-position: 10px 5px;"></span>
 				</div>
 				<script type="text/javascript">
 					Qfast.add('widgets', {
@@ -354,14 +360,23 @@
 			</div>
 			<div class="rt">
 				<ul class="u">
-					<li style="white-space: nowrap;text-overflow: '';overflow: hidden;">·<span><a href="http://www.xinjiangnet.com.cn/2018/0523/2075338.shtml" target="_blank">聚焦靶心 精准施策</a></span>&nbsp;|&nbsp;
-						<span><a href="http://www.xinjiangnet.com.cn/2018/0522/2074878.shtml" target="_blank">救人民警被点赞</a></span></li>
-					<li style="white-space: nowrap;text-overflow: '';overflow: hidden;">·<span><a href="http://www.xinjiangnet.com.cn/2018/0522/2074879.shtml" target="_blank">为6名患者带来新生</a></span>&nbsp;|&nbsp;
-						<span><a href="http://www.chinanews.com/sh/shipin/cns/2018/05-21/news769673.shtml" target="_blank">边境小村巨变</a></span></li>
-					<li style="white-space: nowrap;text-overflow: '';overflow: hidden;">·<span><a href="http://www.xinjiangnet.com.cn/2018/0522/2075091.shtml" target="_blank">西藏青稞新吃法 </a></span>&nbsp;|&nbsp;
-						<span><a href="http://www.xinjiangnet.com.cn/2018/0522/2074936.shtml" target="_blank">实现脱贫梦</a></span></li>
-					<li style="white-space: nowrap;text-overflow: '';overflow: hidden;">·<span><a href="http://www.xinjiangnet.com.cn/2018/0522/2075049.shtml" target="_blank">文明出行</a></span>&nbsp;|&nbsp;
-						<span><a href="http://www.xinjiangnet.com.cn/2018/0522/2074938.shtml" target="_blank">“孩子，妈妈盼着你回家” </a></span></li>
+					[#assign i=0/]
+					[@cms_content_list count='8' channelId='75' channelOption='1' typeId='1'] 
+					[#list tag_list as a]
+					[#if i%2=0]
+					<li style="white-space: nowrap;text-overflow: '';overflow: hidden;">
+						·<span>
+							<a href="${tag_list[i].url}" target="_blank">[@text_cut s=tag_list[i].title len=10 append=append/]</a>
+						</span>
+						&nbsp;|&nbsp;
+						<span>
+							<a href="${tag_list[i+1].url}" target="_blank">[@text_cut s=tag_list[i+1].title len=10 append=append/]</a>
+						</span>
+					</li>
+					[/#if]
+					[#assign i++/]
+					[/#list]
+					[/@cms_content_list]
 				</ul>
 			</div>
 			<div class="rt">
@@ -380,28 +395,21 @@
 				<div class="clear"></div>
 			</div>
 			<div class="rt">
-				<a href="http://www.xinjiangnet.com.cn/2018/0523/2075362.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0523/thumb_260_95_1527064458928.jpg" width="260" height="95" style="border:0;"></a>
+				[@cms_content_list count='1' channelId='75' channelOption='1' typeId='2'] 
+				<a href="${tag_list[0].url}" target="_blank">
+					<img src="${tag_list[0].typeImg}" width="260" height="95" style="border:0;">
+				</a>
+				[/@cms_content_list]
 			</div>
 			<div class="rt">
 				<ul class="u">
+					[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+					[#list tag_list as a]
 					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075362.shtml" target="_blank">“文学活神话”菲利普·罗斯去世</a>
+						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=18 append=append/]</a>
 					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075366.shtml" target="_blank">广西民族剧院开工奠基</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075359.shtml" target="_blank">中国藏学研究生机勃勃</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0521/2074664.shtml" target="_blank">话剧舞台上的濮存昕：我是手工作坊</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075357.shtml" target="_blank">3700多项非遗活动将在全国展开</a>
-					</li>
-					<li>·
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075358.shtml" target="_blank">文学界把脉网络文学发展现状与未来走向</a>
-					</li>
+				 	[/#list]
+					[/@cms_content_list]
 				</ul>
 			</div>
 			<!--7坊街 E-->
