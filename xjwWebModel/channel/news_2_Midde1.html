@@ -176,7 +176,7 @@
 					[@cms_content_list count='5' channelId='75' channelOption='1' typeId='1'] 
 					[#list tag_list as a]
 					<li>·
-						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
+						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=25 append=append/]</a>
 					</li>
 					[/#list]
 					[/@cms_content_list]
@@ -199,7 +199,7 @@
 					[@cms_content_list count='5' channelId='75' channelOption='1' typeId='1'] 
 					[#list tag_list as a]
 					<li>·
-						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
+						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=25 append=append/]</a>
 					</li>
 					[/#list]
 					[/@cms_content_list]
@@ -283,8 +283,8 @@
 					[@cms_content_list count='15' channelId='75' channelOption='1' typeId='1'] 
 					[#list tag_list as a]
 					[#if a_index>6]
-					<li>·
-						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
+					<li>
+						·<a href="${a.url}" target="_blank">[@text_cut s=a.title len=25 append=append/]</a>
 					</li>
 					[/#if]
 					[/#list]
