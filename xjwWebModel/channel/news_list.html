@@ -4,15 +4,11 @@
 <!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="zh-CN">
-	<!--<![endif]-->
+<!--<![endif]-->
 
 	<head>
-		<meta charset="UTF-8">
-		<title>${channel.title!} </title>
-		<meta name="keywords" content="${channel.keywords!}" />
+		[#include '../include/newsMeta.html']
 		<base target="_blank">
-		<meta name="description" content="${channel.description!}" />
-		<link rel="shortcut icon" href="http://www.xinjiangnet.com.cn/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-article.css" />
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-list-text.css" />

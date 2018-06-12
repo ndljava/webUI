@@ -35,56 +35,25 @@
 					<li>趣图</li>
 				</ul>
 				<div class="tabCon">
+					[@cms_content_list count='5' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[#list tag_list as a]
+					[#if a_index==0]
 					<div class="tCon" style="display:block">
+					[#else]
+					<div class="tCon" style="display:none">
+					[/#if]
 						<span>
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075483.shtml" target="_blank">
-								<img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_340_275_1527128663706.jpg" width="340" height="275">
+							<a href="${a.url}" target="_blank">
+								<img src="${a.typeImg}" width="340" height="275">
 							</a>
 						</span>
 						<span class="wz">
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075483.shtml" target="_blank"> 中国第二大沙漠边“绿色长城”的守卫者</a>
+							<a href="${a.url}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
 						</span>
 					</div>
-					<div class="tCon" style="display:none">
-						<span>
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075473.shtml" target="_blank">
-								<img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_340_275_1527128682672.jpg" width="340" height="275">
-							</a>
-						</span>
-						<span class="wz">
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075473.shtml" target="_blank"> 小米登陆法国进一步开拓欧洲市场</a>
-						</span>
-					</div>
-					<div class="tCon" style="display:none">
-						<span>
-										<a href="http://www.xinjiangnet.com.cn/2018/0524/2075465.shtml" target="_blank">
-											<img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_340_275_1527128705115.jpg" width="340" height="275">
-										</a>
-									</span>
-						<span class="wz">
-										<a href="http://www.xinjiangnet.com.cn/2018/0524/2075465.shtml" target="_blank"> 圆明园启动远瀛观遗址保护加固工作</a>
-									</span>
-					</div>
-					<div class="tCon" style="display:none">
-						<span>
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075530.shtml" target="_blank">
-								<img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_340_275_1527128179221.jpg" width="340" height="275">
-							</a>
-						</span>
-						<span class="wz">
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075530.shtml" target="_blank">乌鲁木齐站南广场进入地面施工阶段</a>
-						</span>
-					</div>
-					<div class="tCon" style="display:none">
-						<span>
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075450.shtml" target="_blank">
-								<img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_340_275_1527128743977.jpg" width="340" height="275">
-							</a>
-						</span>
-						<span class="wz">
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075450.shtml" target="_blank">新疆北部牧民转场 夕阳下赶马场面美如画卷</a>
-						</span>
-					</div>
+			 		[/#list]
+					[/@cms_content_list]
+				
 				</div>
 			</div>
 		</div>
@@ -128,43 +97,37 @@
 			<div class="clear"></div>
 		</div>
 		<div class="lt">
+			[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+			[#list tag_list as a]
 			<div class="il">
-				<a href="http://www.xinjiangnet.com.cn/2017/0929/2004041.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2017/0929/thumb_142_99_1506675624387.png" width="142" height="99" style="border:0;"></a>
+				<a href="${a.url}" target="_blank">
+					<img src="${a.typeImg}" width="142" height="99" style="border:0;">
+				</a>
 			</div>
-			<h1><a href="http://www.xinjiangnet.com.cn/2017/0929/2004041.shtml" target="_blank" style="font-weight: bold;">市米东区教育局做客</a></h1>
+			<h1>
+				<a href="${a.url}" target="_blank" style="font-weight: bold;">[@text_cut s=a.title len=10 append=append/]</a>
+			</h1>
 			<p style="text-indent:2em;">
-				<a href="http://www.xinjiangnet.com.cn/2017/0929/2004041.shtml" style="color:#6e6e6e;">9月28日上午，乌鲁木齐市米东区教育局驻西路片区管委会佳和社区“访惠聚”...</a>
-				<a href="http://www.xinjiangnet.com.cn/2017/0929/2004041.shtml" target="_blank">[详细]</a>
+				<a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.desc len=33 append=append/]...</a>
+				<a href="${a.url}" target="_blank">[详细]</a>
 			</p>
+			[/#list]
+			[/@cms_content_list]
 			<div class="clear"></div>
 		</div>
 		<div class="line_dashed"></div>
 		<div id="gg" class="lt">
 			<ul>
+				[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+				[#list tag_list as a]
 				<li>
 					<span>
-						<img src="http://img.xinjiangnet.com.cn/templates/default/img/xjw_xwzx/xwzx_ftimg1.jpg">
+						<img src="/${res}/img/xwzx_ftimg1.jpg">
 					</span>
-					<a href="http://www.xinjiangnet.com.cn/2017/0330/1795096.shtml" target="_blank">市民政局做客行风热线</a>
+					<a href="${a.url}" target="_blank">[@text_cut s=a.title len=10 append=append/]</a>
 				</li>
-				<li>
-					<span>
-						<img src="http://img.xinjiangnet.com.cn/templates/default/img/xjw_xwzx/xwzx_ftimg1.jpg">
-					</span>
-					<a href="http://www.xinjiangnet.com.cn/2017/0323/1789655.shtml" target="_blank">市水务局做客行风热线</a>
-				</li>
-				<li>
-					<span>
-									<img src="http://img.xinjiangnet.com.cn/templates/default/img/xjw_xwzx/xwzx_ftimg1.jpg">
-								</span>
-					<a href="http://www.xinjiangnet.com.cn/2016/1222/1716658.shtml" target="_blank">水磨沟区做客行风热线</a>
-				</li>
-				<li>
-					<span>
-									<img src="http://img.xinjiangnet.com.cn/templates/default/img/xjw_xwzx/xwzx_ftimg1.jpg">
-								</span>
-					<a href="http://www.xinjiangnet.com.cn/2016/0901/1627512.shtml" target="_blank">芳香庄园做最好的葡萄酒</a>
-				</li>
+ 				[/#list]
+				[/@cms_content_list]
 			</ul>
 		</div>
 		<div class="clear"></div>
@@ -264,9 +227,13 @@
 				<div class="clear"></div>
 			</div>
 			<div class="rt">
-				<h4><a href="http://special.xinjiangnet.com.cn/160809-2/index.shtml" target="_blank" style="font-weight: bold;">穿越楼兰</a></h4>
+				<h4>
+					<a href="http://special.xinjiangnet.com.cn/160809-2/index.shtml" target="_blank" style="font-weight: bold;">穿越楼兰</a>
+				</h4>
 				<div class="il">
-					<a href="http://special.xinjiangnet.com.cn/160809-2/index.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2016/0811/thumb_120_80_1470879307684.png" width="120" height="80" style="border:0;"></a>
+					<a href="http://special.xinjiangnet.com.cn/160809-2/index.shtml" target="_blank">
+						<img src="http://upload.xinjiangnet.com.cn/2016/0811/thumb_120_80_1470879307684.png" width="120" height="80" style="border:0;">
+					</a>
 				</div>
 				<p style="text-indent:2em;">
 					<a href="http://special.xinjiangnet.com.cn/160809-2/index.shtml" style="color:#6e6e6e;">“文化、生态、创新、和谐”这几个词是本次大型网络活动的主题。</a>

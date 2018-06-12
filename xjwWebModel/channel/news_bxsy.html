@@ -8,11 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>新疆网_百姓声音</title>
-		<link rel="shortcut icon" href="http://www.xinjiangnet.com.cn/favicon.ico" />
-		<meta name="keywords" content="新疆,新疆网,新疆新闻,乌鲁木齐,一带一路核心网站,张春贤,一带一路,新疆公益,新疆旅游,新疆地州,丝绸之路,新疆新闻综合门户,新疆综合门户,新疆门户,公益新疆,援疆,乌鲁木齐新闻,地州" />
-		<meta name="description" content="国家一类重点新闻网站。乌鲁木齐市委主管，乌鲁木齐晚报社主办，7 x 24小时不间断直播最权威国内外新闻、一带一路沿线国家经济社会发展新闻、新疆新闻及各类服务资讯。" />
-		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		[#include '../include/newsMeta.html']
 		<base target="_blank">
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
 		<link rel="stylesheet" type="text/css" href="/${res}/css/xjw_bxsy.css" />
@@ -40,7 +36,7 @@
 			
 			.widget-vote .btn,
 			.widget-vote .btn span {
-				background-image: url(img/btn.png);
+				background-image: url(/${res}/img/btn.png);
 				color: #ffffff;
 			}
 			
@@ -121,7 +117,7 @@
 			
 			.widget-vote .progress .per {
 				height: 12px;
-				background: transparent url(img/vote-progress.png) repeat-x;
+				background: transparent url(/${res}/img/vote-progress.png) repeat-x;
 			}
 			
 			.widget-vote .nums {
@@ -232,7 +228,7 @@
 				}
 			</style>
 			<div class="headlogo">
-				<a href="http://www.xinjiangnet.com.cn/" alt="新疆网百姓声音"><img src="img/xjw_logo.png" /></a>
+				<a href="http://www.xinjiangnet.com.cn/" alt="新疆网百姓声音"><img src="/${res}/img/xjw_logo.png" /></a>
 				<span>百姓声音</span>
 				<div style="float:right;top:10px;right:10px;width:200px;position: absolute;">
 					<div class="fl-l header-search-input ov ">
@@ -382,48 +378,28 @@
 						</style>
 						<div class="index-slide" id="hotpic" style="height:242px;">
 							<ul class="slide-tab" id="indexSlideTab">
+								[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+								[#list tag_list as a]
 								<li>
-									<a rel="tab" href="http://www.xinjiangnet.com.cn/2018/0524/2075715.shtml" title="燕南荒山C区种植区开始施工">1</a>
+									<a rel="tab" href="${a.url}" title="${a.title}">${a_index+1}</a>
 								</li>
-								<li>
-									<a rel="tab" href="http://www.xinjiangnet.com.cn/2018/0524/2075713.shtml" title="乌鲁木齐站南广场下半年将迎客">2</a>
-								</li>
-								<li>
-									<a rel="tab" href="http://www.xinjiangnet.com.cn/2018/0518/2074197.shtml" title="首届新疆榜书书法展开幕">3</a>
-								</li>
-								<li>
-									<a rel="tab" href="http://www.xinjiangnet.com.cn/2018/0518/2074191.shtml" title="进村入户同劳动 田间地头话发展">4</a>
-								</li>
+								[/#list]
+								[/@cms_content_list]
 							</ul>
 							<div class="slide-cont" id="indexSlideCont">
+								[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+								[#list tag_list as a]
 								<div title="tab" style="display: none;">
 									<div class="shadow"></div>
 									<div class="title">
-										<a href="http://www.xinjiangnet.com.cn/2018/0524/2075715.shtml" title="燕南荒山C区种植区开始施工">燕南荒山C区种植区开始施工</a>
+										<a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=14 append=append/]</a>
 									</div>
-									<a href="http://www.xinjiangnet.com.cn/2018/0524/2075715.shtml" target="_blank" title=""><img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_320_220_1527127137199.jpg" alt="燕南荒山C区种植区开始施工" width="320px" height="220px"></a>
+									<a href="${a.url}" target="_blank" title="${a.title}">
+										<img src="${a.typeImg}" alt="${a.title}" width="320px" height="220px">
+									</a>
 								</div>
-								<div title="tab" style="display: none;">
-									<div class="shadow"></div>
-									<div class="title">
-										<a href="http://www.xinjiangnet.com.cn/2018/0524/2075713.shtml" title="乌鲁木齐站南广场下半年将迎客">乌鲁木齐站南广场下半年将迎客</a>
-									</div>
-									<a href="http://www.xinjiangnet.com.cn/2018/0524/2075713.shtml" target="_blank" title=""><img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_320_220_1527126795209.jpg" alt="乌鲁木齐站南广场下半年将迎客" width="320px" height="220px"></a>
-								</div>
-								<div title="tab" style="display: none;">
-									<div class="shadow"></div>
-									<div class="title">
-										<a href="http://www.xinjiangnet.com.cn/2018/0518/2074197.shtml" title="首届新疆榜书书法展开幕">首届新疆榜书书法展开幕</a>
-									</div>
-									<a href="http://www.xinjiangnet.com.cn/2018/0518/2074197.shtml" target="_blank" title=""><img src="http://upload.xinjiangnet.com.cn/2018/0518/thumb_320_220_1526610837838.jpg" alt="首届新疆榜书书法展开幕" width="320px" height="220px"></a>
-								</div>
-								<div title="tab" style="display: none;">
-									<div class="shadow"></div>
-									<div class="title">
-										<a href="http://www.xinjiangnet.com.cn/2018/0518/2074191.shtml" title="进村入户同劳动 田间地头话发展">进村入户同劳动 田间地头话发</a>
-									</div>
-									<a href="http://www.xinjiangnet.com.cn/2018/0518/2074191.shtml" target="_blank" title=""><img src="http://upload.xinjiangnet.com.cn/2018/0518/thumb_320_220_1526606288442.png" alt="进村入户同劳动 田间地头话发展" width="320px" height="220px"></a>
-								</div>
+								[/#list]
+								[/@cms_content_list]
 							</div>
 						</div>
 						<script type="text/javascript">
@@ -450,23 +426,22 @@
 							</a>
 						</div>
 						<div class="h1_newt">
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075710.shtml">四部门联合整治校外培训机构不良行为</a>
+							[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
+							<a href="${a.url}">[@text_cut s=a.title len=20 append=append/]</a>
+							[/#list]
+							[/@cms_content_list]
 						</div>
 						<div class="h_liebiao">
 							&middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075703.shtml">【文明在行动】乌鲁木齐出租车治理渐显成效</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0522/2074988.shtml">自治区规范102项医疗服务价格</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0518/2074195.shtml">斑马线前不礼让行人将停业学习</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0518/2074194.shtml">乌市新增一家哨点医院监测化妆品不良反应</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0518/2074033.shtml">新疆患者在社区可享北京专家服务</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0518/2074184.shtml">关爱工程：托起困难群众的幸福底线</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0518/2074189.shtml">乌鲁木齐市加大机动车尾气排放遥感监测力度</a>
+							[@cms_content_list count='7' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+							<a href="${a.url}">[@text_cut s=a.title len=20 append=append/]</a>
+							[#if a_has_next]
+								<br> &middot;
+							[/#if]
+							[/#list]
+							[/@cms_content_list]
 						</div>
 					</div>
 				</div>
@@ -474,12 +449,12 @@
 					<!--<script src="http://xhad.xinjiangnet.com.cn/Stat.php?id=2" charset="utf-8" type="text/javascript"></script>-->
 					<!--<img src="swf/left_ad2.gif"/>-->
 					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="650" height="87" align="absbottom">
-        <param name="movie" value="swf/20150701sb.swf" />
-        <param name=wmode value=opaque />
-        <param name="quality" value="high" />
-        <param name="SCALE" value="exactfit" />
-        <embed src="swf/20150701sb.swf" width="650" height="87" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
-    </object>
+        				<param name="movie" value="swf/20150701sb.swf" />
+        				<param name=wmode value=opaque />
+        				<param name="quality" value="high" />
+        				<param name="SCALE" value="exactfit" />
+        				<embed src="swf/20150701sb.swf" width="650" height="87" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+    				</object>
 				</div>
 				<div class="big_left_h2">
 					<style>
@@ -817,7 +792,7 @@
 				</div>
 				<div class="ad">
 					<!--<script src="http://xhad.xinjiangnet.com.cn/Stat.php?id=3" charset="utf-8" type="text/javascript"></script>-->
-					<img src="img/zx650-87.jpg" />
+					<img src="/${res}/img/zx650-87.jpg" />
 				</div>
 				<div class="big_left_h3">
 					<div class="h3_l">
@@ -998,7 +973,7 @@
 			<div class="big_rightbox">
 				<div class="right_login" style="height: 280px;">
 					<!------------登录框开始-------------->
-					<div style="height:156px;background:url(img/loginbg.png)">
+					<div style="height:156px;background:url(/${res}/img/loginbg.png)">
 						<!------------------我要登录--------------->
 						<div class="login_am1" id="login" style="height:200px;">
 							<div style="margin: 11px;color:#fff;font-size: 20px;text-align: center;">会员登陆</div>
@@ -1045,16 +1020,16 @@
 							<em style="font-size: 18px;font-family:'微软雅黑';color:#fb8a00;">会员名</em> <br>
 							<div style="text-align: left;padding-left: 20px;margin-top: 15px;">
 								<ul style="width:100%;">
-									<li><img src="img/icon_hy.png" />
+									<li><img src="/${res}/img/icon_hy.png" />
 										<a href="http://app.xinjiangnet.com.cn/?app=contribution&controller=panel&action=index" style="margin-left:5px;">会员中心首页</a>
 									</li>
-									<li><img src="img/icon_tc.png" />
+									<li><img src="/${res}/img/icon_tc.png" />
 										<a href="javascript:;" onclick="logout()" class="other" style="margin-left:5px;">退出登陆</a>
 									</li>
-									<li><img src="img/icon_xg.png" />
+									<li><img src="/${res}/img/icon_xg.png" />
 										<a href="http://app.xinjiangnet.com.cn/?app=member&amp;controller=panel&amp;action=index" style="margin-left:5px;">修改个人资料</a>
 									</li>
-									<li><img src="img/icon_md.png" />
+									<li><img src="/${res}/img/icon_md.png" />
 										<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebook" style="margin-left:5px;">我要投诉</a>
 									</li>
 								</ul>
@@ -1244,7 +1219,7 @@
 					</div>
 					<div style="margin: 0 20px;">
 						<a href="http://weibo.com/5498430144/profile?topnav=1&wvr=6">
-							<img src="img/weibo.gif" />
+							<img src="/${res}/img/weibo.gif" />
 						</a>
 					</div>
 					<div class="right_hei"><strong></strong></div>
@@ -1295,8 +1270,8 @@
 								<a href="javascript:;" onclick="$(this).prev().click();" class="other">换一张？</a>
 							</div>
 							<div class="center" style="padding: 5px 0 0 0;">
-								<button href="javascript:void(0);" data-role="submit" style="border:0;"><img src="img/201306_ppxj_btn1.jpg"></button>
-								<button onclick="window.open('http://w.xinjiangnet.com.cn/2015/0201/4974.shtml');" style="border:0;"><img src="img/201306_ppxj_btn2.jpg" ></button>
+								<button href="javascript:void(0);" data-role="submit" style="border:0;"><img src="/${res}/img/201306_ppxj_btn1.jpg"></button>
+								<button onclick="window.open('http://w.xinjiangnet.com.cn/2015/0201/4974.shtml');" style="border:0;"><img src="/${res}/img/201306_ppxj_btn2.jpg" ></button>
 								<button onclick="submit11(this)" style="border:0;display: none;">投票</button>&nbsp;&nbsp;
 								<span class="vote-message" style="display:none">投票成功，感谢您的参与</span>
 							</div>
@@ -1451,13 +1426,13 @@
 			<div style="width:100%; height:10px;">
 			</div>
 			<div style="width:980px; margin:0px auto;">
-				<img src="img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
+				<img src="/${res}/img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
 				<map name="Map" id="Map">
-      <area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
-      <area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
-      <area shape="rect" coords="718,29,846,61" href="http://epaper.xinjiangnet.com.cn" />
-      <area shape="rect" coords="866,28,973,58" href="#" />
-    </map>
+      				<area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
+      				<area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
+      				<area shape="rect" coords="718,29,846,61" href="http://epaper.xinjiangnet.com.cn" />
+      				<area shape="rect" coords="866,28,973,58" href="#" />
+    			</map>
 			</div>
 			<div style="width:100%; height:10px;">
 			</div>
@@ -1475,16 +1450,24 @@
 					</script>
 					<div style="width:980px; margin:0px auto;">
 						<div style="width:100px; float:left; border-bottom:2px solid #F00;" id="bdshs1">
-							<span onMouseMove="javascript:hzmt(1)"><a href="" style="font-size:14px; line-height:30px;">地方网媒</a></span>
+							<span onMouseMove="javascript:hzmt(1)">
+								<a href="" style="font-size:14px; line-height:30px;">地方网媒</a>
+							</span>
 						</div>
 						<div style="width:200px; float:left;" id="bdshs2">
-							<span onMouseMove="javascript:hzmt(2)"><a href="" style="font-size:14px; line-height:30px;">“一带一路”网络联盟</a></span>
+							<span onMouseMove="javascript:hzmt(2)">
+								<a href="" style="font-size:14px; line-height:30px;">“一带一路”网络联盟</a>
+							</span>
 						</div>
 						<div style="width:100px;float:left;" id="bdshs3">
-							<span onMouseMove="javascript:hzmt(3)"><a href="" style="font-size:14px; line-height:30px;">合作媒体</a></span>
+							<span onMouseMove="javascript:hzmt(3)">
+								<a href="" style="font-size:14px; line-height:30px;">合作媒体</a>
+							</span>
 						</div>
 						<div style="width:100px;float:left;" id="bdshs4">
-							<span onMouseMove="javascript:hzmt(4)"><a href="" style="font-size:14px; line-height:30px;">城市网盟</a></span>
+							<span onMouseMove="javascript:hzmt(4)">
+								<a href="" style="font-size:14px; line-height:30px;">城市网盟</a>
+							</span>
 						</div>
 						<div style="width:480px;float:right;">
 						</div>

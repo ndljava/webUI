@@ -1,0 +1,1187 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh-CN">
+<!--<![endif]-->
+	<head>
+		[#include '../include/newsMeta.html']
+ 		<base target="_blank">
+		<link rel="stylesheet" type="text/css" href="/${res}/css/xjw_gypd.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-index.css" />
+		<!--[if lt IE 9 ]>
+			<script type="text/javascript" src="/${res}/js/modernizr.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="/${res}/js/cmstop-common.js"></script>
+		<script type="text/javascript" src="/${res}/js/jquery.js"></script>
+		<script type="text/javascript" src="/${res}/js/config.js"></script>
+		<script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
+		<link href="/${res}/css/history.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="/${res}/js/koala.min.1.5.js"></script>
+	</head>
+
+	<body>
+		<!-- 头部 -->
+		<header class="head-repeat-x">
+			<!-- 顶部条 -->
+			<div class="header-topbar">
+				<!-- 带链接的顶部 -->
+				<ul class="head-top-nav" style="width:700px;">
+					<li>
+						<a href="http://www.xinjiangnet.com.cn" title="首页" class="b" target="_blank">首页</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/xwzx" title="新闻" target="_blank">新闻</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/wlmq" title="图片" target="_blank">乌鲁木齐</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/bxsy" title="视频" target="_blank">百姓声音</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/gypd/" title="访谈" target="_blank">公益</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/sppd/index1.html" title="专栏" target="_blank">视频</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/tppd/" title="图片" target="_blank">图片</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/ylpd/" title="娱乐" target="_blank">娱乐</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/typd/" title="体育" target="_blank">体育</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/gwpd/" title="购物" target="_blank">购物</a>
+					</li>
+					<li>
+						<a href="http://bbs.xinjiangnet.com.cn/" title="论坛" target="_blank">论坛</a>
+					</li>
+					<li style="z-index:1000;position:absolute; width:150px; height:26px; text-align:left;">
+						<a id="gengduo">更多></a>
+					</li>
+				</ul>
+				<script>
+					$("#gengduo").hover(function() {
+						$(this).html("<div style='width:150px;z-index;10000;position:absolute;background-color:#000;height:180px;'><div style='width:150px; height:30px;text-align:left;'><a>更多></a></div><div class='dhy'><span><a href='http://www.xinjiangnet.com.cn/qc/' target='_blank'>汽车</a></span><span><a href='http://www.xinjiangnet.com.cn/fcpd/' ' target='_blank'>房产</a></span><span><a href='http://www.xinjiangnet.com.cn/cjpd/' target='_blank'>财经</a></span><span><a href='http://www.xinjiangnet.com.cn/qfj/' target='_blank'>7坊街</a></span><span><a href='http://www.xinjiangnet.com.cn/qnw/' target='_blank'>旅游</a></span><span><a href='http://www.xinjiangnet.com.cn/xwzx/jt/' target='_blank'>交通</a></span><span><a href='http://www.xinjiangnet.com.cn/mspd/' target='_blank'>美食</a></span><span><a href='http://www.xinjiangnet.com.cn/xjhpp/' target='_blank'>好品牌</a></span><span><a href='http://www.xinjiangnet.com.cn/qzpd/' target='_blank'>亲子</a></span><span><a href='http://www.xinjiangnet.com.cn/jypd/' target='_blank'>教育</a></span><span><a href='http://www.xinjiangnet.com.cn/cgpd/' target='_blank'>出国</a></span><span><a href='http://www.xinjiangnet.com.cn/xjzjy/' target='_blank'>小记者</a></span><span><a href='http://www.xinjiangnet.com.cn/hstx/' target='_blank'>评论</a></span><span><a href='http://www.xinjiangnet.com.cn/jkpd/' target='_blank'>健康</a></span><span><a href='http://www.xinjiangnet.com.cn/yoblh/' target='_blank'>亚欧博览会</a></span><span><a href='http://www.xinjiangnet.com.cn/health/ys/' target='_blank'>养生</a></span><span><a href='http://www.xinjiangnet.com.cn/mspd/' target='_blank'>美食</a></span><span><a href='http://swzl.xinjiangnet.com.cn' target='_blank'>失物招领</a></span></div></div>");
+					}, function() {
+						$(this).html("更多");
+					})
+				</script>
+				<ul class="denglu">
+					<li>
+						<a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=login" title="登录" target="_blank">登录</a>
+					</li>
+					<li>
+						<a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=register" title="注册" target="_blank">注册</a>
+					</li>
+				</ul>
+				<!-- 带分享的顶部   #include virtual="/include/search.shtml"   -->
+				<!-- end带分享的顶部 -->
+				<!-- end带链接的顶部 -->
+			</div>
+			<!-- end顶部条 -->
+			<!-- 不带logo的banner -->
+			<!-- end不带logo的banner -->
+			<!-- 顶部背景条, -->
+			<div class="top-block"></div>
+			<!-- end顶部背景条 -->
+		</header>
+		<!-- @end头部 -->
+		<div class="updiv">
+			<div style="margin:15px 0 25px 0;">
+				<a href="http://special.xinjiangnet.com.cn/161010/" target="_blank"><img src="/${res}/img/20161019zmmm.jpg" width="980" height="80">
+			</div>
+			<!--新疆网logo-->
+			<style>
+				.headlogo {
+					width: 980px;
+					margin: 0;
+					padding: 0;
+					no-repeat left center;
+					height: 34px;
+					margin-bottom: 10px;
+					text-align: left;
+					position: relative;
+				}
+				
+				.headlogo span {
+					margin-left: 20px;
+					font-family: "微软雅黑";
+					font-size: 24px;
+					font-weight: 700;
+					color: #960101;
+					line-height: 34px;
+				}
+			</style>
+			<div class="headlogo">
+				<a href="http://www.xinjiangnet.com.cn/" alt="新疆网公益频道"><img src="/${res}/img/xjw_logo.png" /></a>
+				<span>公益新疆</span>
+				<div style="float:right;top:10px;right:10px;width:200px;position: absolute;">
+					<div class="fl-l header-search-input ov ">
+						<form id="head_search" name="head_search" action="http://app.xinjiangnet.com.cn/" method="GET">
+							<input type="hidden" name="app" value="search">
+							<input type="hidden" name="controller" value="index">
+							<input type="hidden" name="action" value="search">
+							<input type="hidden" id="type" name="type" value="all">
+							<div class="divicon icon16x16 fl-r"></div>
+							<input type="text" id="head_wd" name="wd" class="searinput" style="margin-top:2px;" />
+						</form>
+					</div>
+					<a href="" class="m-header-search js-headsearch fl-l icon16x16"></a>
+					<script type="text/javascript">
+						$('#head_search .divicon').click(function() {
+							$('#head_search').submit();
+						});
+						$('#head_search').attr('Action', APP_URL);
+					</script>
+				</div>
+			</div>
+			<div class="navbox">
+				<!------导航开始----->
+				<div id="nav">
+					<ul>
+						<li id="short_title">
+							<a href="http://www.xinjiangnet.com.cn/gy/">首页</a>
+						</li>
+						<li>
+							<a href="http://www.xinjiangnet.com.cn/gy/gyzx/">公益资讯</a>
+						</li>
+						<li>
+							<a href="http://www.xinjiangnet.com.cn/gy/qyshzr/">企业社会责任</a>
+						</li>
+						<li id="long_title">
+							<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=forumdisplay&fid=279">我们需要您的帮助</a>
+						</li>
+						<li>
+							<a href="http://www.xinjiangnet.com.cn/gy/gyzz/">公益组织</a>
+						</li>
+						<li>
+							<a href="http://www.xinjiangnet.com.cn/gy/gyrw/">公益人物</a>
+						</li>
+						<li style="float:right">
+							<a href="http://www.xinjiangnet.com.cn//2015/0128/2664.shtml">加入我们</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!------导航结束----->
+			<div class="leftbox">
+				<div class="flash">
+					<!-- 代码 开始 -->
+					<div id="fsD1" class="focus">
+						<div id="D1pic1" class="fPic">
+							<div class="fcon" style="display: none;">
+								<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0510/2071689.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0510/thumb_596_374_1525917714932.jpg" style="opacity: 1; "></a>
+								<span class="shadow" style="height: 60px;line-height: 60px;">
+                    <a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0510/2071689.shtml">让公益的阳光照亮梦想之路</a>
+                </span>
+							</div>
+							<div class="fcon" style="display: none;">
+								<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0510/2071595.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0510/thumb_596_374_1525915479808.png" style="opacity: 1; "></a>
+								<span class="shadow" style="height: 60px;line-height: 60px;">
+                    <a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0510/2071595.shtml">乌鲁木齐多所学校将剪纸引进课堂 新疆非遗传承人校园教剪纸</a>
+                </span>
+							</div>
+							<div class="fcon" style="display: none;">
+								<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0509/2071549.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0509/thumb_596_374_1525867894617.jpg" style="opacity: 1; "></a>
+								<span class="shadow" style="height: 60px;line-height: 60px;">
+                    <a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0509/2071549.shtml">乌鲁木齐市第一医院医生走进昌乐园小区开展义诊活动</a>
+                </span>
+							</div>
+							<div class="fcon" style="display: none;">
+								<a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0402/2060377.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0402/1522633537764.jpg" style="opacity: 1; "></a>
+								<span class="shadow" style="height: 60px;line-height: 60px;">
+                    <a target="_blank" href="http://www.xinjiangnet.com.cn/2018/0402/2060377.shtml">“轮椅教师”直播教英语成“网红”：我就是喜欢讲课</a>
+                </span>
+							</div>
+						</div>
+						<div class="fbg" style="bottom: 15px;">
+							<div class="D1fBt" id="D1fBt" style="width:90px; position:absolute;top:0;right:0;">
+								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>1</i></a>
+								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a>
+								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>3</i></a>
+								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>4</i></a>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">
+						Qfast.add('widgets', {
+							path: "/${res}/js/terminator2.2.min.js",
+							type: "js",
+							requires: ['fx']
+						});
+						Qfast(false, 'widgets', function() {
+							K.tabs({
+								id: 'fsD1', //焦点图包裹id  
+								conId: "D1pic1", //** 大图域包裹id  
+								tabId: "D1fBt",
+								tabTn: "a",
+								conCn: '.fcon', //** 大图域配置class       
+								auto: 1, //自动播放 1或0
+								effect: 'fade', //效果配置
+								eType: 'click', //** 鼠标事件
+								pageBt: true, //是否有按钮切换页码
+								bns: ['.prev', '.next'], //** 前后按钮配置class                          
+								interval: 3000 //** 停顿时间  
+							})
+						})
+					</script>
+					<!-- 代码 结束 -->
+				</div>
+				<div class="gy_tj">
+					<div class="biaoti1">
+						<a href="http://www.xinjiangnet.com.cn/gy/gytj/">
+							<div class="bt_pic1">
+								<img src="/${res}/img/gy_tj.png" />
+							</div>
+						</a>
+						<a href="http://www.xinjiangnet.com.cn/gy/gytj/">
+							<div class="gd">更多>></div>
+						</a>
+					</div>
+					<div class="wen1">
+						<div class="wen1_left">
+							<a href="http://special.xinjiangnet.com.cn/170426-2/"><img src="http://upload.xinjiangnet.com.cn/2018/0104/1515028928203.jpg" /> </a>
+						</div>
+						<div class="wen1_right">
+							<div class="da_bt">
+								<a href="http://special.xinjiangnet.com.cn/170426-2/">梦圆绿茵</a>
+							</div>
+							<div class="wen1_w" style="text-indent:2em;">
+								<a href="http://special.xinjiangnet.com.cn/170426-2/" style="color:#6e6e6e;">他们的绿茵梦，需要你来助力。我们在此倡议社会各企事业单位、社会团体、爱心人士为新疆贫困地区中小学校捐赠足球，为新疆乡镇学校募集足球，推动校园...</a>
+								<a href="http://special.xinjiangnet.com.cn/170426-2/"><span class="xx">[详细]</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="temp1"></div>
+					<!--- 左侧 两条图文新闻 切割线--->
+					<div class="wen1">
+						<div class="wen1_left">
+							<a href="http://www.xinjiangnet.com.cn/2016/0722/1595598.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0104/1515031940308.jpg" /> </a>
+						</div>
+						<div class="wen1_right">
+							<div class="da_bt">
+								<a href="http://www.xinjiangnet.com.cn/2016/0722/1595598.shtml">童行筑梦</a>
+							</div>
+							<div class="wen1_w" style="text-indent:2em;">
+								<a href="http://www.xinjiangnet.com.cn/2016/0722/1595598.shtml" style="color:#6e6e6e;">参加一次职业体验、观看一部精彩电影、步入户外感受自然、畅玩儿童游乐嘉年华……”童行筑梦“主题活动由新疆网及乌鲁木齐晚报联合发起。</a>
+								<a href="http://www.xinjiangnet.com.cn/2016/0722/1595598.shtml"><span class="xx">[详细]</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="need_help">
+					<div class="biaoti2">
+						<div class="bt_pic2"><img src="/${res}/img/gy_help.png" /></div>
+						<div class="help">
+							<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=forumdisplay&fid=279"><img src="/${res}/img/help.png" /></a>
+						</div>
+					</div>
+					<div class="buluoht">
+						<Br>
+						<div style="width:33.3%; height:220px; float:left;">
+							<div style="width:160px; height:196px;">
+								<div style="width:160px; height:123px;">
+									<a href="http://www.xinjiangnet.com.cn/2018/0122/2040295.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0122/thumb_160_123_1516585966524.jpg" /></a>
+								</div>
+								<div style="width:160px; height:73px;">
+									<a href="http://www.xinjiangnet.com.cn/2018/0122/2040295.shtml" style="font-size:14px; font-weight:bold;">10岁血癌女孩仅剩30斤，每日看视频一笑</a><br />
+									<a href="http://www.xinjiangnet.com.cn/2018/0122/2040295.shtml" style="color:#6e6e6e; font-size:12px;">照片上这个小女孩叫石又兮，生病前后的她截然是两个不同的人。病房里，10岁...</a>
+									<a href="http://www.xinjiangnet.com.cn/2018/0122/2040295.shtml"> <span class="xx">[详细]</span></a>
+								</div>
+							</div>
+						</div>
+						<div style="width:33.3%; height:220px; float:left;">
+							<div style="width:160px; height:196px;">
+								<div style="width:160px; height:123px;">
+									<a href="http://www.xinjiangnet.com.cn/2018/0122/2040302.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0122/thumb_160_123_1516585931468.jpg" /></a>
+								</div>
+								<div style="width:160px; height:73px;">
+									<a href="http://www.xinjiangnet.com.cn/2018/0122/2040302.shtml" style="font-size:14px; font-weight:bold;">男孩八个月大跌入油锅，如今长大只有一个愿望</a><br />
+									<a href="http://www.xinjiangnet.com.cn/2018/0122/2040302.shtml" style="color:#6e6e6e; font-size:12px;">14岁的王帅性格内向，少言寡语的他和妈妈2018年1月份来到北京接受手术治疗...</a>
+									<a href="http://www.xinjiangnet.com.cn/2018/0122/2040302.shtml"> <span class="xx">[详细]</span></a>
+								</div>
+							</div>
+						</div>
+						<div style="width:33.3%; height:220px; float:left;">
+							<div style="width:160px; height:196px;">
+								<div style="width:160px; height:123px;">
+									<a href="http://www.xinjiangnet.com.cn/2017/1211/2027933.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/1212/thumb_160_123_1513047325848.jpg" /></a>
+								</div>
+								<div style="width:160px; height:73px;">
+									<a href="http://www.xinjiangnet.com.cn/2017/1211/2027933.shtml" style="font-size:14px; font-weight:bold;"> 5岁女童患“怪病” 家人盼确诊</a><br />
+									<a href="http://www.xinjiangnet.com.cn/2017/1211/2027933.shtml" style="color:#6e6e6e; font-size:12px;">从5年前起，骆晶开始惧怕秋天与黑夜，因为每到这时，女儿都会因为疼痛发出...</a>
+									<a href="http://www.xinjiangnet.com.cn/2017/1211/2027933.shtml"> <span class="xx">[详细]</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gy_zz">
+					<div class="biaoti1">
+						<a href="http://www.xinjiangnet.com.cn/gy/gyzz/">
+							<div class="bt_pic1"><img src="/${res}/img/gy_zz.png" /></div>
+						</a>
+					</div>
+					<!---------------义工 社区 链接--------------------------------->
+					<div class="yigong">
+						<div class="yg_biao">
+							<a href="http://www.xinjiangnet.com.cn/2015/0128/2645.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0128/1422449470151.jpg" width="52px" height="51px" /></a>
+						</div>
+						<div class="yg_w">
+							<div class="yg_ti">
+								<a href="http://www.xinjiangnet.com.cn/2015/0128/2645.shtml">新疆财经大学知行协会</a>
+							</div>
+							<div class="yg_wen" style="text-indent:2em;">
+								<a href="http://www.xinjiangnet.com.cn/2015/0128/2645.shtml" style="color:#6e6e6e;">新疆财经大学商务学院知行...</a>
+								<a href="http://www.xinjiangnet.com.cn/2015/0128/2645.shtml">[详细]</a>
+							</div>
+						</div>
+					</div>
+					<div class="yigong">
+						<div class="yg_biao">
+							<a href="http://www.xinjiangnet.com.cn/2015/0128/2623.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0128/thumb_52_51_1422446592205.jpg" width="52px" height="51px" /></a>
+						</div>
+						<div class="yg_w">
+							<div class="yg_ti">
+								<a href="http://www.xinjiangnet.com.cn/2015/0128/2623.shtml">乡村校园志愿者</a>
+							</div>
+							<div class="yg_wen" style="text-indent:2em;">
+								<a href="http://www.xinjiangnet.com.cn/2015/0128/2623.shtml" style="color:#6e6e6e;">乡村校园志愿者成立于2007...</a>
+								<a href="http://www.xinjiangnet.com.cn/2015/0128/2623.shtml">[详细]</a>
+							</div>
+						</div>
+					</div>
+					<div class="yigongx">
+						<div class="yg_biao">
+							<a href="http://w.xinjiangnet.com.cn/2015/0128/4225.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0128/thumb_52_51_1422449853940.jpg" width="52px" height="51px" /></a>
+						</div>
+						<div class="yg_w">
+							<div class="yg_ti">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/4225.shtml">爱满天山·爱心联盟</a>
+							</div>
+							<div class="yg_wen" style="text-indent:2em;">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/4225.shtml" style="color:#6e6e6e;">2011年底成立了爱满天山·...</a>
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/4225.shtml">[详细]</a>
+							</div>
+						</div>
+					</div>
+					<div class="yigong">
+						<div class="yg_biao">
+							<a href="http://w.xinjiangnet.com.cn/2015/0128/2643.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0128/thumb_52_51_1422449102591.png" width="52px" height="51px" /></a>
+						</div>
+						<div class="yg_w">
+							<div class="yg_ti">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2643.shtml">幸福义工社</a>
+							</div>
+							<div class="yg_wen" style="text-indent:2em;">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2643.shtml" style="color:#6e6e6e;">乌鲁木齐市幸福义工社创建...</a>
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2643.shtml">[详细]</a>
+							</div>
+						</div>
+					</div>
+					<div class="yigong">
+						<div class="yg_biao">
+							<a href="http://w.xinjiangnet.com.cn/2015/0128/2627.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0128/1422447211802.jpg" width="52px" height="51px" /></a>
+						</div>
+						<div class="yg_w">
+							<div class="yg_ti">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2627.shtml">乌市青少年心理咨询志愿服务队</a>
+							</div>
+							<div class="yg_wen" style="text-indent:2em;">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2627.shtml" style="color:#6e6e6e;">乌鲁木齐青少年心理发展研...</a>
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2627.shtml">[详细]</a>
+							</div>
+						</div>
+					</div>
+					<div class="yigongx">
+						<div class="yg_biao">
+							<a href="http://w.xinjiangnet.com.cn/2015/0128/2614.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0128/thumb_52_51_1422445716262.png" width="52px" height="51px" /></a>
+						</div>
+						<div class="yg_w">
+							<div class="yg_ti">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2614.shtml">春雨爱心公益社</a>
+							</div>
+							<div class="yg_wen" style="text-indent:2em;">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2614.shtml" style="color:#6e6e6e;">群成员为500人，主要年龄...</a>
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2614.shtml">[详细]</a>
+							</div>
+						</div>
+					</div>
+					<div class="yigong">
+						<div class="yg_biao">
+							<a href="http://w.xinjiangnet.com.cn/2015/0128/2613.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0128/thumb_52_51_1422445457786.png" width="52px" height="51px" /></a>
+						</div>
+						<div class="yg_w">
+							<div class="yg_ti">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2613.shtml">“大手牵小手”资助群</a>
+							</div>
+							<div class="yg_wen" style="text-indent:2em;">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2613.shtml" style="color:#6e6e6e;">乌鲁木齐“大手牵小手资助...</a>
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2613.shtml">[详细]</a>
+							</div>
+						</div>
+					</div>
+					<div class="yigong">
+						<div class="yg_biao">
+							<a href="http://w.xinjiangnet.com.cn/2015/0128/2416.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0128/thumb_52_51_1422435488788.jpg" width="52px" height="51px" /></a>
+						</div>
+						<div class="yg_w">
+							<div class="yg_ti">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2416.shtml">白天鹅援助网</a>
+							</div>
+							<div class="yg_wen" style="text-indent:2em;">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2416.shtml" style="color:#6e6e6e;">几年来，新疆白天鹅援助网...</a>
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2416.shtml">[详细]</a>
+							</div>
+						</div>
+					</div>
+					<div class="yigongx">
+						<div class="yg_biao">
+							<a href="http://w.xinjiangnet.com.cn/2015/0128/2414.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0128/1422438067252.jpg" width="52px" height="51px" /></a>
+						</div>
+						<div class="yg_w">
+							<div class="yg_ti">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2414.shtml">聚心中亚南</a>
+							</div>
+							<div class="yg_wen" style="text-indent:2em;">
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2414.shtml" style="color:#6e6e6e;">聚心中亚南隶属于中亚南街...</a>
+								<a href="http://w.xinjiangnet.com.cn/2015/0128/2414.shtml">[详细]</a>
+							</div>
+						</div>
+					</div>
+					<!---------------义工 社区 链接--------------------------------->
+				</div>
+				<style>
+					.picItem {
+						position: relative;
+						overflow: hidden;
+					}
+					
+					.picItem img {
+						display: block;
+					}
+					
+					.picItem a {
+						color: #fff
+					}
+					
+					.picItem span {
+						position: absolute;
+						width: 100%;
+						height: 30px;
+						line-height: 30px;
+						text-indent: 10px;
+						font-size: 14px;
+						color: #fff;
+						left: 0;
+						bottom: 0;
+					}
+					
+					.picItem .mask {
+						margin-left: -9999em;
+						border: 3px solid white;
+						position: absolute;
+						left: 0;
+						top: 0;
+						z-index: 2;
+					}
+					
+					.picItem:hover .mask {
+						margin-left: 0;
+					}
+					
+					.picItem:hover .opacity60 {
+						background: rgba(253, 79, 5, 0.6);
+						filter: progid:DXImageTransform.Microsoft.gradient( GradientType=0, startColorstr="#99fd4f05", endColorstr="#99fd4f05");
+					}
+					
+					:root .picItem:hover span {
+						filter: none;
+						background: rgba(253, 79, 5, 0.6);
+					}
+					
+					.picItem div {
+						display: none;
+					}
+					
+					.picItem:hover div {
+						display: block;
+					}
+				</style>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						var $tab_li = $('.picItem');
+						$tab_li.hover(function() {
+							$(this).find(".mask").width($(this).width() - 6);
+							$(this).find(".mask").height($(this).height() - 6);
+						});
+					});
+				</script>
+				<div class="gy_pic" style="margin-top: 15px;">
+					<div class="biaoti1">
+						<a href="http://www.xinjiangnet.com.cn/gy/gyyx/">
+							<div class="bt_pic1"><img src="/${res}/img/gy_yx.png" /></div>
+						</a>
+						<a href="http://www.xinjiangnet.com.cn/gy/gyyx/">
+							<div class="gd">更多>></div>
+						</a>
+					</div>
+					<div class="picbox">
+						<div class="picItem picbox_left">
+							<a href="http://www.xinjiangnet.com.cn/2017/1219/2030075.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/1219/thumb_184_439_1513647591904.jpg" width="184px" height="439px" /></a>
+							<div class="shadou1" style="height:35px;">
+								<a href="http://www.xinjiangnet.com.cn/2017/1219/2030075.shtml">外国小哥折千纸鹤1000天不重样</a>
+							</div>
+							<a href="http://www.xinjiangnet.com.cn/2017/1219/2030075.shtml"><i class="mask"></i></a>
+						</div>
+						<div class="picbox_mid">
+							<div class="picItem mid1">
+								<a href="http://www.xinjiangnet.com.cn/2017/1120/2020653.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/1120/thumb_201_145_1511144895938.jpg" width="201px" height="145px" /></a>
+								<div class="shadou2" style="height:35px;">
+									<a href="http://www.xinjiangnet.com.cn/2017/1120/2020653.shtml">休斯敦举办街画节为听障儿童筹款</a>
+								</div>
+								<a href="http://www.xinjiangnet.com.cn/2017/1120/2020653.shtml"><i class="mask"></i></a>
+							</div>
+							<div class="picItem mid2">
+								<a href="http://www.xinjiangnet.com.cn/2018/0111/2037042.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0129/1517192487631.jpg" width="201px" height="292px" /></a>
+								<div class="shadou2" style="height:35px;">
+									<a href="http://www.xinjiangnet.com.cn/2018/0111/2037042.shtml">上海唯一一家深夜书店开业 用文化温暖城市人心</a>
+								</div>
+								<a href="http://www.xinjiangnet.com.cn/2018/0111/2037042.shtml"><i class="mask"></i></a>
+							</div>
+						</div>
+						<div class="picbox_right">
+							<div class="picItem boxright1">
+								<a href="http://www.xinjiangnet.com.cn/2018/0129/2042534.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0129/1517192190694.jpg" width="172px" height="276px" /></a>
+								<div class="shadou4" style="height:35px;">
+									<a href="http://www.xinjiangnet.com.cn/2018/0129/2042534.shtml">用医德守护村民生命健康</a>
+								</div>
+								<a href="http://www.xinjiangnet.com.cn/2018/0129/2042534.shtml"><i class="mask"></i></a>
+							</div>
+							<div class="picItem boxright2">
+								<a href="http://www.xinjiangnet.com.cn/2017/1127/2022680.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/1127/thumb_172_161_1511749891124.jpg" width="172px" height="161px" /></a>
+								<div class="shadou5" style="height:35px;">
+									<a href="http://www.xinjiangnet.com.cn/2017/1127/2022680.shtml">6台移植手术同时进行 她捐献的器官至少挽救8人</a>
+								</div>
+								<a href="http://www.xinjiangnet.com.cn/2017/1127/2022680.shtml"><i class="mask"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rightbox">
+				<div class="right1">
+					<div class="right1_t">
+						<a href="http://www.xinjiangnet.com.cn/2018/0510/2071588.shtml">“聪慧行动”公益项目落地新疆</a>
+					</div>
+					<div class="right1_w" style="text-indent:2em;">
+						<a href="http://www.xinjiangnet.com.cn/2018/0510/2071588.shtml" style="color:#6e6e6e;">随着公益项目“聪慧行动”落地新疆，家庭经济困难的耳聋患儿婷婷有望获得免费的人工耳蜗植入手术，重回有声世界。</a>
+						<a href="http://www.xinjiangnet.com.cn/2018/0510/2071588.shtml"><span class="xx">[详细]</span> </a>
+					</div>
+					<div class="right1_t">
+						<a href="http://www.xinjiangnet.com.cn/2018/0510/2071600.shtml">乌鲁木齐市第一人民医院送健康进社区</a>
+					</div>
+					<div class="right1_w" style="text-indent:2em;">
+						<a href="http://www.xinjiangnet.com.cn/2018/0510/2071600.shtml" style="color:#6e6e6e;">5月9日一早，昌乐园小区的花园内，居民们赶来参加由市卫计委驻南湾街昌乐园社区“访惠聚”工作队与市第一人民医院联合举办的义诊活动。</a>
+						<a href="http://www.xinjiangnet.com.cn/2018/0510/2071600.shtml"><span class="xx">[详细]</span> </a>
+					</div>
+					<div class="right1_lb">
+						<ul>
+							<li class="item">&bull;
+								<a href="http://www.xinjiangnet.com.cn/2018/0510/2071607.shtml">乌市开展机关干部“为民服务周”活动</a>
+							</li>
+							<li class="item">&bull;
+								<a href="http://www.xinjiangnet.com.cn/2018/0510/2071599.shtml">达坂城区文化惠民 歌舞、儿童剧送到农牧民家门口</a>
+							</li>
+							<li class="item">&bull;
+								<a href="http://www.xinjiangnet.com.cn/2018/0510/2071590.shtml">乌鲁木齐住房公积金贷款推出三项便民措施</a>
+							</li>
+							<li class="item">&bull;
+								<a href="http://www.xinjiangnet.com.cn/2018/0420/2065834.shtml">不文明行为征集“随手拍”</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="right2">
+					<div class="biaoti3">
+						<a href="http://www.xinjiangnet.com.cn/gy/gyhd/">
+							<div class="bt_pic3">公益活动</div>
+						</a>
+						<a href="http://www.xinjiangnet.com.cn/gy/gyhd/">
+							<div class="gd">更多>></div>
+						</a>
+					</div>
+					<div class="right2_box">
+						<div class="right2_ti">
+							<a href="http://www.xinjiangnet.com.cn/2018/0408/2061968.shtml">“一起读书吧!”第九期 爱心杂志丰富“安宁”内心世界</a>
+						</div>
+						<div class="right2_w">
+							<a href="http://www.xinjiangnet.com.cn/2018/0408/2061968.shtml" style="color:#6e6e6e;">一本本传递着关爱和精神抚慰的爱心杂志整齐地摆放在阅...</a>
+							<a href="http://www.xinjiangnet.com.cn/2018/0408/2061968.shtml">[详细]</a>
+						</div>
+						<div class="right2_an">
+							<a href="http://www.xinjiangnet.com.cn/2018/0408/2061968.shtml"><img src="/${res}/img/canyu.png" /></a>
+						</div>
+						<div class="right2_an">
+							<!-- Baidu Button BEGIN -->
+							<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" data-tag="share_1">
+								<span class="bds_more" data-cmd="more" style="padding-top:0px;height: 24px;padding-left:0px;"><img src="/${res}/img/zhuanfa.png"/></span>
+							</div>
+							<script type="text/javascript" id="bdshare_js" data="type=tools"></script>
+							<script type="text/javascript" id="bdshell_js"></script>
+							<script type="text/javascript">
+								var bds_config = {
+									'snsKey': {
+										'tsina': '4085538946'
+									}
+								};
+								window._bd_share_config = {
+									common: {
+										bdUrl: 'http://www.xinjiangnet.com.cn/2018/0408/2061968.shtml',
+									}
+								}
+								document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static//${res}/js/shell_v2.js?t=" + new Date().getHours() + "&url=http://www.xinjiangnet.com.cn/2018/0408/2061968.shtml";
+							</script>
+							<!-- Baidu Button END -->
+						</div>
+					</div>
+					<div class="temp2"></div>
+					<div class="right2_box">
+						<div class="right2_ti">
+							<a href="http://www.xinjiangnet.com.cn/2018/0402/2060478.shtml">情暖夕阳红第18期 志愿者老人院内爱心传承</a>
+						</div>
+						<div class="right2_w">
+							<a href="http://www.xinjiangnet.com.cn/2018/0402/2060478.shtml" style="color:#6e6e6e;">虽然3月已过，但对于志愿者来说，天天都是雷锋日，月...</a>
+							<a href="http://www.xinjiangnet.com.cn/2018/0402/2060478.shtml">[详细]</a>
+						</div>
+						<div class="right2_an">
+							<a href="http://www.xinjiangnet.com.cn/2018/0402/2060478.shtml"><img src="/${res}/img/canyu.png" /></a>
+						</div>
+						<div class="right2_an">
+							<!-- Baidu Button BEGIN -->
+							<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" data-tag="share_1">
+								<span class="bds_more" data-cmd="more" style="padding-top:0px;height: 24px;padding-left:0px;"><img src="/${res}/img/zhuanfa.png"/></span>
+							</div>
+							<script type="text/javascript" id="bdshare_js" data="type=tools"></script>
+							<script type="text/javascript" id="bdshell_js"></script>
+							<script type="text/javascript">
+								var bds_config = {
+									'snsKey': {
+										'tsina': '4085538946'
+									}
+								};
+								window._bd_share_config = {
+									common: {
+										bdUrl: 'http://www.xinjiangnet.com.cn/2018/0402/2060478.shtml',
+									}
+								}
+								document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static//${res}/js/shell_v2.js?t=" + new Date().getHours() + "&url=http://www.xinjiangnet.com.cn/2018/0402/2060478.shtml";
+							</script>
+							<!-- Baidu Button END -->
+						</div>
+					</div>
+				</div>
+				<div class="right3">
+					<div class="biaoti3">
+						<a href="http://www.xinjiangnet.com.cn/gy/gyht/">
+							<div class="bt_pic3">公益话题</div>
+						</a>
+						<a href="http://w.xinjiangnet.com.cn/2015/0128/2664.shtml">
+							<div class="zhiyuanzhe"><img src="/${res}/img/zhiyuanzhe.png" /></div>
+						</a>
+						<a href="http://www.xinjiangnet.com.cn/gy/gyht/">
+							<div class="gd">更多>></div>
+						</a>
+					</div>
+					<div class="wb_ht_box">
+						<div class="ht_pic2">
+							<a href="http://www.xinjiangnet.com.cn/2018/0323/2058333.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0323/thumb_121_79_1521791505524.jpg" /></a>
+						</div>
+						<div class="ht_w2">
+							<a href="http://www.xinjiangnet.com.cn/2018/0323/2058333.shtml">
+								<div class="ht_w2_ti"> <strong>我们为何需要慈善？</strong> </div>
+							</a>
+							<a href="http://www.xinjiangnet.com.cn/2018/0323/2058333.shtml" style="color:#6e6e6e;">
+								<div class="ht_w2_w" style="text-indent:2em;">在一年一度的学雷锋日和雷锋月里，全社会都在倡导学习和发扬雷锋精神，作为新一代的年轻人，该如何传承雷锋精神，弘扬时代新风，如何看待新时代的慈善和雷锋精神？ </div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="right5">
+					<div class="biaoti3">
+						<a href="http://weibo.com/5498224263/profile?topnav=1&wvr=6">
+							<div class="bt_pic3">公益新疆微信、微博</div>
+						</a>
+					</div>
+					<div class="gy_wb" style="">
+						<a href="http://weibo.com/5498224263/profile?rightmod=1&wvr=6&mod=personinfo">
+							<img src="/${res}/img/gy_weixinweibo.jpg" />
+						</a>
+					</div>
+				</div>
+				<div class="right4">
+					<div class="biaoti3">
+						<a href="http://www.xinjiangnet.com.cn/gy/qyshzr/">
+							<div class="bt_pic4">企业社会责任</div>
+						</a>
+						<a href="http://www.xinjiangnet.com.cn/gy/qyshzr/">
+							<div class="gd">更多>></div>
+						</a>
+					</div>
+					<div class="shehuizeren">
+						<div class="ppl" style="height: 104px;">
+							<div class="pp1_pic">
+								<a href="http://www.xinjiangnet.com.cn/2018/0130/2042975.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0130/thumb_98_90_1517276503412.jpg" /></a>
+							</div>
+							<div class="pp1_box">
+								<div class="pp1_ti">
+									<a href="http://www.xinjiangnet.com.cn/2018/0130/2042975.shtml">亲子科普趣味多 创新公益再出发</a>
+								</div>
+								<div class="pp1_w" style="text-indent:2em;">
+									<a href="http://www.xinjiangnet.com.cn/2018/0130/2042975.shtml" style="color:#6e6e6e;">科普教育是理解世界，提高全民素质和创新能力的重要途径之一。与发达国家相...</a>
+									<a href="http://www.xinjiangnet.com.cn/2018/0130/2042975.shtml"> <span class="xx">[详细]</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="ppl" style="height: 104px;">
+							<div class="pp1_pic">
+								<a href="http://www.xinjiangnet.com.cn/2018/0129/2042608.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0129/thumb_98_90_1517191855725.jpg" /></a>
+							</div>
+							<div class="pp1_box">
+								<div class="pp1_ti">
+									<a href="http://www.xinjiangnet.com.cn/2018/0129/2042608.shtml">马云邀国内企业家谈教育脱贫</a>
+								</div>
+								<div class="pp1_w" style="text-indent:2em;">
+									<a href="http://www.xinjiangnet.com.cn/2018/0129/2042608.shtml" style="color:#6e6e6e;">马云邀请80余位国内知名企业家齐聚三亚，认真探讨一件关于教育脱贫的事情—...</a>
+									<a href="http://www.xinjiangnet.com.cn/2018/0129/2042608.shtml"> <span class="xx">[详细]</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right6">
+					<div class="biaoti3">
+						<a href="http://www.xinjiangnet.com.cn/gy/gyrw/">
+							<div class="bt_pic3">公益人物</div>
+						</a>
+						<a href="http://www.xinjiangnet.com.cn/gy/gyrw/">
+							<div class="gd">更多>></div>
+						</a>
+					</div>
+					<div class="ppl">
+						<div class="pp1_pic">
+							<a href="http://www.xinjiangnet.com.cn/2018/0130/2043003.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0130/1517276633662.jpg" /></a>
+						</div>
+						<div class="pp1_box">
+							<div class="pp1_ti">
+								<a href="http://www.xinjiangnet.com.cn/2018/0130/2043003.shtml">高晓松：做公益是自我净化的过程</a>
+							</div>
+							<div class="pp1_w" style="text-indent:2em;">
+								<a href="http://www.xinjiangnet.com.cn/2018/0130/2043003.shtml" style="color:#6e6e6e;">通过上海真爱梦想基金会捐赠梦想教室，让山区孩子也能接受现代化多媒体教育；通过茅以升科技教育基金会捐建桥梁，以解...</a>
+								<a href="http://www.xinjiangnet.com.cn/2018/0130/2043003.shtml"> <span class="xx">[详细]</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="ppl">
+						<div class="pp1_pic">
+							<a href="http://www.xinjiangnet.com.cn/2018/0122/2040229.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0122/1516585705765.jpg" /></a>
+						</div>
+						<div class="pp1_box">
+							<div class="pp1_ti">
+								<a href="http://www.xinjiangnet.com.cn/2018/0122/2040229.shtml">苏芒：让慈善信仰绽放光芒</a>
+							</div>
+							<div class="pp1_w" style="text-indent:2em;">
+								<a href="http://www.xinjiangnet.com.cn/2018/0122/2040229.shtml" style="color:#6e6e6e;">自创办“BAZAAR明星慈善夜”及芭莎公益慈善基金至今，苏芒已经在公益之路上坚守了整整十五年的时间，共募集超过5.2亿...</a>
+								<a href="http://www.xinjiangnet.com.cn/2018/0122/2040229.shtml"> <span class="xx">[详细]</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="ppl">
+						<div class="pp1_pic">
+							<a href="http://www.xinjiangnet.com.cn/2018/0102/2034072.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0102/1514880730581.jpg" /></a>
+						</div>
+						<div class="pp1_box">
+							<div class="pp1_ti">
+								<a href="http://www.xinjiangnet.com.cn/2018/0102/2034072.shtml">黄晓明：高调公益是把双刃剑</a>
+							</div>
+							<div class="pp1_w" style="text-indent:2em;">
+								<a href="http://www.xinjiangnet.com.cn/2018/0102/2034072.shtml" style="color:#6e6e6e;">打开黄晓明的微博，你会发现他的个人简介非常简单：演员、明天爱心基金发起人。而在他的个人介绍里则写着：少说话，多...</a>
+								<a href="http://www.xinjiangnet.com.cn/2018/0102/2034072.shtml"> <span class="xx">[详细]</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--<div class="botbox">
+        <div class="biaoti5">
+            <a href="http://www.xinjiangnet.com.cn/gy/gylm/">
+              <div class="bt_pic1"><img src="/${res}/img/gy_lm.png"/></div></a>
+            <a href="http://www.xinjiangnet.com.cn/gy/gylm/">  <div class="gd">更多>></div></a>
+        </div>
+    </div>
+    <div class="linksback">
+          <div class="link_w">
+          <a href="http://www.hsjj.org/">新疆红石慈善基金会</a>
+</div>
+    </div>-->
+		</div>
+		<div style="width:100%; clear:both; float:left;margin-top:20px">
+			<!-- footer -->
+			<div style="width:100%; height:10px;">
+			</div>
+			<div style="width:980px; margin:0px auto;">
+				<img src="/${res}/img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
+				<map name="Map" id="Map">
+      <area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
+      <area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
+      <area shape="rect" coords="718,29,846,61" href="http://epaper.xinjiangnet.com.cn" />
+      <area shape="rect" coords="866,28,973,58" href="#" />
+    </map>
+			</div>
+			<div style="width:100%; height:10px;">
+			</div>
+			<div style="width:100%;">
+				<center>
+					<script type="text/javascript">
+						function hzmt(num2) {
+							for(jj1 = 1; jj1 < 5; jj1++) {
+								document.getElementById("bdshs" + jj1).style.borderBottom = "2px solid #dddddd";
+								document.getElementById("bdshas" + jj1).style.display = "none"
+							}
+							document.getElementById("bdshs" + num2).style.borderBottom = "2px solid #F00";
+							document.getElementById("bdshas" + num2).style.display = "block"
+						}
+					</script>
+					<div style="width:980px; margin:0px auto;">
+						<div style="width:100px; float:left; border-bottom:2px solid #F00;" id="bdshs1">
+							<span onMouseMove="javascript:hzmt(1)"><a href="" style="font-size:14px; line-height:30px;">地方网媒</a></span>
+						</div>
+						<div style="width:200px; float:left;" id="bdshs2">
+							<span onMouseMove="javascript:hzmt(2)"><a href="" style="font-size:14px; line-height:30px;">“一带一路”网络联盟</a></span>
+						</div>
+						<div style="width:100px;float:left;" id="bdshs3">
+							<span onMouseMove="javascript:hzmt(3)"><a href="" style="font-size:14px; line-height:30px;">合作媒体</a></span>
+						</div>
+						<div style="width:100px;float:left;" id="bdshs4">
+							<span onMouseMove="javascript:hzmt(4)"><a href="" style="font-size:14px; line-height:30px;">城市网盟</a></span>
+						</div>
+						<div style="width:480px;float:right;">
+						</div>
+					</div>
+					<div style="clear:both;">
+					</div>
+					<div style="width:978px; border:0px solid #CCC; text-align:left; line-height:26px; font-size:12px;" id="bdshas1">
+						&nbsp;<span style="display:inline-block;"><a class="icon-blank"  href="http://wlmq.wenming.cn/">乌鲁木齐文明网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.bz.cn/">巴州在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xj120.com/">新疆健康网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://wlmq.house.sina.com.cn/">乌鲁木齐房产网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjhr.com/">新疆人才网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjtour.com/">新疆旅游网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.wlmq.com/">乌鲁木齐网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.boertala.com/">博尔塔拉新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.altxw.com/"> 阿勒泰新闻网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.shznews.com/">石河子新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjfzb.com/">新疆法制报</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.smxdaily.com.cn/">西部在线  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjws.gov.cn">乌苏市政府网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.uetd.gov.cn/">经济技术开发区（头屯河区）网站  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjtsq.gov.cn/">天山区人民政府网站  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjwh.gov.cn/">新疆文化网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.jrxjnet.com/">今日新疆  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.tlfw.net/">吐鲁番网   </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjksxw.com/"> 喀什新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjpeace.cn/">新疆平安网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.qiucinews.com/">龟兹新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.fzxj.cn/">法治新疆</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.kelamayi.com.cn/">克拉玛依网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.ylxw.com.cn/">伊犁新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.cjrb.cn/">昌吉新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.bt.chinanews.com/">兵团新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://epaper.ts.cn/">新疆都市报  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.iyaxin.com/">亚心网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.wlmqzs.com/">乌鲁木齐电台 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjtvs.com.cn/">虎鱼网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.hongshannet.cn/">红山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="www.xj.chinanews.com"> 新疆新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjbs.com.cn/">新疆新闻在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjdaily.com.cn/">新疆日报网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xinjiang.gov.cn/">新疆维吾尔自治区人民政府网</a></span>
+					</div>
+					<div style="width:978px; border:0px solid #CCC; text-align:left; line-height:26px; font-size:12px;" id="bdshas2">
+						&nbsp;<span style="display:inline-block;"><a class="icon-blank" href="http://www.cqnews.net/">华龙网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.sznews.com/">深圳新闻网　</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.xinjiangnet.com.cn/">新疆网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.xmnn.cn/">厦门网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.qingdaonews.com/">青岛新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.qzwb.com/">泉州网　</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://dalian.runsky.com/">大连天健网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.hangzhou.com.cn/">杭州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.cnnb.com.cn/">中国宁波网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.66wz.com/">温州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.dayoo.com/">大洋网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.guilinlife.com/">桂林生活网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.changsha.cn/">星辰在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.longhoo.net/index.html">龙虎网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.yznews.com.cn/">扬州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.jiaodong.net/">胶东在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.xiancn.com/">西安新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.kunming.cn/">昆明信息港</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.lanzhou.cn/">中国兰州网　</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.ycen.com.cn/">银川新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.my399.com/">哈尔滨新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.chengdu.cn/">成都全搜索</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.hkwb.net/">海口网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://news.cjn.cn/">长江网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.ylxw.com.cn/">伊犁新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.enorth.com.cn/">北方网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.qhnews.com/">青海新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.66wz.com/">温州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.ycwb.com/">金羊网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.fznews.com.cn/">福州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.lyd.com.cn/">洛阳网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.e23.cn/">舜网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.tlfw.net/">吐鲁番新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.hf365.com/">合肥在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.tynews.com.cn/">太原新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.baojinews.com/">宝鸡新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.gazx.org/">广安在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.2500sz.com/">名城苏州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.zgzyw.com.cn/"> 中国张掖网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.dahuawang.com/">大华网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.snxw.com/">遂宁新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.zhoushan.cn/">舟山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.gdzjdaily.com.cn/">湛江新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.zynews.com/">中原网　</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.kf.cn/">开封网　</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.zjknews.com/">张家口新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.hebei.com.cn/">长城网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.gatv.com.cn/">广安新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.txdzw.com/">大足网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.risesungroup.com/main/">浙江晨泰科技股份有限公司</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="">深圳市企业联合会</a></span>
+					</div>
+					<div style="width:978px; border:0px solid #CCC;text-align:left; line-height:26px; font-size:12px;display:none;" id="bdshas3">
+						&nbsp;<span style="display:inline-block;"><a href="http://www.iqilu.com/">齐鲁网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.s1979.com/">中国时刻网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://365jilin.com/">吉和网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xuexiph.cn/">学习出版社 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.njdaily.cn/">南报网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.jfinfo.com/">丰华财经网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://mdj.focus.cn/">牡丹江房地产  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://media.sohu.com/">搜狐传媒 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.jyyuan.com/">江阴信息港  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.jinghua.cn/">京华网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://fenlei.baike.com/">互动百科 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.enshifdc.com/">恩施房产网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.chinawbsyxh.com/">中国晚报摄影学会网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.bjtvnews.com/">华北新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.zj3000.cn/">名城镇江网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.gxorg.com/">八桂网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.he-nan.com/">河南网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://nd.fjsen.com/">宁德新闻网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.hebnews.cn/">河北新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.bandao.cn/">半岛网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.huamanche.com/">汽车网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.hljtv.com/">黑龙江网络广播电视台 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://news.iqilu.com/">齐鲁新闻 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://ndnews.oeeee.com/">奥一新闻 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.ynet.com/">北青网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.mzyfz.com/">民主与法制网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.rednet.cn/">红网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.edu-hb.com/">教育网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.0710fz.com/">襄阳房产网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://cnews.chinadaily.com.cn/">中国日报网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://news.sohu.com/">搜狐 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://news.sina.com.cn/">新浪  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://news.qq.com/">腾讯</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://news.ifeng.com/">凤凰网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.w010w.com.cn/index.html">全国网联</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="www.jxnews.com.cn">中国江西网（大江网）</a></span>
+					</div>
+					<div style="width:978px; border:0px solid #CCC;text-align:left; line-height:26px; font-size:12px;display:none;" id="bdshas4">
+						&nbsp;<span style="display:inline-block;"><a class="icon-blank"  href="http://www.runsky.com">大连天健网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnnb.com.cn">中国宁波网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.sznews.com">深圳新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dayoo.com">广州大洋网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.qingdaonews.com">青岛新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cjn.cn">武汉长江网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.longhoo.net/index.html">南京龙虎网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hangzhou.com.cn">杭州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.changsha.cn">星辰在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jiaodong.net">胶东在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xmnn.cn">厦门网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cqnews.net">重庆华龙网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.syd.com.cn">沈阳网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.e23.cn">济南舜网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ccnews.gov.cn">长春新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hf365.com">合肥在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.sjzdaily.com.cn">石家庄新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gywb.cn">贵阳新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ycen.com.cn">银川新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hkwb.net">中国海口网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ucatv.com.cn">乌鲁木齐信息港</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.shm.com.cn">水母网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gxnews.com.cn">广西新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xiancn.com">西安新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.my399.com">哈尔滨新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tynews.com.cn">太原新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zynews.com">郑州中原网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.qzwb.com">泉州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.66wz.com">温州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.yb983.com">延边信息港</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zyol.gz.cn">遵义在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zhoushan.cn">舟山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.rzw.com.cn">日照网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jzfcol.com">荆州房产网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ncnews.com.cn">南昌新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.2500sz.com">名城苏州</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dehua.net">德化网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dqdaily.com">大庆网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lznews.cn">鲁中网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hz66.com">湖州在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gndaily.com">中国赣州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnxz.com.cn">中国徐州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.yznews.com.cn">扬州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hj.cn">汉江传媒网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.aqnews.com.cn">安庆新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.leshan.cn">乐山新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ptxw.com">莆田新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xinjiangnet.com.cn">新疆网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dpcm.cn">牡丹江大鹏新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.srxww.com">上饶新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jjxw.cn">九江新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xsnet.cn">萧山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.subaonet.com">苏州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jznews.com.cn">荆州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hlbrdaily.com.cn">呼伦贝尔日报网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ijjnews.com">晋江新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tznews.cn">泰州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://dd.nen.com.cn">丹东新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.foshannews.net/">佛山新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tongliaowang.com">中国通辽网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnhan.com">汉网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.bzcm.net ">滨州传媒网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.chengdu.cn">成都全搜索</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.wfcmw.cn">潍坊传媒网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gdzjdaily.com.cn">湛江新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.wuhunews.cn">中国芜湖新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ch365.com.cn">巢湖在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.010lf.com">环京津新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cdyee.com">尚一网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.1545ts.com">东方泰山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hynews.net">淮安新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hldbtv.com">葫芦岛广电网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.chinashishi.net">中国石狮网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jcbctv.com">晋城广电网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.kunming.cn">昆明信息港</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lygnews.com">连云港日报网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lcxw.cn">聊城新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnjxol.com">嘉兴在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.enorth.com.cn">北方网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.mnw.cn">闽南网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.sun0769.com">东莞阳光网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.shjnet.cn">松花江网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ahwang.cn">安徽网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.guilinlife.com">桂林生活网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zznews.cn">漳州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xiancity.cn">西安网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lygmedia.com">连云港传媒网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jwb.com.cn">今晚网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ijntv.cn">济南网络广播电视台</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tielingcn.com">中国铁岭网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ybxww.com">宜宾新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zgzyw.com.cn">中国张掖网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ntjoy.com">江海明珠网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hctvnet.com">珲春新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hscbw.com">华声晨报网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lzbs.com.cn">兰州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.wj001.com">武进新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hhhtnews.com">呼和浩特新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.weihai.tv">威海传媒网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lyd.com.cn">洛阳网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.fznews.com.cn">福州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zkxww.com">周口网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.whnews.cn">威海新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hongshannet.cn">红山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zjknews.com">张家口新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.txdzw.com">大足网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ilinyi.net">爱临沂网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.aksxw.com">阿克苏新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.e0734.com">中国衡阳新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gyxww.cn">广元新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cn3x.com.cn">三峡宜昌网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jmnews.cn">荆门新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tibet.cn">中国西藏网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.aihami.com">楚秀网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xgrb.cn">孝感网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnr.cn ">中国广播网</a></span>
+					</div>
+				</center>
+			</div>
+			<div style="width:100%; height:10px;">
+			</div>
+			<div style="width:100%; background-color:#000; border-top:2px solid #F00;height:100px;">
+				<div style="width:100%; height:10px;">
+				</div>
+				<center>
+					<footer class="foot">
+						<div class="foot-links">
+							<a href="http://www.xinjiangnet.com.cn/2016/1118/1689637.shtml" title="">关于我们</a>
+							<span href="" title="">| </span>
+							<a href="http://www.xinjiangnet.com.cn/2015/0202/6289.shtml" title="">联系我们</a>
+							<span href="" title="">| </span>
+							<a href="http://special.xinjiangnet.com.cn/160406-1/" title="">加入我们</a>
+							<span href="" title="">| </span>
+							<a href="http://www.xinjiangnet.com.cn/2015/0202/6275.shtml" title="">版权声明</a>
+							<span href="" title="">| </span>
+							<a href="http://www.xinjiangnet.com.cn/about/mobile.shtml" title="">手机访问</a>
+							<span href="" title="">| </span>
+							<a href="http://app.xinjiangnet.com.cn/map.php" title="">网站地图</a>
+							<span href="" title="">| </span>
+							<a href="http://app.xinjiangnet.com.cn/?app=guestbook" title="">留言反馈</a>
+							<span href="" title="">| </span>
+							<a href="http://app.xinjiangnet.com.cn/?app=contribution&controller=index&action=index" title="">我要投稿</a>
+						</div>
+						<p><span><a href="http://www.xinjiangnet.com.cn/2015/0319/1376235.shtml" target="_blank" class="littg">互联网新闻信息服务许可证：6512014002</a> </span><span>新ICP备10001213号-2  <span><a href="http://www.xinjiangnet.com.cn/2017/0510/1417370.shtml#g1417370=1" target="_blank" class="littg">广播电视节目制作经营许可证（新）字第66号</a></span><span><a href="http://www.xinjiangnet.com.cn/2015/1216/1503189.shtml" target="_blank" class="littg">信息网络传播视听节目许可证号：3110483</a></span></p>
+						<p>
+							<a href="" title="">版权所有：新疆网</a> 版权所有：Copyright © xinjiangnet.com.cn All Rights Reserved.&nbsp;&nbsp;
+							<a href="http://www.xinjiangnet.com.cn/2018/0119/2039852.shtml" title="">举报受理和处置管理办法</a>
+						</p>
+						<div style="width:100%; height:10px;">
+						</div>
+					</footer>
+				</center>
+			</div>
+			<center>
+				<table width="300" cellpadding="0" cellspacing="0">
+					<tr>
+						<td height="20"></td>
+					</tr>
+					<tr>
+						<td align="center" width="50%">
+							<a href="http://www.wgwj.gov.cn/article/articleClass.aspx?ClassID=257" target="_blank"><img src="http://www.xinjiangnet.com.cn/images/xjwwangjing110.gif" border="0" width="118" height="48" /></a>
+						</td>
+						<td align="center">
+							<a href="http://www.12377.cn/" target="_blank"><img src="http://www.xinjiangnet.com.cn/images/xjwblxxwf.gif" border="0" /></a>
+						</td>
+					</tr>
+					<tr>
+						<td height="20"></td>
+					</tr>
+				</table>
+			</center>
+			<link rel="stylesheet" type="text/css" href="/${res}/css/popmenu.css" media="all" />
+			<script type="text/javascript" src="/${res}/js/recommend.js"></script>
+			<!-- end footer -->
+		</div>
+		<!-- 脚本区域 -->
+	</body>
+
+</html>
