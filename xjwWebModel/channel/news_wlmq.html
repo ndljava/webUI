@@ -195,36 +195,42 @@
 				</div>
 				<div class="xian1" style="width:371px"></div>
 				<div class="wen1" style="width:371px">
-					<a href="http://www.xinjiangnet.com.cn/2018/0419/2065424.shtml" style="color:  #5877AE;">民族团结大院里宣讲中华民族共同体意识</a>
+					[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+					[#list tag_list as a]
+						<a href="${a.url}" style="color:  #5877AE;">[@text_cut s=a.title len=18 append=append/]</a>
+					[/#list]
+					[/@cms_content_list]
 				</div>
 				<div class="wen2" style="width:371px">
-					<a href="http://www.xinjiangnet.com.cn/2018/0418/2065407.shtml">地铁2号线南梁坡站年内主体封顶</a>
-					<br>
-					<a href="http://www.xinjiangnet.com.cn/2018/0419/2065416.shtml">我想入党帮助更多人</a>
-					<br>
-					<a href="http://www.xinjiangnet.com.cn/2018/0419/2065412.shtml">工作队和居民共植“同心树”</a>
-					<br>
-					<a href="http://www.xinjiangnet.com.cn/2018/0418/2065402.shtml">乌鲁木齐市首例代替考试罪案宣判</a>
+					[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+					[#list tag_list as a]
+						<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
+					[#if a_has_next]
+						<br>
+					[/#if]
+					[/#list]
+					[/@cms_content_list]
 				</div>
 				<div class="xian2" style="width:371px"></div>
 				<div class="wen2" style="width:371px">
-					<a href="http://www.xinjiangnet.com.cn/2018/0418/2065410.shtml">她带领村民科技种植致富</a>
-					<br>
-					<a href="http://www.xinjiangnet.com.cn/2018/0419/2065413.shtml">达坂城区机关党员干部义务植树</a>
-					<br>
-					<a href="http://www.xinjiangnet.com.cn/2018/0417/2065004.shtml">乌鲁木齐绿园工程全面启动</a>
-					<br>
-					<a href="http://www.xinjiangnet.com.cn/2018/0418/2065013.shtml">美丽乌鲁木齐 你我共建</a>
+					[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+					[#list tag_list as a]
+					<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
+					[#if a_has_next]
+						<br>
+					[/#if]
+					[/#list]
+					[/@cms_content_list]
 				</div>
 			</div>
 			<div class="ad" data-ad="test-tbj">
 				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="980" height="80" align="absbottom">
-    <param name="movie" value="swf/20180408gx_zx_kpzg.swf" />
-    <param name=wmode value=opaque />
-    <param name="quality" value="high" />
-    <param name="SCALE" value="exactfit" />
-    <embed src="swf/20180408gx_zx_kpzg.swf" width="980" height="80" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
-</object>
+    				<param name="movie" value="swf/20180408gx_zx_kpzg.swf" />
+    				<param name=wmode value=opaque />
+    				<param name="quality" value="high" />
+    				<param name="SCALE" value="exactfit" />
+    				<embed src="swf/20180408gx_zx_kpzg.swf" width="980" height="80" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+				</object>
 			</div>
 		</div>
 		<!------------头部区域结束-------------->
@@ -237,25 +243,32 @@
 					</div>
 					<div class="xian3"></div>
 					<div class="tuwen">
-						<div class="h1_pic"><img src="http://upload.xinjiangnet.com.cn/2017/0906/thumb_103_85_1504663164346.jpg" /></div>
+						[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
+						<div class="h1_pic">
+							<img src="${a.typeImg}" width="100" height="100"/>
+						</div>
 						<div class="h1_w">
 							<div class="w_tit">
-								<a href="http://www.xinjiangnet.com.cn/2017/0825/1991076.shtml"> 新疆•乌鲁木齐好人榜发布现场 </a>
+								<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
 							</div>
 							<div class="w_wen" style="text-indent:2em; ">
-								8月中国好人榜发布仪式暨全国道德模范与身边好人（新疆•乌鲁木齐）现场交流活动。
-								<a href="http://www.xinjiangnet.com.cn/2017/0825/1991076.shtml">[详细]</a>
+								[@text_cut s=a.desc len=33 append=append/]
+								<a href="${a.url}">[详细]</a>
 							</div>
 						</div>
+						[/#list]
+						[/@cms_content_list]
 					</div>
 					<div class="h1_news">
-						<a href="http://www.xinjiangnet.com.cn/2017/0512/1841195.shtml"> 质监局：加气站安全要加强监督 </a>
-						<br>
-						<a href="http://www.xinjiangnet.com.cn/2017/0406/1800343.shtml"> 公安局：狗扰民严重可以直接报警 </a>
-						<br>
-						<a href="http://www.xinjiangnet.com.cn/2016/1102/1676601.shtml"> 阿里木和他的爱心寻人车队 </a>
-						<br>
-						<a href="http://www.xinjiangnet.com.cn/2016/1101/1675912.shtml"> 朱玉龙医生的“方言处方" </a>
+						[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+							<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
+						[#if a_has_next]
+							<br>
+						[/#if]
+						[/#list]
+						[/@cms_content_list]
 					</div>
 				</div>
 				<div class="h1_right">
@@ -264,25 +277,32 @@
 					</div>
 					<div class="xian3"></div>
 					<div class="tuwen">
-						<div class="h1_pic"><img src="http://upload.xinjiangnet.com.cn/2018/0419/thumb_103_85_1524115074320.jpg" /></div>
+						[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
+						<div class="h1_pic">
+							<img src="${a.typeImg}" width="100" height="100"/>
+						</div>
 						<div class="h1_w">
 							<div class="w_tit">
-								<a href="http://www.xinjiangnet.com.cn/2018/0419/2065515.shtml"> 经开区三所新学校开工建设 </a>
+								<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
 							</div>
 							<div class="w_wen" style="text-indent:2em; ">
-								目前,乌鲁木齐经济技术开发区(头屯河区)已开工建设3所学校。今年,该区将新建、续建5所学校、一座...
-								<a href="http://www.xinjiangnet.com.cn/2018/0419/2065515.shtml">[详细]</a>
+								[@text_cut s=a.desc len=33 append=append/]
+								<a href="${a.url}">[详细]</a>
 							</div>
 						</div>
+						[/#list]
+						[/@cms_content_list]
 					</div>
 					<div class="h1_news">
-						<a href="http://www.xinjiangnet.com.cn/2018/0419/2065511.shtml"> 交警四项措施微调堵点保畅通 </a>
-						<br>
-						<a href="http://www.xinjiangnet.com.cn/2018/0419/2065560.shtml"> 4月22日至28日这些片区将停电 </a>
-						<br>
-						<a href="http://www.xinjiangnet.com.cn/2018/0419/2065522.shtml"> 警方重点查处四类网络传销活动 </a>
-						<br>
-						<a href="http://www.xinjiangnet.com.cn/2018/0419/2065543.shtml"> 男子养花近30年 自有一套养花经 </a>
+						[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+							<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
+						[#if a_has_next]
+							<br>
+						[/#if]
+						[/#list]
+						[/@cms_content_list]
 					</div>
 				</div>
 				<div style="float:left;margin-top: 20px;">
@@ -301,12 +321,15 @@
 						</div>
 						<div class="qxdt_wen">
 							&middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/1130/2023637.shtml" title="天山区启动十九大精神进农家乐、牧家乐活动 ">天山区启动十九大精神进农家乐、牧家乐活动 </a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0628/1905640.shtml" title="天山区所有路口月底前装语音播报系统">天山区所有路口月底前装语音播报系统</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0517/1847530.shtml" title="天山区139个蔬菜直销点提档升级">天山区139个蔬菜直销点提档升级</a>
-						</div>
+							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+								<a href="${a.url}" title="${a.title} ">[@text_cut s=a.title len=25 append=append/]</a>
+							[#if a_has_next]
+								<br> &middot;
+							[/#if]
+							[/#list]
+							[/@cms_content_list]
+ 						</div>
 					</div>
 					<div class="qxdt">
 						<div class="qxdt_bt2">
@@ -314,12 +337,14 @@
 						</div>
 						<div class="qxdt_wen">
 							&middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0516/1843993.shtml" title="沙区发放惠农补贴资金">沙区发放惠农补贴资金</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0406/1800365.shtml" title="各区县蔬菜直销点考核 沙依巴克区夺魁">各区县蔬菜直销点考核 沙依巴克区夺魁</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0407/1800659.shtml" title="22项市级项目开工 涉及约30平方公里惠及42万人">22项市级项目开工 涉及约30平方公里惠及42万人</a>
-						</div>
+							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+								<a href="${a.url}" title="${a.title} ">[@text_cut s=a.title len=25 append=append/]</a>
+							[#if a_has_next]
+								<br> &middot;
+							[/#if]
+							[/#list]
+							[/@cms_content_list]						</div>
 					</div>
 					<div class="qxdt">
 						<div class="qxdt_bt3">
@@ -327,12 +352,14 @@
 						</div>
 						<div class="qxdt_wen">
 							&middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/1106/2016389.shtml" title="乌鲁木齐市南湖东路都市形象“高大上”">乌鲁木齐市南湖东路都市形象“高大上”</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/1106/2016403.shtml" title="乌鲁木齐水塔山“树上山”项目年底前完成15亩绿化">乌鲁木齐水塔山“树上山”项目年底前完成15亩绿化</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0628/1905642.shtml" title="水磨沟区打造新民西街等六个靓化工程街区">水磨沟区打造新民西街等六个靓化工程街区</a>
-						</div>
+							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+								<a href="${a.url}" title="${a.title} ">[@text_cut s=a.title len=25 append=append/]</a>
+							[#if a_has_next]
+								<br> &middot;
+							[/#if]
+							[/#list]
+							[/@cms_content_list]						</div>
 					</div>
 					<div class="qxdt">
 						<div class="qxdt_bt4">
@@ -340,12 +367,14 @@
 						</div>
 						<div class="qxdt_wen">
 							&middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0712/1927339.shtml" title="乌鲁木齐米东区货运车辆限行规定有新变化">乌鲁木齐米东区货运车辆限行规定有新变化</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0628/1905641.shtml" title="米东区依法拆除石化新村养殖小区">米东区依法拆除石化新村养殖小区</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0517/1847548.shtml" title="米东区建156个“民族团结之家”">米东区建156个“民族团结之家”</a>
-						</div>
+							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+								<a href="${a.url}" title="${a.title} ">[@text_cut s=a.title len=25 append=append/]</a>
+							[#if a_has_next]
+								<br> &middot;
+							[/#if]
+							[/#list]
+							[/@cms_content_list]						</div>
 					</div>
 				</div>
 				<!-------------------------h2-end--------------->
@@ -358,12 +387,14 @@
 						</div>
 						<div class="qxdt_wen">
 							&middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/1129/2023612.shtml" title="乌鲁木齐经开区（头屯河区）卫生局组织辖区单位开展无偿献血活动">乌鲁木齐经开区（头屯河区）卫生局组织辖区单位开展...</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/1129/2023619.shtml" title="社区困难家庭收到四吨冬菜">社区困难家庭收到四吨冬菜</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0712/1927283.shtml" title="乌鲁木齐经开区20个小游园秋季建成">乌鲁木齐经开区20个小游园秋季建成</a>
-						</div>
+							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+								<a href="${a.url}" title="${a.title} ">[@text_cut s=a.title len=25 append=append/]</a>
+							[#if a_has_next]
+								<br> &middot;
+							[/#if]
+							[/#list]
+							[/@cms_content_list]						</div>
 					</div>
 					<div class="qxdt">
 						<div class="qxdt_bt2">
@@ -371,12 +402,14 @@
 						</div>
 						<div class="qxdt_wen">
 							&middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0516/1843991.shtml" title="达坂城区：工作队牵线帮扶贫困村民">达坂城区：工作队牵线帮扶贫困村民</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0405/1799300.shtml" title="小手册记录亲戚事">小手册记录亲戚事</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0326/1790882.shtml" title="乌鲁木齐银行与苇子村困难户签署“帮扶协议”">乌鲁木齐银行与苇子村困难户签署“帮扶协议”</a>
-						</div>
+							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+								<a href="${a.url}" title="${a.title} ">[@text_cut s=a.title len=25 append=append/]</a>
+							[#if a_has_next]
+								<br> &middot;
+							[/#if]
+							[/#list]
+							[/@cms_content_list]						</div>
 					</div>
 					<div class="qxdt">
 						<div class="qxdt_bt3">
@@ -384,11 +417,14 @@
 						</div>
 						<div class="qxdt_wen">
 							&middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0628/1905847.shtml" title="新市区一保安被咬掉半只耳朵">新市区一保安被咬掉半只耳朵</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0406/1800364.shtml" title="高新区（新市区）752条道路开始“美容”">高新区（新市区）752条道路开始“美容”</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0407/1800638.shtml" title="五个片区改造提升 约52平方公里惠及40万人">五个片区改造提升 约52平方公里惠及40万人</a>
+							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+								<a href="${a.url}" title="${a.title} ">[@text_cut s=a.title len=25 append=append/]</a>
+							[#if a_has_next]
+								<br> &middot;
+							[/#if]
+							[/#list]
+							[/@cms_content_list]
 						</div>
 					</div>
 					<div class="qxdt">
@@ -397,11 +433,14 @@
 						</div>
 						<div class="qxdt_wen">
 							&middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0407/1800381.shtml" title="乌县：他把我当成自家人">乌县：他把我当成自家人</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0407/1800382.shtml" title="乌县：库力生是我的贴心小棉袄">乌县：库力生是我的贴心小棉袄</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/0405/1799296.shtml" title="好邻居救了我们一家五口的命">好邻居救了我们一家五口的命</a>
+							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+								<a href="${a.url}" title="${a.title} ">[@text_cut s=a.title len=25 append=append/]</a>
+							[#if a_has_next]
+								<br> &middot;
+							[/#if]
+							[/#list]
+							[/@cms_content_list]
 						</div>
 					</div>
 				</div>
@@ -755,42 +794,63 @@ $(document).ready(function(){
 							<div class="h5_ti">聚好玩</div>
 							<div class="h5_wb">
 								<div class="houqi1">
+									[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+									[#list tag_list as a]
 									<div class="houqi1_left">
-										<a href="http://www.xinjiangnet.com.cn/2016/0722/1595443.shtml"><img src="http://upload.xinjiangnet.com.cn/2016/0722/thumb_110_85_1469153311157.jpg"></a>
+										<a href="${a.url}">
+											<img src="${a.typeImg}" width="100" height="100">
+										</a>
 									</div>
 									<div class="houqi1_right">
 										<div class="houqi1_bt">
-											<a href="http://www.xinjiangnet.com.cn/2016/0722/1595443.shtml">快来看“观音”菩萨！</a>
+											<a href="${a.url}">[@text_cut s=a.title len=12 append=append/]</a>
 										</div>
-										<div class="houqi1_w" style="text-indent:2em; ">近些日子，有游客在乌鲁木齐南山牧...<span>&nbsp;<a href="http://www.xinjiangnet.com.cn/2016/0722/1595443.shtml">[详情]</a></span></div>
+										<div class="houqi1_w" style="text-indent:2em; ">[@text_cut s=a.title len=16 append=append/]...
+											<span>&nbsp;
+												<a href="${a.url}">[详情]</a>
+											</span>
+										</div>
 										<div class="houqi1_tu">
-											<a href="http://www.xinjiangnet.com.cn/2016/0722/1595443.shtml"><img src="/${res}/img/houqi2.gif"></a>
+											<a href="${a.url}">
+												<img src="/${res}/img/houqi2.gif">
+											</a>
 										</div>
 									</div>
+									[/#list]
+									[/@cms_content_list]
 								</div>
 							</div>
 							<div class="h5_news" style="line-height: 28px;">
-								<a href="http://www.xinjiangnet.com.cn/2016/0908/1635444.shtml">三屯碑高架主桥9月8日贯通</a>
-								<br>
-								<a href="http://www.xinjiangnet.com.cn/2016/0908/1635430.shtml">【天天聊天】双节至 秋游兴</a>
+								[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+								[#list tag_list as a]
+									<a href="${a.url}">[@text_cut s=a.title len=13 append=append/]</a>
+								[#if a_has_next]
+									<br>
+								[/#if]
+								[/#list]
+								[/@cms_content_list]
 							</div>
 						</div>
 						<div class="h5_right">
+							[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
 							<div class="h5_ti">&nbsp;&nbsp;&nbsp;&nbsp;
-								<a href="http://www.xinjiangnet.com.cn/2018/0302/2052108.shtml">乌鲁木齐商超低折扣带热元宵销售</a>
+								<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
 							</div>
 							<div class="h5_hot" style="text-indent:2em;">
-								“快来看看,品牌汤圆搞活动了,买二赠一,买一赠一。”超市里,一家... </div>
+								 [@text_cut s=a.desc len=33 append=append/]... 
+							</div>
+							[/#list]
+							[/@cms_content_list]
 							<div class="h5_news" style="line-height: 28px;">
-								<a href="http://www.xinjiangnet.com.cn/2018/0302/2052181.shtml">节后乌鲁木齐市民扎堆减肥 健身房生意火</a>
-								<br>
-								<a href="http://www.xinjiangnet.com.cn/2018/0302/2052077.shtml">周日名师讲堂 支招高考冲刺</a>
-								<br>
-								<a href="http://www.xinjiangnet.com.cn/2018/0301/2052074.shtml">米东区推出掌上猜灯谜活动</a>
-								<br>
-								<a href="http://www.xinjiangnet.com.cn/2018/0302/2052124.shtml">新疆哪里最先迎春？答：喀什</a>
-								<br>
-								<a href="http://www.xinjiangnet.com.cn/2018/0223/2049908.shtml">公交卡“空中充值机”亮相 </a>
+								[@cms_content_list count='5' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+								[#list tag_list as a]
+									<a href="${a.url}">[@text_cut s=a.title len=13 append=append/]</a>
+								[#if a_has_next]
+									<br>
+								[/#if]
+								[/#list]
+								[/@cms_content_list]
 							</div>
 						</div>
 					</div>
@@ -802,10 +862,14 @@ $(document).ready(function(){
 				<!------------右边内容区域开始-------------->
 				<div class="right_control">
 					<div class="rbiao_0991">
-						<div class="biaopic"><img src="/${res}/img/0991_b1.png" /></div>
+						<div class="biaopic">
+							<img src="/${res}/img/0991_b1.png" />
+						</div>
 						<div class="biaoti2">爆料台</div>
 					</div>
-					<div class="bag"><img src="/${res}/img/baoliao.jpg" /></div>
+					<div class="bag">
+						<img src="/${res}/img/baoliao.jpg" />
+					</div>
 				</div>
 				<div class="right_control">
 					<div class="rbiao_0991">
@@ -819,11 +883,14 @@ $(document).ready(function(){
 						</div>
 					</div>
 					<div class="bag1">
-						<a href="http://www.xinjiangnet.com.cn/2017/1101/2014986.shtml">期待新版红楼精雕细琢</a>
-						<br>
-						<a href="http://www.xinjiangnet.com.cn/2017/1031/2014899.shtml">牢牢把握新时代中国共产党的历史使命</a>
-						<br>
-						<a href="http://www.xinjiangnet.com.cn/2017/1101/2014992.shtml">扫描“斜杠青年”的长短利弊</a>
+						[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+							<a href="${a.url}">[@text_cut s=a.title len=13 append=append/]</a>
+						[#if a_has_next]
+							<br>
+						[/#if]
+						[/#list]
+						[/@cms_content_list]
 					</div>
 				</div>
 				<div class="right_control">
@@ -1046,26 +1113,44 @@ $(document).ready(function(){
 					</div>
 					<div class="bag4">
 						<div class="bag4_pic">
-							<a href="http://www.xinjiangnet.com.cn/2016/1012/1659522.shtml"><img src="http://upload.xinjiangnet.com.cn/2016/1012/thumb_230_157_1476242485931.jpg" title="那些年｜被盗贼们翻过牌子的明星" width="230px" height="157px" /></a>
+							[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
+							<a href="${a.url}">
+								<img src="${a.typeImg}" title="${a.title}" width="230px" height="157px" />
+							</a>
+							[/#list]
+							[/@cms_content_list]
 						</div>
 						<div class="bag4_ti">
-							<a href="http://www.xinjiangnet.com.cn/2016/1012/1659522.shtml">那些年｜被盗贼们翻过牌子的明星</a>
-							<br>
-							<a href="http://www.xinjiangnet.com.cn/2016/1012/1659492.shtml">宇博教你秋冬穿出高级时髦感～</a>
-							<br>
-							<a href="http://www.xinjiangnet.com.cn/2016/1012/1659263.shtml">毛衣加短裤的可不止杨幂一人</a>
+							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+								<a href="${a.url}">[@text_cut s=a.title len=13 append=append/]</a>
+							[#if a_has_next]
+								<br>
+							[/#if]
+							[/#list]
+							[/@cms_content_list]
 						</div>
 					</div>
 					<div class="bag4">
 						<div class="bag4_pic">
-							<a href="http://www.xinjiangnet.com.cn/2016/1012/1659516.shtml"><img src="http://upload.xinjiangnet.com.cn/2016/1012/thumb_230_157_1476245715763.jpg" title="今年秋冬流行元素都在这里了！" width="230px" height="157px" /></a>
+							[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
+							<a href="${a.url}">
+								<img src="${a.typeImg}" title="${a.title}" width="230px" height="157px" />
+							</a>
+							[/#list]
+							[/@cms_content_list]
 						</div>
 						<div class="bag4_ti">
-							<a href="http://www.xinjiangnet.com.cn/2016/1012/1659516.shtml">今年秋冬流行元素都在这里了！</a>
-							<br>
-							<a href="http://www.xinjiangnet.com.cn/2016/1012/1659343.shtml">超屌的自动绑鞋带球鞋终于要面市了！</a>
-							<br>
-							<a href="http://www.xinjiangnet.com.cn/2016/1012/1659489.shtml">超适合秋冬的三款口红，赶快入手！</a>
+							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+								<a href="${a.url}">[@text_cut s=a.title len=13 append=append/]</a>
+							[#if a_has_next]
+								<br>
+							[/#if]
+							[/#list]
+							[/@cms_content_list]
 						</div>
 					</div>
 				</div>
@@ -1074,12 +1159,12 @@ $(document).ready(function(){
 			<div style="margin:15px auto;">
 				<div class="ad">
 					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="980" height="80" align="absbottom">
-    <param name="movie" value="swf/20161117hf_zx_gx_hf.swf" />
-    <param name=wmode value=opaque />
-    <param name="quality" value="high" />
-    <param name="SCALE" value="exactfit" />
-    <embed src="swf/20161117hf_zx_gx_hf.swf" width="980" height="80" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
-</object>
+    					<param name="movie" value="swf/20161117hf_zx_gx_hf.swf" />
+    					<param name=wmode value=opaque />
+    					<param name="quality" value="high" />
+    					<param name="SCALE" value="exactfit" />
+   		 				<embed src="swf/20161117hf_zx_gx_hf.swf" width="980" height="80" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+					</object>
 				</div>
 			</div>
 			<style>
@@ -1163,36 +1248,54 @@ $(document).ready(function(){
 							</a>
 						</div>
 						<div class="picItem templ_2" style="margin-top:2px;">
-							<a href="http://www.xinjiangnet.com.cn/2018/0302/2052122.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0302/thumb_277_135_1519953594741.png" width="277px" height="135px"><span>公交车集体“洗澡”</span>
-								<!--<i class="mask"></i>--></a>
+							<a href="http://www.xinjiangnet.com.cn/2018/0302/2052122.shtml">
+								<img src="http://upload.xinjiangnet.com.cn/2018/0302/thumb_277_135_1519953594741.png" width="277px" height="135px">
+								<span>公交车集体“洗澡”</span>
+								<!--<i class="mask"></i>-->
+							</a>
 						</div>
 						<div class="picItem templ_3">
-							<a href="http://www.xinjiangnet.com.cn/2018/0302/2052112.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0302/thumb_277_135_1519953506662.png" width="277px" height="135px"><span>导诊机器人将亮相乌市</span>
-								<!--<i class="mask">--></i>
+							<a href="http://www.xinjiangnet.com.cn/2018/0302/2052112.shtml">
+								<img src="http://upload.xinjiangnet.com.cn/2018/0302/thumb_277_135_1519953506662.png" width="277px" height="135px">
+								<span>导诊机器人将亮相乌市</span>
+								<!--<i class="mask"></i>-->
 							</a>
 						</div>
 					</div>
 					<div class="temp_mid">
 						<div class="picItem tempm_1">
-							<a href="http://www.xinjiangnet.com.cn/2018/0302/2052079.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0302/thumb_213_142_1519922506213.jpg" width="213px" height="142px"><span>乌市再添日间照料中心</span>
+							<a href="http://www.xinjiangnet.com.cn/2018/0302/2052079.shtml">
+								<img src="http://upload.xinjiangnet.com.cn/2018/0302/thumb_213_142_1519922506213.jpg" width="213px" height="142px">
+								<span>乌市再添日间照料中心</span>
 								<!--<i class="mask">--></a>
 						</div>
 						<div class="picItem tempm_2" style="margin-top:2px;">
-							<a href="http://www.xinjiangnet.com.cn/2018/0301/2052071.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0301/thumb_213_145_1519918857302.jpg" width="213px" height="145px"><span>共庆元宵</span>
-								<!--<i class="mask">--></a>
+							<a href="http://www.xinjiangnet.com.cn/2018/0301/2052071.shtml">
+								<img src="http://upload.xinjiangnet.com.cn/2018/0301/thumb_213_145_1519918857302.jpg" width="213px" height="145px">
+								<span>共庆元宵</span>
+								<!--<i class="mask">-->
+								
+							</a>
 						</div>
 						<div class="picItem tempm_3" style="margin-top:-2px;">
-							<a href="http://www.xinjiangnet.com.cn/2018/0301/2051984.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0301/thumb_213_144_1519887489968.jpg" width="213px" height="144px"><span>新疆市场提前“闹”</span>
-								<!--<i class="mask">--></a>
+							<a href="http://www.xinjiangnet.com.cn/2018/0301/2051984.shtml">
+								<img src="http://upload.xinjiangnet.com.cn/2018/0301/thumb_213_144_1519887489968.jpg" width="213px" height="144px">
+								<span>新疆市场提前“闹”</span>
+								<!--<i class="mask">-->
+							</a>
 						</div>
 					</div>
 					<div class="temp_right">
 						<div class="picItem tempr_1">
-							<a href="http://www.xinjiangnet.com.cn/2018/0301/2051982.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0301/thumb_209_142_1519887276574.jpg" width="209px" height="142px"><span>结对亲戚赏花灯</span>
+							<a href="http://www.xinjiangnet.com.cn/2018/0301/2051982.shtml">
+								<img src="http://upload.xinjiangnet.com.cn/2018/0301/thumb_209_142_1519887276574.jpg" width="209px" height="142px">
+								<span>结对亲戚赏花灯</span>
 								<!--<i class="mask">--></a>
 						</div>
 						<div class="picItem tempr_2" style="margin-top:2px;">
-							<a href="http://www.xinjiangnet.com.cn/2018/0228/2051706.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0302/thumb_209_293_1519960365105.png" width="209px" height="293px"><span>舞出《好日子》</span>
+							<a href="http://www.xinjiangnet.com.cn/2018/0228/2051706.shtml">
+								<img src="http://upload.xinjiangnet.com.cn/2018/0302/thumb_209_293_1519960365105.png" width="209px" height="293px">
+								<span>舞出《好日子》</span>
 								<!--<i class="mask">--></a>
 						</div>
 					</div>
@@ -1546,7 +1649,9 @@ $(document).ready(function(){
 					</tr>
 					<tr>
 						<td align="center" width="50%">
-							<a href="http://www.wgwj.gov.cn/article/articleClass.aspx?ClassID=257" target="_blank"><img src="http://www.xinjiangnet.com.cn/images/xjwwangjing110.gif" border="0" width="118" height="48" /></a>
+							<a href="http://www.wgwj.gov.cn/article/articleClass.aspx?ClassID=257" target="_blank">
+								<img src="http://www.xinjiangnet.com.cn/images/xjwwangjing110.gif" border="0" width="118" height="48" />
+							</a>
 						</td>
 						<td align="center">
 							<a href="http://www.12377.cn/" target="_blank"><img src="http://www.xinjiangnet.com.cn/images/xjwblxxwf.gif" border="0" /></a>
@@ -1558,7 +1663,7 @@ $(document).ready(function(){
 				</table>
 			</center>
 			<link rel="stylesheet" type="text/css" href="/${res}/js/popmenu.css" media="all" />
-			<script type="text/javascript" src="js/recommend.js"></script>
+			<script type="text/javascript" src="/${res}/js/recommend.js"></script>
 			<!-- end footer -->
 		</div>
 		<!-- 脚本区域 --
