@@ -7,18 +7,18 @@
 	<!--<![endif]-->
 
 	<head>
-		[#include "news_content_head.html"/]
+		[#include "news_top_head.html"/]
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-picture-show.css" />
-		<script type="text/javascript" src="http://img.xinjiangnet.com.cn/js/config.js"></script>
+		<script type="text/javascript" src="/${res}/js/config.js"></script>
 		<script type="text/javascript" src="/${res}/js/jquery.js"></script>
 		<script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
 		<!--[if lt IE 9 ]>
-			<script type="text/javascript" src="/${res}/js/helper/modernizr.js"></script>
+			<script type="text/javascript" src="/${res}/js/modernizr.js"></script>
 		<![endif]-->
 		<script type="text/javascript">
-			var contentid = '2074417';
-			var topicid = '';
+			var contentid = '2074308';
+        	var topicid = '2020587';
 		</script>
 	</head>
 
@@ -94,7 +94,7 @@
 		<section class="column picture-wrap">
 			<!-- 面包屑 -->
 			<div class="crumb">
-				<a href="http://www.xinjiangnet.com.cn/">首页</a>
+				<a href="http://www.xinjiangnet.com.cn/">首页</a>>
 				[#list channel.nodeList as n]
 					<a href='${n.url}' target='_blank'>${n.name}</a>
 					[#if n_has_next] 
@@ -114,27 +114,57 @@
                 			<a href="${content.originUrl!}" target="_blank">${content.origin!'本站原创'}</a>
 						</span>
 						<span class="editor">责任编辑：${content.author!'本站编辑'}  </span>
+						<p class="summary">
+							[@text_cut s=content.description len='50' append='...'/]
+						</p>
 					</div>
 				</header>
 				<div id="gallery" class="mod-gallery">
 					<div class="gallery-overlay" data-gallery="overlay"></div>
-					<div class="gallery-content" data-gallery="content" style="visibility:hidden;">
+					<div class="gallery-content" data-gallery="content" style="visibility:visible;">
 						<div class="gallery-toolbar">
 							<span style="float: left">
                         	<a data-gallery="view-origin" href="javascript:void(0);" hideFocus="true" target="_blank" class="mod-btn">
                             <i class="btn-left"></i>
                             <span>
-                            	<i class="btn-icon icon-origin">
-                            	</i>查看原图
-                            </span><i class="btn-right"></i>
+                            	<i class="btn-icon icon-origin"></i>
+                            	查看原图
+                            </span>
+                            <i class="btn-right"></i>
 							</a>
 							<a data-gallery="auto-play" href="javascript:void(0);" hideFocus="true" class="mod-btn">
-								<i class="btn-left"></i><span><i class="btn-icon icon-slide"></i>幻灯播放</span><i class="btn-right"></i>
+								<i class="btn-left"></i>
+								<span>
+									<i class="btn-icon icon-slide"></i>
+									幻灯播放
+								</span>
+								<i class="btn-right"></i>
 							</a>
 							<a data-gallery="auto-stop" href="javascript:void(0);" hideFocus="true" class="mod-btn">
-								<i class="btn-left"></i><span><i class="btn-icon icon-stop"></i>手动播放</span><i class="btn-right"></i>
+								<i class="btn-left"></i>
+								<span>
+									<i class="btn-icon icon-stop"></i>
+									手动播放
+								</span>
+								<i class="btn-right"></i>
 							</a>
-							<a class="mod-btn" hideFocus="true" onclick="javascript:digg.set(2074417,'supports')"><i class="btn-left"></i><span><i class="btn-icon icon-vote"></i><b id="supports">0</b></span><i class="btn-right"></i></a>
+							<a class="mod-btn" target="_blank" href="http://app.xinjiangnet.com.cn/?app=comment&controller=review&action=index&topicid=2020587">
+								<i class="btn-left"></i>
+								<span>
+									<i class="btn-icon icon-comment"></i>
+									我要评论(<em id="changyan_count_unit" class="comments">0</em>)
+								</span>
+								<i class="btn-right"></i>
+							</a>       
+							<a class="mod-btn" hideFocus="true" onclick="javascript:digg.set(2074417,'supports')"><i class="btn-left"></i>
+									<span>
+										<i class="btn-icon icon-vote"></i>
+										<b id="supports">
+											${content.ups!}
+										</b>
+									</span>
+									<i class="btn-right"></i>
+								</a>
 							</span>
 						</div>
 						<div class="gallery-photo">
@@ -145,15 +175,19 @@
 							<div class="gallery-photo-next" data-gallery="photo-next">
 								<a title="点击浏览下一张图片，支持'→'翻页" href="javascript:void(0);" hideFocus="true">下一页</a>
 							</div>
-							<div class="gallery-loading" data-gallery="loading"><span></span></div>
+							<div class="gallery-loading" data-gallery="loading">
+								<span></span>
+							</div>
 							<div class="gallery-end" data-gallery="end">
 								<a class="end-close" data-gallery="end-close"></a>
 								<div class="end-intro">
 									<div class="thumb">
-										<a href="javascript:void(0);"><img src="http://upload.xinjiangnet.com.cn/2018/0520/thumb_120_90_1526801559363.jpg" alt="" width="120" height="90" /></a>
+										<a href="javascript:void(0);">
+											<img src="${content.typeImg!}" alt="" width="120" height="90" />
+										</a>
 									</div>
 									<div class="texts">
-										<h4>醉美神农架大九湖</h4>
+										<h4>${content.title!}</h4>
 										<div class="buttons">
 											<a class="mod-btn" data-gallery="replay"><i class="btn-left"></i><span><i class="btn-icon icon-replay"></i>重新播放</span><i class="btn-right"></i></a>
 										</div>
@@ -161,30 +195,20 @@
 								</div>
 								<div class="end-related">
 									<ul class="piclist">
+										[@cms_content_list typeId='2' count='3' channelId='76' tagName=content.tagStr excludeId=content.id] 
+										[#list tag_list as a] 
 										<li class="v-pic">
 											<div class="thumb">
-												<a title="如梦如幻的神农架国家公园" href="http://www.xinjiangnet.com.cn/2018/0520/2074411.shtml"><img width="120" height="90" alt="" src="http://upload.xinjiangnet.com.cn/2018/0520/thumb_120_90_1526798867620.jpg"></a>
+												<a title="${a.title}" href="${a.url}">
+													<img width="120" height="90" alt="" src="${a.typeImg}">
+												</a>
 											</div>
 											<div class="title">
-												<a title="如梦如幻的神农架国家公园" href="http://www.xinjiangnet.com.cn/2018/0520/2074411.shtml">如梦如幻的神农架国家公园</a>
+												<a title="${a.title!}" href="${a.url}">[@text_cut s=a.title len=20 append=append/]</a>
 											</div>
 										</li>
-										<li class="v-pic">
-											<div class="thumb">
-												<a title=" 梦幻神农架大九湖" href="http://www.xinjiangnet.com.cn/2017/1109/2017704.shtml"><img width="120" height="90" alt="" src="2017/1109/1510193385883.jpg"></a>
-											</div>
-											<div class="title">
-												<a title=" 梦幻神农架大九湖" href="http://www.xinjiangnet.com.cn/2017/1109/2017704.shtml"> 梦幻神农架大九湖</a>
-											</div>
-										</li>
-										<li class="v-pic">
-											<div class="thumb">
-												<a title=" 神农架现云海奇观 引众多游客欣赏" href="http://www.xinjiangnet.com.cn/2017/0612/1882880.shtml"><img width="120" height="90" alt="" src="http://upload.xinjiangnet.com.cn/2017/0612/thumb_120_90_1497232238431.jpg"></a>
-											</div>
-											<div class="title">
-												<a title=" 神农架现云海奇观 引众多游客欣赏" href="http://www.xinjiangnet.com.cn/2017/0612/1882880.shtml"> 神农架现云海奇观 引众多游客欣赏</a>
-											</div>
-										</li>
+ 										[/#list]
+ 										[/@cms_content_list]
 									</ul>
 								</div>
 							</div>
@@ -194,15 +218,15 @@
 						</div>
 						<div class="clearfix"></div>
 					</div>
-					<div class="gallery-footer" data-gallery="footer" style="visibility:hidden;">
+					<div class="gallery-footer" data-gallery="footer" style="visibility:visible;">
 						<div class="clearfix">
 							<div class="gallery-thumb" data-gallery="slider">
 								<span class="gallery-thumb-prev">
-                            <a href="javascript:void(0);" hideFocus="true" data-slider="items-left"></a>
-                        </span>
+                            		<a href="javascript:void(0);" hideFocus="true" data-slider="items-left"></a>
+                        		</span>
 								<span class="gallery-thumb-next">
-                            <a href="javascript:void(0);" hideFocus="true" data-slider="items-right"></a>
-                        </span>
+                            		<a href="javascript:void(0);" hideFocus="true" data-slider="items-right"></a>
+                        		</span>
 								<div class="gallery-thumbs" data-slider="control">
 									<div class="gallery-thumb-list">
 										<ul class="gallery-thumb-items" data-slider="items"></ul>
@@ -216,9 +240,9 @@
 													<b class="bar-btn-left"></b>
 													<b class="bar-btn-right"></b>
 													<span class="bar-btn-body">
-                                                <span>
-                                                    <b class="bar-btn-content"></b>
-                                                </span>
+                                                		<span>
+                                                    		<b class="bar-btn-content"></b>
+                                                		</span>
 													</span>
 												</a>
 											</div>
@@ -252,7 +276,9 @@
 					</li>
 					<li class="v-pic">
 						<div class="thumb">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074417.shtml" target="_blank" title="醉美神农架大九湖"><img src="http://upload.xinjiangnet.com.cn/2018/0520/thumb_120_90_1526801559363.jpg" alt="" width="120" height="90"></a>
+							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074417.shtml" target="_blank" title="醉美神农架大九湖">
+								<img src="http://upload.xinjiangnet.com.cn/2018/0520/thumb_120_90_1526801559363.jpg" alt="" width="120" height="90">
+							</a>
 						</div>
 						<div class="title">
 							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074417.shtml" target="_blank" title="醉美神农架大九湖">醉美神农架大九湖</a>
@@ -294,66 +320,26 @@
 			</div>
 		</section>
 		<!-- @end 推荐组图 -->
-		<script type="text/javascript" src="/${res}/js/apps/digg.js"></script>
+		<script type="text/javascript" src="/${res}/js/digg.js"></script>
 		<script>
 			$(function() {
 				digg.get(2074417, 'supports');
 				$.getJSON(APP_URL + '?app=system&controller=content&action=stat&jsoncallback=?&contentid=' + contentid, function(data) {});
 			});
 		</script>
-		<link rel="stylesheet" href="http://img.xinjiangnet.com.cn/js/lib/gallery/black.css" />
-		<script type="text/javascript" src="http://img.xinjiangnet.com.cn/js/lib/cmstop.gallery.js"></script>
+		<link rel="stylesheet" href="/${res}/css/black.css" />
+		<script type="text/javascript" src="/${res}/js/cmstop.gallery.js"></script>
 		<script type="text/javascript">
 			$(function() {
 				var photos = [];
+				[#list content.pictures as p] 
 				photos.push({
-					orig: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801559363.jpg',
-					big: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801559363.jpg',
-					thumb: 'http://upload.xinjiangnet.com.cn/2018/0520/thumb_100_75_1526801559363.jpg',
-					note: "\u3000\u3000\u795e\u519c\u67b6\u5927\u4e5d\u6e56\u9ad8\u5c71\u6e7f\u5730\u98ce\u5149\uff085\u670818\u65e5\u6444\uff09\u3002\u3000\u3000\u5728\u201c\u534e\u4e2d\u5c4b\u810a\u201d\u6e56\u5317\u795e\u519c\u67b6\u6df1\u5904\u6709\u4e00\u7247\u9ad8\u5c71\u6e7f\u5730\uff0c\u4e00\u6761\u5c0f\u6eaa\u4e32\u8d779\u4e2a\u6e56\u6cca\uff0c\u6545\u540d\u201c\u5927\u4e5d\u6e56\u201d\u3002\u8fd9\u91cc\u7fa4\u5c71\u73af\u7ed5\uff0c\u98ce\u5149\u79c0\u4e3d\uff0c\u5b9b\u5982\u4e16\u5916\u6843\u6e90\u3002\u3000\u3000\u65b0\u534e\u793e\u8bb0\u8005\u675c\u534e\u4e3e \u6444"
+					orig: '${p.imgPath!}',
+					big: '${p.imgPath!}',
+					thumb: '${p.imgPath!}',
+					note: "${p.description!}"
 				});
-				photos.push({
-					orig: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801561910.jpg',
-					big: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801561910.jpg',
-					thumb: 'http://upload.xinjiangnet.com.cn/2018/0520/thumb_100_75_1526801561910.jpg',
-					note: "\u3000\u30005\u670818\u65e5\u62cd\u6444\u7684\u795e\u519c\u67b6\u5927\u4e5d\u6e56\u98ce\u5149\u3002 \u65b0\u534e\u793e\u8bb0\u8005\u675c\u534e\u4e3e \u6444"
-				});
-				photos.push({
-					orig: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801563706.jpg',
-					big: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801563706.jpg',
-					thumb: 'http://upload.xinjiangnet.com.cn/2018/0520/thumb_100_75_1526801563706.jpg',
-					note: "\u3000\u30005\u670818\u65e5\uff0c\u6e38\u5ba2\u5728\u795e\u519c\u67b6\u5927\u4e5d\u6e56\u9ad8\u5c71\u6e7f\u5730\u6e38\u89c8\u3002 \u65b0\u534e\u793e\u8bb0\u8005\u675c\u534e\u4e3e \u6444"
-				});
-				photos.push({
-					orig: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801566715.jpg',
-					big: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801566715.jpg',
-					thumb: 'http://upload.xinjiangnet.com.cn/2018/0520/thumb_100_75_1526801566715.jpg',
-					note: "\u3000\u3000\u795e\u519c\u67b6\u5927\u4e5d\u6e56\u9ad8\u5c71\u6e7f\u5730\u98ce\u5149\uff085\u670818\u65e5\u65e0\u4eba\u673a\u62cd\u6444\uff09\u3002 \u65b0\u534e\u793e\u8bb0\u8005\u675c\u534e\u4e3e \u6444"
-				});
-				photos.push({
-					orig: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801571938.jpg',
-					big: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801571938.jpg',
-					thumb: 'http://upload.xinjiangnet.com.cn/2018/0520/thumb_100_75_1526801571938.jpg',
-					note: "\u3000\u30005\u670818\u65e5\u65e0\u4eba\u673a\u62cd\u6444\u7684\u795e\u519c\u67b6\u5927\u4e5d\u6e56\u98ce\u5149\u3002 \u65b0\u534e\u793e\u8bb0\u8005\u675c\u534e\u4e3e \u6444"
-				});
-				photos.push({
-					orig: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801573124.jpg',
-					big: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801573124.jpg',
-					thumb: 'http://upload.xinjiangnet.com.cn/2018/0520/thumb_100_75_1526801573124.jpg',
-					note: "\u3000\u30005\u670818\u65e5\uff0c\u725b\u7fa4\u5728\u795e\u519c\u67b6\u5927\u4e5d\u6e56\u9ad8\u5c71\u6e7f\u5730\u89c5\u98df\u3002 \u65b0\u534e\u793e\u8bb0\u8005\u675c\u534e\u4e3e \u6444"
-				});
-				photos.push({
-					orig: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801575370.jpg',
-					big: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801575370.jpg',
-					thumb: 'http://upload.xinjiangnet.com.cn/2018/0520/thumb_100_75_1526801575370.jpg',
-					note: "\u3000\u30005\u670818\u65e5\u65e0\u4eba\u673a\u62cd\u6444\u7684\u6e56\u5317\u795e\u519c\u67b6\u5927\u4e5d\u6e56\u9ad8\u5c71\u6e7f\u5730\u98ce\u5149\u3002 \u65b0\u534e\u793e\u8bb0\u8005\u675c\u534e\u4e3e \u6444"
-				});
-				photos.push({
-					orig: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801576374.jpg',
-					big: 'http://upload.xinjiangnet.com.cn/2018/0520/1526801576374.jpg',
-					thumb: 'http://upload.xinjiangnet.com.cn/2018/0520/thumb_100_75_1526801576374.jpg',
-					note: "\u3000\u3000\u795e\u519c\u67b6\u5927\u4e5d\u6e56\u666f\u8272\uff085\u670818\u65e5\u65e0\u4eba\u673a\u62cd\u6444\uff09\u3002 \u65b0\u534e\u793e\u8bb0\u8005\u675c\u534e\u4e3e \u6444"
-				});
+ 				[/#list]
 				$('#gallery').gallery({
 					photos: photos,
 					maxWidth: 900,
@@ -363,8 +349,11 @@
 					hashPageParam: 'g2074417',
 					thumbWidth: 100,
 					thumbHeight: 75,
-					afterShow: function( /* picture index, zero based */ index, /* event action name like afterPrev, afterNext ... */ action) {}
+					afterShow: function( /* picture index, zero based */ index, /* event action name like afterPrev, afterNext ... */ action) {
+						 
+					}
 				});
+				 
 			});
 		</script>
 		<script type="text/javascript">
@@ -751,7 +740,7 @@
 				</tr>
 			</table>
 		</center>
-		<link rel="stylesheet" type="text/css" href="/${res}/js/popmenu.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/popmenu.css" media="all" />
 		<script type="text/javascript" src="/${res}/js/recommend.js"></script>
 		<!-- end footer -->
 	</body>

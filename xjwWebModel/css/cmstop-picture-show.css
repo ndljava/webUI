@@ -59,7 +59,7 @@
 /*推荐组图*/
 .title-hd {
   height: 30px;
-  background: transparent url('images/sprite-bar.png') repeat-x 0 0;
+  background: transparent url('../img/sprite-bar.png') repeat-x 0 0;
 }
 .title-hd .title .words {
   color: #cc0000;
@@ -77,7 +77,7 @@
   _display: inline;
 }
 .title-hd .ico {
-  background: transparent url('images/sprite-ico.png') no-repeat -60px -160px;
+  background: transparent url('../img/sprite-ico.png') no-repeat -60px -160px;
   width: 16px;
   height: 30px;
 }
@@ -133,7 +133,7 @@
   filter: alpha(opacity=50);
 }
 .piclist .v-pic .thumb .ico {
-  background: transparent url('images/sprite-ico.png') no-repeat -108px -169px;
+  background: transparent url('../img/sprite-ico.png') no-repeat -108px -169px;
   width: 16px;
   height: 13px;
   bottom: 4px;
