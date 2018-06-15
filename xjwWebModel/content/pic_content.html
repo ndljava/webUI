@@ -119,18 +119,23 @@
 						</p>
 					</div>
 				</header>
+				<!--
+                	作者：ndljava@126.com
+                	时间：2018-06-13
+                	描述：图片切换
+                -->
 				<div id="gallery" class="mod-gallery">
 					<div class="gallery-overlay" data-gallery="overlay"></div>
 					<div class="gallery-content" data-gallery="content" style="visibility:visible;">
 						<div class="gallery-toolbar">
 							<span style="float: left">
                         	<a data-gallery="view-origin" href="javascript:void(0);" hideFocus="true" target="_blank" class="mod-btn">
-                            <i class="btn-left"></i>
-                            <span>
-                            	<i class="btn-icon icon-origin"></i>
-                            	查看原图
-                            </span>
-                            <i class="btn-right"></i>
+                            	<i class="btn-left"></i>
+                            	<span>
+                            		<i class="btn-icon icon-origin"></i>
+                            		查看原图
+                            	</span>
+                            	<i class="btn-right"></i>
 							</a>
 							<a data-gallery="auto-play" href="javascript:void(0);" hideFocus="true" class="mod-btn">
 								<i class="btn-left"></i>
@@ -266,56 +271,20 @@
 					</div>
 				</div>
 				<ul class="piclist">
-					<li class="v-pic">
-						<div class="thumb">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074397.shtml" target="_blank" title="乐享“中国旅游日”"><img src="http://upload.xinjiangnet.com.cn/2018/0520/thumb_120_90_1526794161233.jpg" alt="" width="120" height="90"></a>
-						</div>
-						<div class="title">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074397.shtml" target="_blank" title="乐享“中国旅游日”">乐享“中国旅游日”</a>
-						</div>
-					</li>
-					<li class="v-pic">
-						<div class="thumb">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074417.shtml" target="_blank" title="醉美神农架大九湖">
-								<img src="http://upload.xinjiangnet.com.cn/2018/0520/thumb_120_90_1526801559363.jpg" alt="" width="120" height="90">
-							</a>
-						</div>
-						<div class="title">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074417.shtml" target="_blank" title="醉美神农架大九湖">醉美神农架大九湖</a>
-						</div>
-					</li>
-					<li class="v-pic">
-						<div class="thumb">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074415.shtml" target="_blank" title="走进中科大 体验科技魅力"><img src="http://upload.xinjiangnet.com.cn/2018/0520/thumb_120_90_1526801422432.jpg" alt="" width="120" height="90"></a>
-						</div>
-						<div class="title">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074415.shtml" target="_blank" title="走进中科大 体验科技魅力">走进中科大 体验科技魅力</a>
-						</div>
-					</li>
-					<li class="v-pic">
-						<div class="thumb">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074416.shtml" target="_blank" title=" 广西侗乡油茶飘香引客来"><img src="http://upload.xinjiangnet.com.cn/2018/0520/thumb_120_90_1526801437720.JPG" alt="" width="120" height="90"></a>
-						</div>
-						<div class="title">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074416.shtml" target="_blank" title=" 广西侗乡油茶飘香引客来"> 广西侗乡油茶飘香引客来</a>
-						</div>
-					</li>
-					<li class="v-pic">
-						<div class="thumb">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074407.shtml" target="_blank" title="品“药膳大餐”感受中医文化"><img src="http://upload.xinjiangnet.com.cn/2018/0520/thumb_120_90_1526798550396.jpg" alt="" width="120" height="90"></a>
-						</div>
-						<div class="title">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074407.shtml" target="_blank" title="品“药膳大餐”感受中医文化">品“药膳大餐”感受中医文化</a>
-						</div>
-					</li>
-					<li class="v-pic">
-						<div class="thumb">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074399.shtml" target="_blank" title="助残日：挚爱与家园"><img src="http://upload.xinjiangnet.com.cn/2018/0520/thumb_120_90_1526797885986.jpg" alt="" width="120" height="90"></a>
-						</div>
-						<div class="title">
-							<a href="http://www.xinjiangnet.com.cn/2018/0520/2074399.shtml" target="_blank" title="助残日：挚爱与家园">助残日：挚爱与家园</a>
-						</div>
-					</li>
+					[@cms_content_list typeId='2' count='3' channelId='76' tagName=content.tagStr excludeId=content.id] 
+					[#list tag_list as a] 
+						<li class="v-pic">
+							<div class="thumb">
+								<a title="${a.title}" href="${a.url}">
+									<img width="120" height="90" alt="" src="${a.typeImg}">
+								</a>
+							</div>
+							<div class="title">
+								<a title="${a.title!}" href="${a.url}">[@text_cut s=a.title len=20 append=append/]</a>
+							</div>
+						</li>
+ 					[/#list]
+ 					[/@cms_content_list]
 				</ul>
 			</div>
 		</section>
