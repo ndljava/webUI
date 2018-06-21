@@ -1,25 +1,98 @@
-<!DOCTYPE HTML>
-<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="zh-CN">
-<!--<![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 	<head>
-		[#include "news_top_head.html"/]
+		[#include '../include/newsMeta.html']
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
-		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-picture-show.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-article.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-list-text.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-comment-mode.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-right-common.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-list-pic-text.css" />
 		<script type="text/javascript" src="/${res}/js/config.js"></script>
 		<script type="text/javascript" src="/${res}/js/jquery.js"></script>
 		<script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
 		<!--[if lt IE 9 ]>
 			<script type="text/javascript" src="/${res}/js/modernizr.js"></script>
 		<![endif]-->
-		<script type="text/javascript">
-			var contentid = '2074308';
-        	var topicid = '2020587';
-		</script>
+		<style type="text/css">
+			a {
+				color: #000;
+			}
+			
+			ul li {
+				list-style-type: none;
+			}
+			
+			.box {
+				width: 980px;
+				border-top: 1px solid #CCC;
+			}
+			
+			.box ul {
+				float: left;
+				width: 980px;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box li {
+				float: left;
+				width: 230px;
+				height: 268px;
+				border: 1px solid #CCC;
+				margin: 20px 7px 0 6px;
+			}
+			
+			.box .b2 {
+				float: left;
+				width: 224px;
+				height: 262px;
+				margin: 2px;
+				border: 1px solid #CCC;
+				text-align: center;
+			}
+			
+			.box .b2 img {
+				float: left;
+				width: 222px;
+				height: 185px;
+				margin: 0 1px 15px 1px;
+			}
+			
+			.box .b2 .tit {
+				font-family: "微软雅黑";
+				font-size: 14px;
+				line-height: 20px;
+			}
+			
+			.box .b2 p {
+				font-family: "微软雅黑";
+				font-size: 12px;
+				line-height: 18px;
+				margin: 0px;
+				text-align: right;
+				padding-right: 10px;
+				color: #999;
+			}
+			
+			.headlogo {
+				margin: 5px auto;
+				width: 980px;
+			}
+			
+			.bax {
+				margin: 15px auto 0 auto;
+				width: 980px;
+				height: 70px;
+				padding: 10px 0;
+			}
+			
+			.add {
+				margin: 10px auto;
+				width: 980px;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -86,281 +159,172 @@
 				<!-- end带链接的顶部 -->
 			</div>
 			<!-- end顶部条 -->
+			<!-- 不带logo的banner -->
+			<!-- end不带logo的banner -->
 			<!-- 顶部背景条, -->
 			<div class="top-block"></div>
 			<!-- end顶部背景条 -->
 		</header>
 		<!-- @end头部 -->
-		<section class="column picture-wrap">
-			<!-- 面包屑 -->
+		<div class="add">
+			<IMG src="http://upload.xinjiangnet.com.cn/2015/0304/1425437968799.jpg" width="980" height="90" />
+		</div>
+		<div class="bax">
+			<img src="/${res}/img/txtx_logo.gif" />
 			<div class="crumb">
-				<a href="http://www.xinjiangnet.com.cn/">首页</a>>
-				[#list channel.nodeList as n]
-					<a href='${n.url}' target='_blank'>${n.name}</a>
-					[#if n_has_next] 
-						&nbsp;&nbsp;<em>&gt;</em>
-					[/#if]
-				[/#list]
-				<em>&gt;</em> <span>组图</span>
-			</div>
-			<!-- @end 面包屑 -->
-			<!-- 组图展示区域 -->
-			<div class="picture-main">
-				<header class="picture-header">
-					<h1 class="h1">${content.title!}</h1>
-					<div class="picture-infos">
-						<span class="post-time">${content.releaseDate}</span>
-						<span class="source">
-                			<a href="${content.originUrl!}" target="_blank">${content.origin!'本站原创'}</a>
-						</span>
-						<span class="editor">责任编辑：${content.author!'本站编辑'}  </span>
-						<p class="summary">
-							[@text_cut s=content.description len='50' append='...'/]
-						</p>
+				<div style="float:left;">
+					<span style="float:left;">
+						<a href="http://www.xinjiangnet.com.cn/">
+							<img src="/${res}/img/xjw_nr_logo.gif" border="0">
+						</a>
+					</span>
+					<span style="margin-top:8px; float:right; display:block;">
+    					&nbsp;&nbsp;<em>&gt;</em>
+    					[#list channel.nodeList as n]
+							<a href='${n.url}' target='_blank'>${n.name}</a>
+							[#if n_has_next] 
+								&nbsp;&nbsp;<em>&gt;</em>
+							[/#if]
+						[/#list]
+    					
+    					<em>&gt;</em> <span>正文</span>
+					</span>
+				</div>
+				<div style="float:right;">
+					<div class="fl-l header-search-input ov ">
+						<form id="head_search" name="head_search" action="http://app.xinjiangnet.com.cn/" method="GET">
+							<input type="hidden" name="app" value="search">
+							<input type="hidden" name="controller" value="index">
+							<input type="hidden" name="action" value="search">
+							<input type="hidden" id="type" name="type" value="all">
+							<div class="divicon icon16x16 fl-r"></div>
+							<input type="text" id="head_wd" name="wd" class="searinput" style="margin-top:2px;" />
+						</form>
 					</div>
-				</header>
-				<!--
-                	作者：ndljava@126.com
-                	时间：2018-06-13
-                	描述：图片切换
-                -->
-				<div id="gallery" class="mod-gallery">
-					<div class="gallery-overlay" data-gallery="overlay"></div>
-					<div class="gallery-content" data-gallery="content" style="visibility:visible;">
-						<div class="gallery-toolbar">
-							<span style="float: left">
-                        	<a data-gallery="view-origin" href="javascript:void(0);" hideFocus="true" target="_blank" class="mod-btn">
-                            	<i class="btn-left"></i>
-                            	<span>
-                            		<i class="btn-icon icon-origin"></i>
-                            		查看原图
-                            	</span>
-                            	<i class="btn-right"></i>
-							</a>
-							<a data-gallery="auto-play" href="javascript:void(0);" hideFocus="true" class="mod-btn">
-								<i class="btn-left"></i>
-								<span>
-									<i class="btn-icon icon-slide"></i>
-									幻灯播放
-								</span>
-								<i class="btn-right"></i>
-							</a>
-							<a data-gallery="auto-stop" href="javascript:void(0);" hideFocus="true" class="mod-btn">
-								<i class="btn-left"></i>
-								<span>
-									<i class="btn-icon icon-stop"></i>
-									手动播放
-								</span>
-								<i class="btn-right"></i>
-							</a>
-							<a class="mod-btn" target="_blank" href="http://app.xinjiangnet.com.cn/?app=comment&controller=review&action=index&topicid=2020587">
-								<i class="btn-left"></i>
-								<span>
-									<i class="btn-icon icon-comment"></i>
-									我要评论(<em id="changyan_count_unit" class="comments">0</em>)
-								</span>
-								<i class="btn-right"></i>
-							</a>       
-							<a class="mod-btn" hideFocus="true" onclick="javascript:digg.set(2074417,'supports')"><i class="btn-left"></i>
-									<span>
-										<i class="btn-icon icon-vote"></i>
-										<b id="supports">
-											${content.ups!}
-										</b>
-									</span>
-									<i class="btn-right"></i>
-								</a>
-							</span>
-						</div>
-						<div class="gallery-photo">
-							<div class="gallery-photo-items" data-gallery="photo-items"></div>
-							<div class="gallery-photo-prev" data-gallery="photo-prev">
-								<a title="点击浏览上一张图片，支持'←'翻页" href="javascript:void(0);" hideFocus="true">上一页</a>
-							</div>
-							<div class="gallery-photo-next" data-gallery="photo-next">
-								<a title="点击浏览下一张图片，支持'→'翻页" href="javascript:void(0);" hideFocus="true">下一页</a>
-							</div>
-							<div class="gallery-loading" data-gallery="loading">
-								<span></span>
-							</div>
-							<div class="gallery-end" data-gallery="end">
-								<a class="end-close" data-gallery="end-close"></a>
-								<div class="end-intro">
-									<div class="thumb">
-										<a href="javascript:void(0);">
-											<img src="${content.typeImg!}" alt="" width="120" height="90" />
-										</a>
-									</div>
-									<div class="texts">
-										<h4>${content.title!}</h4>
-										<div class="buttons">
-											<a class="mod-btn" data-gallery="replay"><i class="btn-left"></i><span><i class="btn-icon icon-replay"></i>重新播放</span><i class="btn-right"></i></a>
-										</div>
-									</div>
-								</div>
-								<div class="end-related">
-									<ul class="piclist">
-										[@cms_content_list typeId='2' count='3' channelId='76' tagName=content.tagStr excludeId=content.id] 
-										[#list tag_list as a] 
-										<li class="v-pic">
-											<div class="thumb">
-												<a title="${a.title}" href="${a.url}">
-													<img width="120" height="90" alt="" src="${a.typeImg}">
-												</a>
-											</div>
-											<div class="title">
-												<a title="${a.title!}" href="${a.url}">[@text_cut s=a.title len=20 append=append/]</a>
-											</div>
-										</li>
- 										[/#list]
- 										[/@cms_content_list]
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-photo-description">
-							<p data-gallery="photo-description"></p>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="gallery-footer" data-gallery="footer" style="visibility:visible;">
-						<div class="clearfix">
-							<div class="gallery-thumb" data-gallery="slider">
-								<span class="gallery-thumb-prev">
-                            		<a href="javascript:void(0);" hideFocus="true" data-slider="items-left"></a>
-                        		</span>
-								<span class="gallery-thumb-next">
-                            		<a href="javascript:void(0);" hideFocus="true" data-slider="items-right"></a>
-                        		</span>
-								<div class="gallery-thumbs" data-slider="control">
-									<div class="gallery-thumb-list">
-										<ul class="gallery-thumb-items" data-slider="items"></ul>
-									</div>
-									<div class="gallery-thumb-bar mod-bar" data-slider="bar">
-										<span class="bar-left"></span>
-										<span class="bar-right"></span>
-										<div class="bar-body">
-											<div class="bar-content">
-												<a class="bar-btn" href="javascript:void(0);" hideFocus="true" data-slider="btn">
-													<b class="bar-btn-left"></b>
-													<b class="bar-btn-right"></b>
-													<span class="bar-btn-body">
-                                                		<span>
-                                                    		<b class="bar-btn-content"></b>
-                                                		</span>
-													</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<a href="" class="m-header-search js-headsearch fl-l icon16x16"></a>
+					<script type="text/javascript">
+						$('#head_search .divicon').click(function() {
+							$('#head_search').submit();
+						});
+						$('#head_search').attr('Action', APP_URL);
+					</script>
 				</div>
 			</div>
-			<!-- @end 组图展示区域 -->
-		</section>
-		<!-- 推荐组图 -->
-		<section class="column picture-hot">
-			<div class="inner">
-				<div class="hd title-hd">
-					<em class="ico"></em>
-					<div class="title">
-						<a href="http://www.xinjiangnet.com.cn/tppd/" target="_blank" title="" class="words">推荐组图</a>
-					</div>
-				</div>
-				<ul class="piclist">
-					[@cms_content_list typeId='2' count='3' channelId='76' tagName=content.tagStr excludeId=content.id] 
-					[#list tag_list as a] 
-						<li class="v-pic">
-							<div class="thumb">
-								<a title="${a.title}" href="${a.url}">
-									<img width="120" height="90" alt="" src="${a.typeImg}">
+		</div>
+		<div class="headlogo">
+			<div class="box">
+				<section>
+					<ul>
+						[@cms_content_page count='3' channelId='75' titLen='20' dateFormat='yyyy-MM-dd hh:mm:ss' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
+						<li>
+							<div class="b2">
+								<a href="${a.url}" target="_blank">
+									<img src="${a.typeImg}" width="222" height="185" />
 								</a>
-							</div>
-							<div class="title">
-								<a title="${a.title!}" href="${a.url}">[@text_cut s=a.title len=20 append=append/]</a>
+								<span class="tit">
+									<a href="${a.url}" target="_blank">
+										[@text_cut s=a.title len=20 append=append/]
+									</a>
+								</span>
+								<p class="tim">${a.date}</p>
 							</div>
 						</li>
- 					[/#list]
- 					[/@cms_content_list]
+						[/#list]
+						
+					</ul>
+				</section>
+			</div>
+			<!-----------------------------------分页开始------------------------>
+			<div class="page-box clear">
+				[#assign n=5/]
+				[#assign m=3/]
+				[#assign b=2/]
+				[#assign p=tag_pagination/]
+				<ul class="page" style="margin: 10px 150px;float: left;">
+					[#if p.firstPage]
+						<li>
+							<a disabled="disabled" class="prev disable">上一页</a>
+						</li>
+					[#else]
+						<li>
+							<a href="#" target="_self" onclick="location.href=encodeURI('${hrefFormer}[#if p.prePage gt 1]_${p.prePage}[/#if]${hrefLatter}');">上一页</a>[#t/]
+						</li>
+					[/#if]
+
+ 					[#if p.totalPage gte n]
+						[#if p.pageNo lte m]
+						[#list 1..n as page]
+							<li>
+								<a target="_self" [#if page==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${page}${hrefLatter}');" [/#if]>${page!}</a>&nbsp;
+							</li>
+						[/#list]
+							<li>
+								<a target="_self">...</a>
+							</li>
+							<li>
+								<a target="_self" [#if p.totalPage==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${p.totalPage}${hrefLatter}');"[/#if]>${p.totalPage!}</a>&nbsp;
+							</li>
+						[#elseif p.pageNo>p.totalPage-m]
+							<li>
+								<a target="_self" [#if 1==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}${hrefLatter}');"[/#if]>1</a>&nbsp;
+							</li>
+							<li>
+								<a target="_self">...</a>
+							</li>
+							[#list p.totalPage-n+1..p.totalPage as page]
+							<li>
+								<a target="_self" [#if page==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${page}${hrefLatter}');"[/#if]>${page!}</a>&nbsp;
+							</li>
+							[/#list]
+						[#else]
+							<li>
+								<a target="_self" [#if 1==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}${hrefLatter}');"[/#if]>1</a>&nbsp;
+							</li>
+							<li>
+								<a target="_self">...</a>
+							</li>
+										
+							[#list p.pageNo-b..p.pageNo+b as page]
+							<li>
+								<a target="_self" [#if page==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${page}${hrefLatter}');"[/#if]>${page!}</a>&nbsp;
+							</li>
+							[/#list]
+							<li>
+								<a target="_self">...</a>
+							</li>
+							<li>
+								<a target="_self" [#if p.totalPage==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${p.totalPage}${hrefLatter}');"[/#if]>${p.totalPage!}</a>&nbsp;
+							</li>
+									[/#if]
+								[#else]
+									[#list 1..p.totalPage as page]
+									<li>
+										<a target="_self" [#if page==p.pageNo]disabled="disabled" class="currPageClass"[#else]class="norPageClass" href="#" onclick="location.href=encodeURI('${hrefFormer}_${page}${hrefLatter}');"[/#if]>${page!}</a>&nbsp;
+									</li>
+									[/#list]
+								[/#if]
+								
+								[#if p.lastPage]
+									<li>
+										<a disabled="disabled" class="prev disable">下一页</a>
+									</li>
+								[#else]
+									<li>
+										<a href="#" target="_self" onclick="location.href=encodeURI('${hrefFormer}_${p.nextPage}${hrefLatter}');">下一页</a>
+									</li>
+								[/#if]
 				</ul>
 			</div>
-		</section>
-		<!-- @end 推荐组图 -->
-		<script type="text/javascript" src="/${res}/js/digg.js"></script>
-		<script>
-			$(function() {
-				digg.get(2074417, 'supports');
-				$.getJSON(APP_URL + '?app=system&controller=content&action=stat&jsoncallback=?&contentid=' + contentid, function(data) {});
-			});
-		</script>
-		<link rel="stylesheet" href="/${res}/css/black.css" />
-		<script type="text/javascript" src="/${res}/js/cmstop.gallery.js"></script>
-		<script type="text/javascript">
-			$(function() {
-				var photos = [];
-				[#list content.pictures as p] 
-				photos.push({
-					orig: '${p.imgPath!}',
-					big: '${p.imgPath!}',
-					thumb: '${p.imgPath!}',
-					note: "${p.description!}"
-				});
- 				[/#list]
-				$('#gallery').gallery({
-					photos: photos,
-					maxWidth: 900,
-					minHeight: 600,
-					preload: 1,
-					scrollIntoView: true,
-					hashPageParam: 'g2074417',
-					thumbWidth: 100,
-					thumbHeight: 75,
-					afterShow: function( /* picture index, zero based */ index, /* event action name like afterPrev, afterNext ... */ action) {
-						 
-					}
-				});
-				 
-			});
-		</script>
-		<script type="text/javascript">
-			var commentTpl = '<div class="comment-item">\
-                        <div class="comment-content">\
-                            <p class="cont">{content}</p>\
-                        </div>\
-                     </div>';
-			$(function() {
-				getCommemt(topicid, $('#commentWrapper'), function(json) {
-					$('.comments').html(json.total);
-					if(json.total > 0) $('.view-comment').show();
-				});
-			});
-			//取评论函数
-			function getCommemt(topicid, wrapper, callback) {
-				if(!topicid) return;
-				$.getJSON(APP_URL + '?app=comment&controller=review&action=page&pagesize=5&all=1&topicid=' + topicid + '&jsoncallback=?', function(json) {
-					if(typeof(json) == 'object') {
-						for(var i = 0, item; item = json[i++];) {
-							var html = commentTpl;
-							for(var key in item) {
-								html = html.replace(new RegExp('{' + key + '}', "gm"), item[key]);
-							}
-							wrapper.append(html);
-						}
-					}
-					// 非评论页不能进行评论操作
-					$('.operate').remove();
-					typeof callback == 'function' && callback(json);
-				});
-			}
-		</script>
+			[/@cms_content_page]
+			<!-- @end 分页 -->
+			<!-----------------------------------分页结束------------------------>
+		</div>
 		<!-- footer -->
 		<div style="width:100%; height:10px;">
 		</div>
 		<div style="width:980px; margin:0px auto;">
-			<img src="http://img.xinjiangnet.com.cn/templates/default/img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
+			<img src="/${res}/img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
 			<map name="Map" id="Map">
       			<area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
       			<area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
@@ -384,24 +348,16 @@
 				</script>
 				<div style="width:980px; margin:0px auto;">
 					<div style="width:100px; float:left; border-bottom:2px solid #F00;" id="bdshs1">
-						<span onMouseMove="javascript:hzmt(1)">
-							<a href="" style="font-size:14px; line-height:30px;">地方网媒</a>
-						</span>
+						<span onMouseMove="javascript:hzmt(1)"><a href="" style="font-size:14px; line-height:30px;">地方网媒</a></span>
 					</div>
 					<div style="width:200px; float:left;" id="bdshs2">
-						<span onMouseMove="javascript:hzmt(2)">
-							<a href="" style="font-size:14px; line-height:30px;">“一带一路”网络联盟</a>
-						</span>
+						<span onMouseMove="javascript:hzmt(2)"><a href="" style="font-size:14px; line-height:30px;">“一带一路”网络联盟</a></span>
 					</div>
 					<div style="width:100px;float:left;" id="bdshs3">
-						<span onMouseMove="javascript:hzmt(3)">
-							<a href="" style="font-size:14px; line-height:30px;">合作媒体</a>
-						</span>
+						<span onMouseMove="javascript:hzmt(3)"><a href="" style="font-size:14px; line-height:30px;">合作媒体</a></span>
 					</div>
 					<div style="width:100px;float:left;" id="bdshs4">
-						<span onMouseMove="javascript:hzmt(4)">
-							<a href="" style="font-size:14px; line-height:30px;">城市网盟</a>
-						</span>
+						<span onMouseMove="javascript:hzmt(4)"><a href="" style="font-size:14px; line-height:30px;">城市网盟</a></span>
 					</div>
 					<div style="width:480px;float:right;">
 					</div>
@@ -409,8 +365,7 @@
 				<div style="clear:both;">
 				</div>
 				<div style="width:978px; border:0px solid #CCC; text-align:left; line-height:26px; font-size:12px;" id="bdshas1">
-					&nbsp;
-					<span style="display:inline-block;"><a class="icon-blank"  href="http://wlmq.wenming.cn/">乌鲁木齐文明网</a></span> &nbsp;
+					&nbsp;<span style="display:inline-block;"><a class="icon-blank"  href="http://wlmq.wenming.cn/">乌鲁木齐文明网</a></span> &nbsp;
 					<span style="display:inline-block;"><a href="http://www.bz.cn/">巴州在线</a></span> &nbsp;
 					<span style="display:inline-block;"><a href="http://www.xj120.com/">新疆健康网 </a></span> &nbsp;
 					<span style="display:inline-block;"><a href="http://wlmq.house.sina.com.cn/">乌鲁木齐房产网 </a></span> &nbsp;
@@ -709,9 +664,22 @@
 				</tr>
 			</table>
 		</center>
-		<link rel="stylesheet" type="text/css" href="/${res}/css/popmenu.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="/${res}/js/popmenu.css" media="all" />
 		<script type="text/javascript" src="/${res}/js/recommend.js"></script>
 		<!-- end footer -->
+		<!--网站底部-->
+		<!-- 脚本区域 -->
+		<script type="text/javascript" src="/${res}/js/cmstop-tabs.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				TAB({
+					menu: 'tabmenu',
+					content: 'tabcontent',
+					active_tab: 0,
+					active_css: 'tabactive'
+				});
+			});
+		</script>
 	</body>
 
 </html>

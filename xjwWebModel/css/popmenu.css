@@ -6,7 +6,7 @@
  .pop-menu .hd .close:hover,
  .pop-menu .hd .open,
  .pop-menu .hd .open:hover {
- 	background-image: url(images/pop_bg.png);
+ 	background-image: url(../img/pop_bg.png);
  }
  
  .pop-menu {
