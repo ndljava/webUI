@@ -1,0 +1,586 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+\ body {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #042a97;
+}
+
+.clear {
+	clear: both;
+}
+
+img {
+	border: 0
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+#main {
+	width: 980px;
+	margin: 0 auto;
+}
+
+#navall {
+	margin-bottom: 20px;
+}
+
+#nav1 {
+	float: left;
+	width: 87px;
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	font-size: 14px;
+	background-color: #3485cb;
+	border: 1px solid #DEDEDE;
+}
+
+#nav {
+	float: left;
+	width: 79px;
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	font-size: 14px;
+	border: 1px solid #DEDEDE;
+}
+
+#nav:hover {
+	background-color: #3485cb;
+	color: #FFF;
+}
+
+.titanjujiaomokuai {
+	width: 400px;
+	float: left;
+}
+
+.jinriguanzhu {
+	text-align: left;
+	line-height: 35px;
+	font-family: "微软雅黑";
+	color: #232323;
+	font-size: 16px;
+	list-style-type: none;
+}
+
+.jinriguanzhu1 {
+	width: 210px;
+	float: left;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.jinriguanzhu2 {
+	width: 370px;
+	height: 140px;
+	float: right;
+	text-align: left;
+	color: #676767;
+	margin: 10px;
+}
+
+.jinriguanzhu3 {
+	text-align: left;
+	line-height: 35px;
+	font-family: "微软雅黑";
+	color: #232323;
+	font-size: 20px;
+}
+
+.titanjujiao {
+	background-color: #408ed6;
+	width: 115px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	font-family: "微软雅黑";
+	color: #FFF;
+	font-size: 18px;
+}
+
+.biaoti {
+	margin-top: 15px;
+	font-family: "微软雅黑";
+	color: #a90000;
+	font-size: 20px;
+}
+
+.zhaiyao {
+	margin-top: 10px;
+	line-height: 22px;
+	font-family: "宋体";
+	color: #333333;
+	font-size: 14px;
+}
+
+.liebiao {
+	margin-top: 10px;
+	margin-left: 15px;
+	padding: 0px;
+	font-size: 14px;
+	line-height: 25px;
+	font-family: "宋体";
+	color: #042a97;
+	list-style-type: none;
+}
+
+#liebiao a {
+	color: #042a97;
+}
+
+.focus {
+	position: relative;
+	width: 558px;
+	height: 333px;
+	background-color: #000;
+	/*float: left;*/
+}
+
+.focus img {
+	width: 558px;
+	height: 333px;
+}
+
+.focus .shadow .title {
+	width: 260px;
+	height: 65px;
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+.focus .shadow .title a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bolder;
+	overflow: hidden;
+}
+
+.focus .btn {
+	position: absolute;
+	bottom: 34px;
+	left: 510px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.focus .btn a {
+	position: relative;
+	display: inline;
+	width: 13px;
+	height: 13px;
+	border-radius: 7px;
+	margin: 0 5px;
+	color: #B0B0B0;
+	font: 12px/15px "\5B8B\4F53";
+	text-decoration: none;
+	text-align: center;
+	outline: 0;
+	float: left;
+	background: #D9D9D9;
+}
+
+.focus .btn a:hover,
+.focus .btn a.current {
+	cursor: pointer;
+	background: #fc114a;
+}
+
+.focus .fPic {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.focus .D1fBt {
+	overflow: hidden;
+	zoom: 1;
+	height: 16px;
+	z-index: 10;
+}
+
+.focus .shadow {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	z-index: 10;
+	height: 80px;
+	line-height: 80px;
+	background: rgba(0, 0, 0, 0.6);
+	filter: progid:DXImageTransform.Microsoft.gradient( GradientType=0, startColorstr='#80000000', endColorstr='#80000000')\9;
+	display: block;
+	text-align: left;
+}
+
+.focus .shadow a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	overflow: hidden;
+	margin-left: 10px;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+.focus .fcon {
+	position: relative;
+	width: 100%;
+	float: left;
+	display: none;
+	background: #000
+}
+
+.focus .fcon img {
+	display: block;
+}
+
+.focus .fbg {
+	bottom: 25px;
+	right: 10px;
+	position: absolute;
+	height: 21px;
+	text-align: center;
+	z-index: 200;
+}
+
+.focus .fbg div {
+	margin: 4px auto 0;
+	overflow: hidden;
+	zoom: 1;
+	height: 14px
+}
+
+.focus .D1fBt a {
+	position: relative;
+	display: inline;
+	width: 12px;
+	height: 12px;
+	border-radius: 7px;
+	margin: 0 5px;
+	color: #B0B0B0;
+	font: 12px/15px "\5B8B\4F53";
+	text-decoration: none;
+	text-align: center;
+	outline: 0;
+	float: left;
+	background: #D9D9D9;
+}
+
+.focus .D1fBt .current,
+.focus .D1fBt a:hover {
+	background: #fc114a;
+}
+
+.focus .D1fBt img {
+	display: none
+}
+
+.focus .D1fBt i {
+	display: none;
+	font-style: normal;
+}
+
+.focus .prev,
+.focus .next {
+	position: absolute;
+	width: 40px;
+	height: 74px;
+	background: url(../img/focus_btn.png) no-repeat;
+}
+
+.focus .prev {
+	top: 50%;
+	margin-top: -37px;
+	left: 0;
+	background-position: 0 -74px;
+	cursor: pointer;
+}
+
+.focus .next {
+	top: 50%;
+	margin-top: -37px;
+	right: 0;
+	background-position: -40px -74px;
+	cursor: pointer;
+}
+
+.focus .prev:hover {
+	background-position: 0 0;
+}
+
+.focus .next:hover {
+	background-position: -40px 0;
+}
+
+.jiaodiantu {
+	width: 558px;
+	height: 350px;
+	float: right;
+}
+
+.zuqiuzixunmokuai {
+	width: 330px;
+	float: left;
+}
+
+.title {
+	font-family: "微软雅黑";
+	color: #335aae;
+	font-size: 18px;
+}
+
+.hd {
+	background: url(../img/ty-hd1.png);
+	height: 2px;
+	margin-top: 7px;
+}
+
+.zuqiuzixunmokuai2 {
+	width: 350px;
+	float: left;
+	margin-left: 20px;
+}
+
+.hd2 {
+	background: url(../img/ty_11.png);
+	height: 2px;
+	margin-top: 7px;
+}
+
+.lslq {
+	background: url(../img/lq_07.png);
+	width: 45px;
+	height: 20px;
+	margin-top: 7px;
+}
+
+.zhaiyao2 {
+	margin-top: -60px;
+	margin-left: 100px;
+	color: #666666;
+	font-size: 12px;
+}
+
+.zhaiyao3 {
+	margin-top: 20px;
+	color: #3b639f;
+	font-size: 12px;
+}
+
+.dierliu {
+	width: 320px;
+}
+
+.dierliu2 {
+	width: 150px;
+	float: left;
+}
+
+.dierliu3 {
+	width: 150px;
+	float: right;
+}
+
+.wrap {
+	margin-top: 7px;
+	position: relative;
+}
+
+.photo a {
+	display: block;
+	border: 0;
+}
+
+.photo a:hover {
+	border: none;
+	solid #fff;
+	text-decoration: none
+}
+
+.photo a span {
+	display: none;
+	cursor: hand;
+	text-align: center;
+	font: bold 12px/20px Verdana, Arial;
+}
+
+.photo a:hover span {
+	width: 167px;
+	background: #000;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+.title1 {
+	font-family: "微软雅黑";
+	color: #335aae;
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+.photo1 {
+	margin-top: -115px;
+	float: right;
+}
+
+.zuqiuzixunmokuai3 {
+	width: 255px;
+	float: right;
+	background: #faf9f9;
+	padding: 0 5px 0 5px;
+}
+
+.hd3 {
+	background: url(../img/ty_33_03.png);
+	height: 2px;
+	margin-top: 7px;
+}
+
+.photo2 {
+	margin-top: 15px;
+}
+
+.title2 {
+	font-family: "微软雅黑";
+	color: #000;
+	font-size: 14px;
+	margin-top: -90px;
+	float: right;
+}
+
+.zhaiyao4 {
+	margin-top: -60px;
+	color: #333;
+	font-size: 12px;
+	margin-left: 110px;
+	font-family: "宋体";
+	color: #666666;
+	font-size: 12px;
+}
+
+.zhaiyao5 span {
+	background: #a8a8a8;
+	width: 70px;
+	height: 20px;
+	font-family: "宋体";
+	color: #fff;
+	font-size: 14px;
+	line-height: 22px;
+	text-align: center;
+}
+
+.zuqiuzixunmokuai4 {
+	width: 980px;
+}
+
+.hd4 {
+	background: url(../img/ty_34_11.png);
+	height: 2px;
+	margin-top: 7px;
+}
+
+
+/*.wrap2{float:left;margin-top:20px;}
+.wrap3{float:left;margin-left:10px;margin-top:20px;}*/
+
+.tu1 {
+	float: left;
+	margin-top: 20px;
+}
+
+.tu2 {
+	float: left;
+	margin-left: 5px;
+	margin-top: 20px;
+}
+
+.zuqiuzixunmokuai5 {
+	width: 350px;
+	height: 258px;
+	float: left;
+}
+
+.tu3 {
+	float: left;
+	margin-top: 20px;
+	margin-left: 5px;
+}
+
+.tu4 {
+	float: left;
+	margin-top: -127px;
+	margin-left: 203px;
+}
+
+.tu5 {
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.tu6 {
+	float: left;
+	margin-left: 203px;
+	margin-top: -127px;
+}
+
+
+/*图片底部显示标题*/
+
+.imgdiv {
+	position: relative;
+	float: left;
+}
+
+.imgdiv a {
+	display: block;
+	border: 0;
+}
+
+.imgdiv a:hover {
+	border: none;
+	solid #fff;
+	text-decoration: none
+}
+
+.imgdiv a span {
+	display: none;
+	cursor: hand;
+	text-align: center;
+	font: bold 12px/20px Verdana, Arial;
+}
+
+.imgdiv a:hover span {
+	width: 100%;
+	background: #000;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}

@@ -1,16 +1,10 @@
-<!DOCTYPE HTML>
-<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="zh-CN">
-<!--<![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		[#include '../include/newsMeta.html']
  		<base target="_blank">
-		<link rel="stylesheet" type="text/css" href="/${res}/css/xjw_gypd.css" />
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
-		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-index.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/xjwty.css" />
 		<!--[if lt IE 9 ]>
 			<script type="text/javascript" src="/${res}/js/modernizr.js"></script>
 		<![endif]-->
@@ -20,581 +14,542 @@
 		<script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
 		<link href="/${res}/css/history.css" type="text/css" rel="stylesheet" />
 		<script type="text/javascript" src="/${res}/js/koala.min.1.5.js"></script>
-	</head>
-
-	<body>
+		<script type="text/javascript">
+			/**
+			 */
+			function PPTBox() {
+				this.uid = PPTBoxHelper.getId();
+				PPTBoxHelper.instance[this.uid] = this;
+				this._$ = function(id) {
+					return document.getElementById(id);
+				};
+				this.width = 400; //宽度
+				this.height = 300; //高度
+				this.picWidth = 15; //小图宽度
+				this.picHeight = 12; //小图高度
+				this.autoplayer = 4; //自动播放间隔（秒）
+				this.target = "_blank";
+				this._box = [];
+				this._curIndex = 0;
+			}
+			PPTBox.prototype = {
+				_createMainBox: function() {
+					var flashBoxWidth = this.width * this._box.length + 5;
+					var html = "<div id='" + this.uid + "_mainbox' class='mainbox'  style='width:" + (this.width) + "px;height:" + (this.height + 2) + "px;'>";
+					html += "<div id='" + this.uid + "_flashbox' class='flashbox' style='width:" + flashBoxWidth + "px;height:" + (this.height + 2) + "px;'></div>";
+					html += "<div id='" + this.uid + "_imagebox' class='imagebox' style='width:" + this.width + "px;height:" + (this.picHeight + 2) + "px;top:-" + (this.picHeight + 20) + "px;'></div>";
+					html += "</div>";
+					document.write(html);
+				},
+				_init: function() {
+					var picstyle = "";
+					var eventstr = "PPTBoxHelper.instance['" + this.uid + "']";
+					var imageHTML = "";
+					var flashbox = "";
+					for(var i = 0; i < this._box.length; i++) {
+						var parame = this._box[i];
+						flashbox += this.flashHTML(parame.url, this.width, this.height, i);
+						imageHTML = "<div class='bitdiv " + ((i == 0) ? "curimg" : "defimg") + "' title =" + parame.title + " src='bit01.gif' " + picstyle + " onclick = \"" + eventstr + ".clickPic(" + i + ")\"  onmouseover=\"" + eventstr + ".mouseoverPic(" + i + ")\"></div>" + imageHTML;
+					}
+					this._$(this.uid + "_flashbox").innerHTML = flashbox;
+					this._$(this.uid + "_imagebox").innerHTML = imageHTML;
+				},
+				_play: function() {
+					clearInterval(this._autoplay);
+					var idx = this._curIndex + 1;
+					if(idx >= this._box.length) {
+						idx = 0;
+					}
+					this.changeIndex(idx);
+					var eventstr = "PPTBoxHelper.instance['" + this.uid + "']._play()";
+					this._autoplay = setInterval(eventstr, this.autoplayer * 1000);
+				},
+				flashHTML: function(url, width, height, idx) {
+					var isFlash = url.substring(url.lastIndexOf('.') + 1).toLowerCase() == "swf";
+					var html = "";
+					if(isFlash) {
+						html = "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' " +
+							"codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0' width='" + width + "' height='" + height + "'>" +
+							"<param name=\"movie\" value=\"" + url + "\" />" +
+							"<param name='quality' value='high' />" +
+							"<param name='wmode' value='transparent'>" +
+							"<embed src='" + url + "' quality='high' wmode='opaque' pluginspage='http://www.macromedia.com/go/getflashplayer'" +
+							"  type='application/x-shockwave-flash' width=" + width + " height='" + height + "'></embed>" +
+							"  </object>";
+					} else {
+						var eventstr = "PPTBoxHelper.instance['" + this.uid + "']";
+						var style = "";
+						if(this._box[idx].href) {
+							style = "cursor:pointer"
+						}
+						html = "<img src='" + url + "' style='width:" + width + "px;height:" + height + "px;" + style + "' onclick = \"" + eventstr + ".clickPic(" + idx + ")\"/>";
+					}
+					return html;
+				},
+				changeIndex: function(idx) {
+					var parame = this._box[idx];
+					moveElement(this.uid + "_flashbox", -(idx * this.width), 1);
+					var imgs = this._$(this.uid + "_imagebox").getElementsByTagName("div");
+					imgs[this._box.length - 1 - this._curIndex].className = "bitdiv defimg";
+					imgs[this._box.length - 1 - idx].className = "bitdiv curimg";
+					this._curIndex = idx;
+				},
+				mouseoverPic: function(idx) {
+					this.changeIndex(idx);
+					if(this.autoplayer > 0) {
+						clearInterval(this._autoplay);
+						var eventstr = "PPTBoxHelper.instance['" + this.uid + "']._play()";
+						this._autoplay = setInterval(eventstr, this.autoplayer * 1000);
+					}
+				},
+				clickPic: function(idx) {
+					var parame = this._box[idx];
+					if(parame.href && parame.href != "") {
+						window.open(parame.href, this.target);
+					}
+				},
+				add: function(imgParam) {
+					this._box[this._box.length] = imgParam;
+				},
+				show: function() {
+					this._createMainBox();
+					this._init();
+					if(this.autoplayer > 0) {
+						var eventstr = "PPTBoxHelper.instance['" + this.uid + "']._play()";
+						this._autoplay = setInterval(eventstr, this.autoplayer * 1000);
+					}
+				}
+			}
+			var PPTBoxHelper = {
+				count: 0,
+				instance: {},
+				getId: function() {
+					return '_ppt_box-' + (this.count++);
+				}
+			};
+			function moveElement(elementID, final_x, interval) {
+				if(!document.getElementById) return false;
+				if(!document.getElementById(elementID)) return false;
+				var elem = document.getElementById(elementID);
+				if(elem.movement) {
+					clearTimeout(elem.movement);
+				}
+				if(!elem.style.left) {
+					elem.style.left = "0px";
+				}
+				var xpos = parseInt(elem.style.left);
+				if(xpos == final_x) {
+					return true;
+				}
+				if(xpos < final_x) {
+					var dist = Math.ceil((final_x - xpos) / 5);
+					xpos = xpos + dist;
+				}
+				if(xpos > final_x) {
+					var dist = Math.ceil((xpos - final_x) / 5);
+					xpos = xpos - dist;
+				}
+				elem.style.left = xpos + "px";
+				var repeat = "moveElement('" + elementID + "'," + final_x + "," + interval + ")";
+				elem.movement = setTimeout(repeat, interval);
+			}
+		</script>
+		<style>
+			body {
+				margin: 0 auto;
+				font-size: 13px;
+				font-family: '微软雅黑';
+				line-height: 1.5;
+				background: #fff;
+			}
+			ul,
+			dl,
+			dd,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			form,
+			p {
+				padding: 0;
+				margin: 0;
+			}
+			ul {
+				list-style: none;
+			}
+			img {
+				border: 0px;
+			}
+			a {
+				color: #000;
+				text-decoration: none;
+			}
+			a:hover {
+				color: #f00;
+			}
+			#xjw_sprotschannel2017 {
+				width: 985px;
+				margin: 0 auto;
+				/*border:1px solid #000;*/
+				padding-top: 10px;
+			}
+			#sports_left {
+				width: 745px;
+				float: left;
+			}
+			#hot {
+				width: 745px;
+				height: 202px;
+				/*border:1px solid #0F0;*/
+				margin-bottom: 0px;
+			}
+			#hot_slider {
+				float: left;
+				width: 288px;
+				height: 202px;
+			}
+			.list_title {
+				width: 100%;
+				height: 22px;
+				line-height: 22px;
+				font-size: 18px;
+				font-family: '微软雅黑';
+				/*border:1px solid #000;*/
+			}
+			.list_title .jrtj {
+				width: 121px;
+				height: 21px;
+				display: block;
+				background: url(/${res}/img/2017typd_jrtjhot.jpg) 0 0 no-repeat;
+			}
+			.list_title .zxxx {
+				width: 121px;
+				height: 21px;
+				display: block;
+				background: url(/${res}/img/2017typd_zxxx.jpg) 0px 2px no-repeat;
+			}
+			.list_title .tstx {
+				width: 121px;
+				height: 21px;
+				display: block;
+				background: url(/${res}/img/2017typd_tstx.jpg) 0 0 no-repeat;
+			}
+			.list_title span {
+				color: #AA011E;
+				margin: 10px 0 0;
+				height: 30px;
+				float: left;
+			}
+			#hot_list {
+				width: 440px;
+				float: right;
+				text-align: left;
+			}
+			#hot_content {
+				width: 440px;
+				font-family: '微软雅黑';
+				text-align: left;
+				height: 178px;
+			}
+			#hot_content h4 {
+				width: 440px;
+				text-align: left;
+				font-size: 18px;
+				/*font-weight:600;*/
+				color: #000;
+				line-height: 36px;
+			}
+			#hot_content .pro {
+				font-size: 14px;
+				color: #676767;
+			}
+			#hot_content ul {
+				width: 440px;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-align: left;
+			}
+			#hot_content ul li {
+				width: 440px;
+				margin-top: 7px;
+				text-align: left;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			#news {
+				width: 745px;
+				/*border:1px solid #000;*/
+				float: left;
+			}
+			#news_list {
+				width: 100%;
+				/*border:1px solid #0F0;*/
+				float: left;
+			}
+			#news_list ul li {
+				float: left;
+				/*border:1px solid #F00;*/
+				height: 100px;
+				font-family: '微软雅黑';
+				padding: 5px 5px 15px 10px;
+				width: 730px;
+				margin-bottom: 10px;
+			}
+			#news_list .list1 {
+				border-bottom: 1px dashed #c4c4c4;
+				float: left;
+			}
+			#news_list .list1 span {
+				width: 100%;
+				float: left;
+				/*border:1px solid #0F0;*/
+			}
+			#news_list .list1 .con {
+				float: right;
+				width: 575px;
+				/*border:1px solid #0F0;*/
+			}
+			#news_list .list1 .con h4 {
+				font-size: 18px;
+				color: #000;
+				/*font-weight:600; border:1px solid #0F0;*/
+			}
+			#news_list .list1 .con p {
+				font-size: 14px;
+				color: #7b7b7b;
+				margin-top: 6px;
+				/*border:1px solid #0F0;*/
+			}
+			#news_list .list2 {
+				border-bottom: 2px dashed #666666;
+			}
+			#news_list .list2 h4 {
+				font-size: 16px;
+				font-weight: 600;
+			}
+			#news_list .list2 .con {
+				font-size: 13px;
+				margin-top: 5px;
+				color: #666;
+				margin-top: 15px;
+			}
+			#sports_right {
+				width: 221px;
+				float: right;
+				/*border:1px solid #900;*/
+			}
+			.adv_title {
+				font-family: '微软雅黑';
+				font-size: 14px;
+				text-align: center;
+				height: 30px;
+				line-height: 30px;
+			}
+			#advert {
+				margin-bottom: 8px;
+			}
+			#hot_slider {
+				width: 286px;
+				height: 202px;
+				position: relative;
+			}
+			#hot_slider ul {
+				width: 286px;
+				height: 202px;
+			}
+			#hot_slider ul li {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 1;
+				filter: alpha(opacity=100);
+			}
+			#hot_slider ul li.show {
+				opacity: 1;
+				filter: alpha(opacity=100);
+				z-index: 1;
+			}
+			#hot_bg {
+				width: 286px;
+				height: 30px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			#hot_bg .btn {
+				height: 30px;
+				position: absolute;
+				right: 0;
+				z-index: 10;
+			}
+			#hot_bg .btn span {
+				float: left;
+				background: #FFF;
+				margin-right: 2px;
+				position: relative;
+				margin-top: 10px;
+				index: 3;
+				opacity: 1;
+				filter: alpha(opacity=100);
+				width: 15px;
+				height: 15px;
+				line-height: 15px;
+				text-align: center;
+				cursor: pointer
+			}
+			#sports_right .list_title {
+				margin-bottom: 10px;
+			}
+			#sports_right .list_title b {
+				color: #A90220;
+			}
+			.headlogo {
+				width: 980px;
+				margin: 0;
+				padding: 0;
+				no-repeat left center;
+				height: 45px;
+				margin-bottom: 10px;
+				text-align: left;
+				position: relative;
+				border-bottom: 2px solid #000;
+			}
+			.headlogo span {
+				width: 65px;
+				height: 37px;
+			}
+			.mainbox {
+				overflow: hidden;
+				position: relative;
+			}
+			.flashbox {
+				overflow: hidden;
+				position: relative;
+			}
+			.imagebox {
+				text-align: right;
+				position: relative;
+				z-index: 999;
+			}
+			.bitdiv {
+				display: inline-block;
+				width: 18px;
+				height: 18px;
+				margin: 0 10px 10px 0px;
+				cursor: pointer;
+				float: right;
+			}
+			.defimg {
+				background-image: url(/${res}/img/02.png)
+			}
+			.curimg {
+				background-image: url(/${res}/img/01.png)
+			}
+		</style>
 		<!-- 头部 -->
 		[#include '../content/news_header.html'/]
-	
-		<!-- @end头部 -->
-		<div class="updiv">
-			<div style="margin:15px 0 25px 0;">
-				<a href="http://special.xinjiangnet.com.cn/161010/" target="_blank"><img src="/${res}/img/20161019zmmm.jpg" width="980" height="80">
-			</div>
-			<!--新疆网logo-->
-			<style>
-				.headlogo {
-					width: 980px;
-					margin: 0;
-					padding: 0;
-					no-repeat left center;
-					height: 34px;
-					margin-bottom: 10px;
-					text-align: left;
-					position: relative;
-				}
-				
-				.headlogo span {
-					margin-left: 20px;
-					font-family: "微软雅黑";
-					font-size: 24px;
-					font-weight: 700;
-					color: #960101;
-					line-height: 34px;
-				}
-			</style>
+		
+	<body>
+		<div style="width:980px; height:10px; clear:both;">
+		</div>
+		<div id="xjw_sprotschannel2017">
 			<div class="headlogo">
-				<a href="http://www.xinjiangnet.com.cn/" alt="新疆网公益频道"><img src="/${res}/img/xjw_logo.png" /></a>
-				<span>公益新疆</span>
-				<div style="float:right;top:10px;right:10px;width:200px;position: absolute;">
-					<div class="fl-l header-search-input ov ">
-						<form id="head_search" name="head_search" action="http://app.xinjiangnet.com.cn/" method="GET">
-							<input type="hidden" name="app" value="search">
-							<input type="hidden" name="controller" value="index">
-							<input type="hidden" name="action" value="search">
-							<input type="hidden" id="type" name="type" value="all">
-							<div class="divicon icon16x16 fl-r"></div>
-							<input type="text" id="head_wd" name="wd" class="searinput" style="margin-top:2px;" />
-						</form>
-					</div>
-					<a href="" class="m-header-search js-headsearch fl-l icon16x16"></a>
-					<script type="text/javascript">
-						$('#head_search .divicon').click(function() {
-							$('#head_search').submit();
-						});
-						$('#head_search').attr('Action', APP_URL);
-					</script>
-				</div>
+				<a href="http://www.xinjiangnet.com.cn/" alt="新疆网娱乐频道"><img src="/${res}/img/xjw_logo.png" /></a>
+				<span>
+					<img src="/${res}/img/2017typd_logoword.jpg" width='69' height='37'/>
+				</span>
 			</div>
-			<div class="navbox">
-				<!------导航开始----->
-				<div id="nav">
-					<ul>
-						<li id="short_title">
-							<a href="http://www.xinjiangnet.com.cn/gy/">首页</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/gy/gyzx/">公益资讯</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/gy/qyshzr/">企业社会责任</a>
-						</li>
-						<li id="long_title">
-							<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=forumdisplay&fid=279">我们需要您的帮助</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/gy/gyzz/">公益组织</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/gy/gyrw/">公益人物</a>
-						</li>
-						<li style="float:right">
-							<a href="http://www.xinjiangnet.com.cn//2015/0128/2664.shtml">加入我们</a>
-						</li>
-					</ul>
-				</div>
+			<div style="width:980px;  clear:both;">
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="980" height="80" align="absbottom">
+    				<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180621sjb_typd.swf">
+    				<param name="wmode" value="opaque">
+    				<param name="quality" value="high">
+    				<param name="SCALE" value="exactfit">
+    				<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20180621sjb_typd.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit" width="980" height="80" align="absbottom">
+				</object>
 			</div>
-			<!------导航结束----->
-			<div class="leftbox">
-				<div class="flash">
-					<!-- 代码 开始 -->
-					<div id="fsD1" class="focus">
-						<div id="D1pic1" class="fPic">
-							[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+			<div style="width:980px; height:10px; clear:both;">
+			</div>
+			<div id="sports_left">
+				<div id="hot">
+					<!--热点图幻灯-->
+					<div id="xxx" style="float:left;">
+						<script>
+							var box = new PPTBox();
+							box.width = 295; //宽度
+							box.height = 195; //高度
+							box.autoplayer = 3; //自动播放间隔时间
+							 
+							[@cms_content_list count='2' channelId='75' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
-							[#if a_index==0]
-								<div class="fcon" style="display:block;">
-							[#else]
-								<div class="fcon" style="display: none;">
-							[/#if]
-								<a target="_blank" href="${a.url}}">
-									<img src="${a.typeImg}" style="opacity: 1; ">
-								</a>
-								<span class="shadow" style="height: 60px;line-height: 60px;">
-                    				<a target="_blank" href="${a.url}">[@text_cut s=a.title len=24 append=append/]</a>
-               					</span>
-							</div>
-						 	[/#list]
-							[/@cms_content_list]
-						</div>
-						<div class="fbg" style="bottom: 15px;">
-							<div class="D1fBt" id="D1fBt" style="width:90px; position:absolute;top:0;right:0;">
-								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>1</i></a>
-								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a>
-								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>3</i></a>
-								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>4</i></a>
-							</div>
-						</div>
-					</div>
-					<script type="text/javascript">
-						Qfast.add('widgets', {
-							path: "/${res}/js/terminator2.2.min.js",
-							type: "js",
-							requires: ['fx']
-						});
-						Qfast(false, 'widgets', function() {
-							K.tabs({
-								id: 'fsD1', //焦点图包裹id  
-								conId: "D1pic1", //** 大图域包裹id  
-								tabId: "D1fBt",
-								tabTn: "a",
-								conCn: '.fcon', //** 大图域配置class       
-								auto: 1, //自动播放 1或0
-								effect: 'fade', //效果配置
-								eType: 'click', //** 鼠标事件
-								pageBt: true, //是否有按钮切换页码
-								bns: ['.prev', '.next'], //** 前后按钮配置class                          
-								interval: 3000 //** 停顿时间  
+							box.add({
+								"url": "${a.typeImg}",
+								"href": "${a.url}",
+								"title": "${a.title}"
 							})
-						})
-					</script>
-					<!-- 代码 结束 -->
-				</div>
-				<div class="gy_tj">
-					<div class="biaoti1">
-						<a href="http://www.xinjiangnet.com.cn/gy/gytj/">
-							<div class="bt_pic1">
-								<img src="/${res}/img/gy_tj.png" />
-							</div>
-						</a>
-						<a href="http://www.xinjiangnet.com.cn/gy/gytj/">
-							<div class="gd">更多>></div>
-						</a>
-					</div>
-					
-					<div class="wen1">
-						<div class="wen1_left">
-							<a href="http://special.xinjiangnet.com.cn/170426-2/">
-								<img src="http://upload.xinjiangnet.com.cn/2018/0104/1515028928203.jpg" />
-							</a>
-						</div>
-						<div class="wen1_right">
-							<div class="da_bt">
-								<a href="http://special.xinjiangnet.com.cn/170426-2/">梦圆绿茵</a>
-							</div>
-							<div class="wen1_w" style="text-indent:2em;">
-								<a href="http://special.xinjiangnet.com.cn/170426-2/" style="color:#6e6e6e;">他们的绿茵梦，需要你来助力。我们在此倡议社会各企事业单位、社会团体、爱心人士为新疆贫困地区中小学校捐赠足球，为新疆乡镇学校募集足球，推动校园...</a>
-								<a href="http://special.xinjiangnet.com.cn/170426-2/">
-									<span class="xx">[详细]</span>
-								</a>
-							</div>
-						</div>
-					</div>
-					 
-					<div class="temp1"></div>
-					<!--- 左侧 两条图文新闻 切割线--->
-					<div class="wen1">
-						<div class="wen1_left">
-							<a href="http://www.xinjiangnet.com.cn/2016/0722/1595598.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0104/1515031940308.jpg" /> </a>
-						</div>
-						<div class="wen1_right">
-							<div class="da_bt">
-								<a href="http://www.xinjiangnet.com.cn/2016/0722/1595598.shtml">童行筑梦</a>
-							</div>
-							<div class="wen1_w" style="text-indent:2em;">
-								<a href="http://www.xinjiangnet.com.cn/2016/0722/1595598.shtml" style="color:#6e6e6e;">参加一次职业体验、观看一部精彩电影、步入户外感受自然、畅玩儿童游乐嘉年华……”童行筑梦“主题活动由新疆网及乌鲁木齐晚报联合发起。</a>
-								<a href="http://www.xinjiangnet.com.cn/2016/0722/1595598.shtml"><span class="xx">[详细]</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="need_help">
-					<div class="biaoti2">
-						<div class="bt_pic2"><img src="/${res}/img/gy_help.png" /></div>
-						<div class="help">
-							<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=forumdisplay&fid=279"><img src="/${res}/img/help.png" /></a>
-						</div>
-					</div>
-					<div class="buluoht">
-						<Br>
-						[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
-						[#list tag_list as a]
-						<div style="width:33.3%; height:220px; float:left;">
-							<div style="width:160px; height:196px;">
-								<div style="width:160px; height:123px;">
-									<a href="${a.url}">
-										<img src="${a.typeImg}" width="160" height="120"/>
-									</a>
-								</div>
-								<div style="width:160px; height:73px;">
-									<a href="${a.url}" style="font-size:14px; font-weight:bold;">[@text_cut s=a.title len=18 append=append/]</a><br />
-									<a href="${a.url}" style="color:#6e6e6e; font-size:12px;">[@text_cut s=a.desc len=33 append=append/]...</a>
-									<a href="${a.url}"> <span class="xx">[详细]</span></a>
-								</div>
-							</div>
-						</div>
-						[/#list]
-						[/@cms_content_list]
-						 
-					</div>
-				</div>
-				<div class="gy_zz">
-					<div class="biaoti1">
-						<a href="http://www.xinjiangnet.com.cn/gy/gyzz/">
-							<div class="bt_pic1">
-								<img src="/${res}/img/gy_zz.png" />
-							</div>
-						</a>
-					</div>
-					<!---------------义工 社区 链接--------------------------------->
-					[@cms_content_list count='9' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
-					[#list tag_list as a]
-					[#if (a_index+1)%3=0]
-						<div class="yigongx">
-					[#else]
-						<div class="yigong">
-					[/#if]
-						<div class="yg_biao">
-							<a href="${a.url}">
-								<img src="${a.typeImg}" width="52px" height="51px" />
-							</a>
-						</div>
-						<div class="yg_w">
-							<div class="yg_ti">
-								<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
-							</div>
-							<div class="yg_wen" style="text-indent:2em;">
-								<a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.desc len=12 append=append/]...</a>
-								<a href="${a.url}">[详细]</a>
-							</div>
-						</div>
-					</div>
-					[/#list]
-					[/@cms_content_list]
-					<!---------------义工 社区 链接--------------------------------->
-				</div>
-				<style>
-					.picItem {
-						position: relative;
-						overflow: hidden;
-					}
-					
-					.picItem img {
-						display: block;
-					}
-					
-					.picItem a {
-						color: #fff
-					}
-					
-					.picItem span {
-						position: absolute;
-						width: 100%;
-						height: 30px;
-						line-height: 30px;
-						text-indent: 10px;
-						font-size: 14px;
-						color: #fff;
-						left: 0;
-						bottom: 0;
-					}
-					
-					.picItem .mask {
-						margin-left: -9999em;
-						border: 3px solid white;
-						position: absolute;
-						left: 0;
-						top: 0;
-						z-index: 2;
-					}
-					
-					.picItem:hover .mask {
-						margin-left: 0;
-					}
-					
-					.picItem:hover .opacity60 {
-						background: rgba(253, 79, 5, 0.6);
-						filter: progid:DXImageTransform.Microsoft.gradient( GradientType=0, startColorstr="#99fd4f05", endColorstr="#99fd4f05");
-					}
-					
-					:root .picItem:hover span {
-						filter: none;
-						background: rgba(253, 79, 5, 0.6);
-					}
-					
-					.picItem div {
-						display: none;
-					}
-					
-					.picItem:hover div {
-						display: block;
-					}
-				</style>
-				<script type="text/javascript">
-					$(document).ready(function() {
-						var $tab_li = $('.picItem');
-						$tab_li.hover(function() {
-							$(this).find(".mask").width($(this).width() - 6);
-							$(this).find(".mask").height($(this).height() - 6);
-						});
-					});
-				</script>
-				<div class="gy_pic" style="margin-top: 15px;">
-					<div class="biaoti1">
-						<a href="http://www.xinjiangnet.com.cn/gy/gyyx/">
-							<div class="bt_pic1"><img src="/${res}/img/gy_yx.png" /></div>
-						</a>
-						<a href="http://www.xinjiangnet.com.cn/gy/gyyx/">
-							<div class="gd">更多>></div>
-						</a>
-					</div>
-					<div class="picbox">
-						<div class="picItem picbox_left">
-							<a href="http://www.xinjiangnet.com.cn/2017/1219/2030075.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/1219/thumb_184_439_1513647591904.jpg" width="184px" height="439px" /></a>
-							<div class="shadou1" style="height:35px;">
-								<a href="http://www.xinjiangnet.com.cn/2017/1219/2030075.shtml">外国小哥折千纸鹤1000天不重样</a>
-							</div>
-							<a href="http://www.xinjiangnet.com.cn/2017/1219/2030075.shtml"><i class="mask"></i></a>
-						</div>
-						<div class="picbox_mid">
-							<div class="picItem mid1">
-								<a href="http://www.xinjiangnet.com.cn/2017/1120/2020653.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/1120/thumb_201_145_1511144895938.jpg" width="201px" height="145px" /></a>
-								<div class="shadou2" style="height:35px;">
-									<a href="http://www.xinjiangnet.com.cn/2017/1120/2020653.shtml">休斯敦举办街画节为听障儿童筹款</a>
-								</div>
-								<a href="http://www.xinjiangnet.com.cn/2017/1120/2020653.shtml"><i class="mask"></i></a>
-							</div>
-							<div class="picItem mid2">
-								<a href="http://www.xinjiangnet.com.cn/2018/0111/2037042.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0129/1517192487631.jpg" width="201px" height="292px" /></a>
-								<div class="shadou2" style="height:35px;">
-									<a href="http://www.xinjiangnet.com.cn/2018/0111/2037042.shtml">上海唯一一家深夜书店开业 用文化温暖城市人心</a>
-								</div>
-								<a href="http://www.xinjiangnet.com.cn/2018/0111/2037042.shtml"><i class="mask"></i></a>
-							</div>
-						</div>
-						<div class="picbox_right">
-							<div class="picItem boxright1">
-								<a href="http://www.xinjiangnet.com.cn/2018/0129/2042534.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0129/1517192190694.jpg" width="172px" height="276px" /></a>
-								<div class="shadou4" style="height:35px;">
-									<a href="http://www.xinjiangnet.com.cn/2018/0129/2042534.shtml">用医德守护村民生命健康</a>
-								</div>
-								<a href="http://www.xinjiangnet.com.cn/2018/0129/2042534.shtml"><i class="mask"></i></a>
-							</div>
-							<div class="picItem boxright2">
-								<a href="http://www.xinjiangnet.com.cn/2017/1127/2022680.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/1127/thumb_172_161_1511749891124.jpg" width="172px" height="161px" /></a>
-								<div class="shadou5" style="height:35px;">
-									<a href="http://www.xinjiangnet.com.cn/2017/1127/2022680.shtml">6台移植手术同时进行 她捐献的器官至少挽救8人</a>
-								</div>
-								<a href="http://www.xinjiangnet.com.cn/2017/1127/2022680.shtml"><i class="mask"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="rightbox">
-				<div class="right1">
-					[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
-					[#list tag_list as a]
-					<div class="right1_t">
-						<a href="${a.url}">[@text_cut s=a.title len=13 append=append/]</a>
-					</div>
-					<div class="right1_w" style="text-indent:2em;">
-						<a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.desc len=40 append=append/]</a>
-						<a href="${a.url}"><span class="xx">[详细]</span> </a>
-					</div>
-					[/#list]
-					[/@cms_content_list]
-					 
-					<div class="right1_lb">
-						<ul>
-							[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
-							[#list tag_list as a]
-							<li class="item">&bull;
-								<a href="${a.url}">[@text_cut s=a.title len=18 append=append/]</a>
-							</li>
 							[/#list]
 							[/@cms_content_list]
-						</ul>
+							
+							box.show();
+						</script>
 					</div>
-				</div>
-				<div class="right2">
-					<div class="biaoti3">
-						<a href="http://www.xinjiangnet.com.cn/gy/gyhd/">
-							<div class="bt_pic3">公益活动</div>
-						</a>
-						<a href="http://www.xinjiangnet.com.cn/gy/gyhd/">
-							<div class="gd">更多>></div>
-						</a>
-					</div>
-					[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
-					[#list tag_list as a]
-					<div class="right2_box">
-						<div class="right2_ti">
-							<a href="${a.url}">[@text_cut s=a.title len=22 append=append/]</a>
+					<!--热点新闻-->
+					<div id="hot_list">
+						<div class="list_title">
+							<span class='jrtj'></span>
 						</div>
-						<div class="right2_w">
-							<a href="${a.url}l" style="color:#6e6e6e;">[@text_cut s=a.desc len=25 append=append/]...</a>
-							<a href="${a.url}">[详细]</a>
-						</div>
-						<div class="right2_an">
-							<a href="${a.url}">
-								<img src="/${res}/img/canyu.png" />
-							</a>
-						</div>
-						<div class="right2_an">
-							<!-- Baidu Button BEGIN -->
-							<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" data-tag="share_1">
-								<span class="bds_more" data-cmd="more" style="padding-top:0px;height: 24px;padding-left:0px;">
-									<img src="/${res}/img/zhuanfa.png"/>
-								</span>
-							</div>
-							<script type="text/javascript" id="bdshare_js" data="type=tools"></script>
-							<script type="text/javascript" id="bdshell_js"></script>
-							<script type="text/javascript">
-								var bds_config = {
-									'snsKey': {
-										'tsina': '4085538946'
-									}
-								};
-								window._bd_share_config = {
-									common: {
-										bdUrl: 'http://www.xinjiangnet.com.cn/2018/0408/2061968.shtml',
-									}
-								}
-								document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static//${res}/js/shell_v2.js?t=" + new Date().getHours() + "&url=http://www.xinjiangnet.com.cn/2018/0408/2061968.shtml";
-							</script>
-							<!-- Baidu Button END -->
+						<div id="hot_content">
+							<ul>
+								[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+								[#list tag_list as a]
+								<li>
+									<div style="width:440px;text-align:left;font-size:18px; /*font-weight:600;*/ color:#000;line-height:40px; font-weight:bold; clear:both;">
+										<a href="${a.url}">[@text_cut s=a.title len=18 append=append/]</a>
+									</div>
+									<div class="pro">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[@text_cut s=a.desc len=33 append=append/]……
+										<a href="${a.url}">[详细]</a>
+									</div>
+								</li>
+								[/#list]
+								[/@cms_content_list]
+							</ul>
 						</div>
 					</div>
-					<div class="temp2"></div>
-					[/#list]
-					[/@cms_content_list]
-				</div>
-				<div class="right3">
-					<div class="biaoti3">
-						<a href="http://www.xinjiangnet.com.cn/gy/gyht/">
-							<div class="bt_pic3">公益话题</div>
-						</a>
-						<a href="http://w.xinjiangnet.com.cn/2015/0128/2664.shtml">
-							<div class="zhiyuanzhe"><img src="/${res}/img/zhiyuanzhe.png" /></div>
-						</a>
-						<a href="http://www.xinjiangnet.com.cn/gy/gyht/">
-							<div class="gd">更多>></div>
-						</a>
-					</div>
-					<div class="wb_ht_box">
-						[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
-						[#list tag_list as a]
-						<div class="ht_pic2">
-							<a href="${a.url}">
-								<img src="${a.typeImg}" width="120" height="100"/>
-							</a>
-						</div>
-						<div class="ht_w2">
-							<a href="${a.url}">
-								<div class="ht_w2_ti">
-									<strong>[@text_cut s=a.title len=15 append=append/]</strong>
-								</div>
-							</a>
-							<a href="${a.url}" style="color:#6e6e6e;">
-								<div class="ht_w2_w" style="text-indent:2em;">
-									 [@text_cut s=a.desc len=35 append=append/]
-								</div>
-							</a>
-						</div>
-						[/#list]
-						[/@cms_content_list]
-					</div>
-				</div>
-				<div class="right5">
-					<div class="biaoti3">
-						<a href="http://weibo.com/5498224263/profile?topnav=1&wvr=6">
-							<div class="bt_pic3">公益新疆微信、微博</div>
-						</a>
-					</div>
-					<div class="gy_wb" style="">
-						<a href="http://weibo.com/5498224263/profile?rightmod=1&wvr=6&mod=personinfo">
-							<img src="/${res}/img/gy_weixinweibo.jpg" />
-						</a>
-					</div>
-				</div>
-				<div class="right4">
-					<div class="biaoti3">
-						<a href="http://www.xinjiangnet.com.cn/gy/qyshzr/">
-							<div class="bt_pic4">企业社会责任</div>
-						</a>
-						<a href="http://www.xinjiangnet.com.cn/gy/qyshzr/">
-							<div class="gd">更多>></div>
-						</a>
-					</div>
-					<div class="shehuizeren">
-						[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
-						[#list tag_list as a]
-						<div class="ppl" style="height: 104px;">
-							<div class="pp1_pic">
-								<a href="${a.url}">
-									<img src="${a.typeImg}" width="100" height="80" />
-								</a>
-							</div>
-							<div class="pp1_box">
-								<div class="pp1_ti">
-									<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
-								</div>
-								<div class="pp1_w" style="text-indent:2em;">
-									<a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.desc len=30 append=append/]...</a>
-									<a href="${a.url}"> <span class="xx">[详细]</span></a>
-								</div>
-							</div>
-						</div>
-						[/#list]
-						[/@cms_content_list]
-					</div>
-				</div>
-				<div class="right6">
-					<div class="biaoti3">
-						<a href="http://www.xinjiangnet.com.cn/gy/gyrw/">
-							<div class="bt_pic3">公益人物</div>
-						</a>
-						<a href="http://www.xinjiangnet.com.cn/gy/gyrw/">
-							<div class="gd">更多>></div>
-						</a>
-					</div>
-					[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
-					[#list tag_list as a]
-					<div class="ppl">
-						<div class="pp1_pic">
-							<a href="${a.url}">
-								<img src="${a.typeImg}" width="100" height="100" />
-							</a>
-						</div>
-						<div class="pp1_box">
-							<div class="pp1_ti">
-								<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
-							</div>
-							<div class="pp1_w" style="text-indent:2em;">
-								<a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.desc len=50 append=append/]...</a>
-								<a href="${a.url}">
-									<span class="xx">[详细]</span>
-								</a>
-							</div>
+					<!--新闻列表-->
+					<div id="news">
+						<div class="list_title">
+							<span class="zxxx"></span>
 						</div>
 					</div>
-					[/#list]
-					[/@cms_content_list]
+					<div id="news_list">
+						<iframe src='/tyqty/index.htm' border='0' width='750px' height='2040px' frameborder='0' marginheight="-10px"></iframe>
+					</div>
 				</div>
 			</div>
-			<!--<div class="botbox">
-        <div class="biaoti5">
-            <a href="http://www.xinjiangnet.com.cn/gy/gylm/">
-              <div class="bt_pic1"><img src="/${res}/img/gy_lm.png"/></div></a>
-            <a href="http://www.xinjiangnet.com.cn/gy/gylm/">  <div class="gd">更多>></div></a>
-        </div>
-    </div>
-    <div class="linksback">
-          <div class="link_w">
-          <a href="http://www.hsjj.org/">新疆红石慈善基金会</a>
-</div>
-    </div>-->
+			<div id="sports_right">
+				<div class="list_title">
+					<span class="tstx"></span>
+				</div>
+				[@cms_content_list count='10' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+				[#list tag_list as a]
+				<div id="advert">
+					<span>
+						<a href="${a.url}">
+							<img src='${a.typeImg}' width="221" height="185" />
+						</a>
+					</span>
+					<div class="adv_title">
+						<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]...</a>
+					</div>
+				</div>
+				[/#list]
+				[/@cms_content_list]
+			</div>
 		</div>
 		<div style="width:100%; clear:both; float:left;margin-top:20px">
 			<!-- footer -->
@@ -603,11 +558,11 @@
 			<div style="width:980px; margin:0px auto;">
 				<img src="/${res}/img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
 				<map name="Map" id="Map">
-      <area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
-      <area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
-      <area shape="rect" coords="718,29,846,61" href="http://epaper.xinjiangnet.com.cn" />
-      <area shape="rect" coords="866,28,973,58" href="#" />
-    </map>
+      				<area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
+      				<area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
+      				<area shape="rect" coords="718,29,846,61" href="http://epaper.xinjiangnet.com.cn" />
+      				<area shape="rect" coords="866,28,973,58" href="#" />
+    			</map>
 			</div>
 			<div style="width:100%; height:10px;">
 			</div>
@@ -941,11 +896,10 @@
 					</tr>
 				</table>
 			</center>
-			<link rel="stylesheet" type="text/css" href="/${res}/css/popmenu.css" media="all" />
+			<link rel="stylesheet" type="text/css" href="/${res}/js/popmenu.css" media="all" />
 			<script type="text/javascript" src="/${res}/js/recommend.js"></script>
 			<!-- end footer -->
 		</div>
 		<!-- 脚本区域 -->
 	</body>
-
 </html>
