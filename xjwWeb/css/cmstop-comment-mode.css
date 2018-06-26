@@ -75,7 +75,7 @@
 }
 
 .comment-list .operate .in_a .arrow {
-	background: transparent url('images/sprite-ico.png') no-repeat -170px -22px;
+	background: transparent url('../img/sprite-ico.png') no-repeat -170px -22px;
 	padding: 4px;
 }
 
@@ -159,7 +159,7 @@
 	width: 63px;
 	height: 22px;
 	line-height: 18px;
-	background: transparent url(images/post.png);
+	background: transparent url(../img/post.png);
 	color: #ffffff;
 	border: none;
 	float: right;
