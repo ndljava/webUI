@@ -80,30 +80,18 @@
 		</div>
 		<div class="ppr">
 			<ul>
+				[@cms_content_list count='4' channelId='193' channelOption='2' typeId='2'] 
+				[#list tag_list as a]
 				<li>
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075457.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_158_105_1527134356321.jpg" width="158" height="105" style="border:0 "></a>
+					<a href="${a.url}" target="_blank">
+						<img src="${a.typeImg}" width="158" height="105" style="border:0 ">
+					</a>
 					<span>
-						<a href="http://www.xinjiangnet.com.cn/2018/0524/2075457.shtml" target="_blank"> 马德里上演斗牛表演</a>
+						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=10 append=append/]</a>
 					</span>
 				</li>
-				<li>
-					<a href="http://www.xinjiangnet.com.cn/2018/0524/2075450.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0524/thumb_158_105_1527134337503.jpg" width="158" height="105" style="border:0 "></a>
-					<span>
-						<a href="http://www.xinjiangnet.com.cn/2018/0524/2075450.shtml" target="_blank">新疆北部牧民转场 </a>
-					</span>
-				</li>
-				<li>
-					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075204.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0523/thumb_158_105_1527045143473.jpg" width="158" height="105" style="border:0 "></a>
-					<span>
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075204.shtml" target="_blank"> 西非海牛在珠海成功产子</a>
-					</span>
-				</li>
-				<li>
-					<a href="http://www.xinjiangnet.com.cn/2018/0523/2075183.shtml" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2018/0523/thumb_158_105_1527045162243.jpg" width="158" height="105" style="border:0 "></a>
-					<span>
-						<a href="http://www.xinjiangnet.com.cn/2018/0523/2075183.shtml" target="_blank"> 德国“磨坊日”向传统技术</a>
-					</span>
-				</li>
+				[/#list]
+				[/@cms_content_list]
 			</ul>
 		</div>
 		<!--热图 E-->
@@ -166,7 +154,7 @@
 				<h1>
 					[@cms_content_list count='1' channelId='75' channelOption='1' typeId='2'] 
 					[#list tag_list as a]
-						<a  style="font-weight: bold;" href="${a.url}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
+						<a style="font-weight: bold;" href="${a.url}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
 					[/#list]
 					[/@cms_content_list]
 				</h1>
@@ -198,8 +186,8 @@
 				<ul class="u">
 					[@cms_content_list count='5' channelId='75' channelOption='1' typeId='1'] 
 					[#list tag_list as a]
-					<li>·
-						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=25 append=append/]</a>
+					<li>
+						·<a href="${a.url}" target="_blank">[@text_cut s=a.title len=25 append=append/]</a>
 					</li>
 					[/#list]
 					[/@cms_content_list]
@@ -259,7 +247,6 @@
 				<h4>
 					<a  style="font-weight: bold;" href="${tag_list[3].url}" >[@text_cut s=tag_list[3].title len=20 append=append/]</a>
 				</h4>
-				
 				<p> 
 					<span>
 						<a href="${tag_list[4].url}" target="_blank">[@text_cut s=tag_list[4].title len=13 append=append/]</a>
@@ -269,7 +256,6 @@
 					</span>
 				</p>
 			</div>
-
 			[/@cms_content_list]
 			<div class="mt">
 				<ul class="u">

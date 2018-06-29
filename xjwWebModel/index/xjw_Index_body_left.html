@@ -11,7 +11,7 @@
 							<div class="gdt_bt">
 								<div class="gdt_bt_t">
 									<div class="gdt_bt_t1">
-										<a href="${a.url}" target="_blank" style="">[@text_cut s=a.title len=titLen append=append/]</a>
+										<a href="${a.url}" target="_blank" style="">[@text_cut s=a.stit len=titLen append=append/]</a>
 									</div>
 								</div>
 								<div class="gdt_bt_abs">
@@ -110,17 +110,23 @@
 			</script>
 			<div style="width:400px; height:40px;">
 				<div class="left_l_q_85r" id="xjxw1">
-					<span class="left_l_xjxw" onMouseMove="javascript:picdisplay(1)"><a href="http://www.xinjiangnet.com.cn/xwzx/xjdz/" target="_blank">新疆新闻</a></span>
+					<span class="left_l_xjxw" onMouseMove="javascript:picdisplay(1)">
+						<a href="/xjdz/index.jhtml" target="_blank">新疆新闻</a>
+					</span>
 				</div>
 				<div class="left_l_40">
 				</div>
 				<div class="left_l_q_85b" id="xjxw2">
-					<span class="left_l_xjxw" onMouseMove="javascript:picdisplay(2)"><a href="http://www.xinjiangnet.com.cn/xwzx/" target="_blank">国内国际</a></span>
+					<span class="left_l_xjxw" onMouseMove="javascript:picdisplay(2)">
+						<a href="/xwzx/index.jhtml" target="_blank">国内国际</a>
+					</span>
 				</div>
 				<div class="left_l_40">
 				</div>
 				<div class="left_l_q_85b" id="xjxw3">
-					<span class="left_l_xjxw" onMouseMove="javascript:picdisplay(3)"><a href="http://www.xinjiangnet.com.cn/wlmq/" target="_blank">乌鲁木齐</a></span>
+					<span class="left_l_xjxw" onMouseMove="javascript:picdisplay(3)">
+						<a href="/wlmq/index.jhtml" target="_blank">乌鲁木齐</a>
+					</span>
 				</div>
 				<div class="left_l_q_65b">
 				</div>
@@ -133,7 +139,7 @@
 					</div>
 					<div class="left_l_xjxw_400_118">
 						<div class="left_l_xjxw_400_112_solid" style="height:123px;">
-							[@cms_content_list count='15' titLen='63' channelId='94' channelOption='1' descLen='158' typeId='2'] 
+							[@cms_content_list count='1' titLen='63' channelId='152' channelOption='1' descLen='158' typeId='2'] 
 							<div class="left_l_xjxw_400_60">
 								<div class="left">
 									<a href="${tag_list[0].url}">
@@ -141,17 +147,16 @@
 									</a>
 								</div>
 								<div class="left_l_xjxw_400_60_bt">
-									<a href="${tag_list[0].url}" target="_blank">[@text_cut s=tag_list[0].title len=titLen append=append/]</a>
+									<a href="${tag_list[0].url}" target="_blank">[@text_cut s=tag_list[0].title len=30 append=append/]</a>
 								</div>
 							</div>
 							[/@cms_content_list]
-							[@cms_content_list count='15' titLen='63' channelId='94' channelOption='1' descLen='158' typeId='1'] 
+							[@cms_content_list count='15' titLen='63' channelId='152' channelOption='1' descLen='158' typeId='1'] 
 							<div class="left_l_xjxw_bt_lit">
-								&nbsp;<span><a href="${tag_list[1].url}" target="_blank">[@text_cut s=tag_list[1].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[2].url}" target="_blank">[@text_cut s=tag_list[2].title len=titLen append=append/]</a>&nbsp;</span>
-								<br /> &nbsp;
-								<span><a href="${tag_list[3].url}" target="_blank">[@text_cut s=tag_list[3].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[4].url}" target="_blank">[@text_cut s=tag_list[4].title len=titLen append=append/] </a>&nbsp;</span>
+								&nbsp;<span><a href="${tag_list[0].url}" target="_blank">[@text_cut s=tag_list[0].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[1].url}" target="_blank">[@text_cut s=tag_list[1].title len=titLen append=append/]</a>&nbsp;</span>
+								<br />&nbsp;<span><a href="${tag_list[2].url}" target="_blank">[@text_cut s=tag_list[2].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[3].url}" target="_blank">[@text_cut s=tag_list[3].title len=titLen append=append/] </a>&nbsp;</span>
 								<br />
 							</div>
 						</div>
@@ -159,14 +164,13 @@
 							<div class="left_l_xjxw_bt_10">
 							</div>
 							<div class="left_l_xjxw_bt">
-								<span><a href="${tag_list[5].url}" target="_blank">[@text_cut s=tag_list[5].title len=titLen append=append/]</a></span>
+								<span><a href="${tag_list[4].url}" target="_blank">[@text_cut s=tag_list[4].title len=15append=append/]</a></span>
 							</div>
 							<div class="left_l_xjxw_bt_lit">
-								&nbsp;<span><a href="${tag_list[6].url}" target="_blank">[@text_cut s=tag_list[6].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[7].url}" target="_blank">[@text_cut s=tag_list[7].title len=titLen append=append/]</a>&nbsp;</span>
-								<br /> &nbsp;
-								<span><a href="${tag_list[8].url}" target="_blank">[@text_cut s=tag_list[8].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[9].url}" target="_blank">[@text_cut s=tag_list[9].title len=titLen append=append/]</a>&nbsp;</span>
+								&nbsp;<span><a href="${tag_list[5].url}" target="_blank">[@text_cut s=tag_list[5].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[6].url}" target="_blank">[@text_cut s=tag_list[6].title len=titLen append=append/]</a>&nbsp;</span>
+								<br />&nbsp;<span><a href="${tag_list[7].url}" target="_blank">[@text_cut s=tag_list[7].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[8].url}" target="_blank">[@text_cut s=tag_list[8].title len=titLen append=append/]</a>&nbsp;</span>
 								<br />
 							</div>
 						</div>
@@ -174,14 +178,13 @@
 							<div class="left_l_xjxw_bt_10">
 							</div>
 							<div class="left_l_xjxw_bt">
-								<span><a href="${tag_list[10].url}" target="_blank">[@text_cut s=tag_list[10].title len=titLen append=append/]</a></span>
+								<span><a href="${tag_list[9].url}" target="_blank">[@text_cut s=tag_list[9].title len=titLen append=append/]</a></span>
 							</div>
 							<div class="left_l_xjxw_bt_lit">
-								&nbsp;<span><a href="${tag_list[11].url}" target="_blank">[@text_cut s=tag_list[11].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[12].url}" target="_blank">[@text_cut s=tag_list[12].title len=titLen append=append/]</a>&nbsp;</span>
-								<br /> &nbsp;
-								<span><a href="${tag_list[13].url}" target="_blank">[@text_cut s=tag_list[13].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[14].url}" target="_blank">[@text_cut s=tag_list[14].title len=titLen append=append/]</a>&nbsp;</span>
+								&nbsp;<span><a href="${tag_list[10].url}" target="_blank">[@text_cut s=tag_list[10].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[11].url}" target="_blank">[@text_cut s=tag_list[11].title len=titLen append=append/]</a>&nbsp;</span>
+								<br />&nbsp;<span><a href="${tag_list[12].url}" target="_blank">[@text_cut s=tag_list[12].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[13].url}" target="_blank">[@text_cut s=tag_list[13].title len=titLen append=append/]</a>&nbsp;</span>
 								<br />
 							</div>
 						</div>
@@ -195,7 +198,7 @@
 					</div>
 					<div class="left_l_xjxw_400_118">
 						<div class="left_l_xjxw_400_112_solid" style="height:123px;">
-							[@cms_content_list count='15' titLen='63' channelId='95' channelOption='1' descLen='158' typeId='2'] 
+							[@cms_content_list count='1' titLen='63' channelId='138' channelOption='1' descLen='158' typeId='2'] 
 							<div class="left_l_xjxw_400_60">
 								<div class="left">
 									<a href="${tag_list[0].url}">
@@ -203,17 +206,16 @@
 									</a>
 								</div>
 								<div class="left_l_xjxw_400_60_bt">
-									<a href="${tag_list[0].url}" target="_blank">2[@text_cut s=tag_list[0].title len=titLen append=append/]</a>
+									<a href="${tag_list[0].url}" target="_blank">[@text_cut s=tag_list[0].stit len=30 append=append/]</a>
 								</div>
 							</div>
 							[/@cms_content_list]
-							[@cms_content_list count='15' titLen='63' channelId='94' channelOption='1' descLen='158' typeId='1'] 
+							[@cms_content_list count='15' titLen='63' channelId='138' channelOption='1' descLen='158' typeId='1'] 
 							<div class="left_l_xjxw_bt_lit">
-								&nbsp;<span><a href="${tag_list[1].url}" target="_blank">[@text_cut s=tag_list[1].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[2].url}" target="_blank">[@text_cut s=tag_list[2].title len=titLen append=append/]</a>&nbsp;</span>
-								<br /> &nbsp;
-								<span><a href="${tag_list[3].url}" target="_blank">[@text_cut s=tag_list[3].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[4].url}" target="_blank">[@text_cut s=tag_list[4].title len=titLen append=append/] </a>&nbsp;</span>
+								&nbsp;<span><a href="${tag_list[0].url}" target="_blank">[@text_cut s=tag_list[0].stit len=titLen append=append/]</a>&nbsp;</span>&nbsp;
+								<span><a href="${tag_list[1].url}" target="_blank">[@text_cut s=tag_list[1].stit len=titLen append=append/]</a>&nbsp;</span>
+								<br />&nbsp;<span><a href="${tag_list[2].url}" target="_blank">[@text_cut s=tag_list[2].stit len=titLen append=append/]</a>&nbsp;</span>&nbsp;
+								<span><a href="${tag_list[3].url}" target="_blank">[@text_cut s=tag_list[3].stit len=titLen append=append/] </a>&nbsp;</span>
 								<br />
 							</div>
 						</div>
@@ -221,14 +223,21 @@
 							<div class="left_l_xjxw_bt_10">
 							</div>
 							<div class="left_l_xjxw_bt">
-								<span><a href="${tag_list[5].url}" target="_blank">[@text_cut s=tag_list[5].title len=titLen append=append/]</a></span>
+								<span>
+									<a href="${tag_list[4].url}" target="_blank">[@text_cut s=tag_list[4].stit len=15append=append/]</a>
+								</span>
 							</div>
 							<div class="left_l_xjxw_bt_lit">
-								&nbsp;<span><a href="${tag_list[6].url}" target="_blank">[@text_cut s=tag_list[6].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[7].url}" target="_blank">[@text_cut s=tag_list[7].title len=titLen append=append/]</a>&nbsp;</span>
-								<br /> &nbsp;
-								<span><a href="${tag_list[8].url}" target="_blank">[@text_cut s=tag_list[8].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[9].url}" target="_blank">[@text_cut s=tag_list[9].title len=titLen append=append/]</a>&nbsp;</span>
+								&nbsp;<span><a href="${tag_list[5].url}" target="_blank">[@text_cut s=tag_list[5].stit len=titLen append=append/]</a>&nbsp;
+								</span>&nbsp;<span><a href="${tag_list[6].url}" target="_blank">[@text_cut s=tag_list[6].stit len=titLen append=append/]</a>
+									&nbsp;
+								</span>
+								<br />&nbsp;<span><a href="${tag_list[7].url}" target="_blank">[@text_cut s=tag_list[7].stit len=titLen append=append/]</a>
+									&nbsp;
+								</span>
+								&nbsp;<span><a href="${tag_list[8].url}" target="_blank">[@text_cut s=tag_list[8].stit len=titLen append=append/]</a>
+									&nbsp;
+								</span>
 								<br />
 							</div>
 						</div>
@@ -236,14 +245,14 @@
 							<div class="left_l_xjxw_bt_10">
 							</div>
 							<div class="left_l_xjxw_bt">
-								<span><a href="${tag_list[10].url}" target="_blank">[@text_cut s=tag_list[10].title len=titLen append=append/]</a></span>
+								<span><a href="${tag_list[9].url}" target="_blank">[@text_cut s=tag_list[9].stit len=titLen append=append/]</a></span>
 							</div>
 							<div class="left_l_xjxw_bt_lit">
-								&nbsp;<span><a href="${tag_list[11].url}" target="_blank">[@text_cut s=tag_list[11].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[12].url}" target="_blank">[@text_cut s=tag_list[12].title len=titLen append=append/]</a>&nbsp;</span>
-								<br /> &nbsp;
-								<span><a href="${tag_list[13].url}" target="_blank">[@text_cut s=tag_list[13].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[14].url}" target="_blank">[@text_cut s=tag_list[14].title len=titLen append=append/]</a>&nbsp;</span>
+								&nbsp;<span><a href="${tag_list[10].url}" target="_blank">[@text_cut s=tag_list[10].stit len=titLen append=append/]</a>&nbsp;</span>&nbsp;
+								<span><a href="${tag_list[11].url}" target="_blank">[@text_cut s=tag_list[11].stit len=titLen append=append/]</a>&nbsp;</span>
+								<br />
+								&nbsp;<span><a href="${tag_list[12].url}" target="_blank">[@text_cut s=tag_list[12].stit len=titLen append=append/]</a>&nbsp;</span>&nbsp;
+								<span><a href="${tag_list[13].url}" target="_blank">[@text_cut s=tag_list[13].stit len=titLen append=append/]</a>&nbsp;</span>
 								<br />
 							</div>
 						</div>
@@ -258,7 +267,7 @@
 					</div>
 					<div class="left_l_xjxw_400_118">
 						<div class="left_l_xjxw_400_112_solid" style="height:123px;">
-							[@cms_content_list count='15' titLen='63' channelId='96' channelOption='1' descLen='158' typeId='2'] 
+							[@cms_content_list count='1' titLen='63' channelId='96' channelOption='1' descLen='158' typeId='2'] 
 							<div class="left_l_xjxw_400_60">
 								<div class="left">
 									<a href="${tag_list[0].url}">
@@ -266,17 +275,16 @@
 									</a>
 								</div>
 								<div class="left_l_xjxw_400_60_bt">
-									<a href="${tag_list[0].url}" target="_blank">3[@text_cut s=tag_list[0].title len=titLen append=append/]</a>
+									<a href="${tag_list[0].url}" target="_blank">[@text_cut s=tag_list[0].stit len=30 append=append/]</a>
 								</div>
 							</div>
 							[/@cms_content_list]
-							[@cms_content_list count='15' titLen='63' channelId='94' channelOption='1' descLen='158' typeId='1'] 
+							[@cms_content_list count='15' titLen='22' channelId='96' channelOption='1' descLen='158' typeId='1'] 
 							<div class="left_l_xjxw_bt_lit">
-								&nbsp;<span><a href="${tag_list[1].url}" target="_blank">[@text_cut s=tag_list[1].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[2].url}" target="_blank">[@text_cut s=tag_list[2].title len=titLen append=append/]</a>&nbsp;</span>
-								<br /> &nbsp;
-								<span><a href="${tag_list[3].url}" target="_blank">[@text_cut s=tag_list[3].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[4].url}" target="_blank">[@text_cut s=tag_list[4].title len=titLen append=append/] </a>&nbsp;</span>
+								&nbsp;<span><a href="${tag_list[0].url}" target="_blank">[@text_cut s=tag_list[0].stit len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[1].url}" target="_blank">[@text_cut s=tag_list[1].stit len=titLen append=append/]</a>&nbsp;</span>
+							<br />&nbsp;<span><a href="${tag_list[2].url}" target="_blank">[@text_cut s=tag_list[2].stit len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[3].url}" target="_blank">[@text_cut s=tag_list[3].stit len=titLen append=append/] </a>&nbsp;</span>
 								<br />
 							</div>
 						</div>
@@ -284,14 +292,13 @@
 							<div class="left_l_xjxw_bt_10">
 							</div>
 							<div class="left_l_xjxw_bt">
-								<span><a href="${tag_list[5].url}" target="_blank">[@text_cut s=tag_list[5].title len=titLen append=append/]</a></span>
+								<span><a href="${tag_list[4].url}" target="_blank">[@text_cut s=tag_list[4].stit len=15append=append/]</a></span>
 							</div>
 							<div class="left_l_xjxw_bt_lit">
-								&nbsp;<span><a href="${tag_list[6].url}" target="_blank">[@text_cut s=tag_list[6].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[7].url}" target="_blank">[@text_cut s=tag_list[7].title len=titLen append=append/]</a>&nbsp;</span>
-								<br /> &nbsp;
-								<span><a href="${tag_list[8].url}" target="_blank">[@text_cut s=tag_list[8].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[9].url}" target="_blank">[@text_cut s=tag_list[9].title len=titLen append=append/]</a>&nbsp;</span>
+								&nbsp;<span><a href="${tag_list[5].url}" target="_blank">[@text_cut s=tag_list[5].stit len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[6].url}" target="_blank">[@text_cut s=tag_list[6].stit len=titLen append=append/]</a>&nbsp;</span>
+								<br />&nbsp;<span><a href="${tag_list[7].url}" target="_blank">[@text_cut s=tag_list[7].stit len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[8].url}" target="_blank">[@text_cut s=tag_list[8].stit len=titLen append=append/]</a>&nbsp;</span>
 								<br />
 							</div>
 						</div>
@@ -299,14 +306,14 @@
 							<div class="left_l_xjxw_bt_10">
 							</div>
 							<div class="left_l_xjxw_bt">
-								<span><a href="${tag_list[10].url}" target="_blank">[@text_cut s=tag_list[10].title len=titLen append=append/]</a></span>
+								<span><a href="${tag_list[9].url}" target="_blank">[@text_cut s=tag_list[9].stit len=titLen append=append/]</a></span>
 							</div>
 							<div class="left_l_xjxw_bt_lit">
-								&nbsp;<span><a href="${tag_list[11].url}" target="_blank">[@text_cut s=tag_list[11].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[12].url}" target="_blank">[@text_cut s=tag_list[12].title len=titLen append=append/]</a>&nbsp;</span>
-								<br /> &nbsp;
-								<span><a href="${tag_list[13].url}" target="_blank">[@text_cut s=tag_list[13].title len=titLen append=append/]</a>&nbsp;</span> &nbsp;
-								<span><a href="${tag_list[14].url}" target="_blank">[@text_cut s=tag_list[14].title len=titLen append=append/]</a>&nbsp;</span>
+								&nbsp;<span><a href="${tag_list[10].url}" target="_blank">[@text_cut s=tag_list[10].stit len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[11].url}" target="_blank">[@text_cut s=tag_list[11].stit len=titLen append=append/]</a>&nbsp;</span>
+								<br />
+								&nbsp;<span><a href="${tag_list[12].url}" target="_blank">[@text_cut s=tag_list[12].stit len=titLen append=append/]</a>&nbsp;</span> &nbsp;
+								<span><a href="${tag_list[13].url}" target="_blank">[@text_cut s=tag_list[13].stit len=titLen append=append/]</a>&nbsp;</span>
 								<br />
 							</div>
 						</div>
@@ -314,6 +321,7 @@
 				</div>
 			</div>
 			[/@cms_content_list]
+			
 			<div style="width:400px; height:40px; margin-top:10px;">
 				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="400" height="40" align="absbottom">
     				<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20170221yl.swf" />
@@ -327,12 +335,12 @@
 			<div class="bdsh">
 				<div class="bdsh_40">
 					<div class="bdsh_85left" id="bdsh1">
-						<span class="bdsh_85left_bt"><a href="http://www.xinjiangnet.com.cn/gwpd/" target="_blank">本地生活</a></span>
+						<span class="bdsh_85left_bt"><a href="/gwpd/index.jhtml" target="_blank">本地生活</a></span>
 					</div>
 					<div class="bdsh_85left_10">
 					</div>
 					<div class="bdsh_85left1" id="bdsh2">
-						<span class="bdsh_85left_bt"><a href="http://www.xinjiangnet.com.cn/xjhpp/" target="_blank">好品牌</a></span>
+						<span class="bdsh_85left_bt"><a href="/xjhpp/index.jhtml" target="_blank">好品牌</a></span>
 					</div>
 					<div class="bdsh_85left_10">
 					</div>
@@ -346,14 +354,14 @@
 					</div>
 					<div class="bdsh_400_160">
 						<ul>
-							[@cms_content_list count='2' channelId='75' titLen='10' channelOption='1' typeId='2'] 
+							[@cms_content_list count='2' channelId='75' titLen='12' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
 								<li>
 									<a href="${a.url}">
 										<IMG src="${a.typeImg}" width="184" height="120">
 									</a>
 									<br>
-									<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+									<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>
 								</li>
 							[/#list] 
 							[/@cms_content_list]
@@ -361,15 +369,14 @@
 					</div>
 					<div class="bdsh_400_100">
 						<ul>
- 
 						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
 						[#list tag_list as a]
 						[#if a_index%2==0]
 							<li>
  								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="float: left; margin: 13px 8px 13px 13px;">
 						[/#if]
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
-						[#if a_index%2==0&&a_index!=0]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=10 append=append/]</a>
+						[#if a_index%2==1]
 							</li>
 						[/#if]
 						[/#list] 
@@ -427,7 +434,7 @@
 								</div>
 							</div>
 							<!--<span style="float: left;display: none; ">&middot;&nbsp;</span>-->
-							<a href="${a.url}" target="_blank" class="titlecolor">[@text_cut s=a.title len=titLen append=append/]</a>
+							<a href="${a.url}" target="_blank" class="titlecolor">[@text_cut s=a.stit len=titLen append=append/]</a>
 						</li>
 						
 						[#if a_index%5==0&&a_index!=0]
@@ -503,22 +510,22 @@
 			<!--公益-->
 			<div class="width675_left_80">
 				<div class="width675_left_80_l">
-					<a href="http://www.xinjiangnet.com.cn/gypd/" target="_blank">
+					<a href="/gy/index.jhtml" target="_blank">
 						<img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_gy.jpg" border="0">
 					</a>
 				</div>
 				<div class="width675_left_80_r">
 					<ul>
-						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[@cms_content_list count='6' channelId='75' titLen='11' channelOption='1' typeId='1'] 
 						[#list tag_list as a]
 						[#if a_index%2==0]
 							<li>
 						[/#if]
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
-						[#if a_index%2==0&&a_index!=0]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>	
+						[#if a_index%2==1]
 							</li>
 						[/#if]
-						[/#list] 
+						[/#list]
 						[/@cms_content_list]
 					</ul>
 				</div>
@@ -528,17 +535,17 @@
 			<!--房产-->
 			<div class="width675_left_80">
 				<div class="width675_left_80_l">
-					<a href="http://www.xinjiangnet.com.cn/fcpd/" target="_blank"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_fc.jpg" border="0"></a>
+					<a href="/fc/index.jhtml" target="_blank"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_fc.jpg" border="0"></a>
 				</div>
 				<div class="width675_left_80_r">
 					<ul>
-						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[@cms_content_list count='6' channelId='75' titLen='11' channelOption='1' typeId='1'] 
 						[#list tag_list as a]
 						[#if a_index%2==0]
 							<li>
 						[/#if]
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
-						[#if a_index%2==0&&a_index!=0]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>	
+						[#if a_index%2==1]
 							</li>
 						[/#if]
 						[/#list] 
@@ -551,17 +558,19 @@
 			<!--汽车-->
 			<div class="width675_left_80">
 				<div class="width675_left_80_l">
-					<a href="http://www.xinjiangnet.com.cn/qc/" target="_blank"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_qc.jpg" border="0"></a>
+					<a href="/qc/index.jhtml" target="_blank">
+						<img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_qc.jpg" border="0">
+					</a>
 				</div>
 				<div class="width675_left_80_r">
 					<ul>
-						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[@cms_content_list count='6' channelId='75' titLen='11' channelOption='1' typeId='1'] 
 						[#list tag_list as a]
 						[#if a_index%2==0]
 							<li>
 						[/#if]
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
-						[#if a_index%2==0&&a_index!=0]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>	
+						[#if a_index%2==1]
 							</li>
 						[/#if]
 						[/#list] 
@@ -573,29 +582,31 @@
 			</div>
 			<div class="xjw_adv400_160">
 				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="400" height="160" align="absbottom">
-    										<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20161208shy_z.swf" />
-    										<param name=wmode value=opaque />
-    										<param name="quality" value="high" />
-    										<param name="SCALE" value="exactfit" />
-    										<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20161208shy_z.swf" width="400" height="160" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
-										</object>
+    				<param name="movie" value="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20161208shy_z.swf" />
+    				<param name=wmode value=opaque />
+    				<param name="quality" value="high" />
+    				<param name="SCALE" value="exactfit" />
+    				<embed src="http://img.xinjiangnet.com.cn/templates/default/img/adv_shouy/20161208shy_z.swf" width="400" height="160" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+				</object>
 			</div>
 			<div class="width675_left_80_clear20">
 			</div>
 			<!--婚恋-->
 			<div class="width675_left_80">
 				<div class="width675_left_80_l">
-					<a href="http://www.xinjiangnet.com.cn/xwzx/xz/" target="_blank"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_xz.jpg" border="0"></a>
+					<a href="/hl/index.jhtml" target="_blank">
+						<img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_xz.jpg" border="0">
+					</a>
 				</div>
 				<div class="width675_left_80_r">
 					<ul>
-						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[@cms_content_list count='6' channelId='75' titLen='11' channelOption='1' typeId='1'] 
 						[#list tag_list as a]
 						[#if a_index%2==0]
 							<li>
 						[/#if]
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
-						[#if a_index%2==0&&a_index!=0]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>	
+						[#if a_index%2==1]
 							</li>
 						[/#if]
 						[/#list] 
@@ -608,17 +619,17 @@
 			<!--亲子-->
 			<div class="width675_left_80">
 				<div class="width675_left_80_l">
-					<a href="http://www.xinjiangnet.com.cn/qzpd/" target="_blank"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_qz.jpg" border="0"></a>
+					<a href="/qz/index.jhtml" target="_blank"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_qz.jpg" border="0"></a>
 				</div>
 				<div class="width675_left_80_r">
 					<ul>
-						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[@cms_content_list count='6' channelId='75' titLen='11' channelOption='1' typeId='1'] 
 						[#list tag_list as a]
 						[#if a_index%2==0]
 							<li>
 						[/#if]
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
-						[#if a_index%2==0&&a_index!=0]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>	
+						[#if a_index%2==1]
 							</li>
 						[/#if]
 						[/#list] 
@@ -631,17 +642,17 @@
 			<!--健康-->
 			<div class="width675_left_80">
 				<div class="width675_left_80_l">
-					<a href="http://www.xinjiangnet.com.cn/jkpd/"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_jk.jpg" border="0"></a>
+					<a href="/jk/index.jhtml"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/xjw_jk.jpg" border="0"></a>
 				</div>
 				<div class="width675_left_80_r">
 					<ul>
-						[@cms_content_list count='6' channelId='75' channelOption='1' typeId='1'] 
+						[@cms_content_list count='6' channelId='75' titLen='11' channelOption='1' typeId='1'] 
 						[#list tag_list as a]
 						[#if a_index%2==0]
 							<li>
 						[/#if]
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>	
-						[#if a_index%2==0&&a_index!=0]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>	
+						[#if a_index%2==1]
 							</li>
 						[/#if]
 						[/#list] 
@@ -665,12 +676,12 @@
 				</script>
 				<div class="bdsh_40">
 					<div class="bdsh_85left" id="bdshs1" style="width:45">
-						<span class="bdsh_85left_bt" onMouseMove="javascript:picdisplay1(1)"><a href="http://www.xinjiangnet.com.cn/ylpd/">娱乐</a></span>
+						<span class="bdsh_85left_bt" onMouseMove="javascript:picdisplay1(1)"><a href="/yl/index.jhtml">娱乐</a></span>
 					</div>
 					<div class="bdsh_85left_10">
 					</div>
 					<div class="bdsh_85left1" id="bdshs2" style="width:45">
-						<span class="bdsh_85left_bt" onMouseMove="javascript:picdisplay1(2)"><a href="http://www.xinjiangnet.com.cn/typd/" target="_blank">体育</a></span>
+						<span class="bdsh_85left_bt" onMouseMove="javascript:picdisplay1(2)"><a href="/ty/index.jhtml" target="_blank">体育</a></span>
 					</div>
 					<div class="bdsh_85left_10">
 					</div>
@@ -691,7 +702,7 @@
 									<IMG src="${a.typeImg}" width="184" height="120">
 								</a>
 								<br>
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=12 append=append/]</a>
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=12 append=append/]</a>
 							</li>
 							[/#list] 
 							[/@cms_content_list]
@@ -699,14 +710,14 @@
 					</div>
 					<div class="bdsh_400_150">
 						<ul>
-						[@cms_content_list count='10' channelId='75' channelOption='1' typeId='1'] 
+						[@cms_content_list count='10' channelId='75' titLen='12' channelOption='1' typeId='1'] 
 						[#list tag_list as a]
 						[#if a_index%2==0]
 							<li style="overflow: hidden;">
 								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="margin: 13px 0px;">
 						[/#if]
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
-						[#if a_index%2==0&&a_index!=0]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>
+						[#if a_index%2==1]
 							</li>
 						[#else]
 							&nbsp;
@@ -728,7 +739,7 @@
 									<IMG src="${a.typeImg}" width="184" height="120">
 								</a>
 								<br>
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>
 							</li>
 							[/#list] 
 							[/@cms_content_list]
@@ -736,14 +747,14 @@
 					</div>
 					<div class="bdsh_400_150">
 						<ul>
-						[@cms_content_list count='10' channelId='75' channelOption='1' typeId='1'] 
+						[@cms_content_list count='10' channelId='75' titLen='12' channelOption='1' typeId='1'] 
 						[#list tag_list as a]
 						[#if a_index%2==0]
 							<li style="overflow: hidden;">
 								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="margin: 13px 0px;">
 						[/#if]
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
-						[#if a_index%2==0&&a_index!=0]
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>
+						[#if a_index%2==1]
 							</li>
 						[#else]
 							&nbsp;
@@ -774,7 +785,7 @@
 				<div class="xjw_cjleft1" style="text-align:left;">
 				</div>
 				<div class="xjw_cjleft_gd">
-					<span class="xjw_cjleft_gd_bt"><a href="http://www.xinjiangnet.com.cn/cjpd/" target="_blank">更多</a></span>
+					<span class="xjw_cjleft_gd_bt"><a href="/cj/index.jhtml" target="_blank">更多</a></span>
 				</div>
 			</div>
 			<div class="width675_left_80_clear10">
@@ -790,7 +801,7 @@
 					<!-- 背景補丁層 -->
 					<div class="width675_cjnr_left_writing">
 						<p>
-							<a href="${a.url}" target="_blank" class="white">[@text_cut s=a.title len=titLen append=append/]</a>
+							<a href="${a.url}" target="_blank" class="white">[@text_cut s=a.stit len=titLen append=append/]</a>
 						</p>
 					</div>
 					[/#list] 
@@ -803,7 +814,7 @@
 						
 							<li>
 								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style=" margin: 10px 0px;">
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>
 							</li>
 							 
 						[/#list] 
@@ -821,7 +832,7 @@
 				<div class="xjw_mrdcleft1">
 				</div>
 				<div class="xjw_mrdcleft_gd">
-					<span class="xjw_mrdcleft_gd_bt"><a href="http://www.xinjiangnet.com.cn/xwzx/mrdc/" target="_blank">更多</a></span>
+					<span class="xjw_mrdcleft_gd_bt"><a href="/mrdc/index.jhtml" target="_blank">更多</a></span>
 				</div>
 			</div>
 			<div class="width675_right_clear10">
@@ -958,10 +969,10 @@
 			<!--美食-->
 			<div class="xjw_mrdc">
 				<div class="xjw_mrdcleft" style="width:45px;">
-					<span class="xjw_mrdcleft_bt"><a href="http://www.xinjiangnet.com.cn/mspd/" target="_blank">美食</a></span>
+					<span class="xjw_mrdcleft_bt"><a href="/ms/index.jhtml" target="_blank">美食</a></span>
 				</div>
 				<div class="xjw_mrdcleft1" style="width:155px;text-align:left;">
-					<span class="xjw_mrdcleft_bt">&nbsp;&nbsp;&nbsp;<a href="http://www.xinjiangnet.com.cn/qnw/" target="_blank">喜乐咖</a></span>
+					<span class="xjw_mrdcleft_bt">&nbsp;&nbsp;&nbsp;<a href="/qlk/index.jhtml" target="_blank">喜乐咖</a></span>
 				</div>
 				<div class="xjw_mrdcleft_gd">
 				</div>
@@ -983,7 +994,7 @@
 						<!-- 背景補丁層 -->
 						<div class="xjw_msnr_bt_l_writing">
 							<p>
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>
 							</p>
 						</div>
 					</div>
@@ -1002,7 +1013,7 @@
 						[#list tag_list as a]
 							<li>
 								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="margin: 10px 0px;">
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>
 							</li>
 						[/#list]
 						[/@cms_content_list]
@@ -1037,12 +1048,12 @@
 				</script>
 				<div class="lyjt_240">
 					<div class="lyjt_240left" id="lyjt1">
-						<span class="lyjt_240left_bt" onMouseMove="javascript:lyjt(1)"><a href="http://www.xinjiangnet.com.cn/ly/" target="_blank">旅游</a></span>
+						<span class="lyjt_240left_bt" onMouseMove="javascript:lyjt(1)"><a href="/ly/index.jhtml" target="_blank">旅游</a></span>
 					</div>
 					<div class="lyjt_240left_10">
 					</div>
 					<div class="lyjt_240left1" id="lyjt2">
-						<span class="lyjt_240left_bt" onMouseMove="javascript:lyjt(2)"><a href="http://www.xinjiangnet.com.cn/xwzx/jt/">交通</a></span>
+						<span class="lyjt_240left_bt" onMouseMove="javascript:lyjt(2)"><a href="/jt/index.jhtml">交通</a></span>
 					</div>
 					<div class="lyjt_240left_100">
 					</div>
@@ -1064,7 +1075,7 @@
 										<!-- 背景補丁層 -->
 										<div class="lyjt_240_176_tp_writing">
 											<p>
-												<a href="${a.typeImg}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a>
+												<a href="${a.typeImg}" target="_blank">[@text_cut s=a.stit len=titLen append=append/]</a>
 											</p>
 										</div>
 									</div>
@@ -1083,7 +1094,7 @@
 							 
 							<li>
 								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="margin: 10px 0px;">
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=16 append=append/]</a>
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=16 append=append/]</a>
 							</li>
 							 
 							[/#list] 
@@ -1104,7 +1115,7 @@
 								<!-- 背景補丁層 -->
 								<div class="width675_right_tp_writing">
 									<p>
-										<a href="${a.url}" target="_blank">[@text_cut s=a.title len=15 append=append/]</a>
+										<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=15 append=append/]</a>
 									</p>
 								</div>
 								[/#list] 
@@ -1121,7 +1132,7 @@
 							 
 							<li>
 								<IMG src="http://img.xinjiangnet.com.cn/templates/default/img/xjwimages/dian_03.jpg" width="4" height="4" style="margin: 10px 0px;">
-								<a href="${a.url}" target="_blank">[@text_cut s=a.title len=16 append=append/]</a>
+								<a href="${a.url}" target="_blank">[@text_cut s=a.stit len=16 append=append/]</a>
 							</li>
 							 
 							[/#list] 

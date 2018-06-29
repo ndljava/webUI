@@ -13,7 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-index.css" />
 		<link rel="stylesheet" type="text/css" href="/${res}/css/xjw_wlmq.css" />
 		<!--[if lt IE 9 ]>
-			<script type="text/javascript" src="/${res}/js/helper/modernizr.js"></script>
+			<script type="text/javascript" src="/${res}/js/modernizr.js"></script>
 		<![endif]-->
 		<script type="text/javascript" src="/${res}/js/config.js"></script>
 		<script type="text/javascript" src="/${res}/js/jquery.js"></script>
@@ -99,7 +99,7 @@
 					<!------导航开始----->
 					<div id="nav">
 						<ul>
-							[@cms_channel_list]
+							[@cms_channel_list parentId='96']
 							[#list tag_list as a]
 							<li>
 								<a style="width:auto;" href="${a.url}">${a.name}</a>

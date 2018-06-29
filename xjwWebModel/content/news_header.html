@@ -4,15 +4,12 @@
 		<!-- 带链接的顶部 -->
 		<ul class="head-top-nav" style="width:700px;">
 			<li>
-				<a href="/" title="首页" class="b" target="_blank">首页</a>
-			</li>
-			<li>
-				<a href="/xwzx/index.jhtml" title="新闻" target="_blank">新闻</a>
+				<a href="/" title="首页" target="_blank">首页</a>
 			</li>
 			[@cms_channel_list]
 			[#list tag_list as a]
 				<li>
-					<a href="${a.url}" title="${a.name}" class="b" target="_blank">${a.name}</a>
+					<a href="${a.url}" title="${a.name}" target="_blank">${a.name}</a>
 				</li>
 			[/#list]
 			[/@cms_channel_list]
