@@ -83,20 +83,15 @@
 						<li id="short_title">
 							<a href="http://www.xinjiangnet.com.cn/gy/">首页</a>
 						</li>
+						[@cms_channel_list parentId='129']
+						[#list tag_list as a]
 						<li>
-							<a href="http://www.xinjiangnet.com.cn/gy/gyzx/">公益资讯</a>
+							<a href="${a.url}" title="${a.name}" target="_blank">${a.name}</a>
 						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/gy/qyshzr/">企业社会责任</a>
-						</li>
+						[/#list]
+						[/@cms_channel_list]
 						<li id="long_title">
 							<a href="http://bbs.xinjiangnet.com.cn/forum.php?mod=forumdisplay&fid=279">我们需要您的帮助</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/gy/gyzz/">公益组织</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/gy/gyrw/">公益人物</a>
 						</li>
 						<li style="float:right">
 							<a href="http://www.xinjiangnet.com.cn//2015/0128/2664.shtml">加入我们</a>
@@ -348,47 +343,65 @@
 							<div class="gd">更多>></div>
 						</a>
 					</div>
+					[@cms_content_list count='5' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					<div class="picbox">
 						<div class="picItem picbox_left">
-							<a href="http://www.xinjiangnet.com.cn/2017/1219/2030075.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/1219/thumb_184_439_1513647591904.jpg" width="184px" height="439px" /></a>
+							<a href="${tag_list[0].url}">
+								<img src="${tag_list[0].typeImg}" width="184px" height="439px" />
+							</a>
 							<div class="shadou1" style="height:35px;">
-								<a href="http://www.xinjiangnet.com.cn/2017/1219/2030075.shtml">外国小哥折千纸鹤1000天不重样</a>
+								<a href="${tag_list[0].url}">[@text_cut s=tag_list[0].title len=13 append=append/]</a>
 							</div>
-							<a href="http://www.xinjiangnet.com.cn/2017/1219/2030075.shtml"><i class="mask"></i></a>
+							<a href="${tag_list[0].url}">
+								<i class="mask"></i>
+							</a>
 						</div>
 						<div class="picbox_mid">
 							<div class="picItem mid1">
-								<a href="http://www.xinjiangnet.com.cn/2017/1120/2020653.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/1120/thumb_201_145_1511144895938.jpg" width="201px" height="145px" /></a>
+								<a href="${tag_list[1].url}">
+									<img src="${tag_list[1].typeImg}" width="201px" height="145px" />
+								</a>
 								<div class="shadou2" style="height:35px;">
-									<a href="http://www.xinjiangnet.com.cn/2017/1120/2020653.shtml">休斯敦举办街画节为听障儿童筹款</a>
+									<a href="${tag_list[1].url}">[@text_cut s=tag_list[1].title len=13 append=append/]</a>
 								</div>
-								<a href="http://www.xinjiangnet.com.cn/2017/1120/2020653.shtml"><i class="mask"></i></a>
+								<a href="${tag_list[1].url}">
+									<i class="mask"></i>
+								</a>
 							</div>
 							<div class="picItem mid2">
-								<a href="http://www.xinjiangnet.com.cn/2018/0111/2037042.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0129/1517192487631.jpg" width="201px" height="292px" /></a>
+								<a href="${tag_list[2].url}">
+									<img src="${tag_list[2].typeImg}" width="201px" height="292px" />
+								</a>
 								<div class="shadou2" style="height:35px;">
-									<a href="http://www.xinjiangnet.com.cn/2018/0111/2037042.shtml">上海唯一一家深夜书店开业 用文化温暖城市人心</a>
+									<a href="${tag_list[2].url}">[@text_cut s=tag_list[2].title len=21 append=append/]</a>
 								</div>
-								<a href="http://www.xinjiangnet.com.cn/2018/0111/2037042.shtml"><i class="mask"></i></a>
+								<a href="${tag_list[2].url}"><i class="mask"></i></a>
 							</div>
 						</div>
 						<div class="picbox_right">
 							<div class="picItem boxright1">
-								<a href="http://www.xinjiangnet.com.cn/2018/0129/2042534.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0129/1517192190694.jpg" width="172px" height="276px" /></a>
+								<a href="${tag_list[3].url}">
+									<img src="${tag_list[3].typeImg}" width="172px" height="276px" />
+								</a>
 								<div class="shadou4" style="height:35px;">
-									<a href="http://www.xinjiangnet.com.cn/2018/0129/2042534.shtml">用医德守护村民生命健康</a>
+									<a href="${tag_list[3].url}">[@text_cut s=tag_list[3].title len=12 append=append/]</a>
 								</div>
-								<a href="http://www.xinjiangnet.com.cn/2018/0129/2042534.shtml"><i class="mask"></i></a>
+								<a href="${tag_list[3].url}">
+									<i class="mask"></i>
+								</a>
 							</div>
 							<div class="picItem boxright2">
-								<a href="http://www.xinjiangnet.com.cn/2017/1127/2022680.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/1127/thumb_172_161_1511749891124.jpg" width="172px" height="161px" /></a>
+								<a href="${tag_list[4].url}">
+									<img src="${tag_list[4].typeImg}" width="172px" height="161px" />
+								</a>
 								<div class="shadou5" style="height:35px;">
-									<a href="http://www.xinjiangnet.com.cn/2017/1127/2022680.shtml">6台移植手术同时进行 她捐献的器官至少挽救8人</a>
+									<a href="${tag_list[4].url}">[@text_cut s=tag_list[4].title len=22 append=append/]</a>
 								</div>
-								<a href="http://www.xinjiangnet.com.cn/2017/1127/2022680.shtml"><i class="mask"></i></a>
+								<a href="${tag_list[4].url}"><i class="mask"></i></a>
 							</div>
 						</div>
 					</div>
+					[/@cms_content_list]
 				</div>
 			</div>
 			<div class="rightbox">
@@ -603,11 +616,11 @@
 			<div style="width:980px; margin:0px auto;">
 				<img src="/${res}/img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
 				<map name="Map" id="Map">
-      <area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
-      <area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
-      <area shape="rect" coords="718,29,846,61" href="http://epaper.xinjiangnet.com.cn" />
-      <area shape="rect" coords="866,28,973,58" href="#" />
-    </map>
+      				<area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
+      				<area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
+      				<area shape="rect" coords="718,29,846,61" href="http://epaper.xinjiangnet.com.cn" />
+      				<area shape="rect" coords="866,28,973,58" href="#" />
+    			</map>
 			</div>
 			<div style="width:100%; height:10px;">
 			</div>
