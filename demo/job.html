@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>人才招聘 </title>
+	<meta http-equiv="keywords" content="" />
+	<meta http-equiv="description" content="" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/front.js" type="text/javascript"></script>
+	<script src="js/jquery.SuperSlide.js" type="text/javascript"></script>
+	<script src="js/common.js" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="css/common.css" />
+	<script type="text/javascript">
+		function g(o) {
+			return document.getElementById(o);
+		}
+		function HoverLi(x, y, m, n, counter) {
+			for(var i = 1; i <= counter; i++) {
+				g(x + m + i).className = 'normaltab';
+				g(y + m + i).className = 'undis';
+			}
+			g(y + m + n).className = 'dis';
+			g(x + m + n).className = 'curr';
+		}
+		$(function() {
+			Cms.channelViewCount("", "97");
+			Cms.siteFlow("", location.href, document.referrer, "true");
+		});
+	</script>
+	<head>
+		<body>
+			<div class="border-bottom">
+				<div class="header clearfix">
+					<span class="fl">客服热线：0791-86538070（周一至周六 8:30 - 17:30）</span>
+					<div class="fr">
+						<a href="#">登录</a>
+						<a href="#">注册</a>
+					</div>
+				</div>
+			</div>
+			<div class="relative">
+				<div class="menubox w1170-center clearfix">
+					<a href="/" class="logo"></a>
+					<ul class="menu">
+						<li class="menu-item">
+							<div class="nav-t">
+								<a href="index.html">首页</a>
+								<span class="menu-hover"></span>
+							</div>
+						</li>
+						<li class="menu-item">
+							<div class="nav-t">
+								<a href="about.html">关于我们</a>
+								<span class="menu-hover"></span>
+							</div>
+							<!--<div class="nav-c">
+								<div class="w1170-center">
+									<ul class="clearfix" id="t451">
+										<li>
+											<a href="http://demo2.jeecms.com/gsjj.jhtml" style="line-height:50px; color:#fff;">公司简介</a>
+										</li>
+										<li>
+											<a href="http://demo2.jeecms.com/fzlc.jhtml" style="line-height:50px; color:#fff;">发展历程</a>
+										</li>
+										<li>
+											<a href="http://demo2.jeecms.com/ygfc/index.jhtml" style="line-height:50px; color:#fff;">员工风采</a>
+										</li>
+									</ul>
+								</div>
+							</div>-->
+						</li>
+						<!--<li class="menu-item">
+							<div class="nav-t">
+								<a href="http://demo2.jeecms.com/gsdt/index.jhtml">公司动态</a>
+								<span class="menu-hover"></span>
+							</div>
+						</li>-->
+						<li class="menu-item on">
+							<div class="nav-t">
+								<a href="job.html">人才招聘</a>
+								<span class="menu-hover"></span>
+							</div>
+						</li>
+						<!--<li class="menu-item">
+							<div class="nav-t">
+								<a href="http://demo2.jeecms.com/pxzl/index.jhtml">培训资料</a>
+								<span class="menu-hover"></span>
+							</div>
+						</li>
+						<li class="menu-item">
+							<div class="nav-t">
+								<a href="http://demo2.jeecms.com/yjzj.jhtml">意见征集</a>
+								<span class="menu-hover"></span>
+							</div>
+							<div class="nav-c">
+								<div class="w1170-center">
+									<ul class="clearfix" id="t455">
+										<li>
+											<a href="http://demo2.jeecms.com/wldc.jhtml" style="line-height:50px; color:#fff;">网络调查</a>
+										</li>
+										<li>
+											<a href="/guestbook.jspx" style="line-height:50px; color:#fff;">留言板</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>-->
+						<li class="menu-item">
+							<div class="nav-t">
+								<a href="link.html">联系我们</a>
+								<span class="menu-hover"></span>
+							</div>
+						</li>
+						<!--<li class="menu-item">
+							<div class="nav-t">
+								<span class="searchIcon"></span>
+								<span class="menu-hover"></span>
+							</div>
+							<div class="nav-c">
+								<div class="w1170-center clearfix">
+									<div class="searchBox">
+										<form action="/search.jspx" target="_blank" id="searchForm">
+											<input type="text" name="q" value="" autocomplete="off" class="searchInput" placeholder="请输入关键字">
+											<input type="submit" value="" class="searchSub">
+										</form>
+									</div>
+								</div>
+							</div>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(function() {
+					Cms.loginSSO('');
+					Cms.loginCsi("", "loginCsiDiv", {
+						"returnUrl": "http://demo2.jeecms.com/rczp/index.jhtml"
+					});
+				});
+			</script>
+			<script>
+				function qkeypress() {
+					var q = $("input[name=q]");
+					if(q.val().trim() != "") {
+						$("input[name=q]").autocomplete("enable");
+					} else {
+						$("input[name=q]").autocomplete("disable");
+					}
+				}
+			</script>
+			<div class="banner-bg3"></div>
+			<div class="page_main clearfix">
+				<div class="page_head clearfix">
+					<div class="nr_title">
+						<div class="ResTitle_a1"><span>人才招聘</span><br><em>Talent Recruitment</em></div>
+					</div>
+					<div class="nr_position">
+						<div id="posT" class="clearfix">
+							<div id="PosList_c1">当前位置：
+								<a href="index.html">首页</a> - 人才招聘</div>
+						</div>
+					</div>
+				</div>
+				<div class="job_main">
+					<section class="job_search">
+						<form action="#" target="_self">
+							<select class="job_select" name="category">
+								<option value="">请选择职位</option>
+								<option value="项目主管">项目主管</option>
+								<option value="java高级工程师">java高级工程师</option>
+								<option value="java工程师">java工程师</option>
+								<option value="网页设计师">网页设计师</option>
+								<option value="测试人员">测试人员</option>
+								<option value="技术支持">技术支持</option>
+							</select>
+							<select class="job_select" name="workplace">
+								<option value="">请选择工作地点</option>
+								<option value="北京">北京</option>
+								<option value="上海">上海</option>
+								<option value="深圳">深圳</option>
+								<option value="广州">广州</option>
+								<option value="重庆">重庆</option>
+								<option value="南京">南京</option>
+								<option value="杭州">杭州</option>
+								<option value="西安">西安</option>
+								<option value="南昌">南昌</option>
+							</select>
+							<input class="job_searchCon" name="q" type="text" id="txtKey" placeholder="网页设计" autocomplete="off" />
+							<input class="job_searchMenu" type="submit" value="职位搜索" />
+						</form>
+					</section>
+					<section class="job_list">
+						<table cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr class="job_list_menu">
+									<td width="30%">招聘职位</td>
+									<td width="30%">企业名称</td>
+									<td>工作地点</td>
+									<td>招聘人数</td>
+									<td>发布时间</td>
+								</tr>
+								<tr>
+									<td width="30%" class="job_name">
+										<a href="http://demo2.jeecms.com/rczp/318.jhtml">精装/装饰/装修工程师</a>
+									</td>
+									<td width="30%">jeecms子站</td>
+									<td>,北京</td>
+									<td>1-3人</td>
+									<td>2018-03-31</td>
+								</tr>
+								<tr>
+									<td width="30%" class="job_name">
+										<a href="http://demo2.jeecms.com/rczp/317.jhtml">汽车销售顾问（包住+工作餐）</a>
+									</td>
+									<td width="30%">jeecms子站</td>
+									<td>,西安</td>
+									<td>1-3人</td>
+									<td>2018-03-31</td>
+								</tr>
+								<tr>
+									<td width="30%" class="job_name">
+										<a href="http://demo2.jeecms.com/rczp/316.jhtml">客户经理（运营商）</a>
+									</td>
+									<td width="30%">jeecms子站</td>
+									<td>,深圳,重庆</td>
+									<td>3-5人</td>
+									<td>2018-03-31</td>
+								</tr>
+								<tr>
+									<td width="30%" class="job_name">
+										<a href="http://demo2.jeecms.com/rczp/291.jhtml">聘网页前端设计3K双休</a>
+									</td>
+									<td width="30%">jeecms子站</td>
+									<td>,南昌,上海</td>
+									<td>3-5人</td>
+									<td>2018-03-29</td>
+								</tr>
+								<tr>
+									<td width="30%" class="job_name">
+										<a href="http://demo2.jeecms.com/rczp/290.jhtml">诚聘微信推广专员</a>
+									</td>
+									<td width="30%">jeecms子站</td>
+									<td>,上海,深圳</td>
+									<td>3-5人</td>
+									<td>2018-03-29</td>
+								</tr>
+								<tr>
+									<td width="30%" class="job_name">
+										<a href="http://demo2.jeecms.com/rczp/289.jhtml">安卓游戏开发5险1金</a>
+									</td>
+									<td width="30%">jeecms子站</td>
+									<td>,北京</td>
+									<td>1-3人</td>
+									<td>2018-03-29</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="page-large">
+							<!--<div style="display:inline-block;">
+								<a class="Num on" href="#" onclick="location.href='index_1.jhtml'">1</a>
+							</div>-->
+						</div>
+					</section>
+				</div>
+			</div>
+			<div class="footerBox">
+				<div class="w1170-center clearfix">
+					<div class="fl" style="width: 430px;">
+						<h1 class="title">JEECMS演示站</h1>
+						<p>电话：0791-86538070　13576281815</p>
+						<p>传真：0791-86538070</p>
+						<p>地址：南昌市西湖区沿江大道1299号力高滨江国际天郡A座503</p>
+						<p>ICP备案号：赣ICP备13005266号</p>
+					</div>
+					<div class="fl" style="margin-left: 118px; width: 300px;">
+						<h1 class="title">相关链接</h1>
+						<div class="linkList clearfix">
+							<a href="about.html">关于我们</a>
+							<a href="link.html">联系我们</a>
+							<a href="#" target="_blank">友情链接</a>
+							<a href="#" target="_blank">程序下载</a>
+							<a href="#" target="_blank">合作服务</a>
+							<a href="#" target="_blank">许可协议</a>
+							<a href="#" target="_blank">管理登录</a>
+						</div>
+					</div>
+					<div class="fr">
+						<img src="img/VX.png" />
+						<div class="weixin">
+							微信公众号
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				Powered by JeeCms Copyright © 2007-2018 www.jeecms.com, All Rights Reserved
+			</div>
+			<div class="right-fixed">
+				<ul>
+					<li class="back-top"></li>
+				</ul>
+				<script type="text/javascript">
+					$(function() {
+						var $body = $(document.body);;
+						var $bottomTools = $('.right-fixed');
+						$(window).scroll(function() {
+							var scrollHeight = $(document).height();
+							var scrollTop = $(window).scrollTop();
+							scrollTop > 50 ? $(".back-top").slideDown(300).css("display", "block") : $(".back-top").slideUp(300);
+						});
+						$('.back-top').click(function(e) {
+							e.preventDefault();
+							$('html,body').animate({
+								scrollTop: 0
+							});
+						});
+					});
+				</script>
+			</div>
+		</body>
+</html>
