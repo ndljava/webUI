@@ -361,7 +361,7 @@
 						<div class="h1_newt">
 							[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
-							<a href="${a.url}">[@text_cut s=a.title len=20 append=append/]</a>
+							<a href="${a.url}">[@text_cut s=a.title len=16 append=append/]</a>
 							[/#list]
 							[/@cms_content_list]
 						</div>
@@ -442,7 +442,7 @@
 						}
 					</style>
 					<div class="bt_box">
-						<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist">
+						<a href="${base}/guestbook.jspx">
 							<div class="biaoti">网友留言</div>
 						</a>
 						<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist">
@@ -460,266 +460,23 @@
 								<div class="line"></div>
 							</div>
 							<!--通过直接查询数据库来得到百姓声音留言（20条）-->
+							[@cms_guestbook_list siteId='1' count='20' ctgId='1' recommend='1' checked='1' orderBy='0']
+							[#list tag_list as g]
 							<ul style="height: 25px;">
-								<li class="xp1">[建议]</li>
+								<li class="xp1">[${g.ctg.name!}]</li>
 								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12832"> 建议给沿河路划标志标线</a>
+									<a href="">[@text_cut s=g.titleHtml len=17 append=append/]</a>
 								</li>
-								<li class="xp3">2018-05-22 11:54:01</li>
+								<li class="xp3">[#if g.replayTime??] ${g.replayTime?string("yyyy-MM-dd：HH:mm:ss")} [/#if]</li>
 								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=市公安局交警支队">市公安局交警支队</a>
+									<a href="">[#if g.admin?? && g.replayTime??] ${g.admin.username!} [/#if]</a>
 								</li>
 								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
+									<a href="">[#if g.checked==1] 已处理 [#else] 未处理 [/#if]</a>
 								</li>
 							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[咨询]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12831"> 有残疾证在物业小区停车免费吗？</a>
-								</li>
-								<li class="xp3">2018-05-10 12:57:20</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=乌鲁木齐市停车场管理中心">乌鲁木齐市停车场管理中心</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[问题]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12830"> 中环明珠小区楼上阳台管破裂漏水无人</a>
-								</li>
-								<li class="xp3">2018-05-08 10:44:10</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=新疆网">新疆网</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[投诉]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12829"> 公租房没人住跑水楼下住户遭殃</a>
-								</li>
-								<li class="xp3">2018-05-06 17:48:30</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=沙依巴克区">沙依巴克区</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_stateflag&state=1">未处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[投诉]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12827"> 用红山通app充值未到帐</a>
-								</li>
-								<li class="xp3">2018-04-18 09:28:15</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=红山一卡通公司">红山一卡通公司</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_stateflag&state=1">未处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[投诉]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12826"> 西山九鼎附近高速公路噪音何时治理</a>
-								</li>
-								<li class="xp3">2018-04-16 08:37:53</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=兵团环保局">兵团环保局</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_stateflag&state=1">未处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[咨询]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12825"> 翼龙华庭小区北门附近道路何时修整？</a>
-								</li>
-								<li class="xp3">2018-04-14 14:26:50</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=沙依巴克区">沙依巴克区</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_stateflag&state=1">未处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[咨询]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12824"> 西山路西延何时开工？</a>
-								</li>
-								<li class="xp3">2018-04-12 23:29:23</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=市交通局">市交通局</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_stateflag&state=1">未处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[咨询]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12823"> 22小学分校什么时候建成？</a>
-								</li>
-								<li class="xp3">2018-04-12 16:15:52</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=沙依巴克区">沙依巴克区</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_stateflag&state=1">未处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[问题]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12818"> 住房公积金网站个人登陆近来一直登不</a>
-								</li>
-								<li class="xp3">2018-04-11 15:36:22</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=市公积金管理中心">市公积金管理中心</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_stateflag&state=1">未处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[咨询]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12816"> 大风天窗户掉落砸中车辆找谁理赔？</a>
-								</li>
-								<li class="xp3">2018-04-09 18:21:15</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=新疆网">新疆网</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[问题]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12782"> 师大家属院的孩子应该在哪里上学？</a>
-								</li>
-								<li class="xp3">2018-03-22 11:21:38</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=高新区（新市区）">高新区（新市区）</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[问题]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12781"> 异地能否办乌鲁木齐社保卡？</a>
-								</li>
-								<li class="xp3">2018-03-22 11:18:16</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=乌鲁木齐市人力资源和社会保障局">乌鲁木齐市人力资源和社会保障局</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[问题]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12780"> 新世界广场垃圾站离小区太近</a>
-								</li>
-								<li class="xp3">2018-03-12 15:41:01</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=高新区（新市区）">高新区（新市区）</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[问题]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12779"> 蓝庭花苑路口两边违停车能否治理？</a>
-								</li>
-								<li class="xp3">2018-03-12 15:09:59</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=市公安局交警支队">市公安局交警支队</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[投诉]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12778"> 四建三区环境卫生差</a>
-								</li>
-								<li class="xp3">2018-03-12 12:22:23</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=高新区（新市区）">高新区（新市区）</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[建议]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12777"> 建议修整天山绿洲小区附近道路</a>
-								</li>
-								<li class="xp3">2018-03-12 10:56:32</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=沙依巴克区">沙依巴克区</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[咨询]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12776"> 公证书可以作为依据给孩子办入学吗？</a>
-								</li>
-								<li class="xp3">2018-03-12 10:48:15</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=经济技术开发区（头屯河区）">经济技术开发区（头屯河区）</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[咨询]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12775"> 黑龙江路和奇台路西延有具体规划吗？</a>
-								</li>
-								<li class="xp3">2018-03-08 10:03:37</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=市规划局">市规划局</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
-							<ul style="height: 25px;">
-								<li class="xp1">[问题]</li>
-								<li class="xp2" style="text-align: left;">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebookreply&gid=12774"> 303路为何不延伸至九点阳光二期？</a>
-								</li>
-								<li class="xp3">2018-03-07 18:27:16</li>
-								<li class="xp4">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist&deptname=市交通局">市交通局</a>
-								</li>
-								<li class="xp5">
-									<a href="http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebooklist_state&state=3">已处理</a>
-								</li>
-							</ul>
+							[/#list]
+							[/@cms_guestbook_list] 
 						</div>
 					</div>
 				</div>
@@ -738,27 +495,16 @@
 							</a>
 						</div>
 						<div class="h_liebiao">
+							[@cms_content_list count='10' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
 							&middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075709.shtml" title="乌鲁木齐市水磨沟区举办民族团结故事会" style="color: #6D6D6D;">乌鲁木齐市水磨沟区举办民族团结故事会</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075707.shtml" title="自治区48人入选第五批国家级非遗代表性传承人" style="color: #6D6D6D;">自治区48人入选第五批国家级非遗代表性传承</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075706.shtml" title="百余项活动呈现新疆文化和自然遗产魅力" style="color: #6D6D6D;">百余项活动呈现新疆文化和自然遗产魅力</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075705.shtml" title="乌鲁木齐经济技术开发区跻身全国开发区40强" style="color: #6D6D6D;">乌鲁木齐经济技术开发区跻身全国开发区40强</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075704.shtml" title="社区组织文艺汇演弘扬社会主义核心价值观" style="color: #6D6D6D;">社区组织文艺汇演弘扬社会主义核心价值观</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075702.shtml" title="新疆花海绽放“花产业”" style="color: #6D6D6D;">新疆花海绽放“花产业”</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0524/2075701.shtml" title="文艺“能人”进社区宣传十九大精神" style="color: #6D6D6D;">文艺“能人”进社区宣传十九大精神</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0522/2074990.shtml" title="新疆首个计量认证电磁兼容实验室揭牌" style="color: #6D6D6D;">新疆首个计量认证电磁兼容实验室揭牌</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0522/2074989.shtml" title="乌鲁木齐市水磨沟区举办校园剧比赛" style="color: #6D6D6D;">乌鲁木齐市水磨沟区举办校园剧比赛</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0522/2074984.shtml" title="【民族团结一家亲】故事会上讲民族团结事" style="color: #6D6D6D;">【民族团结一家亲】故事会上讲民族团结事</a>
-						</div>
+							<a href="${a.url}" title="${a.title}" style="color: #6D6D6D;">[@text_cut s=a.title len=20 append=append/]</a>
+							[#if a_has_next]
+								<br>
+							[/#if]
+							[/#list]
+							[/@cms_content_list]
+ 						</div>
 					</div>
 					<div class="h3_r">
 						<div class="bt_box">
@@ -770,26 +516,15 @@
 							</a>
 						</div>
 						<div class="h_liebiao">
+							[@cms_content_list count='10' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
 							&middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0420/2066077.shtml" title="乌鲁木齐两处饮料批发点查出百件假可乐" style="color: #6D6D6D;">乌鲁木齐两处饮料批发点查出百件假可乐</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0417/2065181.shtml" title="对合同不公条款说不，游客要回九成团费" style="color: #6D6D6D;">对合同不公条款说不，游客要回九成团费</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0314/2055894.shtml" title="一批“化了妆”的假名牌酒在乌鲁木齐被查获" style="color: #6D6D6D;">一批“化了妆”的假名牌酒在乌鲁木齐被查获</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0312/2055155.shtml" title="“马大姐”手撕面包里夹着橡皮筋" style="color: #6D6D6D;">“马大姐”手撕面包里夹着橡皮筋</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2018/0124/2041325.shtml" title="市民购买的玉米煮好后换颜色？" style="color: #6D6D6D;">市民购买的玉米煮好后换颜色？</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/1224/2031973.shtml" title="年糕里检出二氧化硫 新疆三批次食品被通报" style="color: #6D6D6D;">年糕里检出二氧化硫 新疆三批次食品被通报</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/1130/2023839.shtml" title="排烟管没出窗中毒 热水器销售商被判赔偿" style="color: #6D6D6D;">排烟管没出窗中毒 热水器销售商被判赔偿</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/1122/2021409.shtml" title="市民花5万买大衣 说好全额返差一万六要不回" style="color: #6D6D6D;">市民花5万买大衣 说好全额返差一万六要不回</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/1115/2019354.shtml" title="新疆新增46家 “12315投诉快速通道”" style="color: #6D6D6D;">新疆新增46家 “12315投诉快速通道”</a>
-							<br> &middot;
-							<a href="http://www.xinjiangnet.com.cn/2017/1113/2018951.shtml" title="网购遇假货 可在收货地法院起诉维权" style="color: #6D6D6D;">网购遇假货 可在收货地法院起诉维权</a>
+							<a href="${a.url}" title="${a.title}" style="color: #6D6D6D;">[@text_cut s=a.title len=20 append=append/]</a>
+							[#if a_has_next]
+								<br>
+							[/#if]
+							[/#list]
+							[/@cms_content_list]
 						</div>
 					</div>
 					<div class="big_left_h4">
@@ -803,33 +538,21 @@
 						</div>
 						<div class="picbox">
 							<ul>
+								[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+								[#list tag_list as a]
 								<li>
-									<a href="http://www.xinjiangnet.com.cn/2018/0522/2074980.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0522/thumb_164_98_1526954279490.jpg" width="164px" height="98px" /></a>
+									<a href="${a.url}">
+										<img src="${a.typeImg}" width="164px" height="98px" />
+									</a>
 									<p width="154px">
-										<a href="http://www.xinjiangnet.com.cn/2018/0522/2074980.shtml" title="为血液病患者打开希望之门">为血液病患者打开希望之门</a>
+										<a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=12 append=append/]</a>
 									</p>
 								</li>
-								<li class="temp"></li>
-								<li>
-									<a href="http://www.xinjiangnet.com.cn/2018/0521/2074723.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0521/thumb_164_98_1526866459949.png" width="164px" height="98px" /></a>
-									<p width="154px">
-										<a href="http://www.xinjiangnet.com.cn/2018/0521/2074723.shtml" title="水区15对老人集体庆金婚">水区15对老人集体庆金婚</a>
-									</p>
-								</li>
-								<li class="temp"></li>
-								<li>
-									<a href="http://www.xinjiangnet.com.cn/2018/0516/2073537.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0516/thumb_164_98_1526433431358.png" width="164px" height="98px" /></a>
-									<p width="154px">
-										<a href="http://www.xinjiangnet.com.cn/2018/0516/2073537.shtml" title="感受科技的魅力">感受科技的魅力</a>
-									</p>
-								</li>
-								<li class="temp"></li>
-								<li>
-									<a href="http://www.xinjiangnet.com.cn/2018/0515/2073135.shtml"><img src="http://upload.xinjiangnet.com.cn/2018/0515/thumb_164_98_1526350259609.jpg" width="164px" height="98px" /></a>
-									<p width="154px">
-										<a href="http://www.xinjiangnet.com.cn/2018/0515/2073135.shtml" title="亲戚搭档参加趣味运动会">亲戚搭档参加趣味运动会</a>
-									</p>
-								</li>
+								[#if a_has_next]
+									<li class="temp"></li>
+								[/#if]
+								[/#list]
+								[/@cms_content_list]
 							</ul>
 						</div>
 					</div>
@@ -843,18 +566,30 @@
 									<div class="gd">更多</div>
 								</a>
 							</div>
+							[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
 							<div class="leftpic">
-								<a href="http://www.xinjiangnet.com.cn/2017/0427/1823646.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/0518/thumb_162_125_1495075246796.png" /></a>
+								<a href="${a.url}">
+									<img width="162" height="125" src="${a.typeImg}" />
+								</a>
 								<p>
-									<a href="http://www.xinjiangnet.com.cn/2017/0427/1823646.shtml" title="蔬菜直销点须出具小票">蔬菜直销点须出具小票</a>
+									<a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=10 append=append/]</a>
 								</p>
 							</div>
+							[/#list]
+							[/@cms_content_list]
+							[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
 							<div class="rightpic">
-								<a href="http://www.xinjiangnet.com.cn/2017/0413/1805764.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/0414/thumb_162_125_1492142242229.png" /></a>
+								<a href="${a.url}">
+									<img width="162" height="125" src="${a.typeImg}" />
+								</a>
 								<p>
-									<a href="http://www.xinjiangnet.com.cn/2017/0413/1805764.shtml" title="交完物业费 别忘要发票">交完物业费 别忘要发票</a>
+									<a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=10 append=append/]</a>
 								</p>
 							</div>
+							[/#list]
+							[/@cms_content_list]
 						</div>
 						<div class="h5_r">
 							<div class="bt_box">
@@ -866,37 +601,30 @@
 								</a>
 							</div>
 							<div class="h5_lst" style="font-size: 14px;">
+								[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+								[#list tag_list as a]
 								&middot;
-								<a href="http://www.xinjiangnet.com.cn/2018/0425/2067504.shtml" title="巡回法庭开进商城 现场审理商标侵权案">巡回法庭开进商城 现场审理商标侵权案</a>
-								<br /> &middot;
-								<a href="http://www.xinjiangnet.com.cn/2018/0420/2066022.shtml" title="驾校学员未系安全带受伤 自行担责三成">驾校学员未系安全带受伤 自行担责三成</a>
-							</div>
+								<a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=12 append=append/]</a>
+								[#if a_has_next]
+									<br>
+								[/#if]
+								[/#list]
+								[/@cms_content_list]
+ 							</div>
 							<div class="picbox">
 								<ul>
+									[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+									[#list tag_list as a]
 									<li>
-										<a href="http://www.xinjiangnet.com.cn/2017/0418/1812926.shtml"><img src="http://upload.xinjiangnet.com.cn/2017/0418/thumb_64_84_1492481745144.jpg" /></a>
+										<a href="${a.url}">
+											<img width="64" height="84" src="${a.typeImg}" />
+										</a>
 										<p>
-											<a href="http://www.xinjiangnet.com.cn/2017/0418/1812926.shtml" title="周书恒">周书恒</a>
+											<a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=5 append=append/]</a>
 										</p>
 									</li>
-									<li>
-										<a href="http://w.xinjiangnet.com.cn/2015/0127/1797.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0127/thumb_64_84_1422350484819.jpg" /></a>
-										<p>
-											<a href="http://w.xinjiangnet.com.cn/2015/0127/1797.shtml" title="康妍宣">康妍宣</a>
-										</p>
-									</li>
-									<li>
-										<a href="http://w.xinjiangnet.com.cn/2015/0127/1789.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0127/thumb_64_84_1422350387230.jpg" /></a>
-										<p>
-											<a href="http://w.xinjiangnet.com.cn/2015/0127/1789.shtml" title="王志业">王志业</a>
-										</p>
-									</li>
-									<li>
-										<a href="http://w.xinjiangnet.com.cn/2015/0127/1778.shtml"><img src="http://upload.xinjiangnet.com.cn/2015/0127/thumb_64_84_1422350197249.jpg" /></a>
-										<p>
-											<a href="http://w.xinjiangnet.com.cn/2015/0127/1778.shtml" title="杨萍">杨萍</a>
-										</p>
-									</li>
+									[/#list]
+									[/@cms_content_list]
 								</ul>
 							</div>
 						</div>
@@ -1055,14 +783,15 @@
 						</a>
 					</div>
 					<div class="right_bxsy" style="padding-left: 10px;">
+						[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
 						&middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0413/2063992.shtml" title="百姓声音周报（2018年3月28日至2018年4月3日）">百姓声音周报（2018年3月28日至2018年4月3日）</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0413/2063991.shtml" title="百姓声音周报（2018年3月21日至2018年3月27日）">百姓声音周报（2018年3月21日至2018年3月27日）</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0328/2059443.shtml" title="百姓声音周报（2018年3月14日至2018年3月20日）">百姓声音周报（2018年3月14日至2018年3月20日）</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0319/2056817.shtml" title="百姓声音周报（2018年2月28日至2018年3月13日）">百姓声音周报（2018年2月28日至2018年3月13日）</a>
+						<a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=30 append=append/]</a>
+						[#if a_has_next]
+							<br>
+						[/#if]
+						[/#list]
+						[/@cms_content_list]
 					</div>
 					<div class="right_biao">
 						<div class="biao1"></div>
@@ -1111,16 +840,15 @@
 						</a>
 					</div>
 					<div class="right_wen" style="padding-left: 10px;">
+						[@cms_content_list count='5' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
 						&middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0515/2073148.shtml" title="消防栓成快递签收大户的无奈与期许">消防栓成快递签收大户的无奈与期许</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0515/2073151.shtml" title="如何看待“高考工厂的成功”">如何看待“高考工厂的成功”</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0515/2073149.shtml" title="入学需亲子鉴定，什么样的证明不假？">入学需亲子鉴定，什么样的证明不假？</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0515/2073150.shtml" title="用礼品和返现“买”好评是自欺欺人">用礼品和返现“买”好评是自欺欺人</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0417/2064800.shtml" title="“鸿茅药酒违法2630次”缘何仍热卖？">“鸿茅药酒违法2630次”缘何仍热卖？</a>
+						<a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=25 append=append/]</a>
+						[#if a_has_next]
+							<br>
+						[/#if]
+						[/#list]
+						[/@cms_content_list]
 					</div>
 					<div class="right_biao">
 						<div class="biao1"></div>
@@ -1132,16 +860,15 @@
 						</a>
 					</div>
 					<div class="right_wen" style="padding-left: 10px;">
+						[@cms_content_list count='5' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
 						&middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0524/2075716.shtml" title="五月乌鲁木齐这些片区停电 ">五月乌鲁木齐这些片区停电 </a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0524/2075714.shtml" title="动画奇幻影视交响视听音乐会下周首演 ">动画奇幻影视交响视听音乐会下周首演 </a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0524/2075712.shtml" title="音乐童话剧《音乐精灵》六一上演">音乐童话剧《音乐精灵》六一上演</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0524/2075711.shtml" title="微信可查询个人社保信息">微信可查询个人社保信息</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2018/0524/2075708.shtml" title="乌鲁木齐-喀纳斯6月10日复航">乌鲁木齐-喀纳斯6月10日复航</a>
+						<a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=25 append=append/]</a>
+						[#if a_has_next]
+							<br>
+						[/#if]
+						[/#list]
+						[/@cms_content_list]
 					</div>
 					<div class="right_biao">
 						<div class="biao1"></div>
@@ -1157,18 +884,15 @@
 					</div>
 					<div class="right_hei"><strong></strong></div>
 					<div class="right_book">
+						[@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
 						<span class="nimingcolor">匿名：</span>
-						<a href="http://weibo.com/5498430144/profile?topnav=1&wvr=6" title="天越冷，房间温度越低，暖气费白交了！">天越冷，房间温度越低，暖气费白交了！</a>
-						<br> <span class="nimingcolor">匿名：</span>
-						<a href="http://weibo.com/5498430144/profile?topnav=1&wvr=6" title="大冷的天里，公共车偏偏不送暧？！">大冷的天里，公共车偏偏不送暧？！</a>
-						<br> <span class="nimingcolor">匿名：</span>
-						<a href="http://weibo.com/5498430144/profile?topnav=1&wvr=6" title="油运司小区的房子何时节能改造？">油运司小区的房子何时节能改造？</a>
-						<br> <span class="nimingcolor">匿名：</span>
-						<a href="" title="你可在微博里发私信给@中国电信新疆客服">你可在微博里发私信给@中国电信新疆客服</a>
-						<br> <span class="nimingcolor">匿名：</span>
-						<a href="http://weibo.com/5498430144/profile?topnav=1&wvr=6" title="车辆违章能被拍，执法部门却不能调监控查？">车辆违章能被拍，执法部门却不能调监控查？</a>
-						<br> <span class="nimingcolor">匿名：</span>
-						<a href="http://weibo.com/5498430144/profile?topnav=1&wvr=6" title="业主委员会已在收费，是由他们来维护？">业主委员会已在收费，是由他们来维护？</a>
+						<a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=20 append=append/]</a>
+						[#if a_has_next]
+							<br>
+						[/#if]
+						[/#list]
+						[/@cms_content_list]
 					</div>
 					<div class="right_biao">
 						<div class="biao1"></div>
@@ -1180,88 +904,46 @@
 						</a>
 					</div>
 					<div class="right_hei">
-						<form id="vote8" action="http://app.xinjiangnet.com.cn/?app=vote&controller=vote&action=ajaxvote" method="GET" onsubmit="return false;">
-							<input name="app" type="hidden" value="vote" />
-							<input name="controller" type="hidden" value="vote" />
-							<input name="action" type="hidden" value="ajaxvote" />
-							<input name="contentid" type="hidden" value="4974" />
-							<input name="type" type="hidden" value="radio" />
-							<input name="maxoptions" type="hidden" value="1" />
-							<div style="font-weight:bold;">您对百姓声音新的版面满意吗？如有建议可与我们联系。</div>
-							<label style="display: block;padding: 4px 0;font-size: 14px;">
-            <input type="radio" name="optionid" value="100">
-            满意                    </label>
-							<label style="display: block;padding: 4px 0;font-size: 14px;">
-            <input type="radio" name="optionid" value="101">
-            不满意                    </label>
-							<label style="display: block;padding: 4px 0;font-size: 14px;">
-            <input type="radio" name="optionid" value="102">
-            一般                    </label>
-							<div style="display:none;">
-								<input type="text" class="check-txt" name="seccode" style="float: left;width: 100px;" />
-								<img src="http://app.xinjiangnet.com.cn/?app=system&controller=seccode&action=image" id="seccodeimg" onclick="this.src='http://app.xinjiangnet.com.cn/?app=system&controller=seccode&action=image&id='+Math.random()*5;" style="cursor:pointer;padding-left: 5px;" alt="验证码,看不清楚?请点击刷新验证码" align="absmiddle" />
-								<a href="javascript:;" onclick="$(this).prev().click();" class="other">换一张？</a>
-							</div>
+						[@cms_vote id='11']
+						<form id="vote8" name="votes" action="${base}/vote.jspx" method="post" target="_blank">
+							<h3><p>${tag_bean.title?html}</p></h3>
+							<input type="hidden" name="voteId" value="${tag_bean.id}"/>
+      						<h3>${tag_bean.description?html}</h3>
+      						
+      						[#list tag_bean.subtopics as subTopic]
+								<div style="font-weight:bold;">
+									<!--<p>${subTopic_index+1},${subTopic.title?html}</p>-->
+								</div>
+								[#if subTopic.isRadio]
+          						[#list subTopic.voteItems as item]
+          						<label style="display: block;padding: 4px 0;font-size: 14px;">
+          							<input type="radio" name="itemIds${subTopic.id}" value="${item.id}"/>${item.title?html}
+          						</label>
+          						[/#list]
+          						[/#if]
+          					
+          						[#if subTopic.isMulti]
+          						[#list subTopic.voteItems as item]
+          							<span>
+          								<input type="checkbox" name="itemIds${subTopic.id}" value="${item.id}"  id="${item.id}"/>
+          								${item_index+1}.${item.title?html}
+          							</span>
+           							<img src="${item.picture!}"/>
+          						[/#list]
+          						[/#if]
+          						[#if subTopic.isText]
+          							<textarea name="reply" type="text"></textarea>
+          						[/#if]
+        						<input name="subIds" type="hidden" value="${subTopic.id}"/>
+        					[/#list]
 							<div class="center" style="padding: 5px 0 0 0;">
-								<button href="javascript:void(0);" data-role="submit" style="border:0;"><img src="/${res}/img/201306_ppxj_btn1.jpg"></button>
-								<button onclick="window.open('http://w.xinjiangnet.com.cn/2015/0201/4974.shtml');" style="border:0;"><img src="/${res}/img/201306_ppxj_btn2.jpg" ></button>
-								<button onclick="submit11(this)" style="border:0;display: none;">投票</button>&nbsp;&nbsp;
-								<span class="vote-message" style="display:none">投票成功，感谢您的参与</span>
+								<input type="submit" value="提交投票">
+								<a href="${base}/vote_result.jspx?voteId=${tag_bean.id}" class="result">查看投票结果</a>
 							</div>
 						</form>
+						[/@cms_vote]
 					</div>
-					<script type="text/javascript">
-						$.ajaxSetup({
-							jsonp: 'jsoncallback'
-						});
-
-						function vote(url, data, callback) {
-							$.getJSON(url + (url.indexOf('?') > -1 ? '&' : '?') + 'jsoncallback=?', data, function(json) {
-								$.isFunction(callback) && callback(json);
-							});
-						}
-
-						function submit11(obj) {
-							if(obj === null) obj = form.find('[data-role=submit]');
-							var form = $('#vote8'),
-								url = form.attr('action'),
-								type = form.find('[name=type]').val(),
-								maxoptions = parseInt(form.find('[name=maxoptions]').val()),
-								lock = false;
-							contentid = form.find('[name=contentid]').val();
-							if(lock) return false;
-							var checkedLength = form.find(':checked').length;
-							if(!checkedLength) {
-								alert('请选择投票选项');
-								return false;
-							}
-							if(type == 'checkbox' && maxoptions && maxoptions < checkedLength) {
-								alert('最多可以选择 ' + maxoptions + ' 项');
-								return false;
-							}
-							lock = true;
-							vote(url, decodeURIComponent(form.serialize()), function(json) {
-								if(json && json.state) {
-									if(typeof(obj) == "undefined") obj = $('#vote8').find('[data-role=submit]');
-									var button = obj;
-									button.onclick = null;
-									$('.vote-message').show();
-									button.remove()
-								} else {
-									lock = false;
-									alert(json && json.error || '投票失败，请重新尝试');
-								}
-							});
-							return false;
-						}
-						var form = $('#vote8'),
-							url = form.attr('action'),
-							button2 = form.find('[data-role=submit]');
-						button2.seccode({
-							form: form,
-							validate: submit11
-						});
-					</script>
+					 
 					<div class="right_biao">
 						<div class="biao1"></div>
 						<a href="http://www.xinjiangnet.com.cn/list/s255/">
