@@ -7,7 +7,6 @@
 	<!--<![endif]-->
 
 	<head>
-		<meta charset="UTF-8">
 		[#include '../include/newsMeta.html']
 		<base target="_blank">
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
@@ -188,38 +187,15 @@
 				<div id="nav">
 					<ul>
 						<li>
-							<a href="http://www.xinjiangnet.com.cn/bxsy">首页</a>
+							<a href="bxsy/index.jhtml">首页</a>
 						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/xwzx/bxsy/rdtp/">热点图片</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/xwzx/bxsy/rdjj/">热点聚焦</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/xwzx/bxsy/msgz/">民生关注</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/xwzx/bxsy/shwq/">生活维权</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/xwzx/bxsy/mspl/">民生评论</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/xwzx/bxsy/bxsyzb/">百姓声音周报</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/xwzx/bxsy/lst/">律师解答</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/xwzx/bxsy/wsxfs/">网上行风</a>
-						</li>
-						<li>
-							<a href="http://bbs.xinjiangnet.com.cn/portal.php">论坛</a>
-						</li>
-						<li>
-							<a href="http://special.xinjiangnet.com.cn/150212/index.shtml">舆情订阅</a>
-						</li>
+						[@cms_channel_list parentId='128']
+						[#list tag_list as a]
+							<li>
+								<a href="${a.url}">${a.name}</a>
+							</li>
+						[/#list]
+						[/@cms_channel_list]
 					</ul>
 				</div>
 			</div>
@@ -465,7 +441,7 @@
 							<ul style="height: 25px;">
 								<li class="xp1">[${g.ctg.name!}]</li>
 								<li class="xp2" style="text-align: left;">
-									<a href="">[@text_cut s=g.titleHtml len=17 append=append/]</a>
+									<a href="${g.id}">[@text_cut s=g.titleHtml len=17 append=append/]</a>
 								</li>
 								<li class="xp3">[#if g.replayTime??] ${g.replayTime?string("yyyy-MM-dd：HH:mm:ss")} [/#if]</li>
 								<li class="xp4">

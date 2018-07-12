@@ -1,0 +1,1167 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh-CN">
+	<!--<![endif]-->
+	<head>
+		[#include '../include/newsMeta.html']
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-index.css" />
+		<script type="text/javascript" src="/${res}/js/cmstop-common.js"></script>
+		<!--[if lt IE 9 ]>
+			<script type="text/javascript" src="/${res}/js/modernizr.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="/${res}/js/config.js"></script>
+		<script type="text/javascript" src="/${res}/js/jquery.js"></script>
+		<script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
+		<link rel="stylesheet" type="text/css" href="/${res}/js/validator/style.css" />
+		<script type="text/javascript" src="/${res}/js/cmstop.validator.js"></script>
+		<style>
+			footer p {
+				color: #000;
+			}
+			footer a {
+				color: #0B3B8C;
+				line-height: 18px;
+			}
+			.cmstop-sound {
+				height: 800px;
+				width: 611px;
+				margin-top: 10px;
+				margin-bottom: 15px;
+				border: none;
+			}
+			.sound-ebook .ov {
+				margin-bottom: 20px;
+			}
+			.sound-ebook .fieldtitle {
+				color: #ed6600;
+				font-weight: bold;
+				text-align: left;
+				font-size: 14px;
+			}
+			.select-name {
+				width: 78px;
+				text-align: right;
+				padding-right: 20px;
+				font-size: 14px;
+				color: #333;
+				line-height: 28px;
+				float: left;
+			}
+			.type-box {
+				margin-left: 30px;
+				margin-top: 5px;
+				color: #333;
+				float: left;
+				_display: inline;
+				font-size: 14px;
+				line-height: 24px;
+			}
+			.type-box input {
+				margin-left: 5px;
+			}
+			.column .column-aside {
+				width: 611px;
+				float: left;
+				_display: inline;
+			}
+			.column .column-main {
+				width: 340px;
+				float: right;
+				_display: inline;
+			}
+			.texts-content {
+				font-family: 楷体_GB2312;
+				font-size: 14px;
+				line-height: 22px;
+				text-align: left;
+				color: #333;
+				border: none;
+			}
+			.cmstop-area .title-head .title .more {
+				font-size: 14px;
+				font-weight: bold;
+				line-height: 30px;
+				float: right;
+				_display: inline;
+				color: #666;
+				margin-right: 6px;
+			}
+			.cmstop-area .other3-links {
+				overflow: hidden;
+				_zoom: 1;
+				padding: 5px 10px 1px;
+				background-color: #f2f2f2;
+				text-align: center;
+			}
+			.cmstop-area .other3-links .title1 {
+				float: left;
+				_display: inline;
+				width: 15%;
+				font-weight: bold;
+			}
+			.cmstop-area .other3-links .title2 {
+				float: left;
+				_display: inline;
+				width: 60%;
+				font-weight: bold;
+			}
+			.cmstop-area .other3-links .title3 {
+				float: left;
+				_display: inline;
+				width: 25%;
+				font-weight: bold;
+			}
+			.cmstop-area .other3-links .item1 {
+				float: left;
+				_display: inline;
+				width: 15%;
+			}
+			.cmstop-area .other3-links .item2 {
+				float: left;
+				_display: inline;
+				width: 60%;
+			}
+			.cmstop-area .other3-links .item3 {
+				float: left;
+				_display: inline;
+				width: 25%;
+			}
+			/**/
+			.table3_list {
+				overflow: hidden;
+				_zoom: 1;
+				margin-bottom: 5px;
+			}
+			.table3_list .title {
+				overflow: hidden;
+				_zoom: 1;
+				height: 25px;
+				line-height: 25px;
+				background: #d9d9d9;
+				padding: 0 7px;
+				font-weight: bold;
+				text-align: center;
+			}
+			.table3_list .col1 {
+				color: #333333;
+				width: 30%;
+				float: left;
+				_display: inline;
+				overflow: hidden;
+				_zoom: 1;
+			}
+			.table3_list .col2 {
+				width: 47%;
+				float: left;
+				_display: inline;
+				overflow: hidden;
+				_zoom: 1;
+				padding-left: 7px;
+			}
+			.table3_list .col3 {
+				width: 20%;
+				float: left;
+				_display: inline;
+				overflow: hidden;
+				_zoom: 1;
+				padding-left: 7px;
+			}
+			.table3_list ul {
+				overflow: hidden;
+				_zoom: 1;
+			}
+			.table3_list ul li {
+				line-height: 25px;
+				height: 25px;
+				overflow: hidden;
+				_zoom: 1;
+				padding: 0 0 0 7px;
+			}
+			.table3_list ul .bg-f4f4 {
+				background: #f4f4f4;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		[#include '../content/news_header.html'/]
+		<section class="column">
+			<!-- 左侧边栏 -->
+			<aside class="column-aside left-menu">
+				<div class="cmstop-area">
+					<div class="inner">
+						<div class="title-head">
+							<em class="ico"></em>
+							<div class="title">
+								<a title="留言问题" class="words">查看留言 </a>
+							</div>
+						</div>
+						<div class="h-pic clear">
+							<div class="texts">
+								<!-- 留言回复 -->
+								<div class="sound-ebook">
+									<div class="ov">
+										<div class="fieldtitle">留言内容：</div>
+										<div style="font-size: 16px;color: #373737;font-weight: bold;text-align: center;">投诉乌鲁木齐卡子湾车管所</div>
+										<div class="type-box">
+											<!--textarea自适应高度2015-1-21-->
+											<textarea style='border: 0;width:550px;font-size: 14px;line-height:2.0' cols="70" rows=5 onpropertychange='this.style.posHeight=this.scrollHeight' readonly="">
+											
+											[@cms_guestbook_list siteId='1' checked='1']
+											[#list tag_list as g]
+												${g.contentHtml}
+											[/#list]
+											[/@cms_guestbook_list]
+
+											</textarea>
+											<script>
+												$("textarea").each(function() {
+													$(this).css("height", $(this).attr("scrollHeight"));
+												});
+											</script>
+										</div>
+									</div>
+									<div class="ov">
+										<div class="fieldtitle">受理部门：市公安局交警支队</div>
+										<div class="fieldtitle">处理单位回复：</div>
+										<div style="margin: 20px;">
+											<form method="POST" id="soundreply_form">
+												<input id="id" name="id" class="src-txt" value="12847" type="hidden" />
+												<input id="deptid" name="accept_org" type="hidden" class="src-txt" value="12" />
+												<input id="title" name="title" type="hidden" class="src-txt" value="投诉乌鲁木齐卡子湾车管所" />
+												<input id="tourist_txt" type="hidden" name="username" class="src-txt" value="张先生" />
+												<div class="ov">
+													<label class="select-name" style="width:100px;">处理内容：</label>
+													<textarea id="reply_txt" name="reply" cols="60" rows="5" class="content required"></textarea><em class="info"></em>
+												</div>
+												<div class="ov">
+													<label class="select-name" style="width:100px;">处理部门密码：</label>
+													<input id="org_key" name="org_key" type="text" class="src-txt required" /><em class="must">*</em>
+													<em class="info"></em>
+												</div>
+												<div class="btn-submit">
+													<input type="button" value="提交" class="btn-common" onclick="ajaxReply($('#soundreply_form'));" />
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="ov">
+										<div class="fieldtitle">评论信息：</div>
+										<div class="type-box">
+											无评论
+										</div>
+									</div>
+									<div class="dotted"></div>
+									<div class="dotted"></div>
+									<div class="fieldtitle">评论留言：</div>
+									<div style="margin: 20px;">
+										<form method="POST" id="soundcomment_form">
+											<input type="hidden" name="appealid" id="appealid" value="12847" />
+											<div class="ov">
+												<label class="select-name" style="width:100px;">昵称：</label>
+												<input id="username" name="username" type="text" class="src-txt required" />
+												<input type="checkbox" onclick="document.getElementById('username').value=this.value;" value="匿名" /> 匿名
+												<em class="info"></em>
+											</div>
+											<div class="ov">
+												<label class="select-name" style="width:100px;">评论内容：</label>
+												<textarea id="comment_content" name="content" cols="60" rows="5" class="content required"></textarea><em class="info"></em>
+											</div>
+											<div class="btn-submit">
+												<input type="button" value="保存评论" style="width:100px;background: transparent url(/${res}/css/images/btn-submit.png) no-repeat -1px -34px;" class="btn-common" onclick="ajaxComment($('#soundcomment_form'));" />
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dotted"></div>
+				</div>
+			</aside>
+			<!-- @end 左侧边栏 -->
+			<!--  右侧边栏 -->
+			<section class="column-main news-list-box" id="tabcontent">
+				<!--  百姓声音功能界面中右侧公共模板 -->
+				<style>
+					/*思拓专区*/
+					.cmstop-area {
+						margin-top: 9px;
+					}
+					.cmstop-area .inner {
+						border: 1px solid #d6d6d6;
+						overflow: hidden;
+						_zoom: 1;
+					}
+					.cmstop-area .title-head {
+						height: 30px;
+						background: transparent url('/${res}/img/sprite-bar.png') repeat-x 0 0;
+					}
+					.cmstop-area .title-head .title .words {
+						color: #cc0000;
+						font-size: 14px;
+						font-weight: bold;
+						line-height: 30px;
+					}
+					.cmstop-area .title-head .link {
+						float: right;
+						_display: inline;
+						line-height: 30px;
+					}
+					.cmstop-area .title-head .ico {
+						float: left;
+						_display: inline;
+					}
+					.cmstop-area .title-head .ico {
+						background: transparent url('/${res}/img/sprite-ico.png') no-repeat -60px -160px;
+						width: 16px;
+						height: 30px;
+					}
+					.cmstop-area .title-head .ico {
+						margin-right: 9px;
+					}
+					.cmstop-area .dotted {
+						margin: 0 9px;
+					}
+					.cmstop-area .h-pic {
+						margin: 14px 9px;
+					}
+					.cmstop-area .h-pic .thumb {
+						border: 1px solid #ccc;
+					}
+					.cmstop-area .h-pic .summary {
+						height: 40px;
+					}
+					.cmstop-area .list-point {
+						margin: 9px;
+					}
+					.cmstop-area .other-links {
+						overflow: hidden;
+						_zoom: 1;
+						padding: 9px;
+					}
+					.cmstop-area .other-links .item {
+						float: left;
+						_display: inline;
+						width: 50%;
+					}
+					.cmstop-area .other-links .ico {
+						background: transparent url(/${res}/img/index-ico.png) no-repeat -3px -47px;
+						width: 16px;
+						height: 14px;
+						margin-right: 5px;
+						margin-left: 9px;
+					}
+					.cmstop-area .other-links .n1 {
+						background-position: -2px -14px;
+					}
+					.cmstop-area .title-head .title .more {
+						font-size: 14px;
+						font-weight: bold;
+						line-height: 30px;
+						float: right;
+						_display: inline;
+						color: #666;
+						margin-right: 6px;
+					}
+					.cmstop-area .other3-links {
+						overflow: hidden;
+						_zoom: 1;
+						padding: 5px 10px 1px;
+						background-color: #f2f2f2;
+						text-align: center;
+					}
+					.cmstop-area .other3-links .title1 {
+						float: left;
+						_display: inline;
+						width: 15%;
+						font-weight: bold;
+					}
+					.cmstop-area .other3-links .title2 {
+						float: left;
+						_display: inline;
+						width: 60%;
+						font-weight: bold;
+					}
+					.cmstop-area .other3-links .title3 {
+						float: left;
+						_display: inline;
+						width: 25%;
+						font-weight: bold;
+					}
+					.cmstop-area .other3-links .item1 {
+						float: left;
+						_display: inline;
+						width: 15%;
+					}
+					.cmstop-area .other3-links .item2 {
+						float: left;
+						_display: inline;
+						width: 60%;
+					}
+					.cmstop-area .other3-links .item3 {
+						float: left;
+						_display: inline;
+						width: 25%;
+					}
+					/**/
+					.righttab3_list {
+						overflow: hidden;
+						_zoom: 1;
+						margin-bottom: 5px;
+					}
+					.righttab3_list .title {
+						overflow: hidden;
+						_zoom: 1;
+						height: 25px;
+						line-height: 25px;
+						background: #d9d9d9;
+						padding: 0 7px;
+						font-weight: bold;
+						text-align: center;
+					}
+					.righttab3_list .col1 {
+						color: #333333;
+						width: 15%;
+						float: left;
+						_display: inline;
+						overflow: hidden;
+						text-align: center;
+					}
+					.righttab3_list .col2 {
+						width: 60%;
+						float: left;
+						_display: inline;
+						overflow: hidden;
+						_zoom: 1;
+						padding-left: 7px;
+					}
+					.righttab3_list .col3 {
+						width: 20%;
+						float: left;
+						_display: inline;
+						overflow: hidden;
+						text-align: center;
+						padding-left: 7px;
+					}
+					.righttab3_list ul {
+						overflow: hidden;
+						_zoom: 1;
+					}
+					.righttab3_list ul li {
+						line-height: 25px;
+						height: 25px;
+						overflow: hidden;
+						_zoom: 1;
+						padding: 0 0 0 7px;
+					}
+					.righttab3_list ul .bg-f4f4 {
+						background: #f4f4f4;
+					}
+					.texts-content {
+						font-family: 楷体_GB2312;
+						font-size: 14px;
+						line-height: 22px;
+						text-align: left;
+						color: #333;
+						border: none;
+					}
+				</style>
+				<div class="cmstop-area">
+					<div class="inner">
+						<div class="title-head">
+							<em class="ico"></em>
+							<div class="title">
+								<a title="频道简介" class="words">频道简介 </a>
+							</div>
+						</div>
+						<div class="h-pic clear">
+							<div class="texts">
+								<p class="texts-content" style="text-indent: 2em;line-height: 150%;">百姓声音定位为网友服务，为百姓服务的互动式栏目，立足于 “倾听民声，呼应诉求”。通过这一平台，旨在行政职能部门与百姓之间架起一座沟通的桥梁，推进百姓网络“问政”、“问事”的常态化、制度化；旨在切实想网友之所想，力争解网友之所难，本网与网友之间架起一座信任的桥梁！对网民反映的问题，栏目编辑都及时与相关单位联系落实，尽心快速回复，网民反映良好，栏目多次收到网友的跟帖表扬。并于2014年，在第十一届中国城市网盟年会评比中，获得“品牌栏目优秀奖”。 </p>
+								<div style="width: 300px; height: 30px; text-align: center; margin: 0px auto;">
+									<button style="border-radius: 5px; height: 25px; background-color: rgb(251, 138, 0); color: rgb(255, 255, 255); font-size: 12px; font-weight: bold; letter-spacing: 3px; margin: 0px auto; width: 90px;" onclick="window.open('http://app.xinjiangnet.com.cn/?app=sound&controller=index&action=ebook')">我要投诉</button>
+									<div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dotted"></div>
+				</div>
+				<div class="cmstop-area">
+					<div class="inner">
+						<div class="title-head">
+							<em class="ico"></em>
+							<div class="title">
+								<a title="郑重声明" class="words">百姓声音周报</a>
+								<a class="link" href="" target="_bank">更多<span>&gt;&gt;</span></a>
+							</div>
+						</div>
+						<div class="h-pic clear">
+							<div class="texts" style="line-height: 150%;">
+								<div class="right_bxsy" style="padding-left: 10px;">
+									&middot;
+									<a href="http://www.xinjiangnet.com.cn/2018/0413/2063992.shtml" title="百姓声音周报（2018年3月28日至2018年4月3日）">百姓声音周报（2018年3月28日至2018年4月3日）</a>
+									<br> &middot;
+									<a href="http://www.xinjiangnet.com.cn/2018/0413/2063991.shtml" title="百姓声音周报（2018年3月21日至2018年3月27日）">百姓声音周报（2018年3月21日至2018年3月27日）</a>
+									<br> &middot;
+									<a href="http://www.xinjiangnet.com.cn/2018/0328/2059443.shtml" title="百姓声音周报（2018年3月14日至2018年3月20日）">百姓声音周报（2018年3月14日至2018年3月20日）</a>
+									<br> &middot;
+									<a href="http://www.xinjiangnet.com.cn/2018/0319/2056817.shtml" title="百姓声音周报（2018年2月28日至2018年3月13日）">百姓声音周报（2018年2月28日至2018年3月13日）</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dotted"></div>
+				</div>
+				<div class="cmstop-area">
+					<div class="inner">
+						<div class="title-head">
+							<em class="ico"></em>
+							<div class="title">
+								<a title="满意率排行" class="words">职能部门</a>
+								<a class="link" href="?app=sound&controller=index&action=huifulist" target="_bank">更多<span>&gt;&gt;</span></a>
+							</div>
+						</div>
+						<div class="righttab3_list">
+							<ul>
+								<li>
+									<a href="" class="col1">1</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=兵团第12师">兵团第12师</a></span>
+								</li>
+								<li class="bg-f4f4">
+									<a href="" class="col1">2</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=红山一卡通公司">红山一卡通公司</a></span>
+								</li>
+								<li>
+									<a href="" class="col1">3</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=市公安消防支队">市公安消防支队</a></span>
+								</li>
+								<li class="bg-f4f4">
+									<a href="" class="col1">4</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=自治区旅游局">自治区旅游局</a></span>
+								</li>
+								<li>
+									<a href="" class="col1">5</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=兵团环保局">兵团环保局</a></span>
+								</li>
+								<li class="bg-f4f4">
+									<a href="" class="col1">6</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=3·15消费投诉">3·15消费投诉</a></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="cmstop-area">
+					<div class="inner">
+						<div class="title-head">
+							<em class="ico"></em>
+							<div class="title">
+								<a title="满意率排行" class="words">回复率排行</a>
+								<a class="link" href="?app=sound&controller=index&action=huifulist" target="_bank">更多<span>&gt;&gt;</span></a>
+							</div>
+						</div>
+						<ul class="list other3-links">
+							<li class="title1">排名</li>
+							<li class="title2">部门</li>
+							<li class="title3">回复率</li>
+						</ul>
+						<ul class="list other3-links">
+							<li class="item1">1</li>
+							<li class="item2">市审计局</li>
+							<li class="item3">100.00%</li>
+						</ul>
+						<ul class="list other3-links">
+							<li class="item1">2</li>
+							<li class="item2">市地震局</li>
+							<li class="item3">100.00%</li>
+						</ul>
+						<ul class="list other3-links">
+							<li class="item1">3</li>
+							<li class="item2">市老龄办</li>
+							<li class="item3">100.00%</li>
+						</ul>
+						<ul class="list other3-links">
+							<li class="item1">4</li>
+							<li class="item2">市图书馆</li>
+							<li class="item3">100.00%</li>
+						</ul>
+						<ul class="list other3-links">
+							<li class="item1">5</li>
+							<li class="item2">自治区旅游局</li>
+							<li class="item3">100.00%</li>
+						</ul>
+					</div>
+				</div>
+				<div class="cmstop-area">
+					<div class="inner">
+						<div class="m-head title-head">
+							<a class="link" href="?app=sound&controller=index&action=ebooklist" target="_bank">更多&gt;&gt;</a>
+							<em class="ico"></em>
+							<div class="title">
+								<a href="" title="留言排行" class="words">留言排行</a>
+							</div>
+						</div>
+						<div class="righttab3_list">
+							<div class="title">
+								<a href="" class="col1">排序</a>
+								<span class="col2">部门</span>
+								<span class="col3">留言数</span>
+							</div>
+							<ul>
+								<li>
+									<a href="" class="col1">1</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=市房产局">市房产局</a></span>
+									<span class="col3">572</span>
+								</li>
+								<li class="bg-f4f4">
+									<a href="" class="col1">2</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=市公安局交警支队">市公安局交警支队</a></span>
+									<span class="col3">450</span>
+								</li>
+								<li>
+									<a href="" class="col1">3</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=市交通局">市交通局</a></span>
+									<span class="col3">438</span>
+								</li>
+								<li class="bg-f4f4">
+									<a href="" class="col1">4</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=市公积金管理中心">市公积金管理中心</a></span>
+									<span class="col3">416</span>
+								</li>
+								<li>
+									<a href="" class="col1">5</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=乌鲁木齐市人力资源和社会保障局">乌鲁木齐市人力资源和社会保障局</a></span>
+									<span class="col3">361</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- @end 右侧边栏 -->
+		</section>
+		<script type="text/javascript">
+			//JS
+			var orgId = 12;
+			var maxText = 300;
+			var needReply = 1;
+			var needLogin = 0; //是否需要登录后留言
+			var userid = 0;
+			var $regexs = {
+				email: /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
+				telephone: /^((\(\d{2,3}\))|(\d3\-))?(\(0\d{2,3}\)|0\d{2,3}-)?[1-9]\d{6,7}(\-\d{1,4})?$/,
+				mobile: /^((\(\d{2,3}\))|(\d3\-))?((13\d9)|(15[389]\d8))$/,
+				homepage: /^http:\/\/[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&_~`@[\]\':+!]*([^<>\"])*$/,
+				qq: /^[1-9]\d{4,8}$/,
+				msn: /^[1-9]\d{4,8}$/
+			};
+			function validateGuesetBook(jQ) {
+				if(needLogin == 1 && userid == 0) {
+					alert('请登录后留言');
+					return false;
+				}
+				var inputs = jQ.find('input,textarea');
+				var name;
+				var counter = inputs.length + 1;
+				inputs.each(function() {
+					name = this.name;
+					var d = $(this);
+					var value = d.val()
+					if(d.hasClass('required') && value == '') {
+						d.siblings('.info').html('必须填写');
+						counter--;
+					} else if(value != '' && $regexs[name] != undefined) {
+						if(!$regexs[name].test(value)) {
+							d.siblings('.info').html(name + '格式不正确');
+							counter--;
+						}
+					} else if(name == 'seccode') {
+						//验证码
+						$.getJSON(
+							'?app=sound&controller=index&action=seccode&seccode=' + value,
+							function(json) {
+								if(json.state) {} else {
+									d.siblings('.info').html('验证码不正确');
+									counter--;
+								}
+							}
+						);
+					}
+					if(name == 'content') {
+						if(parseInt($('#content_length > b').html()) > maxText) {
+							$('#content_length').siblings('.info').html('留言过长');
+							counter--;
+						}
+					}
+				});
+				if(counter < inputs.length + 1) return false;
+				else return true;
+			}
+			//提交留言回复内容
+			function ajaxReply() {
+				if(!validateGuesetBook($('#soundreply_form'))) {
+					return false;
+				}
+				$.ajax({
+					url: '?app=sound&controller=index&action=reply',
+					dataType: 'json',
+					data: $('#soundreply_form').serialize(),
+					type: 'POST',
+					success: function(json) {
+						if(json.state) {
+							alert('回复成功!请等待网站管理员审核！');
+						} else {
+							if(json.error) {
+								alert('评论失败！原因是：' + json.error);
+							} else {
+								alert('回复失败');
+							}
+						}
+					},
+					error: function() {
+						alert('请求异常');
+					},
+					complete: function() {}
+				});
+			}
+			//提交留言评论内容
+			function ajaxComment(frm_comment) {
+				var f = this;
+				var data = frm_comment.serialize();
+				//btn.attr('disabled', true);
+				$.ajax({
+					url: '?app=sound&controller=index&action=addcomment',
+					dataType: 'json',
+					data: data,
+					type: 'POST',
+					success: function(json) {
+						if(json.state) {
+							alert('评论成功!请等待网站管理员审核！');
+						} else {
+							if(json.error) {
+								alert('评论失败！原因是：' + json.error);
+							} else {
+								alert('评论失败！');
+							}
+						}
+					},
+					error: function() {
+						alert('请求异常');
+					},
+					complete: function() {
+						//btn.attr('disabled', false).removeAttr('disabled');
+					}
+				});
+			}
+			function opencommentReply(e) {
+				var s = $(e);
+				var cls = s.attr('class');
+				if(cls == 'comment_reply_btn') {
+					var idstr = s.parent().attr("id");
+					var id = idstr.split("_")[2];
+					var commentReplyForm = '<form style="padding-left: 50px" action="?app=sound&controller=index&action=commentreply" onSubmit="return commentreply(this)">' +
+						'部门密码：<input type="hidden" name="id" value="' + id + '">' +
+						'<input type="hidden" name="org" value="' + orgId + '">' +
+						'<input type="password" name="passcode"></br>' +
+						'回复内容：</br><textarea name="reply" cols="40" rows="3"></textarea></br>' +
+						'<input type="submit"></form>';
+					s.parent().append($(commentReplyForm));
+					s.text('收起回复');
+					s.removeClass('comment_reply_btn');
+					s.addClass('comment_reply_cancal_btn')
+				} else if(cls == 'comment_reply_cancal_btn') {
+					s.parent().find('form').remove();
+					s.text('回复');
+					s.removeClass('comment_reply_cancal_btn');
+					s.addClass('comment_reply_btn')
+				}
+			}
+			function commentreply(e) {
+				var data = $(e).serialize();
+				$.ajax({
+					url: '?app=sound&controller=index&action=commentreply',
+					dataType: 'json',
+					data: data,
+					type: 'POST',
+					success: function(json) {
+						if(json.state) {
+							$(e).remove();
+							$("button.comment_reply_cancal_btn").parent();
+							$("button.comment_reply_cancal_btn").remove();
+						} else {
+							if(json.error) {
+								alert(json.error);
+							} else {
+								alert('添加失败');
+							}
+						}
+					},
+					error: function() {
+						alert('请求异常');
+					},
+					complete: function() {}
+				});
+				return false;
+			}
+			$(document).ready(function() {
+				GoTop.init({
+					dom: "<div class='mod-gotop'><a hre=''>返回顶部</a></div>",
+					rel: $(".header-topbar"),
+					dir: 'right'
+				});
+			});
+		</script>
+		<!-- footer -->
+		<div style="width:100%; height:10px;">
+		</div>
+		<div style="width:980px; margin:0px auto;">
+			<img src="http://img.xinjiangnet.com.cn/templates/default/img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
+			<map name="Map" id="Map">
+      			<area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
+      			<area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
+      			<area shape="rect" coords="718,29,846,61" href="http://epaper.xinjiangnet.com.cn" />
+      			<area shape="rect" coords="866,28,973,58" href="#" />
+    		</map>
+		</div>
+		<div style="width:100%; height:10px;">
+		</div>
+		<div style="width:100%;">
+			<center>
+				<script type="text/javascript">
+					function hzmt(num2) {
+						for(jj1 = 1; jj1 < 5; jj1++) {
+							document.getElementById("bdshs" + jj1).style.borderBottom = "2px solid #dddddd";
+							document.getElementById("bdshas" + jj1).style.display = "none"
+						}
+						document.getElementById("bdshs" + num2).style.borderBottom = "2px solid #F00";
+						document.getElementById("bdshas" + num2).style.display = "block"
+					}
+				</script>
+				<div style="width:980px; margin:0px auto;">
+					<div style="width:100px; float:left; border-bottom:2px solid #F00;" id="bdshs1">
+						<span onMouseMove="javascript:hzmt(1)"><a href="" style="font-size:14px; line-height:30px;">地方网媒</a></span>
+					</div>
+					<div style="width:200px; float:left;" id="bdshs2">
+						<span onMouseMove="javascript:hzmt(2)"><a href="" style="font-size:14px; line-height:30px;">“一带一路”网络联盟</a></span>
+					</div>
+					<div style="width:100px;float:left;" id="bdshs3">
+						<span onMouseMove="javascript:hzmt(3)"><a href="" style="font-size:14px; line-height:30px;">合作媒体</a></span>
+					</div>
+					<div style="width:100px;float:left;" id="bdshs4">
+						<span onMouseMove="javascript:hzmt(4)"><a href="" style="font-size:14px; line-height:30px;">城市网盟</a></span>
+					</div>
+					<div style="width:480px;float:right;">
+					</div>
+				</div>
+				<div style="clear:both;">
+				</div>
+				<div style="width:978px; border:0px solid #CCC; text-align:left; line-height:26px; font-size:12px;" id="bdshas1">
+					&nbsp;<span style="display:inline-block;"><a class="icon-blank"  href="http://wlmq.wenming.cn/">乌鲁木齐文明网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.bz.cn/">巴州在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xj120.com/">新疆健康网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://wlmq.house.sina.com.cn/">乌鲁木齐房产网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xjhr.com/">新疆人才网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xjtour.com/">新疆旅游网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.wlmq.com/">乌鲁木齐网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.boertala.com/">博尔塔拉新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.altxw.com/"> 阿勒泰新闻网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.shznews.com/">石河子新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xjfzb.com/">新疆法制报</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.smxdaily.com.cn/">西部在线  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xjws.gov.cn">乌苏市政府网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.uetd.gov.cn/">经济技术开发区（头屯河区）网站  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xjtsq.gov.cn/">天山区人民政府网站  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xjwh.gov.cn/">新疆文化网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.jrxjnet.com/">今日新疆  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.tlfw.net/">吐鲁番网   </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xjksxw.com/"> 喀什新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xjpeace.cn/">新疆平安网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.qiucinews.com/">龟兹新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.fzxj.cn/">法治新疆</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.kelamayi.com.cn/">克拉玛依网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.ylxw.com.cn/">伊犁新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.cjrb.cn/">昌吉新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.bt.chinanews.com/">兵团新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://epaper.ts.cn/">新疆都市报  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.iyaxin.com/">亚心网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.wlmqzs.com/">乌鲁木齐电台 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xjtvs.com.cn/">虎鱼网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.hongshannet.cn/">红山网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="www.xj.chinanews.com"> 新疆新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xjbs.com.cn/">新疆新闻在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xjdaily.com.cn/">新疆日报网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xinjiang.gov.cn/">新疆维吾尔自治区人民政府网</a></span>
+				</div>
+				<div style="width:978px; border:0px solid #CCC; text-align:left; line-height:26px; font-size:12px;" id="bdshas2">
+					&nbsp;<span style="display:inline-block;"><a class="icon-blank" href="http://www.cqnews.net/">华龙网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.sznews.com/">深圳新闻网　</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.xinjiangnet.com.cn/">新疆网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.xmnn.cn/">厦门网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.qingdaonews.com/">青岛新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.qzwb.com/">泉州网　</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://dalian.runsky.com/">大连天健网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.hangzhou.com.cn/">杭州网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.cnnb.com.cn/">中国宁波网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.66wz.com/">温州网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.dayoo.com/">大洋网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.guilinlife.com/">桂林生活网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.changsha.cn/">星辰在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.longhoo.net/index.html">龙虎网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.yznews.com.cn/">扬州网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.jiaodong.net/">胶东在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.xiancn.com/">西安新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.kunming.cn/">昆明信息港</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.lanzhou.cn/">中国兰州网　</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.ycen.com.cn/">银川新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.my399.com/">哈尔滨新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.chengdu.cn/">成都全搜索</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.hkwb.net/">海口网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://news.cjn.cn/">长江网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.ylxw.com.cn/">伊犁新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.enorth.com.cn/">北方网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.qhnews.com/">青海新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.66wz.com/">温州新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.ycwb.com/">金羊网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.fznews.com.cn/">福州新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.lyd.com.cn/">洛阳网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.e23.cn/">舜网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.tlfw.net/">吐鲁番新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.hf365.com/">合肥在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.tynews.com.cn/">太原新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.baojinews.com/">宝鸡新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.gazx.org/">广安在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.2500sz.com/">名城苏州网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.zgzyw.com.cn/"> 中国张掖网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.dahuawang.com/">大华网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.snxw.com/">遂宁新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.zhoushan.cn/">舟山网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.gdzjdaily.com.cn/">湛江新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.zynews.com/">中原网　</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.kf.cn/">开封网　</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.zjknews.com/">张家口新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.hebei.com.cn/">长城网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.gatv.com.cn/">广安新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.txdzw.com/">大足网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.risesungroup.com/main/">浙江晨泰科技股份有限公司</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="">深圳市企业联合会</a></span>
+				</div>
+				<div style="width:978px; border:0px solid #CCC;text-align:left; line-height:26px; font-size:12px;display:none;" id="bdshas3">
+					&nbsp;<span style="display:inline-block;"><a href="http://www.iqilu.com/">齐鲁网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.s1979.com/">中国时刻网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://365jilin.com/">吉和网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.xuexiph.cn/">学习出版社 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.njdaily.cn/">南报网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.jfinfo.com/">丰华财经网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://mdj.focus.cn/">牡丹江房地产  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://media.sohu.com/">搜狐传媒 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.jyyuan.com/">江阴信息港  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.jinghua.cn/">京华网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://fenlei.baike.com/">互动百科 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.enshifdc.com/">恩施房产网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.chinawbsyxh.com/">中国晚报摄影学会网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.bjtvnews.com/">华北新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.zj3000.cn/">名城镇江网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.gxorg.com/">八桂网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.he-nan.com/">河南网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://nd.fjsen.com/">宁德新闻网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.hebnews.cn/">河北新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.bandao.cn/">半岛网</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.huamanche.com/">汽车网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.hljtv.com/">黑龙江网络广播电视台 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://news.iqilu.com/">齐鲁新闻 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://ndnews.oeeee.com/">奥一新闻 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.ynet.com/">北青网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.mzyfz.com/">民主与法制网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.rednet.cn/">红网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.edu-hb.com/">教育网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://www.0710fz.com/">襄阳房产网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://cnews.chinadaily.com.cn/">中国日报网 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://news.sohu.com/">搜狐 </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://news.sina.com.cn/">新浪  </a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://news.qq.com/">腾讯</a></span> &nbsp;
+					<span style="display:inline-block;"><a href="http://news.ifeng.com/">凤凰网  </a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="http://www.w010w.com.cn/index.html">全国网联</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank" href="www.jxnews.com.cn">中国江西网（大江网）</a></span>
+				</div>
+				<div style="width:978px; border:0px solid #CCC;text-align:left; line-height:26px; font-size:12px;display:none;" id="bdshas4">
+					&nbsp;<span style="display:inline-block;"><a class="icon-blank"  href="http://www.runsky.com">大连天健网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnnb.com.cn">中国宁波网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.sznews.com">深圳新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dayoo.com">广州大洋网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.qingdaonews.com">青岛新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cjn.cn">武汉长江网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.longhoo.net/index.html">南京龙虎网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hangzhou.com.cn">杭州网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.changsha.cn">星辰在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jiaodong.net">胶东在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xmnn.cn">厦门网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cqnews.net">重庆华龙网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.syd.com.cn">沈阳网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.e23.cn">济南舜网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ccnews.gov.cn">长春新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hf365.com">合肥在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.sjzdaily.com.cn">石家庄新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gywb.cn">贵阳新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ycen.com.cn">银川新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hkwb.net">中国海口网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ucatv.com.cn">乌鲁木齐信息港</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.shm.com.cn">水母网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gxnews.com.cn">广西新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xiancn.com">西安新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.my399.com">哈尔滨新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tynews.com.cn">太原新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zynews.com">郑州中原网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.qzwb.com">泉州网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.66wz.com">温州网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.yb983.com">延边信息港</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zyol.gz.cn">遵义在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zhoushan.cn">舟山网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.rzw.com.cn">日照网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jzfcol.com">荆州房产网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ncnews.com.cn">南昌新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.2500sz.com">名城苏州</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dehua.net">德化网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dqdaily.com">大庆网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lznews.cn">鲁中网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hz66.com">湖州在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gndaily.com">中国赣州网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnxz.com.cn">中国徐州网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.yznews.com.cn">扬州网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hj.cn">汉江传媒网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.aqnews.com.cn">安庆新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.leshan.cn">乐山新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ptxw.com">莆田新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xinjiangnet.com.cn">新疆网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dpcm.cn">牡丹江大鹏新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.srxww.com">上饶新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jjxw.cn">九江新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xsnet.cn">萧山网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.subaonet.com">苏州新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jznews.com.cn">荆州新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hlbrdaily.com.cn">呼伦贝尔日报网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ijjnews.com">晋江新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tznews.cn">泰州新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://dd.nen.com.cn">丹东新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.foshannews.net/">佛山新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tongliaowang.com">中国通辽网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnhan.com">汉网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.bzcm.net ">滨州传媒网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.chengdu.cn">成都全搜索</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.wfcmw.cn">潍坊传媒网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gdzjdaily.com.cn">湛江新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.wuhunews.cn">中国芜湖新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ch365.com.cn">巢湖在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.010lf.com">环京津新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cdyee.com">尚一网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.1545ts.com">东方泰山网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hynews.net">淮安新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hldbtv.com">葫芦岛广电网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.chinashishi.net">中国石狮网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jcbctv.com">晋城广电网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.kunming.cn">昆明信息港</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lygnews.com">连云港日报网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lcxw.cn">聊城新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnjxol.com">嘉兴在线</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.enorth.com.cn">北方网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.mnw.cn">闽南网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.sun0769.com">东莞阳光网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.shjnet.cn">松花江网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ahwang.cn">安徽网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.guilinlife.com">桂林生活网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zznews.cn">漳州新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xiancity.cn">西安网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lygmedia.com">连云港传媒网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jwb.com.cn">今晚网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ijntv.cn">济南网络广播电视台</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tielingcn.com">中国铁岭网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ybxww.com">宜宾新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zgzyw.com.cn">中国张掖网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ntjoy.com">江海明珠网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hctvnet.com">珲春新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hscbw.com">华声晨报网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lzbs.com.cn">兰州新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.wj001.com">武进新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hhhtnews.com">呼和浩特新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.weihai.tv">威海传媒网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lyd.com.cn">洛阳网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.fznews.com.cn">福州新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zkxww.com">周口网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.whnews.cn">威海新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hongshannet.cn">红山网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zjknews.com">张家口新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.txdzw.com">大足网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ilinyi.net">爱临沂网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.aksxw.com">阿克苏新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.e0734.com">中国衡阳新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gyxww.cn">广元新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cn3x.com.cn">三峡宜昌网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jmnews.cn">荆门新闻网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tibet.cn">中国西藏网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.aihami.com">楚秀网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xgrb.cn">孝感网</a></span> &nbsp;
+					<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnr.cn ">中国广播网</a></span>
+				</div>
+			</center>
+		</div>
+		<div style="width:100%; height:10px;">
+		</div>
+		<div style="width:100%; background-color:#000; border-top:2px solid #F00;height:100px;">
+			<div style="width:100%; height:10px;">
+			</div>
+			<center>
+				<footer class="foot">
+					<div class="foot-links">
+						<a href="http://www.xinjiangnet.com.cn/2016/1118/1689637.shtml" title="">关于我们</a>
+						<span href="" title="">| </span>
+						<a href="http://www.xinjiangnet.com.cn/2015/0202/6289.shtml" title="">联系我们</a>
+						<span href="" title="">| </span>
+						<a href="http://special.xinjiangnet.com.cn/160406-1/" title="">加入我们</a>
+						<span href="" title="">| </span>
+						<a href="http://www.xinjiangnet.com.cn/2015/0202/6275.shtml" title="">版权声明</a>
+						<span href="" title="">| </span>
+						<a href="http://www.xinjiangnet.com.cn/about/mobile.shtml" title="">手机访问</a>
+						<span href="" title="">| </span>
+						<a href="http://app.xinjiangnet.com.cn/map.php" title="">网站地图</a>
+						<span href="" title="">| </span>
+						<a href="http://app.xinjiangnet.com.cn/?app=guestbook" title="">留言反馈</a>
+						<span href="" title="">| </span>
+						<a href="http://app.xinjiangnet.com.cn/?app=contribution&controller=index&action=index" title="">我要投稿</a>
+					</div>
+					<p><span><a href="http://www.xinjiangnet.com.cn/2015/0319/1376235.shtml" target="_blank" class="littg">互联网新闻信息服务许可证：6512014002</a> </span><span>新ICP备10001213号-2  <span><a href="http://www.xinjiangnet.com.cn/2017/0510/1417370.shtml#g1417370=1" target="_blank" class="littg">广播电视节目制作经营许可证（新）字第66号</a></span><span><a href="http://www.xinjiangnet.com.cn/2015/1216/1503189.shtml" target="_blank" class="littg">信息网络传播视听节目许可证号：3110483</a></span></p>
+					<p>
+						<a href="" title="">版权所有：新疆网</a> 版权所有：Copyright © xinjiangnet.com.cn All Rights Reserved.&nbsp;&nbsp;
+						<a href="http://www.xinjiangnet.com.cn/2018/0119/2039852.shtml" title="">举报受理和处置管理办法</a>
+					</p>
+					<div style="width:100%; height:10px;">
+					</div>
+				</footer>
+			</center>
+		</div>
+		<center>
+			<table width="300" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="20"></td>
+				</tr>
+				<tr>
+					<td align="center" width="50%">
+						<a href="http://www.wgwj.gov.cn/article/articleClass.aspx?ClassID=257" target="_blank"><img src="http://www.xinjiangnet.com.cn/images/xjwwangjing110.gif" border="0" width="118" height="48" /></a>
+					</td>
+					<td align="center">
+						<a href="http://www.12377.cn/" target="_blank"><img src="http://www.xinjiangnet.com.cn/images/xjwblxxwf.gif" border="0" /></a>
+					</td>
+				</tr>
+				<tr>
+					<td height="20"></td>
+				</tr>
+			</table>
+		</center>
+		<link rel="stylesheet" type="text/css" href="/${res}/js/popmenu.css" media="all" />
+		<script type="text/javascript" src="/${res}/js/recommend.js"></script>
+		<!-- end footer -->
+	</body>
+</html>
