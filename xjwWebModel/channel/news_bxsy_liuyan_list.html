@@ -7,17 +7,16 @@
 	<!--<![endif]-->
 
 	<head>
-		<meta charset="UTF-8">
-		<title>百姓声音_新疆网</title>
+		[#include '../include/newsMeta.html']
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
 		<!--[if lt IE 9 ]>
-			<script type="text/javascript" src="/${res}/js/helper/modernizr.js"></script>
+			<script type="text/javascript" src="/${res}/js/modernizr.js"></script>
 		<![endif]-->
 		<script type="text/javascript" src="/${res}/js/config.js"></script>
 		<script type="text/javascript" src="/${res}/js/jquery.js"></script>
 		<script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
-		<link rel="stylesheet" type="text/css" href="/${res}/validator/style.css" />
-		<script type="text/javascript" src="/${res}/cmstop.validator.js"></script>
+		<link rel="stylesheet" type="text/css" href="/${res}/css/style.css" />
+		<script type="text/javascript" src="/${res}/js/cmstop.validator.js"></script>
 		<script type="text/javascript" src="/${res}/js/cmstop-common.js"></script>
 		<style>
 			.column .column-aside {
@@ -187,7 +186,125 @@
 	<body>
 		<!-- 头部 -->
 		[#include '../content/news_header.html'/]
-		
+		<!--新疆网logo-->
+		<style>
+			.headlogo {
+				width: 980px;
+				margin: 0;
+				padding: 0;
+				no-repeat left center;
+				height: 34px;
+				margin-bottom: 10px;
+				text-align: left;
+				position: relative;
+			}
+			
+			.headlogo span {
+				margin-left: 20px;
+				font-family: "微软雅黑";
+				font-size: 24px;
+				font-weight: 700;
+				color: #D33939;
+				line-height: 34px;
+			}
+			
+			.navbox {
+				width: 980px;
+				height: 40px;
+				margin: 10px auto;
+			}
+			
+			ul {
+				list-style-type: none;
+			}
+			
+			a {
+				text-decoration: none;
+				font-weight: normal;
+			}
+			
+			#nav ul {
+				border-top: 3px solid #8babd1;
+				border-bottom: 1px solid #DEDEDE;
+				border-left: 1px solid #DEDEDE;
+				width: 980px;
+				height: 36px;
+				margin: 0;
+				padding: 0px;
+			}
+			
+			#nav li {
+				width: 88px;
+				height: 36px;
+				font-size: 14px;
+				border-right: 1px solid #DEDEDE;
+				text-align: center;
+				line-height: 36px;
+				float: left;
+				margin-left: 0px;
+				padding: 0;
+			}
+			
+			#nav a {
+				display: block;
+				width: 87px;
+				height: 36px;
+				color: #000;
+			}
+			
+			#nav a:link {
+				color: #000;
+			}
+			
+			#nav a:hover {
+				color: #FFF;
+				background: #FFC443;
+				width: 87px;
+				height: 36px;
+			}
+		</style>
+		<div style="margin:10px auto; width:980px;">
+			<a href="http://www.xinjiangnet.com.cn/bxsy" alt="新疆网百姓声音"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjw_logo.png" /></a>
+			<span style="margin-left:20px; font-family:'微软雅黑'; font-size:24px; color:#D33939; font-weight:700;line-height:34px;">百姓声音</span>
+			<div style="float:right;top:10px;right:10px;width:200px;position: absolute;">
+				<div class="fl-l header-search-input ov ">
+					<form id="head_search" name="head_search" action="http://app.xinjiangnet.com.cn/" method="GET">
+						<input type="hidden" name="app" value="search">
+						<input type="hidden" name="controller" value="index">
+						<input type="hidden" name="action" value="search">
+						<input type="hidden" id="type" name="type" value="all">
+						<div class="divicon icon16x16 fl-r"></div>
+						<input type="text" id="head_wd" name="wd" class="searinput" style="margin-top:2px;" />
+					</form>
+				</div>
+				<a href="" class="m-header-search js-headsearch fl-l icon16x16"></a>
+				<script type="text/javascript">
+					$('#head_search .divicon').click(function() {
+						$('#head_search').submit();
+					});
+					$('#head_search').attr('Action', APP_URL);
+				</script>
+			</div>
+
+		</div>
+
+		<div class="navbox">
+			<!------导航开始----->
+			<div id="nav">
+				<ul>
+					<li>
+						<a href="bxsy/index.jhtml">首页</a>
+					</li>
+					[@cms_channel_list parentId='128']
+					[#list tag_list as a]
+						<li>
+							<a href="${a.url}">${a.name}</a>
+						</li>
+					[/#list]
+					[/@cms_channel_list]
+				</ul>
+			</div>
+		</div>
 		<section class="column">
 			<!-- 左侧边栏 -->
 			<aside class="column-aside left-menu">
@@ -356,8 +473,8 @@
 									margin: 5px;
 								}
 							</style>
-							<link rel="stylesheet" type="text/css" href="/${res}/css/pagination/style.css" />
-							<link rel="stylesheet" type="text/css" href="/${res}/css/tablesorter/style.css" />
+							<link rel="stylesheet" type="text/css" href="/${res}/css/style2.css" />
+							<link rel="stylesheet" type="text/css" href="/${res}/css/style1.css" />
 							<script type="text/javascript" src="/${res}/js/cmstop.js"></script>
 							<script type="text/javascript" src="/${res}/js/cmstop.table.js"></script>
 							<script type="text/javascript" src="/${res}/js/jquery.tablesorter.js"></script>
@@ -681,14 +798,16 @@
 						<div class="h-pic clear">
 							<div class="texts" style="line-height: 150%;">
 								<div class="right_bxsy" style="padding-left: 10px;">
+									
 									&middot;
-									<a href="http://www.xinjiangnet.com.cn/2018/0413/2063992.shtml" title="百姓声音周报（2018年3月28日至2018年4月3日）">百姓声音周报（2018年3月28日至2018年4月3日）</a>
-									<br> &middot;
-									<a href="http://www.xinjiangnet.com.cn/2018/0413/2063991.shtml" title="百姓声音周报（2018年3月21日至2018年3月27日）">百姓声音周报（2018年3月21日至2018年3月27日）</a>
-									<br> &middot;
-									<a href="http://www.xinjiangnet.com.cn/2018/0328/2059443.shtml" title="百姓声音周报（2018年3月14日至2018年3月20日）">百姓声音周报（2018年3月14日至2018年3月20日）</a>
-									<br> &middot;
-									<a href="http://www.xinjiangnet.com.cn/2018/0319/2056817.shtml" title="百姓声音周报（2018年2月28日至2018年3月13日）">百姓声音周报（2018年2月28日至2018年3月13日）</a>
+									[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+									[#list tag_list as a]
+									<a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=18 append=append/]</a>
+										[#if a_has_next]
+											<br> &middot;
+										[/#if]
+									[/#list]
+									[/@cms_content_list]									
 								</div>
 							</div>
 						</div>

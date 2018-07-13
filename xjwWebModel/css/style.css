@@ -40,7 +40,7 @@
 }
 
 .validator-msg {
-    background: #fff url(images/icons.gif) no-repeat -25px -75px;
+    background: #fff url(../img/icons.gif) no-repeat -25px -75px;
     border: 1px solid #fff;
     display: inline;
     margin-left: 5px;
@@ -87,7 +87,7 @@
     *margin-left: 5px;
     width: 220px;
     height: 20px;
-    background: transparent url(images/levels.gif) left top no-repeat;
+    background: transparent url(../img/levels.gif) left top no-repeat;
 }
 
 .validator-infobox {

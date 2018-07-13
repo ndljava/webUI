@@ -5,11 +5,10 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="zh-CN">
 	<!--<![endif]-->
+
 	<head>
 		[#include '../include/newsMeta.html']
 		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
-		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-index.css" />
-		<script type="text/javascript" src="/${res}/js/cmstop-common.js"></script>
 		<!--[if lt IE 9 ]>
 			<script type="text/javascript" src="/${res}/js/modernizr.js"></script>
 		<![endif]-->
@@ -18,337 +17,550 @@
 		<script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
 		<link rel="stylesheet" type="text/css" href="/${res}/js/validator/style.css" />
 		<script type="text/javascript" src="/${res}/js/cmstop.validator.js"></script>
+		<script type="text/javascript" src="/${res}/js/cmstop-common.js"></script>
 		<style>
-			footer p {
-				color: #000;
-			}
-			footer a {
-				color: #0B3B8C;
-				line-height: 18px;
-			}
-			.cmstop-sound {
-				height: 800px;
+			.column .column-aside {
 				width: 611px;
-				margin-top: 10px;
-				margin-bottom: 15px;
-				border: none;
+				float: left;
+				_display: inline;
 			}
-			.sound-ebook .ov {
-				margin-bottom: 20px;
+			
+			.column .column-main {
+				width: 340px;
+				float: right;
+				_display: inline;
 			}
-			.sound-ebook .fieldtitle {
-				color: #ed6600;
-				font-weight: bold;
-				text-align: left;
+			
+			.feedback-wrap {
+				margin-top: 9px;
+			}
+			
+			.feedback-wrap .hd {
+				border: 1px solid #ccc;
+			}
+			
+			.feedback-wrap .hd .inner {
+				overflow: hidden;
+				_zoom: 1;
+				border: 1px solid #fff;
+				background: transparent url(/${res}/css/images/feedback-bar.jpg);
+				height: 36px;
+			}
+			
+			.feedback-wrap .hd .btn-s-orange {
+				height: 24px;
+				background-position: -201px -245px;
+				padding-left: 4px;
+				float: left;
+				_display: inline;
+				margin-left: 10px;
+				margin-top: 6px;
+			}
+			
+			.feedback-wrap .hd .btn-s-orange span {
+				height: 24px;
+				line-height: 24px;
+				letter-spacing: 2px;
+				background-position: right -85px;
+				padding-right: 4px;
+				padding-left: 2px;
+				float: left;
+				_display: inline;
+			}
+			
+			.btn,
+			.btn span {
+				background-image: url(/${res}/css/images/btn.png);
+				color: #ffffff;
+			}
+			
+			.page {
+				margin-top: 20px;
+			}
+			
+			.page a,
+			.page span {
+				padding: 2px 7px;
+				margin: 0 4px;
+				font-size: 12px;
+			}
+			
+			.page ._now {
+				background-color: #2266bb;
+				color: #ffffff;
+				border-color: #2266bb;
+			}
+			
+			.page a {
+				border: 1px solid #cccccc;
+				float: left;
+				_display: inline;
+			}
+			
+			.page a:hover {
+				background-color: #2266bb;
+				color: #ffffff;
+				border-color: #2266bb;
+			}
+			
+			.page .disable {
+				color: #cccccc;
+			}
+			
+			.page .now {
+				background-color: #2266bb;
+				color: #ffffff;
+				border-color: #2266bb;
+			}
+			
+			.published-messages .h2 {
+				font-size: 18px;
+				line-height: 35px;
+				font-family: Microsoft YaHei, SimHei, Arial;
+				margin-left: 16px;
+			}
+			
+			.v-pic {
+				margin-right: 20px;
+				float: left;
+				_display: inline;
+			}
+			
+			.v-pic .thumb {
+				position: relative;
+			}
+			
+			.feedback-list .item {
+				border: 1px solid #ccc;
+				overflow: hidden;
+				_zoom: 1;
+				margin-top: 20px;
+			}
+			
+			.feedback-list .reply {
+				clear: both;
+				background-color: #f8f8f8;
+				color: #c00;
+				line-height: 34px;
+				padding: 0 10px;
+			}
+			
+			.feedback-list .thumb {
+				margin: 20px 30px 20px 20px;
+				text-align: center;
+				float: left;
+				_display: inline;
+				line-height: 24px;
+				width: 70px;
+			}
+			
+			.feedback-list .thumb img {
+				padding: 1px;
+				border: 1px solid #ccc;
+			}
+			
+			.feedback-list .content {
+				line-height: 24px;
+				margin-top: 20px;
+				float: left;
+				_display: inline;
+				width: 380px;
+			}
+			
+			.feedback-list .content p {
+				margin-bottom: 10px;
 				font-size: 14px;
 			}
-			.select-name {
+			
+			.feedback-list .content .topic {
+				font-size: 14px;
+				margin: 0 10px;
+			}
+			
+			.feedback-list .content span {
+				color: #ccc;
+			}
+			
+			.form-box {
+				border: 1px solid #ddd;
+				border-top-width: 0;
+			}
+			
+			.ov {
+				overflow: hidden;
+				_zoom: 1;
+			}
+			
+			.form-contribute {
+				margin-bottom: 20px;
+				margin: 20px 0 20px 25px;
+			}
+			
+			.form-contribute .ov {
+				margin-bottom: 20px;
+			}
+			
+			.title-name,
+			.title-txt,
+			.article-name,
+			.article-txt,
+			.select-name,
+			.type-box,
+			.original-name,
+			.original-txt,
+			.src-name,
+			.src-txt,
+			.src-add-name,
+			.src-add-txt,
+			.check-name,
+			.check-login-box {
+				float: left;
+				_display: inline;
+				font-size: 14px;
+			}
+			
+			.title-name,
+			.article-name,
+			.select-name,
+			.src-name,
+			.src-add-name,
+			.check-name {
 				width: 78px;
 				text-align: right;
 				padding-right: 20px;
 				font-size: 14px;
 				color: #333;
 				line-height: 28px;
-				float: left;
 			}
+			
 			.type-box {
-				margin-left: 30px;
+				margin-left: -5px;
 				margin-top: 5px;
 				color: #333;
-				float: left;
-				_display: inline;
+			}
+			
+			.title-name,
+			.select-name,
+			.check-name {
+				width: 78px;
+				text-align: right;
+				padding-right: 20px;
 				font-size: 14px;
-				line-height: 24px;
-			}
-			.type-box input {
-				margin-left: 5px;
-			}
-			.column .column-aside {
-				width: 611px;
-				float: left;
-				_display: inline;
-			}
-			.column .column-main {
-				width: 340px;
-				float: right;
-				_display: inline;
-			}
-			.texts-content {
-				font-family: 楷体_GB2312;
-				font-size: 14px;
-				line-height: 22px;
-				text-align: left;
 				color: #333;
-				border: none;
+				line-height: 28px;
 			}
-			.cmstop-area .title-head .title .more {
+			
+			.title-txt,
+			.key-txt,
+			.src-add-txt {
+				width: 400px;
+			}
+			
+			.title-txt,
+			.key-txt,
+			.src-txt,
+			.src-add-txt,
+			.author-txt,
+			.check-txt {
+				border: 1px solid #bbb;
 				font-size: 14px;
-				font-weight: bold;
-				line-height: 30px;
-				float: right;
-				_display: inline;
-				color: #666;
-				margin-right: 6px;
+				color: #333;
+				height: 22px;
 			}
-			.cmstop-area .other3-links {
-				overflow: hidden;
-				_zoom: 1;
-				padding: 5px 10px 1px;
-				background-color: #f2f2f2;
-				text-align: center;
-			}
-			.cmstop-area .other3-links .title1 {
-				float: left;
-				_display: inline;
-				width: 15%;
-				font-weight: bold;
-			}
-			.cmstop-area .other3-links .title2 {
-				float: left;
-				_display: inline;
-				width: 60%;
-				font-weight: bold;
-			}
-			.cmstop-area .other3-links .title3 {
-				float: left;
-				_display: inline;
-				width: 25%;
-				font-weight: bold;
-			}
-			.cmstop-area .other3-links .item1 {
-				float: left;
-				_display: inline;
-				width: 15%;
-			}
-			.cmstop-area .other3-links .item2 {
-				float: left;
-				_display: inline;
-				width: 60%;
-			}
-			.cmstop-area .other3-links .item3 {
-				float: left;
-				_display: inline;
-				width: 25%;
-			}
-			/**/
-			.table3_list {
-				overflow: hidden;
-				_zoom: 1;
-				margin-bottom: 5px;
-			}
-			.table3_list .title {
-				overflow: hidden;
-				_zoom: 1;
-				height: 25px;
-				line-height: 25px;
-				background: #d9d9d9;
-				padding: 0 7px;
-				font-weight: bold;
-				text-align: center;
-			}
-			.table3_list .col1 {
-				color: #333333;
-				width: 30%;
-				float: left;
-				_display: inline;
-				overflow: hidden;
-				_zoom: 1;
-			}
-			.table3_list .col2 {
-				width: 47%;
-				float: left;
-				_display: inline;
-				overflow: hidden;
-				_zoom: 1;
-				padding-left: 7px;
-			}
-			.table3_list .col3 {
-				width: 20%;
-				float: left;
-				_display: inline;
-				overflow: hidden;
-				_zoom: 1;
-				padding-left: 7px;
-			}
-			.table3_list ul {
-				overflow: hidden;
-				_zoom: 1;
-			}
-			.table3_list ul li {
-				line-height: 25px;
-				height: 25px;
-				overflow: hidden;
-				_zoom: 1;
-				padding: 0 0 0 7px;
-			}
-			.table3_list ul .bg-f4f4 {
-				background: #f4f4f4;
+			
+			.article-txt {
+				width: 400px;
+				height: 116px;
+				border: 1px solid #bbb;
 			}
 		</style>
 	</head>
+
 	<body>
 		<!-- 头部 -->
 		[#include '../content/news_header.html'/]
+		<!--新疆网logo-->
+		<style>
+			.headlogo {
+				width: 980px;
+				margin: 0;
+				padding: 0;
+				no-repeat left center;
+				height: 34px;
+				margin-bottom: 10px;
+				text-align: left;
+				position: relative;
+			}
+			
+			.headlogo span {
+				margin-left: 20px;
+				font-family: "微软雅黑";
+				font-size: 24px;
+				font-weight: 700;
+				color: #D33939;
+				line-height: 34px;
+			}
+			
+			.navbox {
+				width: 980px;
+				height: 40px;
+				margin: 10px auto;
+			}
+			
+			ul {
+				list-style-type: none;
+			}
+			
+			a {
+				text-decoration: none;
+				font-weight: normal;
+			}
+			
+			#nav ul {
+				border-top: 3px solid #8babd1;
+				border-bottom: 1px solid #DEDEDE;
+				border-left: 1px solid #DEDEDE;
+				width: 980px;
+				height: 36px;
+				margin: 0;
+				padding: 0px;
+			}
+			
+			#nav li {
+				width: 88px;
+				height: 36px;
+				font-size: 14px;
+				border-right: 1px solid #DEDEDE;
+				text-align: center;
+				line-height: 36px;
+				float: left;
+				margin-left: 0px;
+				padding: 0;
+			}
+			
+			#nav a {
+				display: block;
+				width: 87px;
+				height: 36px;
+				color: #000;
+			}
+			
+			#nav a:link {
+				color: #000;
+			}
+			
+			#nav a:hover {
+				color: #FFF;
+				background: #FFC443;
+				width: 87px;
+				height: 36px;
+			}
+		</style>
+		<div style="margin:10px auto; width:980px;">
+			<a href="http://www.xinjiangnet.com.cn/bxsy" alt="新疆网百姓声音"><img src="http://img.xinjiangnet.com.cn/templates/default/img/xjw_logo.png" /></a>
+			<span style="margin-left:20px; font-family:'微软雅黑'; font-size:24px; color:#D33939; font-weight:700;line-height:34px;">百姓声音</span>
+			<div style="float:right;top:10px;right:10px;width:200px;position: absolute;">
+				<div class="fl-l header-search-input ov ">
+					<form id="head_search" name="head_search" action="http://app.xinjiangnet.com.cn/" method="GET">
+						<input type="hidden" name="app" value="search">
+						<input type="hidden" name="controller" value="index">
+						<input type="hidden" name="action" value="search">
+						<input type="hidden" id="type" name="type" value="all">
+						<div class="divicon icon16x16 fl-r"></div>
+						<input type="text" id="head_wd" name="wd" class="searinput" style="margin-top:2px;" />
+					</form>
+				</div>
+				<a href="" class="m-header-search js-headsearch fl-l icon16x16"></a>
+				<script type="text/javascript">
+					$('#head_search .divicon').click(function() {
+						$('#head_search').submit();
+					});
+					$('#head_search').attr('Action', APP_URL);
+				</script>
+			</div>
+
+		</div>
+
+		<div class="navbox">
+			<!------导航开始----->
+			<div id="nav">
+				<ul>
+					<li>
+						<a href="bxsy/index.jhtml">首页</a>
+					</li>
+					[@cms_channel_list parentId='128']
+					[#list tag_list as a]
+						<li>
+							<a href="${a.url}">${a.name}</a>
+						</li>
+					[/#list]
+					[/@cms_channel_list]
+				</ul>
+			</div>
+		</div>
 		<section class="column">
 			<!-- 左侧边栏 -->
 			<aside class="column-aside left-menu">
-				<div class="cmstop-area">
-					<div class="inner">
-						<div class="title-head">
-							<em class="ico"></em>
-							<div class="title">
-								<a title="留言问题" class="words">查看留言 </a>
-							</div>
-						</div>
-						<div class="h-pic clear">
-							<div class="texts">
-								<!-- 留言回复 -->
-								<div class="sound-ebook">
-									<div class="ov">
-										<div class="fieldtitle">留言内容：</div>
-										<div style="font-size: 16px;color: #373737;font-weight: bold;text-align: center;">投诉乌鲁木齐卡子湾车管所</div>
-										<div class="type-box">
-											<!--textarea自适应高度2015-1-21-->
-											<textarea style='border: 0;width:550px;font-size: 14px;line-height:2.0' cols="70" rows=5 onpropertychange='this.style.posHeight=this.scrollHeight' readonly="">
-											
-											[@cms_guestbook_list siteId='1' checked='1']
-											[#list tag_list as g]
-												${g.contentHtml}
-											[/#list]
-											[/@cms_guestbook_list]
-
-											</textarea>
-											<script>
-												$("textarea").each(function() {
-													$(this).css("height", $(this).attr("scrollHeight"));
-												});
-											</script>
-										</div>
-									</div>
-									<div class="ov">
-										<div class="fieldtitle">受理部门：市公安局交警支队</div>
-										<div class="fieldtitle">处理单位回复：</div>
-										<div style="margin: 20px;">
-											<form method="POST" id="soundreply_form">
-												<input id="id" name="id" class="src-txt" value="12847" type="hidden" />
-												<input id="deptid" name="accept_org" type="hidden" class="src-txt" value="12" />
-												<input id="title" name="title" type="hidden" class="src-txt" value="投诉乌鲁木齐卡子湾车管所" />
-												<input id="tourist_txt" type="hidden" name="username" class="src-txt" value="张先生" />
-												<div class="ov">
-													<label class="select-name" style="width:100px;">处理内容：</label>
-													<textarea id="reply_txt" name="reply" cols="60" rows="5" class="content required"></textarea><em class="info"></em>
-												</div>
-												<div class="ov">
-													<label class="select-name" style="width:100px;">处理部门密码：</label>
-													<input id="org_key" name="org_key" type="text" class="src-txt required" /><em class="must">*</em>
-													<em class="info"></em>
-												</div>
-												<div class="btn-submit">
-													<input type="button" value="提交" class="btn-common" onclick="ajaxReply($('#soundreply_form'));" />
-												</div>
-											</form>
-										</div>
-									</div>
-									<div class="ov">
-										<div class="fieldtitle">评论信息：</div>
-										<div class="type-box">
-											无评论
-										</div>
-									</div>
-									<div class="dotted"></div>
-									<div class="dotted"></div>
-									<div class="fieldtitle">评论留言：</div>
-									<div style="margin: 20px;">
-										<form method="POST" id="soundcomment_form">
-											<input type="hidden" name="appealid" id="appealid" value="12847" />
-											<div class="ov">
-												<label class="select-name" style="width:100px;">昵称：</label>
-												<input id="username" name="username" type="text" class="src-txt required" />
-												<input type="checkbox" onclick="document.getElementById('username').value=this.value;" value="匿名" /> 匿名
-												<em class="info"></em>
-											</div>
-											<div class="ov">
-												<label class="select-name" style="width:100px;">评论内容：</label>
-												<textarea id="comment_content" name="content" cols="60" rows="5" class="content required"></textarea><em class="info"></em>
-											</div>
-											<div class="btn-submit">
-												<input type="button" value="保存评论" style="width:100px;background: transparent url(/${res}/css/images/btn-submit.png) no-repeat -1px -34px;" class="btn-common" onclick="ajaxComment($('#soundcomment_form'));" />
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
+				<!-- 发表留言 -->
+				<section id="post_sound" class="feedback-wrap published-messages">
+					<div class="hd">
+						<div class="inner">
+							<h2 class="h2">百姓声音欢迎您留言</h2>
 						</div>
 					</div>
-					<div class="dotted"></div>
-				</div>
+					<div class="form-box ov">
+						<!-- 左侧表单 -->
+						<div class="form-contribute">
+							<form method="POST" id="sound_form" action="?app=sound&controller=index&action=add" onsubmit="return formSubmit();" enctype="multipart/form-data">
+								<div class="ov">
+									<span class="select-name">类型</span>
+									<div class="type-box">
+										<input type="radio" name="type" value="问题" checked="checked">问题
+										<input type="radio" name="type" value="咨询">咨询
+										<input type="radio" name="type" value="建议">建议
+										<input type="radio" name="type" value="反馈">反馈
+										<input type="radio" name="type" value="投诉">投诉
+									</div>
+								</div>
+								<div class="ov">
+									<span class="select-name">单位名称</span>
+									<div class="type-box">
+										<select id="accept_org" name="accept_org"></select>
+										<input id="condition" style="width:80px;">&nbsp;<input type="button" id="mohusearch" value="速查">
+										<script>
+											$(function() {
+												$("#mohusearch").click(function() {
+													if($("#condition").val() && $("#condition").val() != '') {
+														var allOptions = $("#accept_org").children();
+														$(allOptions).each(function(i) {
+															if($(allOptions[i]).html().indexOf($("#condition").val()) <= -1) {
+																$("#accept_org").append(allOptions[i]);
+															}
+														});
+														$("#accept_org option").eq(0).attr('selected', 'true');
+														return;
+													}
+												});
+											});
+										</script>
+									</div>
+								</div>
+								<div class="ov">
+									<label for="title_txt" class="title-name"><em class="must">*</em>标题</label><input id="title_txt" type="text" name="title" value="" class="title-txt required" />
+									<em class="info"></em>
+								</div>
+								<div class="ov">
+									<label for="article_txt" class="article-name"><em class="must">*</em>内容</label>
+									<textarea id="content" name="content" cols="30" rows="10" class="article-txt required"></textarea>
+									<em class="info"></em>
+								</div>
+								<div class="ov">
+									<label for="tourist_txt" class="src-name"><em class="must">*</em>姓名</label><input id="tourist_txt" type="text" name="username" class="src-txt required" value="" />
+									<em class="info"></em>
+								</div>
+								<div class="ov">
+									<label for="telephone_txt" class="src-name telephone">
+										<em class="must">*</em>电话</label><input id="telephone_txt" type="text" class="src-txt required" name="phone" />
+									<em class="info"></em>
+								</div>
+								<input id="ajaxsubmit" type="hidden" name="ajaxsubmit" value="0" />
+								<div class="ov">
+									<label for="check_txt" class="check-name"><em class="must">*</em>验证码</label>
+									<div class="check-login-box">
+										<div class="check-box ov">
+											<input id="check_txt" type="text" class="check-txt" name="seccode" /> <img src="?app=system&controller=seccode&action=image" id="seccodeimg" onclick="this.src='?app=system&controller=seccode&action=image&id='+Math.random()*5;" style="cursor:pointer;" alt="验证码,看不清楚?请点击刷新验证码" align="absmiddle" />
+											<a href="javascript:;" onclick="$(this).prev().click();" class="other">换一张？</a>
+										</div>
+										<input type="submit" value="确定" class="btn-common" />
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- @end 左侧表单 -->
+					</div>
+				</section>
 			</aside>
-			<!-- @end 左侧边栏 -->
 			<!--  右侧边栏 -->
 			<section class="column-main news-list-box" id="tabcontent">
 				<!--  百姓声音功能界面中右侧公共模板 -->
 				<style>
 					/*思拓专区*/
+					
 					.cmstop-area {
 						margin-top: 9px;
 					}
+					
 					.cmstop-area .inner {
 						border: 1px solid #d6d6d6;
 						overflow: hidden;
 						_zoom: 1;
 					}
+					
 					.cmstop-area .title-head {
 						height: 30px;
 						background: transparent url('/${res}/img/sprite-bar.png') repeat-x 0 0;
 					}
+					
 					.cmstop-area .title-head .title .words {
 						color: #cc0000;
 						font-size: 14px;
 						font-weight: bold;
 						line-height: 30px;
 					}
+					
 					.cmstop-area .title-head .link {
 						float: right;
 						_display: inline;
 						line-height: 30px;
 					}
+					
 					.cmstop-area .title-head .ico {
 						float: left;
 						_display: inline;
 					}
+					
 					.cmstop-area .title-head .ico {
 						background: transparent url('/${res}/img/sprite-ico.png') no-repeat -60px -160px;
 						width: 16px;
 						height: 30px;
 					}
+					
 					.cmstop-area .title-head .ico {
 						margin-right: 9px;
 					}
+					
 					.cmstop-area .dotted {
 						margin: 0 9px;
 					}
+					
 					.cmstop-area .h-pic {
 						margin: 14px 9px;
 					}
+					
 					.cmstop-area .h-pic .thumb {
 						border: 1px solid #ccc;
 					}
+					
 					.cmstop-area .h-pic .summary {
 						height: 40px;
 					}
+					
 					.cmstop-area .list-point {
 						margin: 9px;
 					}
+					
 					.cmstop-area .other-links {
 						overflow: hidden;
 						_zoom: 1;
 						padding: 9px;
 					}
+					
 					.cmstop-area .other-links .item {
 						float: left;
 						_display: inline;
 						width: 50%;
 					}
+					
 					.cmstop-area .other-links .ico {
 						background: transparent url(/${res}/img/index-ico.png) no-repeat -3px -47px;
 						width: 16px;
@@ -356,9 +568,11 @@
 						margin-right: 5px;
 						margin-left: 9px;
 					}
+					
 					.cmstop-area .other-links .n1 {
 						background-position: -2px -14px;
 					}
+					
 					.cmstop-area .title-head .title .more {
 						font-size: 14px;
 						font-weight: bold;
@@ -368,6 +582,7 @@
 						color: #666;
 						margin-right: 6px;
 					}
+					
 					.cmstop-area .other3-links {
 						overflow: hidden;
 						_zoom: 1;
@@ -375,45 +590,53 @@
 						background-color: #f2f2f2;
 						text-align: center;
 					}
+					
 					.cmstop-area .other3-links .title1 {
 						float: left;
 						_display: inline;
 						width: 15%;
 						font-weight: bold;
 					}
+					
 					.cmstop-area .other3-links .title2 {
 						float: left;
 						_display: inline;
 						width: 60%;
 						font-weight: bold;
 					}
+					
 					.cmstop-area .other3-links .title3 {
 						float: left;
 						_display: inline;
 						width: 25%;
 						font-weight: bold;
 					}
+					
 					.cmstop-area .other3-links .item1 {
 						float: left;
 						_display: inline;
 						width: 15%;
 					}
+					
 					.cmstop-area .other3-links .item2 {
 						float: left;
 						_display: inline;
 						width: 60%;
 					}
+					
 					.cmstop-area .other3-links .item3 {
 						float: left;
 						_display: inline;
 						width: 25%;
 					}
 					/**/
+					
 					.righttab3_list {
 						overflow: hidden;
 						_zoom: 1;
 						margin-bottom: 5px;
 					}
+					
 					.righttab3_list .title {
 						overflow: hidden;
 						_zoom: 1;
@@ -424,6 +647,7 @@
 						font-weight: bold;
 						text-align: center;
 					}
+					
 					.righttab3_list .col1 {
 						color: #333333;
 						width: 15%;
@@ -432,6 +656,7 @@
 						overflow: hidden;
 						text-align: center;
 					}
+					
 					.righttab3_list .col2 {
 						width: 60%;
 						float: left;
@@ -440,6 +665,7 @@
 						_zoom: 1;
 						padding-left: 7px;
 					}
+					
 					.righttab3_list .col3 {
 						width: 20%;
 						float: left;
@@ -448,10 +674,12 @@
 						text-align: center;
 						padding-left: 7px;
 					}
+					
 					.righttab3_list ul {
 						overflow: hidden;
 						_zoom: 1;
 					}
+					
 					.righttab3_list ul li {
 						line-height: 25px;
 						height: 25px;
@@ -459,9 +687,11 @@
 						_zoom: 1;
 						padding: 0 0 0 7px;
 					}
+					
 					.righttab3_list ul .bg-f4f4 {
 						background: #f4f4f4;
 					}
+					
 					.texts-content {
 						font-family: 楷体_GB2312;
 						font-size: 14px;
@@ -511,8 +741,8 @@
 											<br> &middot;
 										[/#if]
 									[/#list]
-									[/@cms_content_list]
-								 </div>
+									[/@cms_content_list]	
+								</div>
 							</div>
 						</div>
 					</div>
@@ -529,20 +759,30 @@
 						</div>
 						<div class="righttab3_list">
 							<ul>
-								[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
-								[#list tag_list as a]
-								[#if a_index%2==0]
-									<li>
-								[#else]
-									<li class="bg-f4f4">
-								[/#if]
-									<a href="" class="col1">${(a_index+1)}</a>
-									<span class="col2">
-										<a href="${a.url}">[@text_cut s=a.title len=20 append=append/]</a>
-									</span>
+								<li>
+									<a href="" class="col1">1</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=兵团第12师">兵团第12师</a></span>
 								</li>
-								[/#list]
-								[/@cms_content_list]
+								<li class="bg-f4f4">
+									<a href="" class="col1">2</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=红山一卡通公司">红山一卡通公司</a></span>
+								</li>
+								<li>
+									<a href="" class="col1">3</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=市公安消防支队">市公安消防支队</a></span>
+								</li>
+								<li class="bg-f4f4">
+									<a href="" class="col1">4</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=自治区旅游局">自治区旅游局</a></span>
+								</li>
+								<li>
+									<a href="" class="col1">5</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=兵团环保局">兵团环保局</a></span>
+								</li>
+								<li class="bg-f4f4">
+									<a href="" class="col1">6</a>
+									<span class="col2"><a href="?app=sound&controller=index&action=ebooklist&deptname=3·15消费投诉">3·15消费投诉</a></span>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -563,27 +803,27 @@
 						</ul>
 						<ul class="list other3-links">
 							<li class="item1">1</li>
-							<li class="item2">市审计局</li>
+							<li class="item2">乌鲁木齐公交兴盛巴士公司</li>
 							<li class="item3">100.00%</li>
 						</ul>
 						<ul class="list other3-links">
 							<li class="item1">2</li>
-							<li class="item2">市地震局</li>
+							<li class="item2">乌鲁木齐电业局</li>
 							<li class="item3">100.00%</li>
 						</ul>
 						<ul class="list other3-links">
 							<li class="item1">3</li>
-							<li class="item2">市老龄办</li>
+							<li class="item2">市园林局</li>
 							<li class="item3">100.00%</li>
 						</ul>
 						<ul class="list other3-links">
 							<li class="item1">4</li>
-							<li class="item2">市图书馆</li>
+							<li class="item2">市知识产权局</li>
 							<li class="item3">100.00%</li>
 						</ul>
 						<ul class="list other3-links">
 							<li class="item1">5</li>
-							<li class="item2">自治区旅游局</li>
+							<li class="item2">乌鲁木齐市卫生监督所</li>
 							<li class="item3">100.00%</li>
 						</ul>
 					</div>
@@ -637,8 +877,24 @@
 			<!-- @end 右侧边栏 -->
 		</section>
 		<script type="text/javascript">
+			//取所有部门列表形成下拉选择内容
+			function loadOrgs() {
+				$.ajax({
+					url: '?app=sound&controller=index&action=loadOrgs',
+					dataType: 'json',
+					type: 'GET',
+					success: function(json) {
+						var sct = $('#accept_org');
+						sct.empty();
+						for(var i = 0, t; t = json[i++];) {
+							var op = "<option value='" + t.id + "'>" + t.name + "</option>";
+							sct.append(op);
+						}
+						$('#accept_org').val(0);
+					}
+				});
+			}
 			//JS
-			var orgId = 12;
 			var maxText = 300;
 			var needReply = 1;
 			var needLogin = 0; //是否需要登录后留言
@@ -651,11 +907,8 @@
 				qq: /^[1-9]\d{4,8}$/,
 				msn: /^[1-9]\d{4,8}$/
 			};
-			function validateGuesetBook(jQ) {
-				if(needLogin == 1 && userid == 0) {
-					alert('请登录后留言');
-					return false;
-				}
+			//检测百姓声音留言表单是否填写完整
+			function validateBXSYBook(jQ) {
 				var inputs = jQ.find('input,textarea');
 				var name;
 				var counter = inputs.length + 1;
@@ -683,7 +936,21 @@
 							}
 						);
 					}
+					if(name == 'username') {
+						if(parseInt($('#username_length > b').html()) < 4) {
+							$('#username_length').siblings('.info').html('留言者姓名过短');
+							counter--;
+						}
+						if(parseInt($('#username_length > b').html()) > maxText) {
+							$('#username_length').siblings('.info').html('留言者姓名过长');
+							counter--;
+						}
+					}
 					if(name == 'content') {
+						if(parseInt($('#content_length > b').html()) < 10) {
+							$('#content_length').siblings('.info').html('留言过短，不能少于五个汉字。');
+							counter--;
+						}
 						if(parseInt($('#content_length > b').html()) > maxText) {
 							$('#content_length').siblings('.info').html('留言过长');
 							counter--;
@@ -691,99 +958,24 @@
 					}
 				});
 				if(counter < inputs.length + 1) return false;
-				else return true;
+				return true;
 			}
-			//提交留言回复内容
-			function ajaxReply() {
-				if(!validateGuesetBook($('#soundreply_form'))) {
+
+			function ajaxSubmit() {
+				if(!validateBXSYBook($('#sound_form'))) {
 					return false;
 				}
+				//提交留言回复内容
+				//提交留言内容
 				$.ajax({
-					url: '?app=sound&controller=index&action=reply',
+					url: '?app=sound&controller=index&action=add',
 					dataType: 'json',
-					data: $('#soundreply_form').serialize(),
+					data: $('#sound_form').serialize(),
 					type: 'POST',
 					success: function(json) {
 						if(json.state) {
-							alert('回复成功!请等待网站管理员审核！');
-						} else {
-							if(json.error) {
-								alert('评论失败！原因是：' + json.error);
-							} else {
-								alert('回复失败');
-							}
-						}
-					},
-					error: function() {
-						alert('请求异常');
-					},
-					complete: function() {}
-				});
-			}
-			//提交留言评论内容
-			function ajaxComment(frm_comment) {
-				var f = this;
-				var data = frm_comment.serialize();
-				//btn.attr('disabled', true);
-				$.ajax({
-					url: '?app=sound&controller=index&action=addcomment',
-					dataType: 'json',
-					data: data,
-					type: 'POST',
-					success: function(json) {
-						if(json.state) {
-							alert('评论成功!请等待网站管理员审核！');
-						} else {
-							if(json.error) {
-								alert('评论失败！原因是：' + json.error);
-							} else {
-								alert('评论失败！');
-							}
-						}
-					},
-					error: function() {
-						alert('请求异常');
-					},
-					complete: function() {
-						//btn.attr('disabled', false).removeAttr('disabled');
-					}
-				});
-			}
-			function opencommentReply(e) {
-				var s = $(e);
-				var cls = s.attr('class');
-				if(cls == 'comment_reply_btn') {
-					var idstr = s.parent().attr("id");
-					var id = idstr.split("_")[2];
-					var commentReplyForm = '<form style="padding-left: 50px" action="?app=sound&controller=index&action=commentreply" onSubmit="return commentreply(this)">' +
-						'部门密码：<input type="hidden" name="id" value="' + id + '">' +
-						'<input type="hidden" name="org" value="' + orgId + '">' +
-						'<input type="password" name="passcode"></br>' +
-						'回复内容：</br><textarea name="reply" cols="40" rows="3"></textarea></br>' +
-						'<input type="submit"></form>';
-					s.parent().append($(commentReplyForm));
-					s.text('收起回复');
-					s.removeClass('comment_reply_btn');
-					s.addClass('comment_reply_cancal_btn')
-				} else if(cls == 'comment_reply_cancal_btn') {
-					s.parent().find('form').remove();
-					s.text('回复');
-					s.removeClass('comment_reply_cancal_btn');
-					s.addClass('comment_reply_btn')
-				}
-			}
-			function commentreply(e) {
-				var data = $(e).serialize();
-				$.ajax({
-					url: '?app=sound&controller=index&action=commentreply',
-					dataType: 'json',
-					data: data,
-					type: 'POST',
-					success: function(json) {
-						if(json.state) {
-							$(e).remove();
-							$("button.comment_reply_cancal_btn").parent();
-							$("button.comment_reply_cancal_btn").remove();
+							alert('添加成功！请等待网站管理员审核！');
+							window.close();
 						} else {
 							if(json.error) {
 								alert(json.error);
@@ -797,7 +989,20 @@
 					},
 					complete: function() {}
 				});
-				return false;
+			}
+			var formSubmit = function() {
+				if($('#homepage_txt').val() == 'http://') {
+					$('#homepage_txt').val('');
+				}
+				if(needLogin == 1 && userid == 0) {
+					alert('请登录后留言');
+					return false;
+				}
+				if(!validateBXSYBook($('#sound_form'))) {
+					return false;
+				}
+				$('#sound_form').find("#ajaxsubmit").attr("value", "0"); // 非ajax提交数据
+				return true;
 			}
 			$(document).ready(function() {
 				GoTop.init({
@@ -805,19 +1010,20 @@
 					rel: $(".header-topbar"),
 					dir: 'right'
 				});
+				loadOrgs();
 			});
 		</script>
 		<!-- footer -->
 		<div style="width:100%; height:10px;">
 		</div>
 		<div style="width:980px; margin:0px auto;">
-			<img src="http://img.xinjiangnet.com.cn/templates/default/img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
+			<img src="/${res}/img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
 			<map name="Map" id="Map">
-      			<area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
-      			<area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
-      			<area shape="rect" coords="718,29,846,61" href="http://epaper.xinjiangnet.com.cn" />
-      			<area shape="rect" coords="866,28,973,58" href="#" />
-    		</map>
+      <area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
+      <area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
+      <area shape="rect" coords="718,29,846,61" href="http://epaper.xinjiangnet.com.cn" />
+      <area shape="rect" coords="866,28,973,58" href="#" />
+    </map>
 		</div>
 		<div style="width:100%; height:10px;">
 		</div>
@@ -1151,8 +1357,9 @@
 				</tr>
 			</table>
 		</center>
-		<link rel="stylesheet" type="text/css" href="/${res}/js/popmenu.css" media="all" />
-		<script type="text/javascript" src="/${res}/js/recommend.js"></script>
+		<link rel="stylesheet" type="text/css" href="/${res}/css/popsearch/popmenu.css" media="all" />
+		<script type="text/javascript" src="/${res}/js/popsearch/recommend.js"></script>
 		<!-- end footer -->
 	</body>
+
 </html>
