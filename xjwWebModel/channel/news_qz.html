@@ -607,17 +607,21 @@
 					</div>
 					[/#list]
 					[/@cms_content_list]
- 
 				</div>
 				<div class="top3_bot" style="height: 105px;margin: 20px 0 0;">
 					<div class="mama_left" style="padding: 10px 0 10px;height: 70px;">
-						<a style="color:inherit;" href="http://www.xinjiangnet.com.cn/qzly/mm/">妈妈<br>工具<br>推荐
+						<a style="color:inherit;" href="http://www.xinjiangnet.com.cn/qzly/mm/">
+							妈妈<br>工具<br>推荐
 						</a>
 					</div>
 					<div class="mama_right">
 						<div class="temppic" style="text-align:center">
-							<a href="http://www.pcbaby.com.cn/tools/nannv/"><img src="http://upload.xinjiangnet.com.cn/2014/1224/1419412451964.png"></a>
-							<span><a href="http://www.pcbaby.com.cn/tools/nannv/">生男生女</a></span>
+							<a href="http://www.pcbaby.com.cn/tools/nannv/">
+								<img src="http://upload.xinjiangnet.com.cn/2014/1224/1419412451964.png">
+							</a>
+							<span>
+								<a href="http://www.pcbaby.com.cn/tools/nannv/">生男生女</a>
+							</span>
 						</div>
 						<div class="temppic" style="text-align:center">
 							<a href="http://box.baobao.sohu.com/yuchanqi"><img src="http://upload.xinjiangnet.com.cn/2014/1224/1419412438634.png"></a>
@@ -939,7 +943,7 @@
 					[#list tag_list as a]
 					<div class="top4pic2">
 						<a href="${a.url}">
-							<img width="144" height="145" src="http://upload.xinjiangnet.com.cn/2015/0126/1422264613257.jpg" />
+							<img width="144" height="145" src="${a.typeImg}" />
 							<div style="text-align:center;width: 144px;z-index:10;margin-top:-20px;height: 20px;line-height: 20px;background: rgba(0, 0, 0, 0.3);background:#000;filter: alpha(opacity=30);opacity: 0.3;">
 							</div>
 							<div style="height:20px;line-height: 20px;margin-top:-20px;text-align:center;color:#FFF;position:relative;">
@@ -963,7 +967,7 @@
 					[#list tag_list as a]
 					<div class="top4pic2">
 						<a href="${a.url}">
-							<img width="144" height="145" src="http://upload.xinjiangnet.com.cn/2015/0126/1422264613257.jpg" />
+							<img width="144" height="145" src="${a.typeImg}" />
 							<div style="text-align:center;width: 144px;z-index:10;margin-top:-20px;height: 20px;line-height: 20px;background: rgba(0, 0, 0, 0.3);background:#000;filter: alpha(opacity=30);opacity: 0.3;">
 							</div>
 							<div style="height:20px;line-height: 20px;margin-top:-20px;text-align:center;color:#FFF;position:relative;">
@@ -975,7 +979,6 @@
 					</div>
 					[/#list]
 					[/@cms_content_list]
-					 
 				</div>
 			</div>
 			<div class="ad3"><img src="/${res}/img/xjw_qzpd/qz_ad2.jpg" /></div>
@@ -996,43 +999,45 @@
 					}
 				</style>
 				<div class="yunfu_pic2">
-					<a href="http://www.xinjiangnet.com.cn/2017/1017/2010657.shtml">
-						<img src="http://upload.xinjiangnet.com.cn/2017/1017/thumb_255_170_1508232450336.jpg" />
+					[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
+					[#list tag_list as a]
+					<a href="${a.url}">
+						<img width="255" height="170" src="${a.typeImg}" />
 						<div style="text-align: center;width: 255px;z-index:10;margin-top:-30px;height: 30px;line-height: 30px;background: rgba(0, 0, 0, 0.3);background:#000;filter: alpha(opacity=30);opacity: 0.3;">
 						</div>
 						<div style="height:30px;line-height: 30px;margin-top:-30px;text-align:center;color:#FFF;position:relative;">
 							<span style="text-decoration:none; color:#fff; font-size:16px;">
-                    孕妇冬季泡脚的益处 </span>
+                    			[@text_cut s=a.title len=15 append=append/]  
+							</span>
 						</div>
 					</a>
-					<!--<a href="http://www.xinjiangnet.com.cn/2017/1017/2010657.shtml">
-        <img src="http://upload.xinjiangnet.com.cn/2017/1017/thumb_255_196_1508232450336.jpg"/>
-        <div style="text-align: center;width: 255px;z-index:10;position: absolute;margin-top:-30px;height: 30px;line-height: 30px;background: rgba(0, 0, 0, 0.3);">                
-             <span style="text-decoration:none; color:#fff; font-size:16px; margin-left:10px;">孕妇冬季泡脚的益处</span>
-        </div>
-</a>-->
+					[/#list]
+					[/@cms_content_list]
 				</div>
 				<div class="top_mid">
+					[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
+					[#list tag_list as a]
 					<div class="top_news" style="width: 100%">
 						<div class="top_biaoti" style="font-size: 16px;width: 100%">
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010649.shtml">人生只有一次，想生就生吧</a>
+							<a href="${a.url}">[@text_cut s=a.title len=15 append=append/]</a>
 						</div>
 						<div class="top_wen2" style="width: 100%;text-indent:2em;">
-							老大怕老二会分走父母的的爱，好多父母也怕有了老二会对老大造成过高的心理压力，考虑二胎是生还是不生的问题。
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010649.shtml"> [详情]</a>
+							[@text_cut s=a.desc len=45 append=append/]...
+							<a href="${a.url}"> [详情]</a>
 						</div>
 					</div>
+					[/#list]
+					[/@cms_content_list]
 					<div class="news">
-						&middot;
-						<a href="http://www.xinjiangnet.com.cn/2017/1017/2010636.shtml">孩子早教怎么选 科学化早教是未来的主流</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2017/1017/2010474.shtml">爷爷表扬老二聪明乖巧，老大说：我也是需要表扬的！</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2017/1017/2010465.shtml">天气忽冷忽热，家长需要提防孩子生这几种疾病</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2017/1017/2010464.shtml">那些让你让你笑掉大牙的宝宝睡姿 除了笑你还要注意这个</a>
-						<br> &middot;
-						<a href="http://www.xinjiangnet.com.cn/2016/1008/1654511.shtml">孕妇防辐射服哪个牌子好评定标准曝光</a>
+						[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1']
+						[#list tag_list as a]
+							&middot;
+							<a href="${a.url}">[@text_cut s=a.title len=25 append=append/]</a>
+						[#if a_has_next]
+							<br>
+						[/#if]
+						[/#list]
+						[/@cms_content_list]
 					</div>
 				</div>
 				<div class="top_right">
@@ -1043,30 +1048,16 @@
 						<!--<div class="top5_gd"><a style="color:inherit;" href="http://www.xinjiangnet.com.cn/qzly/qzlts/">更多</a></div>-->
 					</div>
 					<div class="remen">
-						<div id="hnumber" class="lvse"><strong>01  </strong></div>
-						<div id="hwen">
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010732.shtml"> 教育1岁宝宝，你要做好这些事</a>
+						[@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1']
+						[#list tag_list as a]
+						<div id="hnumber" [#if a_index<3] class="lvse" [/#if]>
+							<strong>0${a_index+1}</strong>
 						</div>
-						<div id="hnumber" class="lvse"><strong>02  </strong></div>
 						<div id="hwen">
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010699.shtml"> 新妈带娃常见误区，别犯错哦</a>
+							<a href="${a.url}">[@text_cut s=a.title len=18 append=append/]</a>
 						</div>
-						<div id="hnumber" class="lvse"><strong>03  </strong></div>
-						<div id="hwen">
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010691.shtml"> 选月嫂的6个方面，你必须要懂</a>
-						</div>
-						<div id="hnumber"><strong>04  </strong></div>
-						<div id="hwen">
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010689.shtml"> 害怕得乳腺炎？那就做好预防吧</a>
-						</div>
-						<div id="hnumber"><strong>05  </strong></div>
-						<div id="hwen">
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010684.shtml"> 剖腹产要慎选，这些后续问题要知晓</a>
-						</div>
-						<div id="hnumber"><strong>06  </strong></div>
-						<div id="hwen">
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010679.shtml"> 分娩在即，漏尿和破水得注意区分</a>
-						</div>
+						[/#list]
+						[/@cms_content_list]
 					</div>
 				</div>
 			</div>
@@ -1079,86 +1070,20 @@
 				<div class="box" style="margin-top: 20px;">
 					<div class="picbox">
 						<ul class="piclist mainlist">
+							[@cms_content_list count='10' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
+							[#list tag_list as a]
 							<li>
-								<a href="http://www.xinjiangnet.com.cn/2015/0306/1369701.shtml" target="_blank">
-									<img src="http://upload.xinjiangnet.com.cn/2015/0306/1425629493391.jpg" width="170" height="170" />
+								<a href="${a.url}" target="_blank">
+									<img src="${a.typeImg}" width="170" height="170" />
 									<div style=" width: 170px;text-align: center;height:20px;margin-top:-20px;position:relative;background: rgba(0, 0, 0, 0.3);*background:#000; *filter:alpha(opacity=60);">
-										<span style=" width:100%;text-align: center;text-decoration:none; color:#fff; font-size:14px; margin-left:10px;">90秒看完萌宝100次搞笑喷嚏</span>
+										<span style=" width:100%;text-align: center;text-decoration:none; color:#fff; font-size:14px; margin-left:10px;">
+											[@text_cut s=a.title len=18 append=append/]
+										</span>
 									</div>
 								</a>
 							</li>
-							<li>
-								<a href="http://www.xinjiangnet.com.cn/2015/0303/1367650.shtml" target="_blank">
-									<img src="http://upload.xinjiangnet.com.cn/2015/0303/1425370183617.jpg" width="170" height="170" />
-									<div style=" width: 170px;text-align: center;height:20px;margin-top:-20px;position:relative;background: rgba(0, 0, 0, 0.3);*background:#000; *filter:alpha(opacity=60);">
-										<span style=" width:100%;text-align: center;text-decoration:none; color:#fff; font-size:14px; margin-left:10px;">老爸神剪辑配乐！熊北鼻跳起</span>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="http://www.xinjiangnet.com.cn/2015/0216/1361942.shtml" target="_blank">
-									<img src="http://upload.xinjiangnet.com.cn/2015/0216/1424079088836.jpg" width="170" height="170" />
-									<div style=" width: 170px;text-align: center;height:20px;margin-top:-20px;position:relative;background: rgba(0, 0, 0, 0.3);*background:#000; *filter:alpha(opacity=60);">
-										<span style=" width:100%;text-align: center;text-decoration:none; color:#fff; font-size:14px; margin-left:10px;">宝宝哭着喊，不要拍照不要拍</span>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="http://www.xinjiangnet.com.cn/2015/0216/1361950.shtml" target="_blank">
-									<img src="http://upload.xinjiangnet.com.cn/2015/0216/1424078934955.jpg" width="170" height="170" />
-									<div style=" width: 170px;text-align: center;height:20px;margin-top:-20px;position:relative;background: rgba(0, 0, 0, 0.3);*background:#000; *filter:alpha(opacity=60);">
-										<span style=" width:100%;text-align: center;text-decoration:none; color:#fff; font-size:14px; margin-left:10px;">宝宝爱打嗝及屁多怎么办？</span>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="http://www.xinjiangnet.com.cn/2015/0216/1361940.shtml" target="_blank">
-									<img src="http://upload.xinjiangnet.com.cn/2015/0216/1424078285632.jpg" width="170" height="170" />
-									<div style=" width: 170px;text-align: center;height:20px;margin-top:-20px;position:relative;background: rgba(0, 0, 0, 0.3);*background:#000; *filter:alpha(opacity=60);">
-										<span style=" width:100%;text-align: center;text-decoration:none; color:#fff; font-size:14px; margin-left:10px;">得知自己即将迎来妹妹之后..</span>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="http://w.xinjiangnet.com.cn/2015/0130/2919.shtml" target="_blank">
-									<img src="http://upload.xinjiangnet.com.cn/2015/0130/1422588483578.jpg" width="170" height="170" />
-									<div style=" width: 170px;text-align: center;height:20px;margin-top:-20px;position:relative;background: rgba(0, 0, 0, 0.3);*background:#000; *filter:alpha(opacity=60);">
-										<span style=" width:100%;text-align: center;text-decoration:none; color:#fff; font-size:14px; margin-left:10px;">麻麻，我好混乱</span>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="http://w.xinjiangnet.com.cn/2015/0128/2002.shtml" target="_blank">
-									<img src="http://upload.xinjiangnet.com.cn/2015/0128/thumb_170_170_1422412463732.jpg" width="170" height="170" />
-									<div style=" width: 170px;text-align: center;height:20px;margin-top:-20px;position:relative;background: rgba(0, 0, 0, 0.3);*background:#000; *filter:alpha(opacity=60);">
-										<span style=" width:100%;text-align: center;text-decoration:none; color:#fff; font-size:14px; margin-left:10px;">6个月大宝宝辅食</span>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="http://w.xinjiangnet.com.cn/2015/0126/795.shtml" target="_blank">
-									<img src="http://upload.xinjiangnet.com.cn/2015/0126/thumb_170_170_1422261639506.jpg" width="170" height="170" />
-									<div style=" width: 170px;text-align: center;height:20px;margin-top:-20px;position:relative;background: rgba(0, 0, 0, 0.3);*background:#000; *filter:alpha(opacity=60);">
-										<span style=" width:100%;text-align: center;text-decoration:none; color:#fff; font-size:14px; margin-left:10px;">婴儿水下潜泳萌哭网友</span>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="http://w.xinjiangnet.com.cn/2015/0126/836.shtml" target="_blank">
-									<img src="http://upload.xinjiangnet.com.cn/2015/0126/thumb_170_170_1422262282815.jpg" width="170" height="170" />
-									<div style=" width: 170px;text-align: center;height:20px;margin-top:-20px;position:relative;background: rgba(0, 0, 0, 0.3);*background:#000; *filter:alpha(opacity=60);">
-										<span style=" width:100%;text-align: center;text-decoration:none; color:#fff; font-size:14px; margin-left:10px;">超级好玩的双胞胎</span>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="http://w.xinjiangnet.com.cn/2015/0128/1984.shtml" target="_blank">
-									<img src="http://upload.xinjiangnet.com.cn/2015/0128/thumb_170_170_1422411459667.jpg" width="170" height="170" />
-									<div style=" width: 170px;text-align: center;height:20px;margin-top:-20px;position:relative;background: rgba(0, 0, 0, 0.3);*background:#000; *filter:alpha(opacity=60);">
-										<span style=" width:100%;text-align: center;text-decoration:none; color:#fff; font-size:14px; margin-left:10px;">让宝宝跟妈妈更亲密</span>
-									</div>
-								</a>
-							</li>
+							[/#list]
+							[/@cms_content_list]
 						</ul>
 						<ul class="piclist swaplist"></ul>
 					</div>
@@ -1348,30 +1273,37 @@
 			</div>
 			<div class="top5" style="border-top:solid 3px #EA5A7D;">
 				<div class="picture" style="margin-top: 20px;">
+					[@cms_content_list count='9' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
 					<div class="pic_left">
 						<div class="picItem pic_1">
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010636.shtml">
-								<img src="http://upload.xinjiangnet.com.cn/2017/1017/thumb_323_340_1508231316924.jpg" width=323px height=340px/>
+							<a href="${tag_list[0].url}">
+								<img src="${tag_list[0].typeImg}" width="323px" height="340px"/>
 								<div class="shadou1" style="width:100%;height: 30px;margin-top: -30px;position: relative; opacity:1; background: rgba(0, 0, 0, 0.3);text-align: center;">
-									<span style="text-decoration:none; color:#fff; font-size:14px;">孩子早教怎么选 科学化早教</span>
+									<span style="text-decoration:none; color:#fff; font-size:14px;">
+										[@text_cut s=tag_list[0].title len=18 append=append/]
+									</span>
 								</div>
 								<!--<i class="mask"></i>-->
 							</a>
 						</div>
 						<div class="picItem pic_2">
-							<a href="http://www.xinjiangnet.com.cn/2017/1011/2008118.shtml">
-								<img src="http://upload.xinjiangnet.com.cn/2017/1011/thumb_159_169_1507695167747.jpeg" width=159px height=169px />
+							<a href="${tag_list[1].url}">
+								<img src="${tag_list[1].typeImg}" width=159px height=169px />
 								<div class="shadou1" style="width:100%;height: 30px;margin-top: -30px;position: relative; opacity:1; background: rgba(0, 0, 0, 0.3);text-align: center;">
-									<span style="text-decoration:none; color:#fff; font-size:14px;">二胎妈妈告诉你是男是女孩</span>
+									<span style="text-decoration:none; color:#fff; font-size:14px;">
+										[@text_cut s=tag_list[1].title len=18 append=append/]
+									</span>
 								</div>
 								<!--<i class="mask"></i>-->
 							</a>
 						</div>
 						<div class="picItem pic_3">
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010675.shtml">
-								<img src="http://upload.xinjiangnet.com.cn/2017/1017/thumb_159_169_1508233310545.jpg" width=159px height=169px />
+							<a href="${tag_list[2].url}">
+								<img src="${tag_list[2].typeImg}" width="159px" height="169px" />
 								<div class="shadou1" style="width:100%;height: 30px;margin-top: -30px;position: relative; opacity:1; background: rgba(0, 0, 0, 0.3);text-align: center;">
-									<span style="text-decoration:none; color:#fff; font-size:14px;">适合孕晚期的胎教故事：海马</span>
+									<span style="text-decoration:none; color:#fff; font-size:14px;">
+										[@text_cut s=tag_list[2].title len=18 append=append/]
+									</span>
 								</div>
 								<!--<i class="mask"></i>-->
 							</a>
@@ -1379,28 +1311,34 @@
 					</div>
 					<div class="pic_mid">
 						<div class="picItem pic_2">
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010653.shtml">
-								<img src="http://upload.xinjiangnet.com.cn/2017/1017/thumb_159_169_1508232012458.jpg" width=159px height=169px />
+							<a href="${tag_list[3].url}">
+								<img src="${tag_list[3].typeImg}" width=159px height=169px />
 								<div class="shadou1" style="width:100%;height: 30px;margin-top: -30px;position: relative; opacity:1; background: rgba(0, 0, 0, 0.3);text-align: center;">
-									<span style="text-decoration:none; color:#fff; font-size:14px;">MISSOSE x 史雨诗：这小姑娘</span>
+									<span style="text-decoration:none; color:#fff; font-size:14px;">
+										[@text_cut s=tag_list[3].title len=18 append=append/]
+									</span>
 								</div>
 								<!--<i class="mask"></i>-->
 							</a>
 						</div>
 						<div class="picItem pic_3">
-							<a href="http://www.xinjiangnet.com.cn/2017/1017/2010643.shtml">
-								<img src="http://upload.xinjiangnet.com.cn/2017/1017/thumb_159_169_1508231663428.jpg" width=159px height=169px />
+							<a href="${tag_list[4].url}">
+								<img src="${tag_list[4].typeImg}" width=159px height=169px />
 								<div class="shadou1" style="width:100%;height: 30px;margin-top: -30px;position: relative; opacity:1; background: rgba(0, 0, 0, 0.3);text-align: center;">
-									<span style="text-decoration:none; color:#fff; font-size:14px;">辣妈瘦身新风潮</span>
+									<span style="text-decoration:none; color:#fff; font-size:14px;">
+										[@text_cut s=tag_list[4].title len=18 append=append/]
+									</span>
 								</div>
 								<!--<i class="mask"></i>-->
 							</a>
 						</div>
 						<div class="picItem pic_1" style="margin-top:5px">
-							<a href="http://www.xinjiangnet.com.cn/2016/0811/1608874.shtml">
-								<img src="http://upload.xinjiangnet.com.cn/2016/0811/thumb_323_340_1470887391258.jpg" width=323px height=340px />
+							<a href="${tag_list[5].url}">
+								<img src="${tag_list[5].typeImg}" width=323px height=340px />
 								<div class="shadou1" style="width:100%;height: 30px;margin-top: -30px;position: relative; opacity:1; background: rgba(0, 0, 0, 0.3);text-align: center;">
-									<span style="text-decoration:none; color:#fff; font-size:14px;">宝宝第一天上幼儿园的照片 </span>
+									<span style="text-decoration:none; color:#fff; font-size:14px;">
+										[@text_cut s=tag_list[5].title len=18 append=append/]
+									</span>
 								</div>
 								<!--<i class="mask"></i>-->
 							</a>
@@ -1408,33 +1346,40 @@
 					</div>
 					<div class="pic_right">
 						<div class="picItem pic_1">
-							<a href="http://www.xinjiangnet.com.cn/2016/0811/1608846.shtml">
-								<img src="http://upload.xinjiangnet.com.cn/2016/0811/thumb_323_340_1470886105166.jpg" width=323px height=340px />
+							<a href="${tag_list[6].url}">
+								<img src="${tag_list[6].typeImg}" width=323px height=340px />
 								<div class="shadou1" style="width:100%;height: 30px;margin-top: -30px;position: relative; opacity:1; background: rgba(0, 0, 0, 0.3);text-align: center;">
-									<span style="text-decoration:none; color:#fff; font-size:14px;">这画风完全看不懂！小S母女</span>
+									<span style="text-decoration:none; color:#fff; font-size:14px;">
+										[@text_cut s=tag_list[6].title len=18 append=append/]
+									</span>
 								</div>
 								<!--<i class="mask"></i>-->
 							</a>
 						</div>
 						<div class="picItem pic_2">
-							<a href="http://www.xinjiangnet.com.cn/2016/0811/1608844.shtml">
-								<img src="http://upload.xinjiangnet.com.cn/2016/0811/thumb_159_169_1470886099136.png" width=159px height=169px />
+							<a href="${tag_list[7].url}">
+								<img src="${tag_list[7].typeImg}" width=159px height=169px />
 								<div class="shadou1" style="width:100%;height: 30px;margin-top: -30px;position: relative; opacity:1; background: rgba(0, 0, 0, 0.3);text-align: center;">
-									<span style="text-decoration:none; color:#fff; font-size:14px;">辣妈大赛惊现97年妈妈 网友</span>
+									<span style="text-decoration:none; color:#fff; font-size:14px;">
+										[@text_cut s=tag_list[7].title len=18 append=append/]
+									</span>
 								</div>
 								<!--<i class="mask"></i>-->
 							</a>
 						</div>
 						<div class="picItem pic_3">
-							<a href="http://www.xinjiangnet.com.cn/2016/0811/1608841.shtml">
-								<img src="http://upload.xinjiangnet.com.cn/2016/0811/thumb_159_169_1470886079195.jpg" width=159px height=169px />
+							<a href="${tag_list[8].url}">
+								<img src="${tag_list[8].typeImg}" width=159px height=169px />
 								<div class="shadou1" style="width:100%;height: 30px;margin-top: -30px;position: relative; opacity:1; background: rgba(0, 0, 0, 0.3);text-align: center;">
-									<span style="text-decoration:none; color:#fff; font-size:14px;">看那些美到爆的儿童房！</span>
+									<span style="text-decoration:none; color:#fff; font-size:14px;">
+										[@text_cut s=tag_list[8].title len=18 append=append/]
+									</span>
 								</div>
 								<!--<i class="mask"></i>-->
 							</a>
 						</div>
 					</div>
+					[/@cms_content_list]
 				</div>
 			</div>
 		</div>
