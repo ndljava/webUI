@@ -197,30 +197,18 @@
 						<li id="short_title">
 							<a href="#">首页</a>
 						</li>
-						<li id="short_title">
-							<a href="http://www.xinjiangnet.com.cn/qzly/xw/">新闻</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/qzly/djch/">独家策划</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/qzly/djch/">准妈孕产中心</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/qzly/bb/">宝宝中心</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/qzly/fcyytj/">妇产医院</a>
-						</li>
-						<li id="short_title">
-							<a href="http://www.xinjiangnet.com.cn/qzly/jcsp/">视频</a>
-						</li>
-						<li>
-							<a href="http://www.xinjiangnet.com.cn/qzly/qztk/">育儿图库</a>
-						</li>
-						<li id="short_title" style="float:right;">
-							<a href="http://w.xinjiangnet.com.cn/lt/">论坛</a>
-						</li>
+						
+						[@cms_channel_list parentId='334']
+						[#list tag_list as a]
+						[#if a_index>4]
+							<li id="short_title">
+						[#else]
+							<li>
+						[/#if]
+								<a href="${a.url}">${a.name}</a>
+							</li>
+						[/#list]
+						[/@cms_channel_list]
 					</ul>
 				</div>
 			</div>
