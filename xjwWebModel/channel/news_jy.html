@@ -1,0 +1,2833 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh-CN">
+	<!--<![endif]-->
+	<head>
+		[#include '../include/newsMeta.html']
+ 		<base target="_blank">
+		<!--[if lt IE 9 ]>
+			<script type="text/javascript" src="/${res}/js/modernizr.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="/${res}/css/cmstop-common.css" />
+		<script type="text/javascript" src="/${res}/js/jquery.js"></script>
+		<script type="text/javascript" src="/${res}/js/cmstop-common.js"></script>
+		<script type="text/javascript" src="/${res}/js/config.js"></script>
+		<script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/${res}/js/koala.min.1.5.js"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				font-family: "微软雅黑";
+			}
+			.big {
+				width: 980px;
+				margin: 10px auto;
+			}
+			.navbox {
+				float: left;
+				width: 980px;
+				height: 40px;
+				margin-top: 15px;
+			}
+			ul {
+				list-style-type: none;
+			}
+			a {
+				text-decoration: none;
+				font-weight: normal;
+			}
+			#nav ul {
+				border-top: 3px solid #1F9350;
+				border-bottom: 1px solid #DEDEDE;
+				border-left: 1px solid #DEDEDE;
+				width: 980px;
+				height: 36px;
+				margin: 0;
+				padding: 0px;
+			}
+			#nav li {
+				width: 96px;
+				height: 36px;
+				font-size: 14px;
+				border-right: 1px solid #DEDEDE;
+				text-align: center;
+				line-height: 36px;
+				float: left;
+				margin-left: 0px;
+				padding: 0;
+			}
+			#nav a {
+				display: block;
+				width: 90px;
+				height: 36px;
+				color: #000;
+			}
+			#nav a:link {
+				color: #000;
+			}
+			#nav a:hover {
+				color: #FFF;
+				background: #3BBD81;
+				width: 90px;
+				height: 36px;
+			}
+			#l {
+				width: 228px;
+				text-align: left;
+			}
+			#pn {
+				width: 228px;
+				height: 278px;
+			}
+			.hide {
+				display: none;
+			}
+			.big .top1 {
+				float: left;
+				width: 900px;
+				height: 18px;
+				margin: 12px 0;
+				font-size: 12px;
+				line-height: 18px;
+				color: #797979;
+				padding-left: 80px;
+			}
+			.big .top1 .to1 {
+				float: left;
+				width: 10px;
+				margin-top: 2px;
+			}
+			.big .top1 .to2 {
+				float: left;
+				width: 30px;
+				margin: 0 9px;
+			}
+			.big .top1 .to4 {
+				float: left;
+				width: 55px;
+				margin: 0 9px;
+			}
+			.big .top1 .to5 {
+				float: left;
+				width: 65px;
+				margin: 0 9px;
+			}
+			.big .top1 .to6 {
+				float: left;
+				width: 75px;
+				margin: 0 9px;
+			}
+			.biao {
+				float: left;
+				width: 105px;
+				height: 32px;
+				margin-right: 10px;
+			}
+			.biaoti {
+				float: left;
+				width: 90px;
+				height: 32px;
+				line-height: 32px;
+				color: #D33939;
+				font-size: 22px;
+			}
+			.bigbt {
+				float: left;
+				font-family: "微软雅黑";
+				font-size: 22px;
+				color: #3BBD81;
+				line-height: 34px;
+				border-top: 2px #3BBD81 solid;
+				height: 34px;
+				margin-top: -2px;
+			}
+			.gd {
+				float: right;
+				font-family: "宋体";
+				font-size: 14px;
+				color: #3BBD81;
+				line-height: 34px;
+				font-weight: bolder;
+			}
+			.big .top2 {
+				float: left;
+				width: 980px;
+				height: 71px;
+				border: 1px solid #E1E1E1;
+				margin-top: 10px;
+				margin-left: -2px;
+			}
+			.big .top2 .zhuanqu {
+				float: left;
+				width: 100px;
+				height: 70px;
+				margin: 0;
+				border: 0;
+				padding: 0;
+			}
+			.big .top2 ul {
+				float: left;
+				margin: 0;
+				padding: 0;
+			}
+			.big .top2 li {
+				float: left;
+				width: 130px;
+				height: 56px;
+				margin: 10px 0 10px 7px;
+				border-left: 1px solid #E1E1E1;
+				padding: 0 0 0 8px;
+			}
+			.big .top2 .noborder {
+				float: left;
+				border: 0;
+			}
+			.big .h1 {
+				float: left;
+				width: 980px;
+				margin: 20px 0;
+			}
+			.big .h1 .h1left {
+				float: left;
+				width: 414px;
+				height: 237px;
+			}
+			.big .h1 .h1right {
+				float: right;
+				width: 552px;
+				height: 237px;
+			}
+			.big .h1 .h1right .h1l {
+				float: left;
+				width: 246px;
+				border-top: 2px solid #BFBFBF;
+			}
+			.big .h1 .h1right .h1l .xinwen {
+				float: left;
+				width: 246px;
+				margin-top: 5px;
+			}
+			.big .h1 .h1right .h1l .hbiaoti {
+				font-family: "宋体";
+				font-size: 14px;
+				line-height: 24px;
+				height: 24px;
+				color: #000;
+				width: 246px;
+				text-align: center;
+				font-weight: bolder;
+			}
+			.big .h1 .h1right .h1l .hp {
+				float: left;
+				width: ;
+				color: #6D6D6D;
+				font-family: "宋体";
+				font-size: 12px;
+				line-height: 22px;
+				width: 246px;
+				height: 20px;
+			}
+			.big .h1 .h1right .h1r {
+				float: right;
+				width: 286px;
+				border-top: 2px solid #BFBFBF;
+			}
+			.big .h1 .h1right .h1r .xinwen {
+				float: left;
+				width: 286px;
+				margin-top: 5px;
+			}
+			.big .h1 .h1right .h1r .hbiaoti {
+				font-family: "宋体";
+				font-size: 14px;
+				line-height: 28px;
+				height: 28px;
+				color: #000;
+				width: 286px;
+				text-align: center;
+				font-weight: bolder;
+			}
+			.big .h1 .h1right .h1r .hp {
+				float: left;
+				color: #6D6D6D;
+				font-family: "宋体";
+				font-size: 12px;
+				margin-top: 6px;
+				line-height: 22px;
+				width: 276px;
+				padding-right: 10px;
+				height: 91px;
+			}
+			.big .h1 .h1right .h1r .hp img {
+				float: left;
+				width: 128px;
+				height: 91px;
+				margin-right: 10px;
+			}
+			.big .h2 {
+				float: left;
+				width: 978px;
+				height: 63px;
+				border: #DEDEDE 1px solid;
+				color: #6D6D6D;
+				font-family: "宋体";
+				font-size: 12px;
+				margin-bottom: 20px;
+			}
+			.big .h2 ul {
+				float: left;
+				width: 978px;
+				padding-left: 40px;
+			}
+			.big .h2 li {
+				float: left;
+				width: 177px;
+				height: 14px;
+				line-height: 14px;
+				padding-left: 10px;
+				margin-top: 10px;
+				border-left: 1px solid #747474;
+			}
+			.big .h2 .you {
+				border-left: 1px solid #FFF;
+			}
+			.big .h2 a {
+				font-size: 12px;
+				color: #777;
+			}
+			.big .h3 {
+				float: left;
+				width: 978px;
+			}
+			.big .h3 .left {
+				float: left;
+				width: 677px;
+				border-top: 2px solid #BFBFBF;
+			}
+			.big .h3 .left .nav {
+				float: left;
+				width: 590px;
+				height: 34px;
+				line-height: 34px;
+			}
+			.big .h3 .left .nav ul {
+				float: left;
+				width: 590px;
+				margin: 0;
+				padding: 0;
+				height: 32px;
+			}
+			.big .h3 .left .nav li {
+				float: left;
+				margin-right: 32px;
+				text-align: left;
+				font-family: "微软雅黑";
+				font-size: 22px;
+				color: #333;
+			}
+			.big .h3 .left .nav li .b {
+				font-weight: normal;
+			}
+			.big .h3 .left .nav li:hover {
+				border-top: #3BBD81 2px solid;
+				margin-top: -2px;
+				color: #47C188;
+			}
+			.big .h3 .left .nav a:hover {
+				border-top: #3BBD81 2px solid;
+				margin-top: -2px;
+				color: #47C188;
+			}
+			.big .h3 .left .nav a {
+				color: #333;
+			}
+			#wbox_01 {
+				float: left;
+				width: 677px;
+				margin-top: 15px;
+			}
+			#wbox_01 .a {
+				float: left;
+				width: 677px;
+				height: 175px;
+				margin-top: 5px;
+				background: #F5F5F5;
+			}
+			#wbox_01 .b {
+				float: left;
+				width: 677px;
+				height: 175px;
+				margin-top: 13px;
+			}
+			#wbox_01 .boxleft {
+				float: left;
+				width: 208px;
+				height: 135px;
+				margin-top: 15px;
+			}
+			#wbox_01 .boxright {
+				float: right;
+				width: 450px;
+				margin-top: 15px;
+			}
+			#wbox_01 .boxright .up {
+				float: left;
+				width: 450px;
+				height: 100px;
+			}
+			#wbox_01 .boxright .up .hbiaoti {
+				float: left;
+				font-size: 18px;
+				width: 450px;
+			}
+			#wbox_01 .boxright .up .wen {
+				float: left;
+				width: 440px;
+				padding: 0 5px;
+				font-weight: normal;
+				color: #595959;
+				font-size: 14px;
+				line-height: 22px;
+				margin-top: 14px;
+			}
+			#wbox_01 .boxright .down {
+				float: left;
+				width: 450px;
+				margin-top: 10px;
+			}
+			#wbox_01 .boxright .down .biaoqian {
+				float: left;
+				height: 25px;
+				width: 295px;
+			}
+			#wbox_02 {
+				float: left;
+				width: 677px;
+				margin-top: 15px;
+			}
+			#wbox_02 .a {
+				float: left;
+				width: 677px;
+				height: 175px;
+				margin-top: 5px;
+				background: #F5F5F5;
+			}
+			#wbox_02 .b {
+				float: left;
+				width: 677px;
+				height: 175px;
+				margin-top: 13px;
+			}
+			#wbox_02 .boxleft {
+				float: left;
+				width: 208px;
+				height: 135px;
+				margin-top: 15px;
+			}
+			#wbox_02 .boxright {
+				float: right;
+				width: 450px;
+				margin-top: 15px;
+			}
+			#wbox_02 .boxright .up {
+				float: left;
+				width: 450px;
+				height: 100px;
+			}
+			#wbox_02 .boxright .up .hbiaoti {
+				float: left;
+				font-size: 18px;
+				width: 450px;
+			}
+			#wbox_02 .boxright .up .wen {
+				float: left;
+				width: 440px;
+				padding: 0 5px;
+				font-weight: normal;
+				color: #595959;
+				font-size: 14px;
+				line-height: 22px;
+				margin-top: 14px;
+			}
+			#wbox_02 .boxright .down {
+				float: left;
+				width: 450px;
+				margin-top: 10px;
+			}
+			#wbox_02 .boxright .down .biaoqian {
+				float: left;
+				height: 25px;
+				width: 295px;
+			}
+			#wbox_03 {
+				float: left;
+				width: 677px;
+				margin-top: 15px;
+			}
+			#wbox_03 .a {
+				float: left;
+				width: 677px;
+				height: 175px;
+				margin-top: 5px;
+				background: #F5F5F5;
+			}
+			#wbox_03 .b {
+				float: left;
+				width: 677px;
+				height: 175px;
+				margin-top: 13px;
+			}
+			#wbox_03 .boxleft {
+				float: left;
+				width: 208px;
+				height: 135px;
+				margin-top: 15px;
+			}
+			#wbox_03 .boxright {
+				float: right;
+				width: 450px;
+				margin-top: 15px;
+			}
+			#wbox_03 .boxright .up {
+				float: left;
+				width: 450px;
+				height: 100px;
+			}
+			#wbox_03 .boxright .up .hbiaoti {
+				float: left;
+				font-size: 18px;
+				width: 450px;
+			}
+			#wbox_03 .boxright .up .wen {
+				float: left;
+				width: 440px;
+				font-weight: normal;
+				padding: 0 5px;
+				color: #595959;
+				font-size: 14px;
+				line-height: 22px;
+				margin-top: 14px;
+			}
+			#wbox_03 .boxright .down {
+				float: left;
+				width: 450px;
+				margin-top: 10px;
+			}
+			#wbox_03 .boxright .down .biaoqian {
+				float: left;
+				height: 25px;
+				width: 295px;
+			}
+			#wbox_04 {
+				float: left;
+				width: 677px;
+				margin-top: 15px;
+			}
+			#wbox_04 .a {
+				float: left;
+				width: 677px;
+				height: 175px;
+				margin-top: 5px;
+				background: #F5F5F5;
+			}
+			#wbox_04 .b {
+				float: left;
+				width: 677px;
+				height: 175px;
+				margin-top: 13px;
+			}
+			#wbox_04 .boxleft {
+				float: left;
+				width: 208px;
+				height: 135px;
+				margin-top: 15px;
+			}
+			#wbox_04 .boxright {
+				float: right;
+				width: 450px;
+				margin-top: 15px;
+			}
+			#wbox_04 .boxright .up {
+				float: left;
+				width: 450px;
+				height: 100px;
+			}
+			#wbox_04 .boxright .up .hbiaoti {
+				float: left;
+				font-size: 18px;
+				width: 450px;
+			}
+			#wbox_04 .boxright .up .wen {
+				float: left;
+				width: 440px;
+				font-weight: normal;
+				padding: 0 5px;
+				color: #595959;
+				font-size: 14px;
+				line-height: 22px;
+				margin-top: 14px;
+			}
+			#wbox_04 .boxright .down {
+				float: left;
+				width: 450px;
+				margin-top: 10px;
+			}
+			#wbox_04 .boxright .down .biaoqian {
+				float: left;
+				height: 25px;
+				width: 295px;
+			}
+			#wbox_05 {
+				float: left;
+				width: 677px;
+				margin-top: 15px;
+			}
+			#wbox_05 .a {
+				float: left;
+				width: 677px;
+				height: 175px;
+				margin-top: 5px;
+				background: #F5F5F5;
+			}
+			#wbox_05 .b {
+				float: left;
+				width: 677px;
+				height: 175px;
+				margin-top: 13px;
+			}
+			#wbox_05 .boxleft {
+				float: left;
+				width: 208px;
+				height: 135px;
+				margin-top: 15px;
+			}
+			#wbox_05 .boxright {
+				float: right;
+				width: 450px;
+				margin-top: 15px;
+			}
+			#wbox_05 .boxright .up {
+				float: left;
+				width: 450px;
+				height: 100px;
+			}
+			#wbox_05 .boxright .up .hbiaoti {
+				float: left;
+				font-size: 18px;
+				width: 450px;
+			}
+			#wbox_05 .boxright .up .wen {
+				float: left;
+				width: 440px;
+				padding: 0 5px;
+				font-weight: normal;
+				color: #595959;
+				font-size: 14px;
+				line-height: 22px;
+				margin-top: 14px;
+			}
+			#wbox_05 .boxright .down {
+				float: left;
+				width: 450px;
+				margin-top: 10px;
+			}
+			#wbox_05 .boxright .down .biaoqian {
+				float: left;
+				height: 25px;
+				width: 295px;
+			}
+			.big .h3 .right {
+				float: right;
+				width: 287px;
+			}
+			.big .h3 .right .right1 {
+				float: left;
+				width: 287px;
+				border-top: 2px solid #BFBFBF;
+			}
+			.big .h3 .right .right1 .xinwen {
+				float: left;
+				width: 287px;
+				height: 140px;
+				margin: 15px 0;
+				background: #F5F5F5;
+			}
+			.big .h3 .right .right1 .xinwen img {
+				float: left;
+				width: 105px;
+				height: 120px;
+				margin: 10px;
+			}
+			.big .h3 .right .right1 .xinwen .qik {
+				float: right;
+				width: 145px;
+				height: 120px;
+				margin: 10px 10px 10px 0;
+			}
+			.big .h3 .right .right1 .xinwen .qik .a1 {
+				float: left;
+				font-size: 12px;
+				padding-top: 5px;
+			}
+			.big .h3 .right .right1 .xinwen .qik .a1 .di {
+				font-size: 14px;
+			}
+			.big .h3 .right .right1 .xinwen .qik .a1 .num {
+				font-size: 18px;
+				color: #66AC92;
+				font-weight: bolder;
+			}
+			.big .h3 .right .right1 .xinwen .qik .a2 {
+				float: left;
+				font-size: 16px;
+				color: #292929;
+				width: 145px;
+				font-family: "宋体";
+				font-weight: bolder;
+				margin: 12px 0;
+				text-align: center;
+			}
+			.big .h3 .right .right1 .xinwen .qik .a3 {
+				float: left;
+				font-size: 13px;
+				color: #4C4A4B;
+				width: 145px;
+				line-height: 18px;
+			}
+			.big .h3 .right .right2 {
+				float: left;
+				width: 287px;
+				border-top: 2px solid #BFBFBF;
+			}
+			.big .h3 .right .right2 .zhuanti {
+				float: left;
+				width: 287px;
+				height: 152px;
+			}
+			.big .h3 .right .right2 .zhuanti img {
+				float: left;
+				width: 287px;
+				height: 73px;
+				margin-top: 5px;
+			}
+			.big .h4 {
+				float: left;
+				width: 980px;
+				margin-top: 15px;
+				height: 190px;
+			}
+			.big .h4 .left {
+				float: left;
+				width: 676px;
+			}
+			.big .h4 .flashbox {
+				float: left;
+				width: 610px;
+				height: 135px;
+				margin-top: 30px;
+			}
+			.big .h4 .picbox {
+				margin-left: 28px;
+				width: 646px;
+				height: 135px;
+				overflow: hidden;
+				position: relative;
+			}
+			.big .h4 .piclist {
+				height: 135px;
+				position: absolute;
+				left: 0px;
+				top: 0px
+			}
+			.big .h4 .piclist li {
+				background: #fff;
+				margin-right: 15px;
+				padding: 5px;
+				float: left;
+			}
+			.big .h4 .swaplist {
+				position: absolute;
+				left: -3000px;
+				top: 0px
+			}
+			.big .h4 .og_prev,
+			.og_next {
+				width: 30px;
+				height: 50px;
+				background: url(/${res}/img/xjw_jypd/icon_ie6.png) no-repeat;
+				background: url(/${res}/img/xjw_jypd/icon_ie6.png) no-repeat\9;
+				top: 33px;
+				z-index: 99;
+				cursor: pointer;
+				filter: alpha(opacity=70);
+				opacity: 0.7;
+			}
+			.big .h4 .og_prev {
+				background-position: 0 -60px;
+				left: 4px;
+				margin-top: -100px;
+			}
+			.big .h4 .og_next {
+				background-position: 0 0;
+				margin-left: 666px;
+				margin-top: -50px;
+			}
+			.big .h4 .box {
+				width: 736px;
+			}
+			.big .h4 .right {
+				float: right;
+				width: 288px;
+				border-top: 2px solid #BFBFBF;
+			}
+			.big .h4 .right .xinwen {
+				float: left;
+				width: 288px;
+				margin-top: 5px;
+			}
+			.big .h4 .right .hbiaoti {
+				font-family: "宋体";
+				font-size: 14px;
+				line-height: 28px;
+				height: 28px;
+				color: #000;
+				width: 288px;
+				text-align: center;
+				font-weight: bolder;
+			}
+			.big .h4 .right .hp {
+				float: left;
+				width: ;
+				color: #6D6D6D;
+				font-family: "宋体";
+				font-size: 12px;
+				line-height: 22px;
+				width: 288px;
+			}
+			.big .h4 .right .hp img {
+				float: left;
+				margin-right: 10px;
+				width: 100px;
+				height: 95px;
+			}
+			.big .h5 {
+				float: left;
+				width: 980px;
+				margin-top: 25px;
+				border-top: 2px solid #BFBFBF;
+			}
+			.big .h5 .box {
+				float: left;
+				width: 980px;
+				margin-top: 15px;
+				height: 280px;
+			}
+			.big .h5 .box .left {
+				float: left;
+				width: 656px;
+			}
+			.big .h5 .box .left .huandeng {
+				float: left;
+				width: 280px;
+				height: 278px;
+			}
+			.big .h5 .box .left .news {
+				float: right;
+				width: 350px;
+				height: 278px;
+			}
+			.big .h5 .box .left .news .zhiding {
+				float: left;
+				font-size: 14px;
+			}
+			.big .h5 .box .left .news .zhiding .hbiaoti {
+				font-family: "宋体";
+				line-height: 28px;
+				height: 28px;
+				color: #000;
+				width: 360px;
+				font-weight: bolder;
+			}
+			.big .h5 .box .left .news .zhiding .ti1 {
+				float: left;
+				color: #6A6A6A;
+				font-family: "微软雅黑";
+				width: 360px;
+				line-height: 36px;
+			}
+			.big .h5 .box .left .news .lieb {
+				float: left;
+			}
+			.big .h5 .box .left .news .lieb ul {
+				float: left;
+				width: 360px;
+				color: #5C5C5C;
+				margin-top: 5px;
+				font-size: 14px;
+			}
+			.big .h5 .box .left .news .lieb li {
+				float: left;
+				width: 360px;
+				line-height: 26px;
+				padding: 0 10px;
+			}
+			.big .h5 .box .right {
+				float: right;
+				width: 288px;
+				height: 280px;
+			}
+			.big .h5 .box .right .hbiaoti {
+				font-family: "宋体";
+				line-height: 28px;
+				height: 28px;
+				color: #000;
+				width: 288px;
+				font-weight: bolder;
+			}
+			.big .h5 .box .right .picbox {
+				float: left;
+				width: 288px;
+				height: 250px;
+			}
+			.big .h5 .box .right .picbox ul {
+				float: left;
+				width: 288px;
+				height: 240px;
+				margin-top: 12px;
+			}
+			.big .h5 .box .right .picbox li {
+				float: left;
+				margin: 0 0 14px 0;
+				width: 130px;
+				height: 112px;
+				margin-right: 14px;
+			}
+			.big .h5 .box .right .picbox img {
+				float: left;
+				width: 130px;
+				height: 90px;
+			}
+			.big .h5 .box .right .picbox span {
+				float: left;
+				width: 130px;
+				height: 12px;
+				text-align: center;
+				font-size: 14px;
+				line-height: 24px;
+			}
+			.sbt {
+				float: left;
+				font-family: "宋体";
+				font-size: 16px;
+				line-height: 16px;
+				border-left: 5px #42A71B solid;
+				height: 16px;
+				font-weight: bolder;
+			}
+			.gdt {
+				float: right;
+				font-family: "宋体";
+				font-size: 12px;
+				color: #929292;
+				line-height: 16px;
+			}
+			.big .h6 {
+				float: left;
+				width: 980px;
+				margin-top: 25px;
+				border-top: 2px solid #BFBFBF;
+			}
+			.big .h6 .lbti {
+				float: left;
+				font-size: 14px;
+				font-family: "宋体";
+				line-height: 26px;
+				height: 26px;
+			}
+			.big .h6 .temp {
+				float: left;
+				width: 980px;
+				height: 25px;
+			}
+			.big .h6 .left {
+				float: left;
+				width: 280px;
+				height: 343px;
+			}
+			.big .h6 .left .up {
+				float: left;
+				width: 280px;
+				height: 90px;
+			}
+			.big .h6 .left .up ul {
+				float: left;
+				width: 280px;
+			}
+			.big .h6 .left .up li {
+				float: left;
+				width: 120px;
+				height: 90px;
+				margin-left: 15px;
+				font-size: 12px;
+				color: #FFF;
+				text-align: center;
+			}
+			.big .h6 .left .up .shadou {
+				width: 120px;
+				height: 22px;
+				margin-top: -22px;
+				display: block;
+				background: #000;
+				filter: alpha(opacity=70);
+				filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+				opacity: 0.70;
+			}
+			.big .h6 .left .down {
+				float: left;
+				width: 280px;
+				margin-top: 20px;
+			}
+			.big .h6 .left .down ul {
+				float: left;
+				width: 260px;
+				padding: 0 5px;
+				font-size: 14px;
+			}
+			.big .h6 .left .down li {
+				float: left;
+				width: 260px;
+				line-height: 26px;
+			}
+			.big .h6 .left .add {
+				float: left;
+				width: 280px;
+				height: 88px;
+				margin-top: 20px;
+			}
+			.big .h6 .mid {
+				float: left;
+				width: 355px;
+				margin-left: 30px;
+			}
+			.big .h6 .mid ul {
+				float: left;
+				width: 345px;
+				padding: 0 5px;
+				font-size: 14px;
+			}
+			.big .h6 .mid li {
+				float: left;
+				width: 345px;
+				line-height: 26px;
+			}
+			.big .h6 .mid .up {
+				float: left;
+				width: 355px;
+				height: 165px;
+			}
+			.big .h6 .mid .down {
+				float: left;
+				width: 355px;
+				height: 165px;
+				margin-top: 15px;
+				padding-left: 5px;
+			}
+			.big .h6 .right {
+				float: right;
+				width: 255px;
+				margin-right: 35px;
+			}
+			.big .h6 .right ul {
+				float: left;
+				width: 250px;
+				height: 90px;
+				margin-left: 5px;
+			}
+			.big .h6 .right li {
+				float: left;
+				width: 83px;
+				height: 15px;
+				margin: 5px 0;
+			}
+			.big .h6 .right li .tt2 {
+				float: left;
+				width: 52px;
+				height: 15px;
+			}
+			.big .h6 .right li .tt3 {
+				float: left;
+				width: 65px;
+				height: 15px;
+			}
+			.big .h6 .right li .tt4 {
+				float: left;
+				width: 78px;
+				height: 15px;
+			}
+			.big .h6 .right .thebox {
+				float: left;
+				width: 113px;
+				height: 32px;
+			}
+			.big .h6 .right .thebox img {
+				float: left;
+				width: 95px;
+				height: 20px;
+				margin: 5px;
+			}
+			.big .h6 .right .thebox:hover {
+				border: 1px dashed #000;
+				float: left;
+			}
+			.sbt2 {
+				float: left;
+				font-family: "宋体";
+				font-size: 16px;
+				width: 160px;
+				line-height: 16px;
+				border-left: 5px #F2B33F solid;
+				height: 16px;
+				font-weight: bolder;
+			}
+			.big .hx {
+				float: left;
+				width: 980px;
+				margin-top: 25px;
+				border-top: 2px solid #BFBFBF;
+			}
+			.big .hx .lbti {
+				float: left;
+				font-size: 14px;
+				font-family: "宋体";
+				line-height: 26px;
+				height: 26px;
+			}
+			.big .hx .temp {
+				float: left;
+				width: 980px;
+				height: 25px;
+			}
+			.big .hx .left {
+				float: left;
+				width: 280px;
+				height: 343px;
+			}
+			.big .hx .left .up {
+				float: left;
+				width: 280px;
+				height: 90px;
+			}
+			.big .hx .left .up ul {
+				float: left;
+				width: 280px;
+			}
+			.big .hx .left .up li {
+				float: left;
+				width: 120px;
+				height: 90px;
+				margin-left: 15px;
+				font-size: 12px;
+				color: #FFF;
+				text-align: center;
+			}
+			.big .hx .left .up .shadou {
+				width: 120px;
+				height: 22px;
+				margin-top: -22px;
+				display: block;
+				background: #000;
+				filter: alpha(opacity=70);
+				filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+				opacity: 0.70;
+			}
+			.big .hx .left .down {
+				float: left;
+				width: 280px;
+				margin-top: 20px;
+			}
+			.big .hx .left .down ul {
+				float: left;
+				width: 260px;
+				padding: 0 5px;
+				font-size: 14px;
+			}
+			.big .hx .left .down li {
+				float: left;
+				width: 260px;
+				line-height: 26px;
+			}
+			.big .hx .left .add {
+				float: left;
+				width: 280px;
+				height: 88px;
+				margin-top: 20px;
+			}
+			.big .hx .mid {
+				float: left;
+				width: 355px;
+				margin-left: 30px;
+			}
+			.big .hx .mid ul {
+				float: left;
+				width: 345px;
+				padding: 0 5px;
+				font-size: 12px;
+				margin-top: 16px;
+			}
+			.big .hx .mid li {
+				float: left;
+				width: 345px;
+				line-height: 24px;
+			}
+			.big .hx .mid .up {
+				float: left;
+				width: 355px;
+				height: 110px;
+			}
+			.big .hx .mid .mid2 {
+				float: left;
+				width: 355px;
+				height: 110px;
+			}
+			.big .hx .mid .down {
+				float: left;
+				width: 355px;
+				height: 110px;
+			}
+			.big .hx .right {
+				float: right;
+				width: 255px;
+				margin-right: 35px;
+			}
+			.big .hx .right ul {
+				float: left;
+				width: 255px;
+				padding: 0 5px;
+				font-size: 14px;
+				font-family: "微软雅黑";
+			}
+			.big .hx .right li {
+				float: left;
+				width: 255px;
+				line-height: 24px;
+			}
+			.big .hx .right .hxbox {
+				float: left;
+				width: 288px;
+				height: 120px;
+			}
+			.big .hx .right .hxbox ul {
+				float: left;
+				width: 288px;
+				font-family: "黑体";
+				font-size: 14px;
+				background: #FBFFDC;
+			}
+			.big .hx .right .hxbox li {
+				float: left;
+				width: 110px;
+				height: 24px;
+				font-weight: bolder;
+				padding-left: 25px;
+			}
+			.big .hx .right .hxbox li a {
+				font-family: "黑体";
+				font-size: 14px;
+				color: #000;
+			}
+			.big .map {
+				float: left;
+				width: 980px;
+				height: 414px;
+				border-top: 2px solid #BFBFBF;
+			}
+			.focus {
+				position: relative;
+				width: 414px;
+				height: 237px;
+				background-color: #000;
+				float: left;
+			}
+			.focus img {
+				width: 414px;
+				height: 237px;
+			}
+			.focus .shadow .title {
+				width: 260px;
+				height: 35px;
+				padding-left: 30px;
+				padding-top: 20px;
+			}
+			.focus .shadow .title a {
+				text-decoration: none;
+				color: #fff;
+				font-size: 14px;
+				font-weight: bolder;
+				overflow: hidden;
+			}
+			.focus .btn {
+				position: absolute;
+				bottom: 34px;
+				left: 510px;
+				ove1rflow: hidden;
+				zoom: 1;
+			}
+			.focus .btn a {
+				position: relative;
+				display: inline;
+				width: 13px;
+				height: 13px;
+				border-radius: 7px;
+				margin: 0 5px;
+				color: #B0B0B0;
+				font: 12px/15px "\5B8B\4F53";
+				text-decoration: none;
+				text-align: center;
+				outline: 0;
+				float: left;
+				background: #D9D9D9;
+			}
+			.focus .btn a:hover,
+			.focus .btn a.current {
+				cursor: pointer;
+				background: #fc114a;
+			}
+			.focus .fPic {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+			.focus .D1fBt {
+				overflow: hidden;
+				zoom: 1;
+				height: 16px;
+				z-index: 10;
+			}
+			.focus .shadow {
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0px;
+				z-index: 10;
+				height: 50px;
+				line-height: 30px;
+				background: rgba(0, 0, 0, 0.6);
+				filter: progid:DXImageTransform.Microsoft.gradient( GradientType=0, startColorstr='#80000000', endColorstr='#80000000')\9;
+				display: block;
+				text-align: left;
+			}
+			.focus .shadow a {
+				text-decoration: none;
+				color: #fff;
+				font-size: 14px;
+				overflow: hidden;
+				margin-left: 10px;
+				font-family: "\5FAE\8F6F\96C5\9ED1";
+			}
+			.focus .fcon {
+				position: relative;
+				width: 100%;
+				float: left;
+				display: none;
+				background: #000
+			}
+			.focus .fcon img {
+				display: block;
+			}
+			.focus .fbg {
+				bottom: 20px;
+				right: 20px;
+				position: absolute;
+				height: 21px;
+				text-align: center;
+				z-index: 200;
+			}
+			.focus .fbg div {
+				margin: 4px auto 0;
+				overflow: hidden;
+				zoom: 1;
+				height: 14px
+			}
+			.focus .D1fBt a {
+				position: relative;
+				display: inline;
+				width: 7px;
+				height: 7px;
+				border-radius: 9px;
+				margin: 0 5px;
+				color: #B0B0B0;
+				font: 12px/15px "\5B8B\4F53";
+				text-decoration: none;
+				text-align: center;
+				outline: 0;
+				float: left;
+				background: #FFF;
+			}
+			.focus .D1fBt .current,
+			.focus .D1fBt a:hover {
+				background: #48B638;
+			}
+			.focus .D1fBt img {
+				display: none
+			}
+			.focus .D1fBt i {
+				display: none;
+				font-style: normal;
+			}
+			.focus .prev,
+			.focus .next {
+				position: absolute;
+				width: 40px;
+				height: 74px;
+				background: url(/${res}/img/xjw_jypd/focus_btn.png) no-repeat;
+			}
+			.focus .prev {
+				top: 50%;
+				margin-top: -37px;
+				left: 0;
+				background-position: 0 -74px;
+				cursor: pointer;
+			}
+			.focus .next {
+				top: 50%;
+				margin-top: -37px;
+				right: 0;
+				background-position: -40px -74px;
+				cursor: pointer;
+			}
+			.focus .prev:hover {
+				background-position: 0 0;
+			}
+			.focus .next:hover {
+				background-position: -40px 0;
+			}
+			.code {
+				height: auto;
+				padding: 20px;
+				border: 1px solid #9EC9FE;
+				background: #FFF;
+			}
+			.code pre {
+				font-family: "Courier New";
+				font-size: 12px;
+			}
+			.code pre code.note {
+				color: #fff
+			}
+			.code2 {
+				border: 1px solid #FEB0B0;
+				background: #fff;
+				margin-top: 10px;
+			}
+			.code2 pre {
+				margin-left: 20px;
+				font-size: 12px;
+			}
+			.info {
+				font-size: 8px;
+				color: #fff;
+				font-family: Verdana;
+				margin: 20px 0 50px 0;
+			}
+			.info p {
+				margin: 0;
+				padding: 0;
+				line-height: 18px;
+				text-indent: 40px;
+			}
+			h2.title {
+				margin: 0;
+				padding: 0;
+				margin-top: 50px;
+				font-size: 12px;
+				font-family: "微软雅黑", Verdana;
+			}
+			h2.title span.titleInfo {
+				font-size: 12px;
+				color: #333;
+				margin-left: 10px;
+				font-family: Verdana;
+			}
+			h3.title {
+				font-size: 12px;
+				font-family: "微软雅黑", Verdana;
+			}
+			.importInfo {
+				font-family: Verdana;
+				font-size: 12px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		[#include '../content/news_header.html'/]
+		<!-- @end头部 -->
+		<div class="big">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="980" height="90" align="absbottom">
+    			<param name="movie" value="/${res}/img/adv_jypd/20170710zkcx_jypd.swf" />
+    			<param name=wmode value=opaque />
+    			<param name="quality" value="high" />
+    			<param name="SCALE" value="exactfit" />
+    			<embed src="/${res}/img/adv_jypd/20170710zkcx_jypd.swf" width="980" height="90" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+			</object>
+			<!--新疆网logo-->
+			<style>
+				.headlogo {
+					width: 980px;
+					margin: 0;
+					padding: 0;
+					no-repeat left center;
+					height: 34px;
+					text-align: left;
+					position: relative;
+				}
+				.headlogo span {
+					margin-left: 20px;
+					font-family: "微软雅黑";
+					font-size: 24px;
+					font-weight: 700;
+					color: #D33939;
+					line-height: 34px;
+				}
+			</style>
+			<div class="headlogo">
+				<a href="http://www.xinjiangnet.com.cn/" alt="新疆网教育频道"><img src="/${res}/img/xjw_logo.png" /></a>
+				<span style="color:#3BBD81; font-size:22px;">教育频道</span>
+				<div style="float:right;top:10px;right:10px;width:200px;position: absolute;">
+					<div class="fl-l header-search-input ov ">
+						<form id="head_search" name="head_search" action="http://app.xinjiangnet.com.cn/" method="GET">
+							<input type="hidden" name="app" value="search">
+							<input type="hidden" name="controller" value="index">
+							<input type="hidden" name="action" value="search">
+							<input type="hidden" id="type" name="type" value="all">
+							<div class="divicon icon16x16 fl-r"></div>
+							<input type="text" id="head_wd" name="wd" class="searinput" style="margin-top:2px;" />
+						</form>
+					</div>
+					<a href="" class="m-header-search js-headsearch fl-l icon16x16"></a>
+					<script type="text/javascript">
+						$('#head_search .divicon').click(function() {
+							$('#head_search').submit();
+						});
+						$('#head_search').attr('Action', APP_URL);
+					</script>
+				</div>
+			</div>
+			<div class="navbox">
+				<!------导航开始----->
+				<div id="nav">
+					<ul>
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="http://w.xinjiangnet.com.cn/xwzx/jy/rdxw/">今日头条</a>
+						</li>
+						<li>
+							<a href="http://w.xinjiangnet.com.cn/xwzx/jy/xyxw/zxx/">中小学</a>
+						</li>
+						<li>
+							<a href="http://w.xinjiangnet.com.cn/xwzx/jy/xyxw/yey/">幼儿园</a>
+						</li>
+						<li>
+							<a href="http://w.xinjiangnet.com.cn/xwzx/jy/xyxw/kspx/">考试培训</a>
+						</li>
+						<li>
+							<a href="http://w.xinjiangnet.com.cn/xwzx/jy/xyxw/cglx/">出国留学</a>
+						</li>
+						<li>
+							<a href="http://w.xinjiangnet.com.cn/xwzx/jy/xyhd/xyb/">校园互动</a>
+						</li>
+						<li>
+							<a href="http://www.xinjiangnet.com.cn/xjzjy/">小记者</a>
+						</li>
+						<li>
+							<a href="http://www.xinjiangnet.com.cn/cgpd/">出国</a>
+						</li>
+						<li style="float:right">
+							<a href="http://w.xinjiangnet.com.cn/xjzjy/">小记者家园</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="top2">
+				<ul>
+					<li class="zhuanqu"><img src="/${res}/img/xjw_jypd/zhuanqu.gif"></li>
+					<li class="noborder" style="margin-left:-5px;">
+						<a href="http://www.xinjiangnet.com.cn/xjwzt/Apr/8zzkxc/" target="_blank">
+							<img src="http://upload.xinjiangnet.com.cn/2015/0217/1424145207682.jpg" width="130" height="56">
+						</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/xjwzt/2014july/whtlxy/" target="_blank">
+							<img src="http://upload.xinjiangnet.com.cn/2015/0203/thumb_130_56_1422955404301.jpg" width="130" height="56">
+						</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/xjwzt/May/70midschool/" target="_blank">
+							<img src="http://upload.xinjiangnet.com.cn/2015/0217/1424145036656.jpg" width="130" height="56">
+						</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/xjwzt/2013june/2013xdf/index.shtml" target="_blank">
+							<img src="http://upload.xinjiangnet.com.cn/2015/0202/1422862777867.jpg" width="130" height="56">
+						</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/xjwzt/May/41midschool/" target="_blank">
+							<img src="http://upload.xinjiangnet.com.cn/2015/0217/1424144844430.jpg" width="130" height="56">
+						</a>
+					</li>
+					<li>
+						<a href="http://www.xinjiangnet.com.cn/xjwzt/2013Nov/sxtcgk/" target="_blank">
+							<img src="http://upload.xinjiangnet.com.cn/2015/0202/1422861480588.jpg" width="130" height="56">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="h1">
+				<div class="h1left">
+					<!-------------------首页幻灯片特效------------------------->
+					<!-- 代码 开始 -->
+					<div id="fsD1" class="focus">
+						<div id="D1pic1" class="fPic">
+							[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
+							<div class="fcon" style="display: none;">
+								<a target="_blank" href="${a.url}">
+									<img width="414" height="237" src="${a.typeImg}" style="opacity: 1; ">
+								</a>
+								<span class="shadow">
+									<a target="_blank" href="${a.url}">
+										[@text_cut s=a.title len=18 append=append/]
+									</a>
+									<div style="clear:both; margin-top:-2px; line-height:12px; font-size:12px; color:#CCC;">
+										&nbsp;&nbsp;[@text_cut s=a.desc len=33 append=append/]
+									</div>
+								</span>
+							</div>
+							[/#list]
+							[/@cms_content_list]
+						</div>
+						<div class="fbg" style="bottom: 15px;">
+							<div class="D1fBt" id="D1fBt">
+								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>1</i></a>
+								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a>
+								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>3</i></a>
+								<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>4</i></a>
+							</div>
+						</div>
+						<span class="prev"></span>
+						<span class="next"></span>
+					</div>
+					<script type="text/javascript">
+						Qfast.add('widgets', {
+							path: "/${res}/js/terminator2.2.min.js",
+							type: "js",
+							requires: ['fx']
+						});
+						Qfast(false, 'widgets', function() {
+							K.tabs({
+								id: 'fsD1', //焦点图包裹id  
+								conId: "D1pic1", //** 大图域包裹id  
+								tabId: "D1fBt",
+								tabTn: "a",
+								conCn: '.fcon', //** 大图域配置class       
+								auto: 1, //自动播放 1或0
+								effect: 'fade', //效果配置
+								eType: 'click', //** 鼠标事件
+								pageBt: true, //是否有按钮切换页码
+								bns: ['.prev', '.next'], //** 前后按钮配置class                          
+								interval: 3000 //** 停顿时间  
+							})
+						})
+					</script>
+					<!-- 代码 结束 -->
+					<!-------------------首页幻灯片特效------------------------->
+				</div>
+				<div class="h1right">
+					<div class="h1l">
+						<div class="bigbt">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/rdxw/" style="color:#3BBD81">热点新闻</a>
+						</div>
+						<div class="gd">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/rdxw/" style="color:#3BBD81; font-weight:bolder;">更多</a>
+						</div>
+						[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+						[#list tag_list as a]
+						<div class="xinwen">
+							<div class="hbiaoti" style="text-align:left;">
+								<a href="${a.url}" class="hbiaoti" style="text-align:left;">&nbsp;&nbsp;[@text_cut s=a.title len=15 append=append/]</a>
+							</div>
+							<div class="hp">&nbsp;[@text_cut s=a.desc len=18 append=append/]</div>
+						</div>
+						[/#list]
+						[/@cms_content_list]
+					</div>
+					<div class="h1r">
+						<div class="bigbt">
+							<a href="#" style="color:#3BBD81">独家策划</a>
+						</div>
+						<div class="gd">
+							<a href="#" style="color:#3BBD81; font-weight:bolder;">更多</a>
+						</div>
+						<div class="xinwen">
+							[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
+							<div>
+								<div class="hbiaoti">
+									<a href="${a.url}" class="hbiaoti">[@text_cut s=a.title len=12 append=append/]</a>
+								</div>
+								<div class="hp">
+									<a href="${a.url}">
+										<img width="129" height="91" src="${a.typeImg}">
+									</a>
+									&nbsp;&nbsp;[@text_cut s=a.desc len=35 append=append/]
+									<a href="${a.url}" style="color:#D50000;"> [详细]</a>
+								</div>
+							</div>
+							[/#list]
+							[/@cms_content_list]
+							[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+							<div class="hp" style="height:60px; margin-top:5px;">
+								&nbsp;&nbsp;[@text_cut s=a.desc len=50 append=append/]
+								<a href="${a.url}" style="color:#D50000;">[详细]</a>
+							</div>
+							[/#list]
+							[/@cms_content_list]
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="margin:15px 0 25px 0;">
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="980" height="80" align="absbottom">
+    				<param name="movie" value="/${res}/img/adv_jypd/20160413gd_qnw_gyxj.swf" />
+    				<param name=wmode value=opaque />
+    				<param name="quality" value="high" />
+    				<param name="SCALE" value="exactfit" />
+    				<embed src="/${res}/img/adv_jypd/20160413gd_qnw_gyxj.swf" width="980" height="80" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+				</object>
+			</div>
+			<!----------------tab 标签切换效果----------------------------------->
+			<script type="text/javascript" language="javascript">
+				function g(o) {
+					return document.getElementById(o);
+				}
+				function HoverLi(n) {
+					//如果有N个标签,就将i<=N;
+					for(var i = 1; i <= 5; i++) {
+						g('tb_' + i).className = 'normaltab';
+						g('wbox_0' + i).className = 'undis';
+					}
+					g('wbox_0' + n).className = 'dis';
+					g('tb_' + n).className = 'hovertab';
+				}
+				//如果要做成点击后再转到请将<li>中的onmouseover 改成 onclick;
+			</script>
+			<style type="text/css">
+				.dis {
+					display: block;
+				}
+				.undis {
+					display: none;
+				}
+			</style>
+			<div class="h3">
+				<div class="left">
+					<div class="nav">
+						<ul>
+							<li id="tb_1" onMouseOver="x:HoverLi(1);">
+								<a href="#" style="">中小学</a>
+							</li>
+							<li id="tb_2" onMouseOver="x:HoverLi(2);">
+								<a href="#" style="">幼儿园</a>
+							</li>
+							<li id="tb_3" onMouseOver="x:HoverLi(3);">
+								<a href="#" style="">考试培训</a>
+							</li>
+							<li id="tb_4" onMouseOver="x:HoverLi(4);">
+								<a href="http://www.xinjiangnet.com.cn/xwzx/jy/xyxw/cglx/" style="">出国留学</a>
+							</li>
+							<li id="tb_5" onMouseOver="x:HoverLi(5);">
+								<a href="#" style="">曝光台</a>
+							</li>
+						</ul>
+					</div>
+					<div id="wbox_01" class="dis">
+						[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
+						<div class="b">
+							<div class="boxleft">
+								<a href="${a.url}" target="_blank">
+									<img src="${a.typeImg}" width="208" height="135">
+								</a>
+							</div>
+							<div class="boxright">
+								<div class="up">
+									<div class="hbiaoti">
+										<a href="${a.url}" style="font-weight:bolder;">
+											[@text_cut s=a.title len=20 append=append/]
+										</a>
+									</div>
+									<div class="wen">[@text_cut s=a.desc len=80 append=append/]</div>
+								</div>
+								<div class="down">
+									<div class="biaoqian">
+										<div style=" float:left; font-weight:bolder;font-size:14px;width:51px;height:21px;background:#F9A743;color:#FFF;text-align:center; margin:0 0 0 5px;">暑假</div>
+										<div style=" float:left; font-weight:bolder;font-size:14px;width:66px;height:21px;background:#F9A743;color:#FFF;text-align:center; margin:0 0 0 15px;">培训班</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						[/#list]
+						[/@cms_content_list]
+					</div>
+					<div id="wbox_02" class="undis">
+						[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
+						<div class="b">
+							<div class="boxleft">
+								<a href="${a.url}" target="_blank">
+									<img src="${a.typeImg}" width="208" height="135">
+								</a>
+							</div>
+							<div class="boxright">
+								<div class="up">
+									<div class="hbiaoti">
+										<a href="${a.url}" style="font-weight:bolder;">
+											[@text_cut s=a.title len=20 append=append/]
+										</a>
+									</div>
+									<div class="wen">[@text_cut s=a.desc len=80 append=append/]</div>
+								</div>
+								<div class="down">
+									<div class="biaoqian">
+										<div style=" float:left; font-weight:bolder;font-size:14px;width:51px;height:21px;background:#F9A743;color:#FFF;text-align:center; margin:0 0 0 5px;">暑假</div>
+										<div style=" float:left; font-weight:bolder;font-size:14px;width:66px;height:21px;background:#F9A743;color:#FFF;text-align:center; margin:0 0 0 15px;">培训班</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						[/#list]
+						[/@cms_content_list]
+					</div>
+					<div id="wbox_03" class="undis">
+						[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
+						<div class="b">
+							<div class="boxleft">
+								<a href="${a.url}" target="_blank">
+									<img src="${a.typeImg}" width="208" height="135">
+								</a>
+							</div>
+							<div class="boxright">
+								<div class="up">
+									<div class="hbiaoti">
+										<a href="${a.url}" style="font-weight:bolder;">
+											[@text_cut s=a.title len=20 append=append/]
+										</a>
+									</div>
+									<div class="wen">[@text_cut s=a.desc len=80 append=append/]</div>
+								</div>
+								<div class="down">
+									<div class="biaoqian">
+										<div style=" float:left; font-weight:bolder;font-size:14px;width:51px;height:21px;background:#F9A743;color:#FFF;text-align:center; margin:0 0 0 5px;">暑假</div>
+										<div style=" float:left; font-weight:bolder;font-size:14px;width:66px;height:21px;background:#F9A743;color:#FFF;text-align:center; margin:0 0 0 15px;">培训班</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						[/#list]
+						[/@cms_content_list]
+					</div>
+					<div id="wbox_04" class="undis">
+						[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
+						<div class="b">
+							<div class="boxleft">
+								<a href="${a.url}" target="_blank">
+									<img src="${a.typeImg}" width="208" height="135">
+								</a>
+							</div>
+							<div class="boxright">
+								<div class="up">
+									<div class="hbiaoti">
+										<a href="${a.url}" style="font-weight:bolder;">
+											[@text_cut s=a.title len=20 append=append/]
+										</a>
+									</div>
+									<div class="wen">[@text_cut s=a.desc len=80 append=append/]</div>
+								</div>
+								<div class="down">
+									<div class="biaoqian">
+										<div style=" float:left; font-weight:bolder;font-size:14px;width:51px;height:21px;background:#F9A743;color:#FFF;text-align:center; margin:0 0 0 5px;">暑假</div>
+										<div style=" float:left; font-weight:bolder;font-size:14px;width:66px;height:21px;background:#F9A743;color:#FFF;text-align:center; margin:0 0 0 15px;">培训班</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						[/#list]
+						[/@cms_content_list]
+					</div>
+					<div id="wbox_05" class="undis">
+						[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
+						<div class="b">
+							<div class="boxleft">
+								<a href="${a.url}" target="_blank">
+									<img src="${a.typeImg}" width="208" height="135">
+								</a>
+							</div>
+							<div class="boxright">
+								<div class="up">
+									<div class="hbiaoti">
+										<a href="${a.url}" style="font-weight:bolder;">
+											[@text_cut s=a.title len=20 append=append/]
+										</a>
+									</div>
+									<div class="wen">[@text_cut s=a.desc len=80 append=append/]</div>
+								</div>
+								<div class="down">
+									<div class="biaoqian">
+										<div style=" float:left; font-weight:bolder;font-size:14px;width:51px;height:21px;background:#F9A743;color:#FFF;text-align:center; margin:0 0 0 5px;">暑假</div>
+										<div style=" float:left; font-weight:bolder;font-size:14px;width:66px;height:21px;background:#F9A743;color:#FFF;text-align:center; margin:0 0 0 15px;">培训班</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						[/#list]
+						[/@cms_content_list]
+					</div>
+				</div>
+				<div class="right">
+					<div class="right1">
+						<div class="bigbt">
+							<a href="#" style="color:#3BBD81">教育周刊</a>
+						</div>
+						<div class="gd">
+							<a href="#" style="color:#3BBD81; font-weight:bolder;">更多</a>
+						</div>
+						[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
+						<div class="xinwen">
+							<a href="${a.url}" target="_blank">
+								<img src="${a.typeImg}" width="105" height="120">
+							</a>
+							<div class="qik">
+								<div class="a2">
+									<a href="${a.url}" class="hbiaoti" style="font-family:宋体; font-weight:bolder;">
+										[@text_cut s=a.title len=8 append=append/]
+									</a>
+								</div>
+								<div class="a3" style="font-family:宋体; font-size:12px; line-height:22px;">
+									&nbsp;&nbsp;[@text_cut s=a.desc len=40 append=append/]
+								</div>
+							</div>
+						</div>
+						[/#list]
+						[/@cms_content_list]
+					</div>
+					<div class="right2">
+						<div class="bigbt">
+							<a href="#" style="color:#3BBD81">热点专题</a>
+						</div>
+						<div class="gd">
+							<a href="#" style="color:#3BBD81; font-weight:bolder;">更多</a>
+						</div>
+						<div class="zhuanti">
+							[@cms_topic_list  count='2' descLen='50' append='...']
+							[#list tag_list as a]
+							<a href="${base}/topic/${a.id}.jspx">
+								<img width="287" height="73" src="${a.titleImg}" />
+							</a>
+							[/#list]
+							[/@cms_topic_list]
+						</div>
+					</div>
+				</div>
+			</div>
+			<!----------------------------------------------------->
+			<div class="h4">
+				<div class="left" style="border-top: 2px solid #BEBEBE;">
+					<div class="bigbt">
+						<a href="#" style="color:#3BBD81;">人物</a>
+					</div>
+					<div class="gd">
+						<a href="#" style="color:#3BBD81;font-weight:bolder;">更多</a>
+					</div>
+					<div class="flashbox">
+						<!-- 代码开始 -->
+						<div class="box" style="margin-left:-10px;">
+							<div class="picbox">
+								<ul class="piclist mainlist">
+									[@cms_content_list count='15' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+									[#list tag_list as a]
+									<li style="float:left; width:104px;margin: 0px 8px;">
+										<a href="${a.url}">
+											<img src="${a.typeImg}" width="104" height="110" />
+										</a>
+										<span style=" float:left; width:104px; height:18px; font-size:12px; line-height:18px;">
+                    						<a href="${a.url}" style=" float:left;text-align:center; width:104px; height:18px; font-size:12px; line-height:18px;">
+                    							[@text_cut s=a.title len=8 append=append/]
+                    						</a>
+                						</span>
+									</li>
+									[/#list]
+									[/@cms_content_list]
+								</ul>
+								<ul class="piclist swaplist"></ul>
+							</div>
+							<div class="og_prev"></div>
+							<div class="og_next"></div>
+						</div>
+						<!-- 代码结束 -->
+						<script>
+							// JavaScript Document
+							$(document).ready(function(e) {
+								linum = $('.mainlist li').length; //图片数量
+								w = linum * 130; //ul宽度
+								$('.piclist').css('width', w + 'px'); //ul宽度
+								$('.swaplist').html($('.mainlist').html()); //复制内容
+								$('.og_next').click(function() {
+									if($('.swaplist,.mainlist').is(':animated')) {
+										$('.swaplist,.mainlist').stop(true, true);
+									}
+									if($('.mainlist li').length > 5) { //多于5张图片
+										ml = parseInt($('.mainlist').css('left')); //默认图片ul位置
+										sl = parseInt($('.swaplist').css('left')); //交换图片ul位置
+										if(ml <= 0 && ml > w * -1) { //默认图片显示时
+											$('.swaplist').css({
+												left: '650px'
+											}); //交换图片放在显示区域右侧
+											$('.mainlist').animate({
+												left: ml - 650 + 'px'
+											}, 'slow'); //默认图片滚动				
+											if(ml == (w - 650) * -1) { //默认图片最后一屏时
+												$('.swaplist').animate({
+													left: '0px'
+												}, 'slow'); //交换图片滚动
+											}
+										} else { //交换图片显示时
+											$('.mainlist').css({
+												left: '650px'
+											}) //默认图片放在显示区域右
+											$('.swaplist').animate({
+												left: sl - 650 + 'px'
+											}, 'slow'); //交换图片滚动
+											if(sl == (w - 1000) * -1) { //交换图片最后一屏时
+												$('.mainlist').animate({
+													left: '0px'
+												}, 'slow'); //默认图片滚动
+											}
+										}
+									}
+								})
+								$('.og_prev').click(function() {
+									if($('.swaplist,.mainlist').is(':animated')) {
+										$('.swaplist,.mainlist').stop(true, true);
+									}
+									if($('.mainlist li').length > 5) {
+										ml = parseInt($('.mainlist').css('left'));
+										sl = parseInt($('.swaplist').css('left'));
+										if(ml <= 0 && ml > w * -1) {
+											$('.swaplist').css({
+												left: w * -1 + 'px'
+											});
+											$('.mainlist').animate({
+												left: ml + 650 + 'px'
+											}, 'slow');
+											if(ml == 0) {
+												$('.swaplist').animate({
+													left: (w - 650) * -1 + 'px'
+												}, 'slow');
+											}
+										} else {
+											$('.mainlist').css({
+												left: (w - 650) * -1 + 'px'
+											});
+											$('.swaplist').animate({
+												left: sl + 650 + 'px'
+											}, 'slow');
+											if(sl == 0) {
+												$('.mainlist').animate({
+													left: '0px'
+												}, 'slow');
+											}
+										}
+									}
+								})
+							});
+							$(document).ready(function() {
+								$('.og_prev,.og_next').hover(function() {
+									$(this).fadeTo('fast', 1);
+								}, function() {
+									$(this).fadeTo('fast', 0.7);
+								})
+							})
+						</script>
+					</div>
+				</div>
+				<div class="right">
+					<div class="bigbt">
+						<a href="http://www.xinjiangnet.com.cn/xwzx/jy/jyft/" style="color:#3BBD81">教育访谈</a>
+					</div>
+					<div class="gd">
+						<a href="http://www.xinjiangnet.com.cn/xwzx/jy/jyft/" style="color:#3BBD81; font-weight:bolder;">更多</a>
+					</div>
+					<div class="xinwen">
+						[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[#list tag_list as a]
+						<div class="hbiaoti" style=" margin-top:8px;">
+							<a href="${a.url}" class="hbiaoti">[@text_cut s=a.title len=18 append=append/]</a>
+						</div>
+						<div class="hp" style=" margin-top:8px;">
+							<a href="${a.url}" target="_blank">
+								<img src="${a.typeImg}" width="100" height="95">
+							</a>
+							&nbsp;&nbsp;[@text_cut s=a.desc len=60 append=append/]
+							<a href="${a.url}" style="color:#D50000;">[详细]</a>
+						</div>
+						[/#list]
+						[/@cms_content_list]
+					</div>
+				</div>
+			</div>
+			<!----------------------------------------------------->
+			<div class="h5">
+				<div class="bigbt">校园&nbsp;互动</div>
+				<div class="box">
+					<div class="left">
+						
+						<div class="news" style="font-family:'宋体'">
+							<div class="zhiding">
+								<div class="sbt2">
+									<a href="http://www.xinjiangnet.com.cn/xwzx/jy/xyhd/xyb/" style="font-weight:bolder;color:#000;">&nbsp;&nbsp;校园八卦</a>
+								</div>
+								[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+								[#list tag_list as a]
+								<div class="ti1" style="text-align:center;">
+									<a href="${a.url}" target="_blank" style="font-family:'宋体'; font-weight:border; color:#000;">
+										&nbsp;&nbsp;<strong>[@text_cut s=a.title len=18 append=append/]</strong>
+									</a>
+								</div>
+								<div style="padding:0 30px; font-size:12px; line-height:18px; color:#666;">
+									&nbsp;&nbsp;[@text_cut s=a.desc len=35 append=append/]
+								</div>
+								[/#list]
+								[/@cms_content_list]
+							</div>
+							<div class="lieb">
+								<ul>
+									[@cms_content_list count='7' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+									[#list tag_list as a]
+									<li>
+										&middot;<a href="${a.url}" target="_blank" style="color:#373B44;">[@text_cut s=a.title len=18 append=append/]</a>
+									</li>
+									[/#list]
+									[/@cms_content_list]
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="sbt2">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/xyhd/sjqc/" style="font-weight:bolder;color:#000;">&nbsp;&nbsp;视觉青春</a>
+						</div>
+						<div class="picbox">
+							<ul>
+								[@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+								[#list tag_list as a]
+								<li>
+									<a href="${a.url}" target="_blank">
+										<img width="130" height="90" src="${a.typeImg}">
+									</a>
+									<span>
+										<a href="${a.url}" target="_blank" >[@text_cut s=a.title len=8 append=append/]</a>
+									</span>
+								</li>
+								[/#list]
+								[/@cms_content_list]
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!----------------------------------------------------------------------------------->
+			<div class="h6">
+				<div class="bigbt">出国&nbsp;留学</div>
+				<div class="temp"></div>
+				<div class="left">
+					<div class="sbt">
+						<a href="http://www.xinjiangnet.com.cn/xwzx/jy/cglx/lxjg/" style="color:#000;font-weight:bolder;">&nbsp;&nbsp;留学机构</a>
+					</div>
+					<div class="gdt">
+						<a href="http://www.xinjiangnet.com.cn/xwzx/jy/cglx/lxjg/" style="color:#929292;">更多</a>
+					</div>
+					<div style="float:left; width:280px; height:35px;"></div>
+					<div class="up">
+						<ul>
+							[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
+							<li>
+								<a href="${a.url}" target="_blank">
+									<img src="${a.typeImg}" width="120" height="90">
+								</a>
+								<div class="shadou">
+									<a href="${a.url}" style="color:#FFF;" target="_blank">[@text_cut s=a.title len=9 append=append/]</a>
+								</div>
+							</li>
+							[/#list]
+							[/@cms_content_list]
+						</ul>
+					</div>
+					<div class="down">
+						<div class="blti">
+							<ul>
+								[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+								[#list tag_list as a]
+								<li>
+									&middot;&nbsp;
+									<a href="${a.url}" style=" font-family:宋体;" target="_blank">[@text_cut s=a.title len=17 append=append/]</a>
+								</li>
+								[/#list]
+								[/@cms_content_list]
+							</ul>
+						</div>
+					</div>
+					<div class="add">
+						<a href="http://w.xinjiangnet.com.cn/2015/0127/1161.shtml" target="_blank">
+							<img src="http://upload.xinjiangnet.com.cn/2015/0127/thumb_280_88_1422333157222.jpg" width="280" height="88">
+						</a>
+					</div>
+				</div>
+				<div class="mid">
+					<div class="up">
+						<div class="sbt">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/cglx/lxzx/" style="color:#000;font-weight:bolder;">&nbsp;&nbsp;留学资讯</a>
+						</div>
+						<div class="gdt">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/cglx/lxzx/" style="color:#929292;">更多</a>
+						</div>
+						<div style="float:left; width:355px; height:10px;"></div>
+						<div class="blti">
+							<ul>
+								[@cms_content_list count='5' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+								[#list tag_list as a]
+								<li>
+									&middot;&nbsp;
+									<a href="${a.url}" style=" font-family:宋体; font-size:14px; color:#373B44;" target="_blank">[@text_cut s=a.title len=23 append=append/]</a>
+								</li>
+								[/#list]
+								[/@cms_content_list]
+							</ul>
+						</div>
+					</div>
+					<div class="down">
+						<div class="sbt">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/cglx/ym/" style="color:#000;font-weight:bolder;">&nbsp;&nbsp;移民</a>
+						</div>
+						<div class="gdt">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/cglx/ym/" style="color:#929292;">更多</a>
+						</div>
+						<div style="float:left; width:355px; height:10px;"></div>
+						<div class="blti">
+							<ul>
+								[@cms_content_list count='5' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+								[#list tag_list as a]
+								<li>
+									&middot;&nbsp;
+									<a href="${a.url}" style=" font-family:宋体; font-size:14px; color:#373B44;" target="_blank">[@text_cut s=a.title len=23 append=append/]</a>
+								</li>
+								[/#list]
+								[/@cms_content_list]
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="sbt">
+						<a href="#" style="color:#000;font-weight:bolder;">&nbsp;&nbsp;出国留学查询</a>
+					</div>
+					<div style="float:left; width:255px; height:10px;"></div>
+					<div style="float:left; width:255px; font-size:12px; font-family:'宋体';">
+						<div style="float:left; width:255px; height:18px; line-height:18px; margin-top:10px;">囊括中国承认的43个国家及港澳台10882所学校</div>
+						<div style="float:left; width:125px; margin:5px 0;">
+							<form>
+								<select name="gj" style="width:125px;">
+									<option value="guojia">国家必选</option>
+									<option value="1">美国</option>
+									<option value="2">日本</option>
+									<option value="3">德国</option>
+								</select>
+							</form>
+						</div>
+						<div style="float:right; width:125px; margin:5px 0;">
+							<form>
+								<select name="xl" style="width:125px;">
+									<option value="guojia">学历</option>
+									<option value="1">高中</option>
+									<option value="2">本科</option>
+									<option value="3">硕士</option>
+								</select>
+							</form>
+						</div>
+						<div style="float:left; width:255px; margin:5px 0;">
+							<input type="text" name="xx" value="输入可查询专业" size="44px">
+							<input type="image" src="/${res}/img/xjw_jypd/chaxun.png" width="83px;" height="29px" style="margin:10px 90px;">
+						</div>
+						<div style="float:left; width:255px;">
+							<ul>
+								<li class="tt2"><img src="/${res}/img/xjw_jypd/gj-mg.gif"></li>
+								<li class="tt4"><img src="/${res}/img/xjw_jypd/gj-adly.gif"></li>
+								<li class="tt2"><img src="/${res}/img/xjw_jypd/gj-yg.gif"></li>
+								<li class="tt2"><img src="/${res}/img/xjw_jypd/gj-hg.gif"></li>
+								<li class="tt3"><img src="/${res}/img/xjw_jypd/gj-jnd.gif"></li>
+								<li class="tt3"><img src="/${res}/img/xjw_jypd/gj-xxl.gif"></li>
+								<li class="tt2"><img src="/${res}/img/xjw_jypd/gj-fg.gif"></li>
+								<li class="tt2"><img src="/${res}/img/xjw_jypd/gj-wkl.gif"></li>
+								<li class="tt2"><img src="/${res}/img/xjw_jypd/gj-rs.gif"></li>
+							</ul>
+						</div>
+					</div>
+					<div class="thebox"><img src="/${res}/img/xjw_jypd/zxfy.gif"></div>
+					<div class="thebox"><img src="/${res}/img/xjw_jypd/jxj.gif"></div>
+					<div class="thebox" style="clear:both;"><img src="/${res}/img/xjw_jypd/qz.gif"></div>
+				</div>
+			</div>
+			<!----------------------------------------------------------------------------------->
+			<div class="hx">
+				<div class="bigbt">考试&nbsp;培训</div>
+				<div class="temp"></div>
+				<div class="left">
+					<div class="sbt2">
+						<a href="http://www.xinjiangnet.com.cn/xwzx/jy/kspx/pxjg/" style="font-weight:bolder;color:#000;">&nbsp;&nbsp;培训机构</a>
+					</div>
+					<div class="gdt">
+						<a href="http://www.xinjiangnet.com.cn/xwzx/jy/kspx/pxjg/" style="color:#929292;">更多</a>
+					</div>
+					<div style="float:left; width:280px; height:35px;"></div>
+					<div class="up">
+						<ul>
+							[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[#list tag_list as a]
+							<li>
+								<a href="${a.url}" target="_blank">
+									<img src="${a.typeImg}" width="120" height="90">
+								</a>
+								<div class="shadou">
+									<a href="${a.url}" style="color:#FFF;" target="_blank">[@text_cut s=a.title len=9 append=append/]</a>
+								</div>
+							</li>
+							[/#list]
+							[/@cms_content_list]
+							
+						</ul>
+					</div>
+					<div class="down">
+						<div class="blti">
+							<ul>
+								[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+								[#list tag_list as a]
+								<li>
+									&middot;&nbsp;
+									<a href="${a.url}" style=" font-family:宋体;" target="_blank">[@text_cut s=a.title len=17 append=append/]</a>
+								</li>
+								[/#list]
+								[/@cms_content_list]
+							</ul>
+						</div>
+					</div>
+					<div class="add">
+						<a href="http://w.xinjiangnet.com.cn/2015/0130/2988.shtml" target="_blank">
+							<img src="http://upload.xinjiangnet.com.cn/2015/0130/thumb_280_88_1422606221471.jpg" width="280" height="88">
+						</a>
+					</div>
+				</div>
+				<div class="mid">
+					<div class="up">
+						<div class="sbt2">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/kspx/ky/" style="font-weight:bolder;color:#000;">&nbsp;&nbsp;考研</a>
+						</div>
+						<div class="gdt">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/kspx/ky/" style="color:#929292;">更多</a>
+						</div>
+						<div class="blti">
+							<ul>
+								[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+								[#list tag_list as a]
+								<li>
+									&middot;&nbsp;
+									<a href="${a.url}" style=" font-family:宋体; font-size:14px; color:#373B44;" target="_blank">[@text_cut s=a.title len=23 append=append/]</a>
+								</li>
+								[/#list]
+								[/@cms_content_list]
+							</ul>
+						</div>
+					</div>
+					<div style="float:left; width:355px; height:15px;"></div>
+					<div class="mid2">
+						<div class="sbt2">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/kspx/gwy/" style="font-weight:bolder;color:#000;">&nbsp;&nbsp;公务员</a>
+						</div>
+						<div class="gdt">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/kspx/gwy/" style="color:#929292;">更多</a>
+						</div>
+						<div class="blti">
+							<ul>
+								[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+								[#list tag_list as a]
+								<li>
+									&middot;&nbsp;
+									<a href="${a.url}" style=" font-family:宋体; font-size:14px; color:#373B44;" target="_blank">[@text_cut s=a.title len=23 append=append/]</a>
+								</li>
+								[/#list]
+								[/@cms_content_list]
+							</ul>
+						</div>
+					</div>
+					<div style="float:left; width:355px; height:15px;"></div>
+					<div class="down">
+						<div class="sbt2">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/kspx/qtks/" style="font-weight:bolder;color:#000;">&nbsp;&nbsp;其他考试</a>
+						</div>
+						<div class="gdt">
+							<a href="http://www.xinjiangnet.com.cn/xwzx/jy/kspx/qtks/" style="color:#929292;">更多</a>
+						</div>
+						<div class="blti">
+							<ul>
+								[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+								[#list tag_list as a]
+								<li>
+									&middot;&nbsp;
+									<a href="${a.url}" style=" font-family:宋体; font-size:14px; color:#373B44;" target="_blank">[@text_cut s=a.title len=23 append=append/]</a>
+								</li>
+								[/#list]
+								[/@cms_content_list]
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="sbt2">
+						<a href="http://www.xinjiangnet.com.cn/xwzx/jy/kspx/pxxx/" style="color:#000; font-size:14px; font-weight:bolder;">&nbsp;&nbsp;培训信息</a>
+					</div>
+					<div style="float:left; width:255px; height:10px;"></div>
+					<div class="blti">
+						<ul>
+							[@cms_content_list count='7' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+							[#list tag_list as a]
+								<li>
+									&middot;&nbsp;
+									<a href="${a.url}" style=" font-family:宋体; color:#373B44;" target="_blank">[@text_cut s=a.title len=15 append=append/]</a>
+								</li>
+							[/#list]
+							[/@cms_content_list]
+						</ul>
+					</div>
+					<div style="float:left; width:255px; height:20px;"></div>
+					<div style="float:left; width:255px; height:20px;"></div>
+					<div class="sbt2">
+						<a href="http://www.xinjiangnet.com.cn/xwzx/jy/kspx/ksxx/" style="color:#000; font-size:14px; font-weight:bolder;">&nbsp;&nbsp;考试心理</a>
+					</div>
+					<div style="float:left; width:255px; height:20px;"></div>
+					<!--<div style="float:left; width:255px; height:30px;"></div>-->
+					<div class="hxbox">
+						<ul>
+							<li>
+								<a href="http://www.xinjiangnet.com.cn/2017/0327/1792018.shtml" target="_blank" style="font-family:'宋体';">接受成绩波动</a>
+							</li>
+							<li>
+								<a href="http://www.xinjiangnet.com.cn/2017/0327/1792001.shtml" target="_blank" style="font-family:'宋体';">培养阅读习惯</a>
+							</li>
+							<li>
+								<a href="http://www.xinjiangnet.com.cn/2017/0327/1791940.shtml" target="_blank" style="font-family:'宋体';">应对考试焦虑</a>
+							</li>
+							<li>
+								<a href="http://www.xinjiangnet.com.cn/2017/0327/1791939.shtml" target="_blank" style="font-family:'宋体';">考前调整心理</a>
+							</li>
+							<li>
+								<a href="http://www.xinjiangnet.com.cn/2017/0327/1792002.shtml" target="_blank" style="font-family:'宋体';">“暗语”宝典</a>
+							</li>
+							<li>
+								<a href="http://www.xinjiangnet.com.cn/2017/0327/1791407.shtml" target="_blank" style="font-family:'宋体';">自主招生</a>
+							</li>
+							<li>
+								<a href="http://www.xinjiangnet.com.cn/2017/0327/1791943.shtml" target="_blank" style="font-family:'宋体';">模拟考试</a>
+							</li>
+							<li>
+								<a href="http://www.xinjiangnet.com.cn/2017/0327/1792007.shtml" target="_blank" style="font-family:'宋体';">家长必读</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!----------------------------------------------------------------------------------->
+			<div class="map">
+				<div class="bigbt">教育地图</div>
+				<div class="temp"></div>
+				<div style="float:left; width:980px; height:18px;"></div>
+				<div class="baidumap">
+					<img src="/${res}/img/xjw_jypd/map.gif">
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;margin:20px auto; width:100%; height:20px;"></div>
+		<div style="clear:both;margin:20px auto; width:100%; height:100px; height:100px;  ">
+			<!-- footer -->
+			<div style="width:100%; height:10px;">
+			</div>
+			<div style="width:980px; margin:0px auto;">
+				<img src="/${res}/img/xjw_bottom_lj.jpg" border="0" usemap="#Map" />
+				<map name="Map" id="Map">
+      <area shape="rect" coords="470,27,574,58" href="http://weibo.com/xinjiangnet" />
+      <area shape="rect" coords="600,28,698,58" href="http://t.qq.com/xinjiangnet" />
+      <area shape="rect" coords="718,29,846,61" href="http://epaper.xinjiangnet.com.cn" />
+      <area shape="rect" coords="866,28,973,58" href="#" />
+    </map>
+			</div>
+			<div style="width:100%; height:10px;">
+			</div>
+			<div style="width:100%;">
+				<center>
+					<script type="text/javascript">
+						function hzmt(num2) {
+							for(jj1 = 1; jj1 < 5; jj1++) {
+								document.getElementById("bdshs" + jj1).style.borderBottom = "2px solid #dddddd";
+								document.getElementById("bdshas" + jj1).style.display = "none"
+							}
+							document.getElementById("bdshs" + num2).style.borderBottom = "2px solid #F00";
+							document.getElementById("bdshas" + num2).style.display = "block"
+						}
+					</script>
+					<div style="width:980px; margin:0px auto;">
+						<div style="width:100px; float:left; border-bottom:2px solid #F00;" id="bdshs1">
+							<span onMouseMove="javascript:hzmt(1)"><a href="" style="font-size:14px; line-height:30px;">地方网媒</a></span>
+						</div>
+						<div style="width:200px; float:left;" id="bdshs2">
+							<span onMouseMove="javascript:hzmt(2)"><a href="" style="font-size:14px; line-height:30px;">“一带一路”网络联盟</a></span>
+						</div>
+						<div style="width:100px;float:left;" id="bdshs3">
+							<span onMouseMove="javascript:hzmt(3)"><a href="" style="font-size:14px; line-height:30px;">合作媒体</a></span>
+						</div>
+						<div style="width:100px;float:left;" id="bdshs4">
+							<span onMouseMove="javascript:hzmt(4)"><a href="" style="font-size:14px; line-height:30px;">城市网盟</a></span>
+						</div>
+						<div style="width:480px;float:right;">
+						</div>
+					</div>
+					<div style="clear:both;">
+					</div>
+					<div style="width:978px; border:0px solid #CCC; text-align:left; line-height:26px; font-size:12px;" id="bdshas1">
+						&nbsp;<span style="display:inline-block;"><a class="icon-blank"  href="http://wlmq.wenming.cn/">乌鲁木齐文明网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.bz.cn/">巴州在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xj120.com/">新疆健康网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://wlmq.house.sina.com.cn/">乌鲁木齐房产网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjhr.com/">新疆人才网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjtour.com/">新疆旅游网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.wlmq.com/">乌鲁木齐网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.boertala.com/">博尔塔拉新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.altxw.com/"> 阿勒泰新闻网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.shznews.com/">石河子新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjfzb.com/">新疆法制报</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.smxdaily.com.cn/">西部在线  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjws.gov.cn">乌苏市政府网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.uetd.gov.cn/">经济技术开发区（头屯河区）网站  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjtsq.gov.cn/">天山区人民政府网站  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjwh.gov.cn/">新疆文化网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.jrxjnet.com/">今日新疆  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.tlfw.net/">吐鲁番网   </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjksxw.com/"> 喀什新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjpeace.cn/">新疆平安网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.qiucinews.com/">龟兹新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.fzxj.cn/">法治新疆</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.kelamayi.com.cn/">克拉玛依网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.ylxw.com.cn/">伊犁新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.cjrb.cn/">昌吉新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.bt.chinanews.com/">兵团新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://epaper.ts.cn/">新疆都市报  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.iyaxin.com/">亚心网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.wlmqzs.com/">乌鲁木齐电台 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjtvs.com.cn/">虎鱼网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.hongshannet.cn/">红山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="www.xj.chinanews.com"> 新疆新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjbs.com.cn/">新疆新闻在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xjdaily.com.cn/">新疆日报网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xinjiang.gov.cn/">新疆维吾尔自治区人民政府网</a></span>
+					</div>
+					<div style="width:978px; border:0px solid #CCC; text-align:left; line-height:26px; font-size:12px;" id="bdshas2">
+						&nbsp;<span style="display:inline-block;"><a class="icon-blank" href="http://www.cqnews.net/">华龙网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.sznews.com/">深圳新闻网　</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.xinjiangnet.com.cn/">新疆网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.xmnn.cn/">厦门网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.qingdaonews.com/">青岛新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.qzwb.com/">泉州网　</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://dalian.runsky.com/">大连天健网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.hangzhou.com.cn/">杭州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.cnnb.com.cn/">中国宁波网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.66wz.com/">温州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.dayoo.com/">大洋网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.guilinlife.com/">桂林生活网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.changsha.cn/">星辰在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.longhoo.net/index.html">龙虎网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.yznews.com.cn/">扬州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.jiaodong.net/">胶东在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.xiancn.com/">西安新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.kunming.cn/">昆明信息港</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.lanzhou.cn/">中国兰州网　</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.ycen.com.cn/">银川新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.my399.com/">哈尔滨新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.chengdu.cn/">成都全搜索</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.hkwb.net/">海口网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://news.cjn.cn/">长江网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.ylxw.com.cn/">伊犁新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.enorth.com.cn/">北方网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.qhnews.com/">青海新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.66wz.com/">温州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.ycwb.com/">金羊网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.fznews.com.cn/">福州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.lyd.com.cn/">洛阳网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.e23.cn/">舜网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.tlfw.net/">吐鲁番新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.hf365.com/">合肥在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.tynews.com.cn/">太原新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.baojinews.com/">宝鸡新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.gazx.org/">广安在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.2500sz.com/">名城苏州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.zgzyw.com.cn/"> 中国张掖网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.dahuawang.com/">大华网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.snxw.com/">遂宁新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.zhoushan.cn/">舟山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.gdzjdaily.com.cn/">湛江新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.zynews.com/">中原网　</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.kf.cn/">开封网　</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.zjknews.com/">张家口新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.hebei.com.cn/">长城网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.gatv.com.cn/">广安新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.txdzw.com/">大足网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.risesungroup.com/main/">浙江晨泰科技股份有限公司</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="">深圳市企业联合会</a></span>
+					</div>
+					<div style="width:978px; border:0px solid #CCC;text-align:left; line-height:26px; font-size:12px;display:none;" id="bdshas3">
+						&nbsp;<span style="display:inline-block;"><a href="http://www.iqilu.com/">齐鲁网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.s1979.com/">中国时刻网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://365jilin.com/">吉和网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.xuexiph.cn/">学习出版社 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.njdaily.cn/">南报网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.jfinfo.com/">丰华财经网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://mdj.focus.cn/">牡丹江房地产  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://media.sohu.com/">搜狐传媒 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.jyyuan.com/">江阴信息港  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.jinghua.cn/">京华网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://fenlei.baike.com/">互动百科 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.enshifdc.com/">恩施房产网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.chinawbsyxh.com/">中国晚报摄影学会网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.bjtvnews.com/">华北新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.zj3000.cn/">名城镇江网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.gxorg.com/">八桂网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.he-nan.com/">河南网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://nd.fjsen.com/">宁德新闻网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.hebnews.cn/">河北新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.bandao.cn/">半岛网</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.huamanche.com/">汽车网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.hljtv.com/">黑龙江网络广播电视台 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://news.iqilu.com/">齐鲁新闻 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://ndnews.oeeee.com/">奥一新闻 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.ynet.com/">北青网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.mzyfz.com/">民主与法制网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.rednet.cn/">红网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.edu-hb.com/">教育网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://www.0710fz.com/">襄阳房产网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://cnews.chinadaily.com.cn/">中国日报网 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://news.sohu.com/">搜狐 </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://news.sina.com.cn/">新浪  </a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://news.qq.com/">腾讯</a></span> &nbsp;
+						<span style="display:inline-block;"><a href="http://news.ifeng.com/">凤凰网  </a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="http://www.w010w.com.cn/index.html">全国网联</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank" href="www.jxnews.com.cn">中国江西网（大江网）</a></span>
+					</div>
+					<div style="width:978px; border:0px solid #CCC;text-align:left; line-height:26px; font-size:12px;display:none;" id="bdshas4">
+						&nbsp;<span style="display:inline-block;"><a class="icon-blank"  href="http://www.runsky.com">大连天健网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnnb.com.cn">中国宁波网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.sznews.com">深圳新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dayoo.com">广州大洋网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.qingdaonews.com">青岛新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cjn.cn">武汉长江网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.longhoo.net/index.html">南京龙虎网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hangzhou.com.cn">杭州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.changsha.cn">星辰在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jiaodong.net">胶东在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xmnn.cn">厦门网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cqnews.net">重庆华龙网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.syd.com.cn">沈阳网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.e23.cn">济南舜网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ccnews.gov.cn">长春新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hf365.com">合肥在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.sjzdaily.com.cn">石家庄新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gywb.cn">贵阳新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ycen.com.cn">银川新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hkwb.net">中国海口网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ucatv.com.cn">乌鲁木齐信息港</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.shm.com.cn">水母网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gxnews.com.cn">广西新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xiancn.com">西安新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.my399.com">哈尔滨新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tynews.com.cn">太原新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zynews.com">郑州中原网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.qzwb.com">泉州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.66wz.com">温州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.yb983.com">延边信息港</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zyol.gz.cn">遵义在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zhoushan.cn">舟山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.rzw.com.cn">日照网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jzfcol.com">荆州房产网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ncnews.com.cn">南昌新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.2500sz.com">名城苏州</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dehua.net">德化网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dqdaily.com">大庆网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lznews.cn">鲁中网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hz66.com">湖州在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gndaily.com">中国赣州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnxz.com.cn">中国徐州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.yznews.com.cn">扬州网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hj.cn">汉江传媒网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.aqnews.com.cn">安庆新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.leshan.cn">乐山新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ptxw.com">莆田新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xinjiangnet.com.cn">新疆网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.dpcm.cn">牡丹江大鹏新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.srxww.com">上饶新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jjxw.cn">九江新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xsnet.cn">萧山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.subaonet.com">苏州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jznews.com.cn">荆州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hlbrdaily.com.cn">呼伦贝尔日报网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ijjnews.com">晋江新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tznews.cn">泰州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://dd.nen.com.cn">丹东新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.foshannews.net/">佛山新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tongliaowang.com">中国通辽网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnhan.com">汉网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.bzcm.net ">滨州传媒网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.chengdu.cn">成都全搜索</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.wfcmw.cn">潍坊传媒网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gdzjdaily.com.cn">湛江新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.wuhunews.cn">中国芜湖新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ch365.com.cn">巢湖在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.010lf.com">环京津新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cdyee.com">尚一网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.1545ts.com">东方泰山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hynews.net">淮安新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hldbtv.com">葫芦岛广电网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.chinashishi.net">中国石狮网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jcbctv.com">晋城广电网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.kunming.cn">昆明信息港</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lygnews.com">连云港日报网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lcxw.cn">聊城新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnjxol.com">嘉兴在线</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.enorth.com.cn">北方网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.mnw.cn">闽南网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.sun0769.com">东莞阳光网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.shjnet.cn">松花江网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ahwang.cn">安徽网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.guilinlife.com">桂林生活网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zznews.cn">漳州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xiancity.cn">西安网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lygmedia.com">连云港传媒网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jwb.com.cn">今晚网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ijntv.cn">济南网络广播电视台</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tielingcn.com">中国铁岭网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ybxww.com">宜宾新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zgzyw.com.cn">中国张掖网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ntjoy.com">江海明珠网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hctvnet.com">珲春新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hscbw.com">华声晨报网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lzbs.com.cn">兰州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.wj001.com">武进新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hhhtnews.com">呼和浩特新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.weihai.tv">威海传媒网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.lyd.com.cn">洛阳网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.fznews.com.cn">福州新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zkxww.com">周口网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.whnews.cn">威海新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.hongshannet.cn">红山网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.zjknews.com">张家口新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.txdzw.com">大足网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.ilinyi.net">爱临沂网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.aksxw.com">阿克苏新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.e0734.com">中国衡阳新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.gyxww.cn">广元新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cn3x.com.cn">三峡宜昌网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.jmnews.cn">荆门新闻网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.tibet.cn">中国西藏网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.aihami.com">楚秀网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.xgrb.cn">孝感网</a></span> &nbsp;
+						<span style="display:inline-block;"><a class="icon-blank"  href="http://www.cnr.cn ">中国广播网</a></span>
+					</div>
+				</center>
+			</div>
+			<div style="width:100%; height:10px;">
+			</div>
+			<div style="width:100%; background-color:#000; border-top:2px solid #F00;height:100px;">
+				<div style="width:100%; height:10px;">
+				</div>
+				<center>
+					<footer class="foot">
+						<div class="foot-links">
+							<a href="http://www.xinjiangnet.com.cn/2016/1118/1689637.shtml" title="">关于我们</a>
+							<span href="" title="">| </span>
+							<a href="http://www.xinjiangnet.com.cn/2015/0202/6289.shtml" title="">联系我们</a>
+							<span href="" title="">| </span>
+							<a href="http://special.xinjiangnet.com.cn/160406-1/" title="">加入我们</a>
+							<span href="" title="">| </span>
+							<a href="http://www.xinjiangnet.com.cn/2015/0202/6275.shtml" title="">版权声明</a>
+							<span href="" title="">| </span>
+							<a href="http://www.xinjiangnet.com.cn/about/mobile.shtml" title="">手机访问</a>
+							<span href="" title="">| </span>
+							<a href="http://app.xinjiangnet.com.cn/map.php" title="">网站地图</a>
+							<span href="" title="">| </span>
+							<a href="http://app.xinjiangnet.com.cn/?app=guestbook" title="">留言反馈</a>
+							<span href="" title="">| </span>
+							<a href="http://app.xinjiangnet.com.cn/?app=contribution&controller=index&action=index" title="">我要投稿</a>
+						</div>
+						<p><span><a href="http://www.xinjiangnet.com.cn/2015/0319/1376235.shtml" target="_blank" class="littg">互联网新闻信息服务许可证：6512014002</a> </span><span>新ICP备10001213号-2  <span><a href="http://www.xinjiangnet.com.cn/2017/0510/1417370.shtml#g1417370=1" target="_blank" class="littg">广播电视节目制作经营许可证（新）字第66号</a></span><span><a href="http://www.xinjiangnet.com.cn/2015/1216/1503189.shtml" target="_blank" class="littg">信息网络传播视听节目许可证号：3110483</a></span></p>
+						<p>
+							<a href="" title="">版权所有：新疆网</a> 版权所有：Copyright © xinjiangnet.com.cn All Rights Reserved.&nbsp;&nbsp;
+							<a href="http://www.xinjiangnet.com.cn/2018/0119/2039852.shtml" title="">举报受理和处置管理办法</a>
+						</p>
+						<div style="width:100%; height:10px;">
+						</div>
+					</footer>
+				</center>
+			</div>
+			<center>
+				<table width="300" cellpadding="0" cellspacing="0">
+					<tr>
+						<td height="20"></td>
+					</tr>
+					<tr>
+						<td align="center" width="50%">
+							<a href="http://www.wgwj.gov.cn/article/articleClass.aspx?ClassID=257" target="_blank"><img src="http://www.xinjiangnet.com.cn/images/xjwwangjing110.gif" border="0" width="118" height="48" /></a>
+						</td>
+						<td align="center">
+							<a href="http://www.12377.cn/" target="_blank"><img src="http://www.xinjiangnet.com.cn/images/xjwblxxwf.gif" border="0" /></a>
+						</td>
+					</tr>
+					<tr>
+						<td height="20"></td>
+					</tr>
+				</table>
+			</center>
+			<link rel="stylesheet" type="text/css" href="/${res}/css/popmenu.css" media="all" />
+			<script type="text/javascript" src="/${res}/js/recommend.js"></script>
+			<!-- end footer -->
+			<!-- 脚本区域 -->
+		</div>
+	</body>
+</html>
