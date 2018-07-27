@@ -1,0 +1,28 @@
+<div class="top"></div>
+<div class="toptitle">视觉焦点
+	<a href="http://www.xinjiangnet.com.cn/tppd/"><img src="/${res}/img/gd.gif"></a>
+</div>
+<div class="lyjt_240_176">
+	<ul>
+		[@cms_content_list count='4' channelId='366' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+		[#list tag_list as a]
+		<li>
+			<div class="lyjt_240_176_tp">
+				<div class="lyjt_240_176_tp_left">
+					<a href="${a.url}">
+						<IMG src="${a.typeImg}" width="137" height="93">
+					</a>
+					<div class="lyjt_240_176_tp_bg"></div>
+					<!-- 背景補丁層 -->
+					<div class="lyjt_240_176_tp_writing">
+						<p>
+							<a href="${a.url}" target="_blank">[@text_cut s=a.title len=10 append=append/] </a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</li>
+		[/#list] 
+		[/@cms_content_list]
+	</ul>
+</div>

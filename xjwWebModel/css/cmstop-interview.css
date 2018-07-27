@@ -1,0 +1,1030 @@
+/*æ•´ä½“å¸ƒå±€*/
+
+.interview-slide {
+	margin-top: 9px;
+	height: 290px;
+	padding: 20px 0;
+	background-color: #333;
+}
+
+.interview-slide .slide-inner {
+	width: 960px;
+	margin: 0 auto;
+	background-color: #111;
+}
+
+.interview-slide-core,
+.interview-herald {
+	float: left;
+	_display: inline;
+}
+
+.interview-slide-core {
+	width: 660px;
+}
+
+.interview-herald {
+	width: 300px;
+	height: 290px;
+	background: url(../img/interview-herald.jpg) no-repeat;
+}
+
+
+/*å¹»ç¯ç‰‡*/
+
+.interview-slide-core {
+	width: 640px;
+	height: 270px;
+	overflow: hidden;
+	position: relative;
+	padding: 10px;
+	background-color: #111;
+}
+
+.interview-slide-core .img {
+	width: 480px;
+	height: 270px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.interview-slide-core .title {
+	bottom: 10px;
+	width: 480px;
+}
+
+.interview-slide-core .title .shadow {
+	background-color: #000;
+	height: 30px;
+	opacity: .7;
+	filter: alpha(opacity=70);
+}
+
+.interview-slide-core .title .h3 {
+	z-index: 30;
+	line-height: 30px;
+	margin-left: 10px;
+}
+
+.interview-slide-core .title .h3 a {
+	font-weight: bold;
+	color: #fff;
+	font-size: 14px;
+}
+
+.interview-slide-core .shadow {
+	background-color: #000;
+}
+
+.interview-slide-core .thumb {
+	right: 10px;
+	top: 10px;
+	width: 160px;
+}
+
+.interview-slide-core .thumb li img {
+	border: 5px solid #333;
+}
+
+.interview-slide-core .thumb .now-status {
+	width: 150px;
+	height: 80px;
+	top: 0;
+	border: 5px solid #c00;
+}
+
+
+/*é¢åŒ…å±‘*/
+
+.herald-crumb {
+	overflow: hidden;
+	_zoom: 1;
+	margin: 9px;
+}
+
+.herald-crumb a,
+.herald-crumb em,
+.herald-crumb span {
+	float: left;
+	_display: inline;
+}
+
+.herald-crumb a {
+	height: 28px;
+}
+
+.herald-crumb a span {
+	background: url(../img/herald-arrow.png) no-repeat right -34px;
+	width: 14px;
+	height: 28px;
+}
+
+.herald-crumb a em {
+	height: 28px;
+	line-height: 28px;
+	background-color: #666;
+	padding: 0 6px 0 10px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.herald-crumb .now span {
+	background-position: right 0;
+}
+
+.herald-crumb .now em {
+	background-color: #c00;
+}
+
+.herald-summary {
+	margin: 0 10px;
+}
+
+.herald-summary .f-l {
+	height: 150px;
+}
+
+.herald-summary .texts {
+	float: right;
+	_display: inline;
+}
+
+.herald-summary .summary {
+	margin: 0 10px;
+	line-height: 24px;
+	text-indent: 2em;
+}
+
+.herald-summary .t {
+	display: block;
+	text-align: center;
+	line-height: 24px;
+}
+
+.herald-summary .thumb {
+	margin-right: 10px;
+}
+
+.herald-summary h2 {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.herald-summary h2 a {
+	color: #333;
+	font-weight: bold;
+}
+
+.herald-summary a:hover {
+	color: #cc0000;
+}
+
+
+/*è®¿è°ˆé¦–é¡µ-æ•´ä½“å¸ƒå±€*/
+
+.interview-homepage .column-aside {
+	width: 338px;
+	float: right;
+	_display: inline;
+}
+
+.interview-homepage .column-main {
+	width: 610px;
+	float: left;
+	_display: inline;
+}
+
+.interview-homepage .column-aside {
+	width: 338px;
+	float: right;
+	_display: inline;
+}
+
+.interview-homepage .column-main {
+	width: 610px;
+	float: left;
+	_display: inline;
+}
+
+
+/*æ ç›®æ ‡é¢˜*/
+
+.title-head {
+	height: 30px;
+	background: transparent url('../img/sprite-bar.png') repeat-x 0 0;
+}
+
+.title-head .title .words {
+	color: #cc0000;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.title-head .link {
+	float: right;
+	_display: inline;
+	line-height: 30px;
+}
+
+.title-head .ico {
+	float: left;
+	_display: inline;
+}
+
+.title-head .ico {
+	background: transparent url('../img/sprite-ico.png') no-repeat -60px -160px;
+	width: 16px;
+	height: 30px;
+}
+
+.title-head .ico {
+	margin-right: 10px;
+}
+
+.title-head .link {
+	margin-right: 9px;
+	color: #666666;
+	font-family: SimSun;
+}
+
+.title-head .link:hover {
+	color: #cc0000;
+}
+
+
+/*æ ç›®åˆ—è¡¨å†…å®¹*/
+
+.interview-homepage {
+	margin-top: 9px;
+}
+
+.interview-channel {
+	margin-bottom: 9px;
+}
+
+.interview-channel .inner {
+	border: 1px solid #ccc;
+}
+
+.imglist {
+	overflow: hidden;
+	_zoom: 1;
+	margin: 16px 0 0 0px;
+}
+
+.imglist .v-pic {
+	width: 120px;
+	margin-right: 9px;
+	float: left;
+	_display: inline;
+	margin: 0 15px;
+}
+
+.imglist .v-pic .title {
+	height: 46px;
+	line-height: 20px;
+	margin-top: 4px;
+	overflow: hidden;
+	_zoom: 1;
+}
+
+.imglist .v-pic .title a {
+	color: #333333;
+	font-size: 12px;
+}
+
+.imglist .v-pic .title a:hover {
+	color: #cc0000;
+}
+
+.imglist .v-pic .thumb {
+	position: relative;
+}
+
+.imglist .v-pic .thumb .opa,
+.imglist .v-pic .thumb .ico,
+.imglist .v-pic .thumb .info {
+	position: absolute;
+}
+
+.imglist .v-pic .thumb .opa {
+	height: 20px;
+	background-color: #000;
+	bottom: 0;
+	width: 100%;
+	opacity: .5;
+	filter: alpha(opacity=50);
+}
+
+.imglist .v-pic .thumb .ico {
+	background: transparent url('../img/sprite-ico.png') no-repeat -108px -169px;
+	width: 16px;
+	height: 13px;
+	bottom: 4px;
+	left: 4px;
+}
+
+.imglist .v-pic .thumb .info {
+	color: #fff;
+	bottom: 3px;
+	right: 5px;
+	font-size: 12px;
+}
+
+.ie6 .imglist .v-pic {
+	width: 120px;
+}
+
+.ie6 .imglist .v-pic .thumb {
+	height: 90px;
+	position: relative;
+}
+
+
+/*è§‚ç‚¹åˆ—è¡¨*/
+
+.viewpoint-list {
+	margin: 9px;
+}
+
+.viewpoint-list .item {
+	margin: 20px 10px;
+}
+
+.viewpoint-list .h2 {
+	font-size: 12px;
+}
+
+.viewpoint-list .h2 a {
+	color: #333;
+	font-weight: bold;
+}
+
+.viewpoint-list .h2 a:hover {
+	color: #cc0000;
+}
+
+.viewpoint-list .photo {
+	float: left;
+	margin-right: 10px;
+}
+
+.viewpoint-list .photo img {
+	border: 1px solid #ccc;
+	padding: 1px;
+	_display: inline;
+}
+
+.viewpoint-list .texts {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.viewpoint-list .title {
+	height: 20px;
+}
+
+.viewpoint-list .title:hover {
+	color: #CC0000;
+}
+
+.viewpoint-list .summary {
+	line-height: 20px;
+	color: #666;
+}
+
+
+/*  
+=========================
+è®¿è°ˆ-å†…å®¹é¡µé¢
+=========================
+*/
+
+.crumb {
+	width: 960px;
+	margin: 20px auto;
+}
+
+.crumb em {
+	font-family: SimSun;
+	padding: 0 4px;
+}
+
+.crumb a:hover {
+	color: #c00;
+}
+
+.interview-unstart-guide {
+	width: 962px;
+	margin: 0 auto;
+	background-color: #333;
+	height: 428px;
+	padding-top: 10px;
+}
+
+.interview-unstart-guide .interview-inner {
+	width: 960px;
+	margin: 0 auto;
+	height: 422px;
+	background: transparent url(../img/iv-guide.png);
+}
+
+.interview-unstart-guide .interview-video {
+	width: 480px;
+	height: 394px;
+	margin: 10px 0 0 10px;
+	float: left;
+	overflow: hidden;
+	_zoom: 1;
+}
+
+.interview-guide-info {
+	float: right;
+	_display: inline;
+	width: 455px;
+}
+
+.interview-guide-crumb {
+	position: relative;
+}
+
+.interview-guide-nextsection {
+	position: absolute;
+	line-height: 18px;
+	left: 200px;
+	top: 6px;
+	color: #999;
+}
+
+.interview-guide-nextsection a {
+	color: #69f;
+}
+
+.interview-guide-content {
+	margin: 20px 30px 10px 30px;
+}
+
+.interview-guide-content .title {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.interview-guide-content .start {
+	line-height: 34px;
+	color: #999;
+}
+
+.interview-guide-content .summary {
+	margin: 5px 0;
+	font-size: 14px;
+	line-height: 24px;
+	text-indent: 2em;
+	color: #666;
+	height: 146px;
+}
+
+.interview-guide-content .bottom {
+	overflow: hidden;
+	_zoom: 1;
+}
+
+.interview-guide-content .agree {
+	background: transparent url(../img/agree.png);
+	width: 80px;
+	height: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	text-align: center;
+	color: #333333;
+	float: left;
+	_display: inline;
+}
+
+.interview-guide-content .share {
+	float: right;
+	_display: inline;
+}
+
+
+/*å˜‰å®¾åˆ‡æ¢*/
+
+.interview-guide-guest .line {
+	height: 1px;
+	position: absolute;
+	background-color: #ccc;
+	top: 23px;
+	width: 100%;
+	overflow: hidden;
+	_zoom: 1;
+}
+
+.interview-guide-guest .tab-head {
+	position: relative;
+	overflow: hidden;
+	_zoom: 1;
+	z-index: 10;
+	padding-left: 20px;
+}
+
+.interview-guide-guest .tab-head li {
+	float: left;
+	_display: inline;
+}
+
+.interview-guide-guest .tab-head li a {
+	color: #333;
+	float: left;
+	_display: inline;
+	border: 1px solid #ccc;
+	height: 22px;
+	margin: 0 2px;
+	line-height: 22px;
+	padding: 0 10px;
+}
+
+.interview-guide-guest .tab-head li .tabactive {
+	background-color: #f4f4f4;
+	border-bottom-color: #f4f4f4;
+}
+
+.interview-guide-guest .bd {
+	background: #f4f4f4 url(../img/iv-tab.png) no-repeat 95% 10px;
+	height: 75px;
+	padding: 15px 0 0 20px;
+	position: relative;
+}
+
+.interview-guide-guest .bd .t {
+	line-height: 24px;
+	padding-left: 10px;
+}
+
+.interview-guide-guest .bd img,
+.interview-guide-guest .bd span {
+	position: absolute;
+}
+
+.interview-guide-guest .bd span {
+	width: 272px;
+	height: 58px;
+	left: 80px;
+}
+
+
+/*è®¿è°ˆåˆ—è¡¨*/
+
+.interview-unstart-main {
+	width: 960px;
+	border: 0px solid #cccccc;
+	width: 960px;
+	border: 0px solid #cccccc;
+	margin: 9px auto;
+}
+
+.interview-unstart-main .inner {
+	border: 1px solid #ccc;
+	overflow: hidden;
+	_zoom: 1;
+	background-color: #f4f4f4;
+}
+
+.interview-unstart-content-no {
+	width: 632px;
+	height: 160px;
+	line-height: 160px;
+	text-align: center;
+	color: #666;
+	border-right: 1px solid #ccc;
+	float: left;
+	background-color: #fff;
+}
+
+.question-list .interview-unstart-content-no {
+	width: 290px;
+	border: 0;
+}
+
+.interview-unstart-content-list {
+	overflow-y: scroll;
+	background-color: #ffffff;
+	float: left;
+	_display: inline;
+	width: 650px;
+	height: 160px;
+}
+
+.interview-unstart-content-list .num {
+	float: left;
+	_display: inline;
+	width: 30px;
+	text-align: center;
+	padding-top: 4px;
+	font-weight: bold;
+}
+
+.interview-unstart-content-list .content {
+	float: left;
+	_display: inline;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+.interview-interaction .content.comment span {
+	color: #000000;
+	font-weight: normal;
+}
+
+.interview-unstart-content-list .content.guest span {
+	font-weight: bold;
+	color: #077AC7;
+}
+
+.interview-unstart-content-list .content span {
+	font-weight: bold;
+	color: #DF0000;
+}
+
+.interview-unstart-content-list .content em {
+	color: #999;
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.interview-unstart-content-list .item {
+	clear: both;
+	border-bottom: 1px dashed #cccccc;
+	overflow: hidden;
+	_zoom: 1;
+	padding: 10px 0;
+	margin: 5px 10px;
+}
+
+.interview-unstart-content-list .emcee {
+	color: #0B3B8C;
+}
+
+
+/*ç™»é™†åŒºåŸŸ*/
+
+.interview-unstart-ask {
+	float: right;
+	_display: inline;
+	width: 308px;
+}
+
+.interview-unstart-ask .title-head {
+	background: none;
+}
+
+.interview-unstart-ask .title-head .ico {
+	background: transparent url(../img/interview-ico.png) no-repeat -147px 0;
+	width: 12px;
+	height: 22px;
+}
+
+.interview-unstart-ask .title-head .ico {
+	margin: 4px 10px 0 10px;
+}
+
+
+/*ç™»é™†æ¨¡å—å’Œå…¶ä»–é¡µé¢æ¨¡å—ä¸€è‡´*/
+
+.comment-form {
+	background-color: #f4f4f4;
+}
+
+.comment-form .c-inner {
+	padding: 10px;
+	border-top: 1px solid #ddd;
+}
+
+.comment-form .textarea-wrap {
+	position: relative;
+	border: 1px solid #999;
+	border-left-color: #d6d6d6;
+	border-bottom-color: #d6d6d6;
+}
+
+.comment-form .textarea-wrap .textarea {
+	width: 278px;
+	padding: 0;
+	height: 60px;
+	border: none;
+	background-color: #ffffff;
+	padding: 4px;
+}
+
+.comment-form .textarea-wrap .login-warn {
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	height: 60px;
+	top: 0;
+	left: 0;
+	color: #666;
+}
+
+.comment-form .textarea-wrap .login-warn .info {
+	line-height: 60px;
+	text-align: center;
+}
+
+.comment-form .btn-post {
+	width: 63px;
+	height: 22px;
+	background: transparent url(../img/post.png);
+	color: #ffffff;
+	border: none;
+	float: right;
+	_display: inline;
+}
+
+
+/*@end*/
+
+.interview-guide-guest {
+	position: relative;
+}
+
+
+/*å¾€æœŸå›žé¡¾*/
+
+.interview-unstart-bottom .inner {
+	border: 1px solid #ccc;
+}
+
+.interview-unstart-bottom .interview-unstart-history {
+	float: left;
+	_display: inline;
+	height: 158px;
+	width: 638px;
+}
+
+.interview-unstart-bottom .interview-unstart-rel {
+	float: right;
+	_display: inline;
+	width: 310px;
+}
+
+.interview-unstart-history {
+	position: relative;
+}
+
+.interview-unstart-history .h2 {
+	width: 15px;
+	height: 130px;
+	padding: 0 8px;
+	padding-top: 28px;
+	position: absolute;
+	background-color: #ccc;
+}
+
+.interview-unstart-history .h2 a {
+	font-size: 14px;
+	color: #cc0000;
+	font-weight: bold;
+}
+
+.interview-unstart-history .imglist {
+	margin-left: 30px;
+}
+
+.ie6 .interview-unstart-history .imglist {
+	width: 600px;
+	overflow: hidden;
+	_zoom: 1;
+}
+
+.ie6 .interview-unstart-history .imglist .v-pic {
+	margin-right: 10px;
+}
+
+.interview-unstart-rel {
+	width: 310px;
+}
+
+.interview-unstart-rel .inner {
+	height: 156px;
+}
+
+.interview-unstart-rel .list {
+	margin: 9px;
+}
+
+.interview-unstart-rel .list .item {
+	height: 24px;
+	overflow: hidden;
+	_zoom: 1;
+}
+
+.interview-unstart-rel .list .item .title {
+	line-height: 24px;
+	color: #333333;
+	font-size: 12px;
+}
+
+.interview-unstart-rel .list .item .title:hover {
+	color: #cc0000;
+}
+
+.interview-unstart-rel .list .item .date {
+	color: #cccccc;
+	margin-left: 6px;
+}
+
+.interview-unstart-rel .list .item {
+	clear: both;
+}
+
+.interview-unstart-rel .list .ico {
+	margin-top: 3px;
+}
+
+.interview-unstart-rel .list-point .ico {
+	float: left;
+	_display: inline;
+	text-align: center;
+	width: 14px;
+	height: 24px;
+	margin-right: 6px;
+	background: transparent url('../img/sprite-ico.png') no-repeat 4px -152px;
+	color: #fff;
+}
+
+.interview-unstart-rel .list-point .n1,
+.interview-unstart-rel .list-point .n2,
+.interview-unstart-rel .list-point .n3 {
+	background-position: 0 0;
+}
+
+.interview-unstart-rel .list-point .ico {
+	margin-right: 0px;
+}
+
+.interview-ico {
+	background-color: #f4f4f4;
+	background-image: none;
+	border-bottom: 1px solid #ddd;
+}
+
+.interview-ico .ico {
+	background-image: url(../img/interview-ico.png);
+	width: 28px;
+	height: 18px;
+	margin: 6px 6px 0 5px;
+}
+
+.interview-head-note .ico {
+	background-position: -65px -2px;
+}
+
+.interview-head-note .title {
+	position: relative;
+}
+
+.interview-head-note .title p {
+	position: absolute;
+	width: 425px;
+	left: 117px;
+	top: 5px;
+}
+
+.interview-head-interaction .ico {
+	background-position: -27px -2px;
+}
+
+.interview-head-img .ico {
+	background-position: -104px -2px;
+}
+
+.interview-unstart-history .interview-img-list {
+	margin: 16px;
+}
+
+.interview-imgs .inner {
+	height: 146px;
+}
+
+.interview-imgs .bd {
+	position: absolute;
+	left: 20px;
+	width: 600px;
+	height: 146px;
+	overflow: hidden;
+	_zoom: 1;
+}
+
+.interview-imgs .scroll-wrap {
+	position: absolute;
+	width: 637px;
+	height: 126px;
+	overflow: hidden;
+	_zoom: 1;
+}
+
+.interview-imgs .scroll-wrap .thumb {
+	margin: 10px;
+}
+
+
+/*æ–‡å­—å®žå½•-å¸ƒå±€*/
+
+.interview-main {
+	width: 960px;
+	margin: 9px auto;
+	overflow: hidden;
+	_zoom: 1;
+}
+
+.interview-main .interview-note {
+	float: left;
+	_display: inline;
+	width: 636px;
+}
+
+.interview-main .interview-interaction {
+	float: right;
+	_display: inline;
+	width: 308px;
+}
+
+
+/*æ–‡å­—å®žå½•*/
+
+.interview-note,
+.interview-interaction {
+	position: relative;
+	border: 1px solid #ccc;
+}
+
+.interview-note .switch-scroll,
+.interview-interaction .switch-scroll {
+	position: absolute;
+	right: 10px;
+	top: 6px;
+}
+
+.interview-note .switch-scroll label,
+.interview-interaction .switch-scroll label {
+	color: #999;
+}
+
+.interview-note .interview-unstart-content-list {
+	width: 636px;
+	height: 404px;
+}
+
+
+/*ç½‘å‹äº’åŠ¨*/
+
+.interview-interaction .interview-unstart-content-list {
+	width: 308px;
+	height: 268px;
+}
+
+.btn-area {
+	margin-top: 10px;
+}
+
+.interview-ask .btn-area .btn-post {
+	margin-top: 0;
+}
+
+
+/*ç²¾å½©è§‚ç‚¹*/
+
+.interview-wonderful {
+	margin-top: 9px;
+}
+
+.interview-wonderful .inner {
+	border: 1px solid #ccc;
+}
+
+.interview-woderful-list {
+	padding: 20px 20px 20px 182px;
+	background: #ffffff url(../img/interview-wonderful.png) no-repeat 10px 20px;
+}
+
+.interview-woderful-list .item {
+	clear: both;
+	font-size: 14px;
+	padding-left: 30px;
+	line-height: 24px;
+	padding-bottom: 20px;
+	color: #333;
+	min-height: 116px;
+	height: auto!important;
+	height: 116px;
+}
+
+.interview-woderful-list .item .ico {
+	float: left;
+	_display: inline;
+	margin-left: -30px;
+	width: 18px;
+	height: 20px;
+	background: transparent url(../img/interview-ico.png) no-repeat 0 0;
+}
