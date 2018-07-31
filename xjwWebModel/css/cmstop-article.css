@@ -1073,12 +1073,12 @@ a:hover {
 
 /*内容中图片缩放*/
 
-.article-content img {
+/*.article-content img {
 	width: 500px;
 	visibility: hidden;
 	opacity: 0;
 	/*fliter:alpha(opacity=0);*/
-}
+}*/
 
 .image_zoom {
 	border: 10px solid #ededed;
