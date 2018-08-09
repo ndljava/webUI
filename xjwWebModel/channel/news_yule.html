@@ -15,9 +15,8 @@
     <script type="text/javascript" src="/${res}/js/jquery.cookie.js"></script>
     <link href="/${res}/css/history.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="/${res}/js/koala.min.1.5.js"></script>
-    <script type="text/javascript">
-        /**
-         */
+    <script type="text/javascript">/**
+*/
         function PPTBox() {
             this.uid = PPTBoxHelper.getId();
             PPTBoxHelper.instance[this.uid] = this;
@@ -163,8 +162,7 @@
             elem.style.left = xpos + "px";
             var repeat = "moveElement('" + elementID + "'," + final_x + "," + interval + ")";
             elem.movement = setTimeout(repeat, interval);
-        }
-    </script>
+        }</script>
     <style>
         body {
             margin: 0 auto;
@@ -533,26 +531,24 @@
                 <div id="hot">
                     <!--热点图幻灯-->
                     <div id="xxx" style="float:left;">
-                        <script>
-                            var box = new PPTBox();
+                        <script>var box = new PPTBox();
                             box.width = 295; //宽度   
                             box.height = 195; //高度
                             box.autoplayer = 3; //自动播放间隔时间
 
                             [@cms_content_list count = '2'
-                                channelId = '75'
-                                channelOption = '1'
-                                typeId = '2'
-                            ]
+                            channelId = '75'
+                            channelOption = '1'
+                            typeId = '2'
+]
                             [#list tag_list as a]
                             box.add({
-                                    "url": "${a.typeImg}",
-                                    "href": "${a.url}",
-                                    "title": "${a.title}"
-                                })[/#list] [/@cms_content_list]
+                                "url": "${a.typeImg}",
+                                "href": "${a.url}",
+                                "title": "${a.title}"
+                            })[/#list] [/@cms_content_list]
 
-                                        box.show();
-                        </script>
+		box.show();</script>
                     </div>
                     <!--热点新闻-->
                     <div id="hot_list">
@@ -623,16 +619,14 @@
             </div>
             <div style="width:100%;">
                 <center>
-                    <script type="text/javascript">
-                        function hzmt(num2) {
+                    <script type="text/javascript">function hzmt(num2) {
                             for (jj1 = 1; jj1 < 5; jj1++) {
                                 document.getElementById("bdshs" + jj1).style.borderBottom = "2px solid #dddddd";
                                 document.getElementById("bdshas" + jj1).style.display = "none"
                             }
                             document.getElementById("bdshs" + num2).style.borderBottom = "2px solid #F00";
                             document.getElementById("bdshas" + num2).style.display = "block"
-                        }
-                    </script>
+                        }</script>
                     <div style="width:980px; margin:0px auto;">
                         <div style="width:100px; float:left; border-bottom:2px solid #F00;" id="bdshs1">
                             <span onMouseMove="javascript:hzmt(1)">
@@ -1417,8 +1411,7 @@
                             </span>
                             <span>新ICP备10001213号-2
                                 <span>
-                                    <a href="http://www.xinjiangnet.com.cn/2017/0510/1417370.shtml#g1417370=1" target="_blank"
-                                        class="littg">广播电视节目制作经营许可证（新）字第66号</a>
+                                    <a href="http://www.xinjiangnet.com.cn/2017/0510/1417370.shtml#g1417370=1" target="_blank" class="littg">广播电视节目制作经营许可证（新）字第66号</a>
                                 </span>
                                 <span>
                                     <a href="http://www.xinjiangnet.com.cn/2015/1216/1503189.shtml" target="_blank" class="littg">信息网络传播视听节目许可证号：3110483</a>
@@ -1441,8 +1434,7 @@
                     <tr>
                         <td align="center" width="50%">
                             <a href="http://www.wgwj.gov.cn/article/articleClass.aspx?ClassID=257" target="_blank">
-                                <img src="http://www.xinjiangnet.com.cn/images/xjwwangjing110.gif" border="0" width="118" height="48"
-                                />
+                                <img src="http://www.xinjiangnet.com.cn/images/xjwwangjing110.gif" border="0" width="118" height="48" />
                             </a>
                         </td>
                         <td align="center">
