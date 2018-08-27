@@ -509,6 +509,7 @@
         .curimg {
             background-image: url(/${res}/img/01.png)
         }
+
     </style>
     <!-- 头部 -->
     [#include '../content/news_header.html'/]
@@ -548,7 +549,8 @@
                                 "title": "${a.title}"
                             })[/#list] [/@cms_content_list]
 
-		box.show();</script>
+                            box.show();
+                        </script>
                     </div>
                     <!--热点新闻-->
                     <div id="hot_list">
@@ -557,8 +559,8 @@
                         </div>
                         <div id="hot_content">
                             <ul>
-                                [@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
-                                as a]
+                                [@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+                                [#list tag_list as a]
                                 <li>
                                     <div style="width:440px;text-align:left;font-size:18px; /*font-weight:600;*/ color:#000;line-height:40px; font-weight:bold; clear:both;">
                                         <a href="${a.url}">[@text_cut s=a.title len=18 append=append/]</a>
