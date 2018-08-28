@@ -13,7 +13,7 @@
 		</div>
 		<div class="lt">
 			<ul class="u">
-				[@cms_content_list count='5' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+				[@cms_content_list count='5' channelId='377' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 				[#list tag_list as a]
 				<li>
 					·<a href="${a.url}" target="_blank">[@text_cut s=a.title len=22 append=append/]</a>
@@ -24,7 +24,7 @@
 		</div>
 		<div class="lt">
 			<ul class="u">
-				[@cms_content_list count='4' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+				[@cms_content_list count='4' channelId='377' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 				[#list tag_list as a]
 				<li>
 					·<a href="${a.url}" target="_blank">[@text_cut s=a.title len=22 append=append/]</a>
@@ -47,7 +47,7 @@
 		</div>
 		<div class="ppr" style="height: 124px;">
 			<ul>
-				[@cms_content_list count='2' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+				[@cms_content_list count='2' channelId='392' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 				[#list tag_list as a]
 				<li>
 					<a href="${a.url}" target="_blank">
@@ -63,7 +63,7 @@
 		</div>
 		<div class="lt">
 			<ul class="u">
-				[@cms_content_list count='3' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+				[@cms_content_list count='3' channelId='392' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 				[#list tag_list as a]
 				<li>
 					·<a href="${a.url}" target="_blank">[@text_cut s=a.title len=22 append=append/]</a>
@@ -88,7 +88,7 @@
 				<div class="clear"></div>
 			</div>
 			<div class="mt">
-				[@cms_content_list count='1' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+				[@cms_content_list count='1' channelId='377' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 				[#list tag_list as a]
 				<div class="il">
 					<a href="${a.url}" target="_blank">
@@ -106,13 +106,13 @@
 				[/#list]
 				[/@cms_content_list]
 			</div>
-			[@cms_content_list count='9' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+			[@cms_content_list count='9' channelId='377,372,371' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 			[#assign i=0/]
 			[#list tag_list as a]
 			[#if i%3=0]
 			<div class="mt">
 				<h4>
-					<a  style="color:black;font-weight: bold;" href="${tag_list[i].url}" >[@text_cut s=tag_list[i].title len=22 append=append/]</a>
+					<a style="color:black;font-weight: bold;" href="${tag_list[i].url}" >[@text_cut s=tag_list[i].title len=21 append=append/]</a>
 				</h4>
 				<p>
 					<span>
@@ -130,7 +130,7 @@
 			<div class="line_dashed"></div>
 			<div class="mt">
 				<ul class="u">
-					[@cms_content_list count='8' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+					[@cms_content_list count='8' channelId='377,372,371' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 					[#list tag_list as a]
 					[#if a_index==0]
 					<li>
@@ -164,7 +164,7 @@
 			<div class="rt">
 				<div id="fsD2" class="focus" style="width:260px;height:223px;">
 					<div id="D1pic2" class="fPic">
-						[@cms_content_list count='5' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='5' channelId='372' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
 						<div class="fcon" style="display: none;">
 							<a target="_blank" href="${a.url}">
@@ -229,7 +229,7 @@
 				<ul>
 					<li>
 						<a href="http://store.ccb.com/xj/" target="_blank">
-							<img src="http://upload.xinjiangnet.com.cn/2015/0127/1422359019870.jpg" style="border:0 ">
+							<img src="/${res}/img/1422359019870.jpg" style="border:0 ">
 						</a>
 						<span>
 							<a href="http://store.ccb.com/xj/" target="_blank">建设银行</a>
@@ -237,7 +237,7 @@
 					</li>
 					<li>
 						<a href="http://www.icbc.com.cn/ICBC/%e6%96%b0%e7%96%86%e5%88%86%e8%a1%8c/default.htm" target="_blank">
-							<img src="http://upload.xinjiangnet.com.cn/2015/0127/1422358822929.jpg" style="border:0 ">
+							<img src="/${res}/img/1422358822929.jpg" style="border:0 ">
 						</a>
 						<span>
 							<a href="http://www.icbc.com.cn/ICBC/%e6%96%b0%e7%96%86%e5%88%86%e8%a1%8c/default.htm" target="_blank">工商银行</a>
@@ -247,7 +247,7 @@
 			</div>
 			<div class="rt">
 				<ul class="u" style="white-space: nowrap;">
-					[@cms_content_list count='3' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+					[@cms_content_list count='3' channelId='377' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 					[#list tag_list as a]
 					<li style="white-space: nowrap;text-overflow: '';overflow: hidden;">·
 						<span><a href="${a.url}" target="_blank">[@text_cut s=a.title len=13 append=append/]</a></span>

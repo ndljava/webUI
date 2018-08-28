@@ -14,7 +14,7 @@
 		<div class="lt">
 			<div id="fsD1" class="focus">
 				<div id="D1pic1" class="fPic">
-					[@cms_content_list count='4' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[@cms_content_list count='4' channelId='374' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					[#list tag_list as a]
 					<div class="fcon" style="display: none;">
 						<a target="_blank" href="${a.url}">
@@ -76,7 +76,7 @@
 		</div>
 		<div class="ppr">
 			<ul>
-				[@cms_content_list count='6' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+				[@cms_content_list count='6' channelId='376' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 				[#list tag_list as a]
 				<li>
 					<a href="${a.url}" target="_blank">
@@ -105,7 +105,7 @@
 				<div class="clear"></div>
 			</div>
 			<div class="mt">
-				[@cms_content_list count='1' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+				[@cms_content_list count='1' channelId='376' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 				[#list tag_list as a]
 				<div class="il">
 					<a href="${a.url}" target="_blank">
@@ -123,7 +123,7 @@
 				[/#list]
 				[/@cms_content_list]
 			</div>
-			[@cms_content_list count='6' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+			[@cms_content_list count='6' channelId='376' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 			<div class="mt">
 				<h4>
 					<a  style="font-weight: bold;" href="${tag_list[0].url}" >[@text_cut s=tag_list[0].title len=22 append=append/]</a>
@@ -153,7 +153,7 @@
 			[/@cms_content_list]
 			<div class="mt">
 				<ul class="u">
-					[@cms_content_list count='5' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+					[@cms_content_list count='5' channelId='374' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 					[#list tag_list as a]
 					<li>
 						·<a href="${a.url}" target="_blank">[@text_cut s=a.title len=22 append=append/]</a>
@@ -174,8 +174,7 @@
 				</a>
 				<div class="clear"></div>
 			</div>
-			[@cms_content_list count='1' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
-			
+			[@cms_content_list count='1' channelId='378' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 			<div class="mt">
 				<div class="il">
 					<a href="${tag_list[0].url}" target="_blank">
@@ -192,7 +191,7 @@
 				<div class="clear"></div>
 			</div>
 			[/@cms_content_list]
-			[@cms_content_list count='3' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+			[@cms_content_list count='3' channelId='378' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 			<div class="mt">
 				<h4>
 					<a  style="font-weight: bold;" href="${tag_list[0].url}" >[@text_cut s=tag_list[0].title len=15 append=append/]</a>
@@ -209,11 +208,13 @@
 			[/@cms_content_list]
 			<div class="mt">
 				<ul class="u">
-					[@cms_content_list count='5' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+					[@cms_content_list count='8' channelId='378' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 					[#list tag_list as a]
+					[#if a_index>2]
 					<li>·
 						<a href="${a.url}" target="_blank">[@text_cut s=a.title len=22 append=append/]</a>
 					</li>
+					[/#if]
  					[/#list]
 					[/@cms_content_list]
 				</ul>
@@ -237,7 +238,7 @@
 			</div>
 			<div class="ppy">
 				<ul>
-					[@cms_content_list count='2' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[@cms_content_list count='2' channelId='270' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					[#list tag_list as a]
 					<li>
 						<a href="${a.url}" target="_blank">
@@ -254,16 +255,16 @@
 			<div class="rt">
 				<ul class="u">
 					[#assign i=0/]
-					[@cms_content_list count='8' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+					[@cms_content_list count='8' channelId='270' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 					[#list tag_list as a]
 					[#if a_index%2==0]
 					<li style="white-space: nowrap;text-overflow: '';overflow: hidden;">·
 						<span>
-							<a href="${tag_list[i].url}" target="_blank">[@text_cut s=tag_list[i].title len=10 append=append/]</a>
+							<a href="${tag_list[i].url}" target="_blank">[@text_cut s=tag_list[i].title len=8 append=append/]</a>
 						</span>
 						 &nbsp;|&nbsp;
 						<span>
-							<a href="${tag_list[i+1].url}" target="_blank">[@text_cut s=tag_list[i+1].title len=10 append=append/]</a>
+							<a href="${tag_list[i+1].url}" target="_blank">[@text_cut s=tag_list[i+1].title len=8 append=append/]</a>
 						</span>
 					</li>
 					[/#if]
@@ -286,7 +287,7 @@
 			</div>
 			<div class="ppy">
 				<ul>
-					[@cms_content_list count='6' channelId='75' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[@cms_content_list count='6' channelId='366' titLen='15' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					[#list tag_list as a]
 					<li>
 						<a href="${a.url}" target="_blank">
