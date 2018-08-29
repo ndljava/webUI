@@ -138,8 +138,8 @@
             <!------   头部幻灯特效   ---->
             <div id="fsD1" class="focus">
                 <div id="D1pic1" class="fPic">
-                    [@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
-										[#list tag_list as a]
+                    [@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
+                    as a]
                     <div class="fcon" style="display: none;">
                         <a target="_blank" href="${a.url}">
                             <img src="${a.typeImg}" style="opacity: 1;width: 586px; height: 319px; ">
@@ -234,8 +234,8 @@
                 </div>
                 <div class="xian3"></div>
                 <div class="tuwen">
-                    [@cms_content_list count='1' channelId='365' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
-										[#list tag_list as a]
+                    [@cms_content_list count='1' channelId='365' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
+                    as a]
                     <div class="h1_pic">
                         <img src="${a.typeImg}" width="100" height="100" />
                     </div>
@@ -264,10 +264,10 @@
                 </div>
                 <div class="xian3"></div>
                 <div class="tuwen">
-                    [@cms_content_list count='1' channelId='154' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
-										[#list tag_list as a]
+                    [@cms_content_list count='1' channelId='154' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
+                    as a]
                     <div class="h1_pic">
-                        <img src="${a.typeImg}" width="100" height="100"/>
+                        <img src="${a.typeImg}" width="100" height="100" />
                     </div>
                     <div class="h1_w">
                         <div class="w_tit">
@@ -278,8 +278,7 @@
                             <a href="${a.url}">[详细]</a>
                         </div>
                     </div>
-                    [/#list]
-										[/@cms_content_list]
+                    [/#list] [/@cms_content_list]
                 </div>
                 <div class="h1_news">
                     [@cms_content_list count='4' channelId='154' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
@@ -289,6 +288,7 @@
                     <br> [/#if] [/#list] [/@cms_content_list]
                 </div>
             </div>
+						 
             <div style="float:left;margin-top: 20px;">
                 <div class="biaoti3">
                     <a style="color:inherit;" href="http://www.xinjiangnet.com.cn/xwzx/sfwlmq/qxdts/">区县动态</a>
@@ -832,14 +832,11 @@ $(document).ready(function(){
                     </div>
                 </div>
                 <div class="bag1">
-                    [@cms_content_list count='3' channelId='384' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1']
-										[#list tag_list as a]
+                    [@cms_content_list count='3' channelId='384' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
+                    as a]
                     <a href="${a.url}">[@text_cut s=a.title len=13 append=append/]</a>
                     [#if a_has_next]
-                    <br>
-										[/#if]
-										[/#list]
-										[/@cms_content_list]
+                    <br> [/#if] [/#list] [/@cms_content_list]
                 </div>
             </div>
             <div class="right_control">
@@ -1165,7 +1162,7 @@ $(document).ready(function(){
                 filter: progid:DXImageTransform.Microsoft.gradient( GradientType=0, startColorstr="#99fd4f05", endColorstr="#99fd4f05");
             }
 
-            :root .picItem:hover span {
+             :root .picItem:hover span {
                 filter: none;
                 background: rgba(0, 0, 0, 0.5);
                 display: block;

@@ -32,6 +32,7 @@
         <div style="margin:15px 0 25px 0;">
             <a href="http://special.xinjiangnet.com.cn/161010/" target="_blank">
                 <img src="/${res}/img/20161019zmmm.jpg" width="980" height="80">
+						</a>
         </div>
         <!--新疆网logo-->
         <style>
@@ -107,20 +108,22 @@
                 <!-- 代码 开始 -->
                 <div id="fsD1" class="focus">
                     <div id="D1pic1" class="fPic">
-                        [@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
-                        as a] [#if a_index==0]
+                        [@cms_content_list count='4' channelId='410' titLen='20' dateFormat='MM-dd' channelOption='2' typeId='2']
+												[#list tag_list as a]
+												[#if a_index==0]
                         <div class="fcon" style="display:block;">
-                            [#else]
-                            <div class="fcon" style="display: none;">
-                                [/#if]
-                                <a target="_blank" href="${a.url}}">
+                        [#else]
+                        <div class="fcon" style="display: none;">
+                        [/#if]
+                                <a target="_blank" href="${a.url}">
                                     <img src="${a.typeImg}" style="opacity: 1; ">
                                 </a>
                                 <span class="shadow" style="height: 60px;line-height: 60px;">
                                     <a target="_blank" href="${a.url}">[@text_cut s=a.title len=24 append=append/]</a>
                                 </span>
                             </div>
-                            [/#list] [/@cms_content_list]
+                            [/#list]
+														[/@cms_content_list]
                         </div>
                         <div class="fbg" style="bottom: 15px;">
                             <div class="D1fBt" id="D1fBt" style="width:90px; position:absolute;top:0;right:0;">
@@ -174,7 +177,7 @@
                             <div class="gd">更多>></div>
                         </a>
                     </div>
-
+									 
                     <div class="wen1">
                         <div class="wen1_left">
                             <a href="http://special.xinjiangnet.com.cn/170426-2/">
@@ -199,7 +202,8 @@
                     <div class="wen1">
                         <div class="wen1_left">
                             <a href="http://www.xinjiangnet.com.cn/2016/0722/1595598.shtml">
-                                <img src="http://upload.xinjiangnet.com.cn/2018/0104/1515031940308.jpg" /> </a>
+                                <img src="http://upload.xinjiangnet.com.cn/2018/0104/1515031940308.jpg" />
+														</a>
                         </div>
                         <div class="wen1_right">
                             <div class="da_bt">
@@ -213,6 +217,7 @@
                             </div>
                         </div>
                     </div>
+										 
                 </div>
                 <div class="need_help">
                     <div class="biaoti2">
@@ -226,7 +231,8 @@
                         </div>
                     </div>
                     <div class="buluoht">
-                        <Br> [@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
+                        <Br> 
+												[@cms_content_list count='3' channelId='411' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
                         [#list tag_list as a]
                         <div style="width:33.3%; height:220px; float:left;">
                             <div style="width:160px; height:196px;">
@@ -245,8 +251,8 @@
                                 </div>
                             </div>
                         </div>
-                        [/#list] [/@cms_content_list]
-
+                        [/#list]
+												[/@cms_content_list]
                     </div>
                 </div>
                 <div class="gy_zz">
@@ -258,12 +264,13 @@
                         </a>
                     </div>
                     <!---------------义工 社区 链接--------------------------------->
-                    [@cms_content_list count='9' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
-                    as a] [#if (a_index+1)%3=0]
+                    [@cms_content_list count='9' channelId='197' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
+										[#list tag_list as a]
+										[#if (a_index+1)%3=0]
                     <div class="yigongx">
-                        [#else]
-                        <div class="yigong">
-                            [/#if]
+                    [#else]
+                    <div class="yigong">
+                    [/#if]
                             <div class="yg_biao">
                                 <a href="${a.url}">
                                     <img src="${a.typeImg}" width="52px" height="51px" />
@@ -279,7 +286,8 @@
                                 </div>
                             </div>
                         </div>
-                        [/#list] [/@cms_content_list]
+                        [/#list]
+												[/@cms_content_list]
                         <!---------------义工 社区 链接--------------------------------->
                     </div>
                     <style>
@@ -426,13 +434,13 @@
                 </div>
                 <div class="rightbox">
                     <div class="right1">
-                        [@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
+                        [@cms_content_list count='2' channelId='194' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
                         as a]
                         <div class="right1_t">
                             <a href="${a.url}">[@text_cut s=a.title len=13 append=append/]</a>
                         </div>
                         <div class="right1_w" style="text-indent:2em;">
-                            <a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.desc len=40 append=append/]</a>
+                            <a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.desc len=70 append=append/]...</a>
                             <a href="${a.url}">
                                 <span class="xx">[详细]</span>
                             </a>
@@ -441,12 +449,13 @@
 
                         <div class="right1_lb">
                             <ul>
-                                [@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
-                                as a]
+                                [@cms_content_list count='4' channelId='194' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1']
+																[#list tag_list as a]
                                 <li class="item">&bull;
                                     <a href="${a.url}">[@text_cut s=a.title len=18 append=append/]</a>
                                 </li>
-                                [/#list] [/@cms_content_list]
+                                [/#list]
+																[/@cms_content_list]
                             </ul>
                         </div>
                     </div>
@@ -459,7 +468,7 @@
                                 <div class="gd">更多>></div>
                             </a>
                         </div>
-                        [@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
+                        [@cms_content_list count='2' channelId='199' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
                         as a]
                         <div class="right2_box">
                             <div class="right2_ti">
@@ -519,7 +528,7 @@
                             </a>
                         </div>
                         <div class="wb_ht_box">
-                            [@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
+                            [@cms_content_list count='1' channelId='203' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
                             as a]
                             <div class="ht_pic2">
                                 <a href="${a.url}">
@@ -563,8 +572,8 @@
                             </a>
                         </div>
                         <div class="shehuizeren">
-                            [@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
-                            as a]
+                            [@cms_content_list count='2' channelId='195' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
+														[#list tag_list as a]
                             <div class="ppl" style="height: 104px;">
                                 <div class="pp1_pic">
                                     <a href="${a.url}">
@@ -595,7 +604,7 @@
                                 <div class="gd">更多>></div>
                             </a>
                         </div>
-                        [@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
+                        [@cms_content_list count='3' channelId='198' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
                         as a]
                         <div class="ppl">
                             <div class="pp1_pic">

@@ -100,8 +100,8 @@
                         </span>
                     </div>
                 </div>
-                [@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
-                as a]
+                [@cms_content_list count='2' channelId='380' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1']
+				[#list tag_list as a]
                 <div class="hotnews1">
                     <h3>
                         <a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.title len=18 append=append/]</a>
@@ -111,7 +111,8 @@
                         <a href="${a.url}">[详细]</a>
                     </p>
                 </div>
-                [/#list] [/@cms_content_list]
+                [/#list]
+				[/@cms_content_list]
             </div>
             <style>
                 #ifocus {
@@ -365,31 +366,35 @@
                     <div id="ifocus_pic">
                         <div id="ifocus_piclist">
                             <ul>
-                                [@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
-                                as a]
+                                [@cms_content_list count='3' channelId='391' titLen='20' dateFormat='MM-dd' channelOption='2' typeId='2']
+								[#list tag_list as a]
                                 <li>
                                     <a href="${a.url}">
                                         <img src="${a.typeImg}" alt="${a.title}" width="514" height="300" />
                                     </a>
                                 </li>
-                                [/#list] [/@cms_content_list]
+                                [/#list]
+								[/@cms_content_list]
                             </ul>
                         </div>
                         <div id="ifocus_opdiv"></div>
                         <div id="ifocus_tx">
                             <ul>
-                                [@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
-                                as a] [#if a_index==0]
+                                [@cms_content_list count='3' channelId='391' titLen='20' dateFormat='MM-dd' channelOption='2' typeId='2']
+								[#list tag_list as a]
+								[#if a_index==0]
                                 <li class="current">[@text_cut s=a.title len=18 append=append/]</li>
                                 [#else]
                                 <li class="normal">[@text_cut s=a.title len=18 append=append/]</li>
-                                [/#if] [/#list] [/@cms_content_list]
+                                [/#if]
+								[/#list] 
+								[/@cms_content_list]
                             </ul>
                         </div>
                     </div>
                     <div id="ifocus_btn">
                         <ul>
-                            [@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
+                            [@cms_content_list count='3' channelId='391' titLen='20' dateFormat='MM-dd' channelOption='2' typeId='2'] [#list tag_list
                             as a] [#if a_index==0]
                             <li class="current">
                                 <img src="${a.typeImg}" alt="${a.title}" />
@@ -421,7 +426,7 @@
                                     </span>
                                 </div>
                             </div>
-                            [@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
+                            [@cms_content_list count='1' channelId='390' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
                             as a]
                             <a href="${a.url}">
                                 <img src="${a.typeImg}" width="321px" height="224px" style="vertical-align: top;">
@@ -432,14 +437,14 @@
                             [/#list] [/@cms_content_list]
                             <div class="list">
                                 <ul>
-                                    [@cms_content_list count='4' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
+                                    [@cms_content_list count='4' channelId='390' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
                                     as a] [#if a_index==0]
                                     <li class="first_tt">
                                         <a href="${a.url}" style="color:#6e6e6e;">· [@text_cut s=a.title len=18 append=append/]</a>
                                     </li>
                                     [#else]
                                     <li>
-                                        <a href="${a.url}">· [@text_cut s=a.title len=18 append=append/]</a>
+                                        <a href="${a.url}">· [@text_cut s=a.title len=20 append=append/]</a>
                                     </li>
                                     [/#if] [/#list] [/@cms_content_list]
                                 </ul>
@@ -462,16 +467,19 @@
                             </div>
                             <div class="list" style="margin-top: 10px;">
                                 <ul>
-                                    [@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
-                                    as a] [#if a_index==0]
+                                    [@cms_content_list count='6' channelId='389' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1']
+									[#list tag_list as a]
+									[#if a_index==0]
                                     <li class="first_tt">
-                                        <a href="${a.title}" style="color:#6e6e6e;">[@text_cut s=a.title len=18 append=append/]</a>
+                                        <a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.title len=18 append=append/]</a>
                                     </li>
                                     [#else]
                                     <li>
-                                        <a href="${a.title}"> · [@text_cut s=a.title len=18 append=append/]</a>
+                                        <a href="${a.url}"> · [@text_cut s=a.title len=18 append=append/]</a>
                                     </li>
-                                    [/#if] [/#list] [/@cms_content_list]
+                                    [/#if]
+									[/#list]
+									[/@cms_content_list]
                             </div>
                         </div>
                         <!-- 本网评论-->
@@ -489,15 +497,16 @@
                                     </span>
                                 </div>
                             </div>
-                            [@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
-                            as a]
+                            [@cms_content_list count='1' channelId='412' titLen='20' dateFormat='MM-dd' channelOption='2' typeId='2']
+							[#list tag_list as a]
                             <a href="${a.url}">
                                 <img src="${a.typeImg}" width="321px" height="182px">
                             </a>
                             <h4 style="margin-top: 10px;">
                                 <a href="${a.url}" style="color:#6e6e6e;">[@text_cut s=a.title len=18 append=append/]</a>
                             </h4>
-                            [/#list] [/@cms_content_list]
+                            [/#list]
+							[/@cms_content_list]
                         </div>
                         <!-- 漫评天下-->
                     </div>
@@ -518,7 +527,7 @@
                             </div>
                             <div class="list">
                                 <ul>
-                                    [@cms_content_list count='10' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
+                                    [@cms_content_list count='10' channelId='381' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
                                     as a] [#if a_index==0]
                                     <li class="first_tt">
                                         <a href="${a.url}">·[@text_cut s=a.title len=20 append=append/]</a>
@@ -548,7 +557,7 @@
                             </div>
                             <div class="list">
                                 <ul>
-                                    [@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
+                                    [@cms_content_list count='6' channelId='382' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
                                     as a] [#if a_index==0]
                                     <li class="first_tt">
                                         <a href="${a.url}">·[@text_cut s=a.title len=20 append=append/]</a>
@@ -578,7 +587,7 @@
                             </div>
                             <div class="list">
                                 <ul>
-                                    [@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
+                                    [@cms_content_list count='6' channelId='384' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
                                     as a] [#if a_index==0]
                                     <li class="first_tt">
                                         <a href="${a.url}">·[@text_cut s=a.title len=20 append=append/]</a>
@@ -608,7 +617,7 @@
                             </div>
                             <div class="list">
                                 <ul>
-                                    [@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
+                                    [@cms_content_list count='6' channelId='385' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
                                     as a] [#if a_index==0]
                                     <li class="first_tt">
                                         <a href="${a.url}">·[@text_cut s=a.title len=20 append=append/]</a>
@@ -640,8 +649,8 @@
                                 </div>
                             </div>
                             <ul>
-                                [@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
-                                as a]
+                                [@cms_content_list count='6' channelId='413' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
+								[#list tag_list as a]
                                 <li>
                                     <a href="${a.url}" class="bor">
                                         <img src="${a.typeImg}" width="85px" height="81px" />
@@ -650,11 +659,12 @@
                                         <a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=5 append=append/]</a>
                                     </h4>
                                 </li>
-                                [/#list] [/@cms_content_list]
+                                [/#list]
+								[/@cms_content_list]
                             </ul>
                             <ul>
-                                [@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
-                                as a]
+                                [@cms_content_list count='6' channelId='413' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
+								[#list tag_list as a]
                                 <li>
                                     <a href="${a.url}" class="bor">
                                         <img src="${a.typeImg}" width="85px" height="81px" />
@@ -663,7 +673,8 @@
                                         <a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=5 append=append/]</a>
                                     </h4>
                                 </li>
-                                [/#list] [/@cms_content_list]
+                                [/#list]
+								[/@cms_content_list]
                             </ul>
                         </div>
                         <!-- 评论员风采-->
@@ -686,7 +697,7 @@
                         </div>
                         <div class="list">
                             <ul>
-                                [@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
+                                [@cms_content_list count='6' channelId='387' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
                                 as a] [#if a_index==0]
                                 <li class="first_tt">
                                     <a href="${a.url}">·[@text_cut s=a.title len=18 append=append/]</a>
@@ -714,7 +725,7 @@
                                 </span>
                             </div>
                         </div>
-                        [@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
+                        [@cms_content_list count='1' channelId='386' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
                         as a]
                         <a href="${a.url}">
                             <img src="${a.typeImg}" width="279px" height="179px" style="vertical-align: top;">
@@ -725,7 +736,7 @@
                         [/#list] [/@cms_content_list]
                         <div class="list">
                             <ul>
-                                [@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
+                                [@cms_content_list count='6' channelId='386' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] [#list tag_list
                                 as a] [#if a_index==0]
                                 <li class="first_tt">
                                     <a href="${a.url}" style="color:#6e6e6e;">· [@text_cut s=a.title len=17 append=append/]</a>
@@ -756,7 +767,7 @@
                         <div class="plb">
                             <div class="list">
                                 <ul>
-									[@cms_content_list count='8' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1']
+									[@cms_content_list count='8' channelId='380' titLen='20' dateFormat='MM-dd' orderBy='13' channelOption='1' typeId='1']
 									[#list tag_list as a]
 									[#if a_index<3]
                                     <li class="list_b">
