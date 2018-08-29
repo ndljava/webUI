@@ -513,7 +513,6 @@
     </style>
     <!-- 头部 -->
     [#include '../content/news_header.html'/]
-
     <body>
         <div style="width:980px; height:10px; clear:both;">
         </div>
@@ -537,17 +536,15 @@
                             box.height = 195; //高度
                             box.autoplayer = 3; //自动播放间隔时间
 
-                            [@cms_content_list count = '2'
-                            channelId = '75'
-                            channelOption = '1'
-                            typeId = '2'
-]
+                            [@cms_content_list count='2' channelId = '374' channelOption = '1' typeId = '2']
                             [#list tag_list as a]
                             box.add({
                                 "url": "${a.typeImg}",
                                 "href": "${a.url}",
                                 "title": "${a.title}"
-                            })[/#list] [/@cms_content_list]
+                            });
+							[/#list]
+							[/@cms_content_list]
 
                             box.show();
                         </script>
@@ -559,18 +556,19 @@
                         </div>
                         <div id="hot_content">
                             <ul>
-                                [@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+                                [@cms_content_list count='2' channelId='374' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
                                 [#list tag_list as a]
                                 <li>
                                     <div style="width:440px;text-align:left;font-size:18px; /*font-weight:600;*/ color:#000;line-height:40px; font-weight:bold; clear:both;">
                                         <a href="${a.url}">[@text_cut s=a.title len=18 append=append/]</a>
                                     </div>
                                     <div class="pro">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[@text_cut s=a.desc len=33 append=append/]……
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[@text_cut s=a.desc len=33 append=append/]...
                                         <a href="${a.url}">[详细]</a>
                                     </div>
                                 </li>
-                                [/#list] [/@cms_content_list]
+                                [/#list]
+								[/@cms_content_list]
                             </ul>
                         </div>
                     </div>
@@ -589,8 +587,8 @@
                 <div class="list_title">
                     <span class="tstx"></span>
                 </div>
-                [@cms_content_list count='10' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] [#list tag_list
-                as a]
+                [@cms_content_list count='10' channelId='182' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2']
+				[#list tag_list as a]
                 <div id="advert">
                     <span>
                         <a href="${a.url}">
@@ -601,7 +599,8 @@
                         <a href="${a.url}">[@text_cut s=a.title len=15 append=append/]...</a>
                     </div>
                 </div>
-                [/#list] [/@cms_content_list]
+                [/#list]
+				[/@cms_content_list]
             </div>
         </div>
         <div style="width:100%; clear:both; float:left;margin-top:20px">

@@ -24,8 +24,9 @@
 
 <body>
     <div style="width:740px;  float:left;">
-        [@cms_content_page count='14' channelId='75' titLen='20' dateFormat='yyyy-MM-dd hh:mm:ss' channelOption='1' typeId='2']
+        [@cms_content_page count='14' channelId='163' dateFormat='yyyy-MM-dd hh:mm:ss' channelOption='1' typeId='1']
         [#list tag_list as a]
+		[#if a.typeImg??]
         <div style="width:740px; height:139px; border-bottom:1px dashed #CCC;">
             <div style="width:740px; height:23px;">
             </div>
@@ -38,17 +39,34 @@
                 <div style="width:580px; height:94px; float:right;">
                     <div style="width:580px; height:34px;">
                         <a href="${a.url}" target="_blank" style="font-family:'Microsoft YaHei',微软雅黑,'Microsoft JhengHei',华文细黑,STHeiti,MingLiu; font-size:18px; color:#111;">
-                            ${a.title}
+                           [@text_cut s=a.title len=35 append=append/]
                         </a>
                     </div>
                     <div style="width:580px; height:60px;font-family:'Microsoft YaHei',微软雅黑,'Microsoft JhengHei',华文细黑,STHeiti,MingLiu; font-size:14px; line-height:24px;color:#676767;">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[@text_cut s=a.desc len=33 append=append/]
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[@text_cut s=a.desc len=83 append=append/]...
                         <a href="${a.url}" class="more">[详细]</a>
                     </div>
                 </div>
                 <div style="clear:both;"></div>
             </div>
         </div>
+		[#else]
+		<div style="width:740px; height:139px; border-bottom:1px dashed #CCC;">
+			<div style="width:740px; height:23px;">
+			</div>
+            <div style="width:740px; height:94px;">
+				<div style="width:740px; height:34px;">
+					<a href="${a.url}" target="_blank" style="font-family:'Microsoft YaHei',微软雅黑,'Microsoft JhengHei',华文细黑,STHeiti,MingLiu; font-size:18px; color:#111;">
+						[@text_cut s=a.title len=35 append=append/]
+					</a>
+				</div>
+				<div style="width:740px; height:60px;font-family:'Microsoft YaHei',微软雅黑,'Microsoft JhengHei',华文细黑,STHeiti,MingLiu; font-size:14px; line-height:24px; color:#676767; ">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[@text_cut s=a.desc len=83 append=append/]...
+					<a href="${a.url}" class="more">[详细]</a>
+				</div>
+			</div>
+		</div>
+		[/#if]
         [/#list]
         <!-- 分页 -->
         <div class="hr18"></div>
