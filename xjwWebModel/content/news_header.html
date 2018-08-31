@@ -1,45 +1,68 @@
 <header class="head-repeat-x">
-	<!-- 顶部条 -->
-	<div class="header-topbar">
-		<!-- 带链接的顶部 -->
-		<ul class="head-top-nav" style="width:700px;">
-			<li>
-				<a href="/" title="首页" target="_blank">首页</a>
-			</li>
-			[@cms_channel_list]
-			[#list tag_list as a]
-				<li>
-					<a href="${a.url}" title="${a.name}" target="_blank">${a.name}</a>
-				</li>
-			[/#list]
-			[/@cms_channel_list]
-			<li style="z-index:1000;position:absolute; width:150px; height:26px; text-align:left;">
-				<a id="gengduo">更多></a>
-			</li>
-		</ul>
-		<script>
-			$("#gengduo").hover(function() {
-				$(this).html("<div style='width:150px;z-index;10000;position:absolute;background-color:#000;height:180px;'><div style='width:150px; height:30px;text-align:left;'><a>更多></a></div><div class='dhy'><span><a href='/qcpd/index.jhtml' target='_blank'>汽车</a></span><span><a href='/fcpd/index.jhtml' target='_blank'>房产</a></span><span><a href='/cjpd/index.jhtml' target='_blank'>财经</a></span><span><a href='/' target='_blank'>7坊街</a></span><span><a href='/' target='_blank'>旅游</a></span><span><a href='/' target='_blank'>交通</a></span><span><a href='/' target='_blank'>美食</a></span><span><a href='/' target='_blank'>好品牌</a></span><span><a href='/' target='_blank'>亲子</a></span><span><a href='/' target='_blank'>教育</a></span><span><a href='/' target='_blank'>出国</a></span><span><a href='/' target='_blank'>小记者</a></span><span><a href='/' target='_blank'>评论</a></span><span><a href='/' target='_blank'>健康</a></span><span><a href='/' target='_blank'>亚欧博览会</a></span><span><a href='/' target='_blank'>养生</a></span><span><a href='/' target='_blank'>美食</a></span><span><a href='/' target='_blank'>失物招领</a></span></div></div>");
-			}, function() {
-				$(this).html("更多");
-			})
-		</script>
-		<ul class="denglu">
-			<li>
-				<a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=login" title="登录" target="_blank">登录</a>
-			</li>
-			<li>
-				<a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=register" title="注册" target="_blank">注册</a>
-			</li>
-		</ul>
-		<!-- 带分享的顶部   #include virtual="/include/search.shtml"   -->
-		<!-- end带分享的顶部 -->
-		<!-- end带链接的顶部 -->
-	</div>
-	<!-- end顶部条 -->
-	<!-- 不带logo的banner -->
-	<!-- end不带logo的banner -->
-	<!-- 顶部背景条, -->
-	<div class="top-block"></div>
-	<!-- end顶部背景条 -->
+    <!-- 顶部条 -->
+    <div class="header-topbar">
+        <!-- 带链接的顶部 -->
+        <ul class="head-top-nav" style="width:700px;">
+            <li>
+                <a href="/" title="首页" target="_blank">首页</a>
+            </li>
+            [@cms_channel_list] [#list tag_list as a]
+            <li>
+                <a href="${a.url}" title="${a.name}" target="_blank">${a.name}</a>
+            </li>
+            [/#list] [/@cms_channel_list]
+            <li style="z-index:1000;position:absolute; width:150px; height:26px; text-align:left;">
+                <a id="gengduo">更多></a>
+            </li>
+        </ul>
+        <script>
+			
+            $("#gengduo").hover(function () {
+				
+				var content="<div style='width:150px;z-index;10000;position:absolute;background-color:#000;height:180px;'>";
+				content+="<div style='width:150px; height:30px;text-align:left;'>";
+				content+="<a>更多></a></div><div class='dhy'>";
+				content+="<span><a href='/qcpd/index.htm' target='_blank'>汽车</a></span>";
+				content+="<span><a href='/fcpd/index.htm' target='_blank'>房产</a></span>";
+				content+="<span><a href='/cjpd/index.htm' target='_blank'>财经</a></span>";
+				content+="<span><a href='/qfjpd/index.htm' target='_blank'>7坊街</a></span>";
+				content+="<span><a href='/lypd/index.htm' target='_blank'>旅游</a></span>";
+				content+="<span><a href='/jtpd/index.htm' target='_blank'>交通</a></span>";
+				content+="<span><a href='/mspd/index.htm' target='_blank'>美食</a></span>";
+				content+="<span><a href='/hpp/index.htm' target='_blank'>好品牌</a></span>";
+				content+="<span><a href='/qz/index.htm' target='_blank'>亲子</a></span>";
+				content+="<span><a href='/jypd/index.htm' target='_blank'>教育</a></span>";
+				content+="<span><a href='/cgpd/index.htm' target='_blank'>出国</a></span>";
+				content+="<span><a href='/xjz/index.htm' target='_blank'>小记者</a></span>";
+				content+="<span><a href='/plpd/index.htm' target='_blank'>评论</a></span>";
+				content+="<span><a href='/jkpd/index.htm' target='_blank'>健康</a></span>";
+				content+="<span><a href='/' target='_blank'>亚欧博览会</a></span>";
+				content+="<span><a href='/yspd/index.htm' target='_blank'>养生</a></span>";
+				content+="<span><a href='/mspd/index.htm' target='_blank'>美食</a></span>";
+				content+="<span><a href='/' target='_blank'>失物招领</a></span>";
+				content+="</div></div>";
+				
+                $(this).html(content);
+            }, function () {
+                $(this).html("更多");
+            })
+        </script>
+        <ul class="denglu">
+            <li>
+                <a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=login" title="登录" target="_blank">登录</a>
+            </li>
+            <li>
+                <a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=register" title="注册" target="_blank">注册</a>
+            </li>
+        </ul>
+        <!-- 带分享的顶部   #include virtual="/include/search.shtml"   -->
+        <!-- end带分享的顶部 -->
+        <!-- end带链接的顶部 -->
+    </div>
+    <!-- end顶部条 -->
+    <!-- 不带logo的banner -->
+    <!-- end不带logo的banner -->
+    <!-- 顶部背景条, -->
+    <div class="top-block"></div>
+    <!-- end顶部背景条 -->
 </header>

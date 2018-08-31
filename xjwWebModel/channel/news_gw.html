@@ -29,11 +29,11 @@
 		<div class="updiv">
 			<div style="margin:10px auto;">
 				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="980" height="80" align="absbottom">
-    				<param name="movie" value="/${res}/img/liantong songyue.swf" />
+    				<param name="movie" value="/${res}/swf/liantong songyue.swf" />
     				<param name=wmode value=opaque />
     				<param name="quality" value="high" />
     				<param name="SCALE" value="exactfit" />
-    				<embed src="/${res}/img/liantong songyue.swf" width="980" height="80" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
+    				<embed src="/${res}/swf/liantong songyue.swf" width="980" height="80" align="absbottom" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="exactfit"></embed>
 				</object>
 			</div>
 			<!--新疆网logo-->
@@ -77,7 +77,7 @@
 					<a href="" class="m-header-search js-headsearch fl-l icon16x16"></a>
 					<script type="text/javascript">
 						$('#head_search .divicon').click(function() {
-							$('#head_search').submit();
+							$('#head_search').submit(); 
 						});
 						$('#head_search').attr('Action', APP_URL);
 					</script>
@@ -87,7 +87,7 @@
 				<!------导航开始----->
 				<div id="nav">
 					<ul>
-						[@cms_channel_list]
+						[@cms_channel_list parentId='134']
 						[#list tag_list as a]
 						[#if a_index==0]
 							<li id="short_title">
@@ -96,7 +96,7 @@
 						[/#if]
 								<a href="${a.url}">${a.name}</a>
 							</li>
-						[/#list]
+						[/#list]l
 						[/@cms_channel_list]
 					</ul>
 				</div>
@@ -209,7 +209,7 @@
 							<div id="ifocus_pic">
 								<div id="ifocus_piclist" style="left:0; top:0;">
 									<ul>
-										[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+										[@cms_content_list count='3' channelId='414' titLen='20' dateFormat='MM-dd' channelOption='2' typeId='2'] 
 										[#list tag_list as a]
 										<li>
 											<a href="${a.url}" target="_blank">
@@ -223,7 +223,7 @@
 								<div id="ifocus_opdiv"></div>
 								<div id="ifocus_tx">
 									<ul>
-										[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+										[@cms_content_list count='3' channelId='414' titLen='20' dateFormat='MM-dd' channelOption='2' typeId='2'] 
 										[#list tag_list as a]
 										[#if a_index==0]
 										<li class="current">
@@ -239,7 +239,7 @@
 							</div>
 							<div id="ifocus_btn">
 								<ul>
-									[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+									[@cms_content_list count='3' channelId='414' titLen='20' dateFormat='MM-dd' channelOption='2' typeId='2'] 
 									[#list tag_list as a]
 									[#if a_index==0]
 										<li class="current">
@@ -414,13 +414,13 @@
 					<div class="tempbox2"></div>
 					<div class="left_titlebox">
 						<div class="left_ti1">
-							<a href="http://www.xinjiangnet.com.cn/gwpd/clbs/">
+							<a href="/clbs/index.jhtml">
 								<img src="/${res}/img/xjw_gwpd/gw_ti_clbs.png" />
 							</a>
 						</div>
 						<div class="back">
 							<div class="gd2">
-								<a href="http://www.xinjiangnet.com.cn/gwpd/clbs/">更多>></a>
+								<a href="/clbs/index.jhtml">更多>></a>
 							</div>
 						</div>
 					</div>
@@ -431,7 +431,7 @@
 					</style>
 					<div class="left_left">
 						[#assign m=['a','b','c','d','e']]
-						[@cms_content_list count='5' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='5' channelId='394' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 						[#list tag_list as a]
 						<div class="left_wbox">
 						[#if a_index%2==0]
@@ -457,9 +457,10 @@
 						[/@cms_content_list]
 					</div>
 					<div class="left_right">
+						[@cms_content_list count='5' channelId='394' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						<div class="picline1" style="position: relative;">
-							<a href="http://www.xinjiangnet.com.cn/2018/0227/2051193.shtml">
-								<img src="http://upload.xinjiangnet.com.cn/2018/0227/thumb_255_251_1519704331494.jpg" width="255px" height="251px" />
+							<a href="${tag_list[0].url}">
+								<img src="${tag_list[0].typeImg}" width="255px" height="251px" />
 								<div style="position: absolute;height: 40px;width: 40px;bottom:0;right:0;line-height: 40px;font-size: 20px;font-weight: bold;text-align: center;color: #FFF;background: rgba(0, 0, 0, 0.6);">
 									<img src="/${res}/img/xjw_gwpd/a_bai.png" />
 								</div>
@@ -467,16 +468,16 @@
 						</div>
 						<div class="picline1">
 							<div class="picline2" style="position: relative;">
-								<a href="http://www.xinjiangnet.com.cn/2018/0227/2051206.shtml">
-									<img src="http://upload.xinjiangnet.com.cn/2018/0227/thumb_83_197_1519706943129.jpg" width="83px" height="197px" />
+								<a href="${tag_list[1].url}">
+									<img src="${tag_list[1].typeImg}" width="83px" height="197px" />
 									<div style="position: absolute;height: 40px;width: 40px;bottom: 0;left:0;line-height: 40px;font-size: 20px;font-weight: bold;text-align: center;color: #FFF;background: rgba(0, 0, 0, 0.6);">
 										<img src="/${res}/img/xjw_gwpd/b_bai.png" />
 									</div>
 								</a>
 							</div>
 							<div class="picline3" style="position: relative;">
-								<a href="http://www.xinjiangnet.com.cn/2018/0223/2049800.shtml">
-									<img src="http://upload.xinjiangnet.com.cn/2018/0223/thumb_166_197_1519357471918.jpg" width="166px" height="197px" />
+								<a href="${tag_list[2].url}">
+									<img src="${tag_list[2].typeImg}" width="166px" height="197px" />
 									<div style="position: absolute;height: 40px;width: 40px;bottom: 0;left:0;line-height: 40px;font-size: 20px;font-weight: bold;text-align: center;color: #FFF;background: rgba(0, 0, 0, 0.6);">
 										<img src="/${res}/img/xjw_gwpd/c_bai.png" />
 									</div>
@@ -485,40 +486,41 @@
 						</div>
 						<div class="picline1">
 							<div class="picline4" style="position: relative;">
-								<a href="http://www.xinjiangnet.com.cn/2018/0223/2049804.shtml">
-									<img src="http://upload.xinjiangnet.com.cn/2018/0223/thumb_166_197_1519357742441.jpg" width="166px" height="197px" />
+								<a href="${tag_list[3].url}">
+									<img src="${tag_list[3].typeImg}" width="166px" height="197px" />
 									<div style="position: absolute;height: 40px;width: 40px;bottom:0;left:0px;line-height: 40px;font-size: 20px;font-weight: bold;text-align: center;color: #FFF;background: rgba(0, 0, 0, 0.6);">
 										<img src="/${res}/img/xjw_gwpd/d_bai.png" />
 									</div>
 								</a>
 							</div>
 							<div class="picline5" style="position: relative;">
-								<a href="http://www.xinjiangnet.com.cn/2018/0223/2049815.shtml">
-									<img src="http://upload.xinjiangnet.com.cn/2018/0223/thumb_83_197_1519358006710.jpeg" width="83px" height="197px" />
+								<a href="${tag_list[4].url}">
+									<img src="${tag_list[4].typeImg}" width="83px" height="197px" />
 									<div style="position: absolute;height: 40px;width: 40px;bottom: 0;left:0;line-height: 40px;font-size: 20px;font-weight: bold;text-align: center;color: #FFF;background: rgba(0, 0, 0, 0.6);">
 										<img src="/${res}/img/xjw_gwpd/e_bai.png" />
 									</div>
 								</a>
 							</div>
 						</div>
+						[/@cms_content_list]
 					</div>
 					<div class="left_titlebox">
 						<div class="left_ti2">
-							<a href="http://www.xinjiangnet.com.cn/gwpd/cz/">
+							<a href="/czVSzb/index.jhtml">
 								<img src="/${res}/img/xjw_gwpd/gw_ti_caizhuang.fw.png" />
 							</a>
 						</div>
 						<div class="back2">
 							<div class="gd2">
-								<a href="http://www.xinjiangnet.com.cn/gwpd/cz/"> 更多>></a>
+								<a href="/czVSzb/index.jhtml"> 更多>></a>
 							</div>
 						</div>
 					</div>
-					[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[@cms_content_list count='3' channelId='395' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					[#list tag_list as a]
 					<div class="shouface">
 						<div class="shou_title">
-							<a href="${a.url}">[@text_cut s=a.title len=12 append=append/]</a>
+							<a href="${a.url}">[@text_cut s=a.title len=11 append=append/]</a>
 						</div>
 						<div class="shou_pic">
 							<a href="${a.url}">
@@ -532,15 +534,15 @@
 				<div class="number1_right">
 					<div class="biaoti1">
 						<div class="ti1">
-							<a href="http://www.xinjiangnet.com.cn/gwpd/jm/">
+							<a href="/jm/index.jhtml">
 								<img src="/${res}/img/xjw_gwpd/gw_ti_jiemi.png" />
 							</a>
 						</div>
-						<a href="http://www.xinjiangnet.com.cn/gwpd/jm/">
+						<a href="/jm/index.jhtml">
 							<div class="gd1">更多>></div>
 						</a>
 					</div>
-					[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+					[@cms_content_list count='3' channelId='392' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 					[#list tag_list as a]
 					<div class="right1_wen">
 						<div class="wen_ti">
@@ -560,15 +562,15 @@
 					<div class="tempbox"></div>
 					<div class="biaoti1" style="margin-top: 16px;">
 						<div class="ti1">
-							<a href="http://www.xinjiangnet.com.cn/gwpd/zxhd/">
+							<a href="/zxhd/index.jhtml">
 								<img src="/${res}/img/xjw_gwpd/gw_ti_zxhd.png" />
 							</a>
 						</div>
 						<div class="gd1">
-							<a href="http://www.xinjiangnet.com.cn/gwpd/zxhd/">更多>></a>
+							<a href="/zxhd/index.jhtml">更多>></a>
 						</div>
 					</div>
-					[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[@cms_content_list count='3' channelId='393' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					[#list tag_list as a]
 					<div class="right_pic1">
 						<a href="${a.url}">
@@ -591,57 +593,56 @@
 					<div style="height:20px;"> </div>
 					<div class="biaoti1" style="margin-top: 26px;">
 						<div class="ti1">
-							<a href="http://www.xinjiangnet.com.cn/gwpd/zttj/">
-								<img src="/${res}/img/xjw_gwpd/gw_ti_zttj.png" />
+							<a href="/tjzt/index.jhtml">
+								<img src="/${res}/img/xjw_gwpd/gw_ti_zttj.png"/>
 							</a>
 						</div>
 						<div class="gd1">
-							<a href="http://www.xinjiangnet.com.cn/gwpd/zttj/">更多>></a>
+							<a href="/tjzt/index.jhtml">更多>></a>
 						</div>
 					</div>
+					[@cms_content_list count='3' channelId='396' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[#list tag_list as a]
+					[#if a_index==0]
 					<div class="right_pic2">
-						<a href="http://special.xinjiangnet.com.cn/160729/">
-							<img src="http://upload.xinjiangnet.com.cn/2016/0801/thumb_283_92_1470042190896.jpg" />
+						<a href="${a.url}">
+							<img src="${a.typeImg}" width='283px' height='92' />
 						</a>
 					</div>
 					<div class="pic1_title" style="padding-top: 12px;">
-						<a href="http://special.xinjiangnet.com.cn/160729/">
-							<strong>品味生活 松月陪伴</strong>
+						<a href="${a.url}">
+							<strong>[@text_cut s=a.title len=15 append=append/]</strong>
 						</a>
 					</div>
 					<div class="biaoti2_w" style="text-indent:2em">
-						<a href="http://special.xinjiangnet.com.cn/160729/" style="color:#6e6e6e;font-size: 12px;">
-							新疆网独家代理：韩国第一毛巾品牌—松月毛巾。热卖活动接洽中。
+						<a href="${a.url}" style="color:#6e6e6e;font-size: 12px;">
+							[@text_cut s=a.desc len=35 append=append/]
 						</a>
-						<a href="http://special.xinjiangnet.com.cn/160729/" style="color:#69C;font-size: 12px;">
+						<a href="${a.url}" style="color:#69C;font-size: 12px;">
 							<span class="xx">[详细]</span>
 						</a>
 					</div>
+					[#else]
 					<div class="right_pic2">
-						<a href="http://www.xinjiangnet.com.cn/xjwzt/2013March/white/">
-							<img src="http://upload.xinjiangnet.com.cn/2015/0127/thumb_283_92_1422332823934.jpg" />
+						<a href="${a.url}">
+							<img width='283' height='92' src="${a.typeImg}"/>
 						</a>
 					</div>
 					<div class="pic1_title" style="padding-top: 12px;">
-						<a href="http://www.xinjiangnet.com.cn/xjwzt/2013March/white/">
-							<strong>一次性解决美白四大困扰</strong>
+						<a href="${a.url}">
+							<strong>[@text_cut s=a.title len=15 append=append/]</strong>
 						</a>
 					</div>
-					<div class="right_pic2">
-						<a href="http://www.xinjiangnet.com.cn/xjwzt/Dec/underwear/">
-							<img src="http://upload.xinjiangnet.com.cn/2015/0127/thumb_283_92_1422332447719.jpg" />
-						</a>
-					</div>
-					<div class="pic1_title" style="padding-top: 12px;">
-						<a href="http://www.xinjiangnet.com.cn/xjwzt/Dec/underwear/">
-							<strong>无法抵挡的甜心诱惑—圣诞系内衣</strong>
-						</a>
-					</div>
+					[/#if]
+					[/#list]
+					[/@cms_content_list]
 				</div>
 			</div>
 			<!------头部  结束----->
 			<div class="ad" style="margin-top: 0px;">
-				<a href="http://www.xinjiangnet.com.cn/" target="_blank"><img src="http://upload.xinjiangnet.com.cn/2015/1112/1447315663251.jpg" width="980" height="80"></a>
+				<a href="http://www.xinjiangnet.com.cn/" target="_blank">
+					<img src="/${res}/img/1456732564125.jpg" width="980" height="80">
+				</a>
 			</div>
 			<div class="h1">
 				<!---------------h1 开始---------------->
@@ -656,11 +657,11 @@
 				</div>
 				<div class="h1_left">
 					<div class="left_mx1">
-						<a href="http://www.xinjiangnet.com.cn/gwpd/mxjp/">
+						<a href="/mxjp/index.jhtml">
 							<img src="/${res}/img/xjw_gwpd/mxjp.fw.png" />
 						</a>
 					</div>
-					[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[@cms_content_list count='1' channelId='415' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					[#list tag_list as a]
 					<div class="left_mx2">
 						<a href="${a.url}">
@@ -675,7 +676,7 @@
 					</div>
 					[/#list]
 					[/@cms_content_list]
-					[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[@cms_content_list count='1' channelId='415' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					[#list tag_list as a]
 					<div class="left_mx4">
 						<div class="temp2_pic">
@@ -697,26 +698,28 @@
 					[/@cms_content_list]
 				</div>
 				<div class="h1_mid">
-					[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[@cms_content_list count='3' channelId='415' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					[#list tag_list as a]
+					[#if a_index>0]
 					<div class="h1_mid_pic">
 						<a href="${a.url}">
 							<img width="153" height="180" src="${a.typeImg}"/>
 						</a>
 					</div>
 					<div class="h1_mid_w">
-						<a href="${a.url}">[@text_cut s=a.title len=10 append=append/]</a>
+						<a href="${a.url}">[@text_cut s=a.title len=9 append=append/]</a>
 					</div>
+					[/#if]
 					[/#list]
 					[/@cms_content_list]
 				</div>
 				<div class="h1_right">
 					<div class="left_mx1">
-						<a href="http://www.xinjiangnet.com.cn/gwpd/htdz/">
+						<a href="/htdz/index.jhtml">
 							<img src="/${res}/img/xjw_gwpd/htdz.fw.png" />
 						</a>
 					</div>
-					[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[@cms_content_list count='1' channelId='416' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					[#list tag_list as a]
 					<div class="h1_right_pic1">
 						<a href="${a.url}">
@@ -737,7 +740,7 @@
 					[/#list]
 					[/@cms_content_list]
 					<div class="h1_lb">
-						[@cms_content_list count='5' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
+						[@cms_content_list count='5' channelId='416' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='1'] 
 						[#list tag_list as a]
 						<a href="${a.url}">[@text_cut s=a.title len=22 append=append/]</a>
 						[#if a_has_next]
@@ -753,19 +756,19 @@
 				<div class="h1_titlebox">
 					<div class="back3"></div>
 					<div class="h1_ti1">
-						<a href="http://www.xinjiangnet.com.cn/gwpd/pssh/">
+						<a href="/pssh/index.jhtml">
 							<img src="/${res}/img/xjw_gwpd/gw_ti_pssh.fw.png" />
 						</a>
 					</div>
 					<div class="back5">
 						<div class="gd2">
-							<a href="http://www.xinjiangnet.com.cn/gwpd/pssh/">更多>></a>
+							<a href="/pssh/index.jhtml">更多>></a>
 						</div>
 					</div>
 				</div>
 				<div class="h3_low">
 					<div class="h2_left">
-						[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='1' channelId='398' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
 						<div class="left_mx3">
 							<a href="${a.url}">
@@ -780,7 +783,7 @@
 						</div>
 						[/#list]
 						[/@cms_content_list]
-						[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='1' channelId='398' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
 						<div class="left_mx4">
 							<div class="temp2_pic">
@@ -806,27 +809,29 @@
 						[/@cms_content_list]
 					</div>
 					<div class="h2_mid">
-						[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='3' channelId='398' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
+						[#if a_index>0]
 						<div class="h1_mid_pic">
 							<a href="${a.url}">
-								<img width="153" height="180" src="${a.typeImg}" />
+								<img width="153px" height="180px" src="${a.typeImg}" />
 							</a>
 						</div>
 						<div class="h1_mid_w">
 							<a href="${a.url}">[@text_cut s=a.title len=12 append=append/]</a>
 						</div>
+						[/#if]
 						[/#list]
 						[/@cms_content_list]
 					</div>
 				</div>
 				<div class="h2_right">
 					<div class="right_box">
-						<a href="http://www.xinjiangnet.com.cn/gwpd/rmht/">
+						<a href="/rmht/index.jhtml">
 							<div class="h2_wen">热门话题</div>
 						</a>
 						<div style="background-color: #F9F9F9;width: 284px;margin: 0 0 0 30px;float: left;">
-							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='3' channelId='417' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
 							<div class="h2_w_box" style="margin:0;">
 								<div class="h2_mix_left">
@@ -848,11 +853,11 @@
 					</div>
 					<div class="temp3" style="height: 13px;"></div>
 					<div class="right_box">
-						<a href="http://www.xinjiangnet.com.cn/gwpd/cwsp/">
+						<a href="/cwsp/index.jhtml">
 							<div class="h2_wen">潮物奢品</div>
 						</a>
 						<div style="background-color: #F9F9F9;width: 284px;margin: 0 0 0 30px;float: left;">
-							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='3' channelId='418' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
 							<div class="h2_w_box" style="margin:0;">
 								<div class="h2_mix_left">
@@ -872,7 +877,7 @@
 					</div>
 				</div>
 				<div class="temp4">
-					[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+					[@cms_content_list count='2' channelId='398' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					[#list tag_list as a]
 					<div class="temp4_pic">
 						<a href="${a.url}">
@@ -890,24 +895,24 @@
 			</div>
 			<div class="ad">
 				<a href="http://www.xinjiangnet.com.cn/xjwzt/2014Dec/zwf/" target="_blank">
-					<img src="http://upload.xinjiangnet.com.cn/2016/0229/1456737772534.jpg" width="980" height="80">
+					<img src="/${res}/img/1456732564125.jpg" width="980" height="80">
 				</a>
 			</div>
 			<div class="h4">
 				<div class="h1_titlebox">
 					<div class="back3"></div>
-					<a href="http://www.xinjiangnet.com.cn/gwpd/zkzx/">
+					<a href="/zkzx/index.jhtml">
 						<div class="h1_ti1">
 							<img src="/${res}/img/xjw_gwpd/gw_ti_zkzx.fw.png" />
 						</div>
 					</a>
 					<div class="back5">
-						<a href="http://www.xinjiangnet.com.cn/gwpd/zkzx/">
+						<a href="/zkzx/index.jhtml">
 							<div class="gd2">更多>></div>
 						</a>
 					</div>
 				</div>
-				[@cms_content_list count='1' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+				[@cms_content_list count='1' channelId='399' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 				[#list tag_list as a]
 				<div class="h4_left">
 					<div class="h4_left_pic">
@@ -926,7 +931,7 @@
 				</div>
 				[/#list]
 				[/@cms_content_list] 
-				[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+				[@cms_content_list count='2' channelId='399' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 				[#list tag_list as a]
 				[#if a_index==1]
 				<div class="h4_mid">
@@ -948,7 +953,7 @@
 				[/#if]
 				[/#list]
 				[/@cms_content_list] 
-				[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+				[@cms_content_list count='3' channelId='399' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 				[#list tag_list as a]
 				[#if a_index==2]
 				<div class="h4_right">
@@ -1021,54 +1026,56 @@
 			<div class="h5">
 				<div class="h1_titlebox">
 					<div class="h5_title">
-						<a href="http://www.xinjiangnet.com.cn/gwpd/gwdt/">
+						<a href="/sfgwdt/index.jhtml">
 							<div class="gd3" style="width:100%">&nbsp;&nbsp;</div>
 						</a>
 					</div>
 				</div>
 				<div class="bigpic" style="background: rgb(65, 62, 62);">
+					[@cms_content_list count='7' channelId='400' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 					<div style=" position:absolute; width:330px; height:330px; margin:20px 0 0 10px;z-index:1;">
-						<a href="http://www.xinjiangnet.com.cn/2015/1015/1472926.shtml">
-							<img src="http://upload.xinjiangnet.com.cn/2015/1015/thumb_330_330_1444879871456.jpg" style="width:330px;height:330px;" title="H&M落户新疆乌鲁木齐汇嘉购物中心">
-							<span>H&M落户新疆乌鲁木齐汇嘉购物中心</span>
+						<a href="${tag_list[0].url}">
+							<img src="${tag_list[0].typeImg}" style="width:330px;height:330px;" title="${tag_list[0].title}">
+							<span>[@text_cut s=tag_list[0].title len=20 append=append/]</span>
 						</a>
 					</div>
 					<div style=" position:absolute; width:247px; height:180px; margin:10px 0 0 285px;z-index:6;">
-						<a href="http://www.xinjiangnet.com.cn/xjwzt/2014Apr/2014ndzk/meimei1/">
-							<img src="http://upload.xinjiangnet.com.cn/2015/0127/thumb_247_180_1422347496953.jpg" style="width:247px;height:180px;" title="美美百货">
-							<span>美美百货</span>
+						<a href="${tag_list[1].url}">
+							<img src="${tag_list[1].typeImg}" style="width:247px;height:180px;" title="${tag_list[1].title}">
+							<span>[@text_cut s=tag_list[1].title len=20 append=append/]</span>
 						</a>
 					</div>
 					<div style=" position:absolute; width:308px; height:190px; margin:165px 0 0 270px;z-index:5;">
-						<a href="http://www.xinjiangnet.com.cn/xjwzt/2014Apr/2014ndzk/sjjh/">
-							<img src="http://upload.xinjiangnet.com.cn/2015/0203/thumb_308_190_1422969339172.jpg" style="width:308px;height:190px;" title="世纪金花时代广场">
-							<span>世纪金花时代广场</span>
+						<a href="${tag_list[2].url}">
+							<img src="${tag_list[2].typeImg}" style="width:308px;height:190px;" title="${tag_list[2].title}">
+							<span>[@text_cut s=tag_list[2].title len=20 append=append/]</span>
 						</a>
 					</div>
 					<div style=" position:absolute; width:214px; height:150px; margin:20px 0 0 525px;z-index:7;">
-						<a href="http://www.xinjiangnet.com.cn/xjwzt/2014Apr/2014ndzk/jpbh/201404/t20140429_3854597.shtml">
-							<img src="http://upload.xinjiangnet.com.cn/2015/0128/thumb_214_150_1422419682327.jpg" style="width:214px;height:150px;" title="汇嘉时代">
-							<span>汇嘉时代</span>
+						<a href="${tag_list[3].url}">
+							<img src="${tag_list[3].typeImg}" style="width:214px;height:150px;" title="${tag_list[3].title}">
+							<span>[@text_cut s=tag_list[3].title len=20 append=append/]</span>
 						</a>
 					</div>
 					<div style=" position:absolute; width:244px; height:150px; margin:190px 0 0 510px;z-index:4;">
-						<a href="http://www.xinjiangnet.com.cn/xjwzt/2014Apr/2014ndzk/jpbh/201404/t20140429_3854609.shtml">
-							<img src="http://upload.xinjiangnet.com.cn/2015/0128/thumb_245_150_1422418975983.jpg" style="width:245px;height:150px;" title="友好商场">
-							<span>友好商场</span>
+						<a href="${tag_list[4].url}">
+							<img src="${tag_list[4].typeImg}" style="width:245px;height:150px;" title="${tag_list[4].title}">
+							<span>[@text_cut s=tag_list[4].title len=20 append=append/]</span>
 						</a>
 					</div>
 					<div style=" position:absolute; width:290px; height:179px; margin:10px 0 0 670px;z-index:2;">
-						<a href="http://www.xinjiangnet.com.cn/xjwzt/2014Apr/2014ndzk/jpbh/201404/t20140429_3855354.shtml">
-							<img src="http://upload.xinjiangnet.com.cn/2015/0128/1422430306113.jpg" style="width:290px;height:179px;" title="卡乐士生活广场">
-							<span>卡乐士生活广场</span>
+						<a href="${tag_list[5].url}">
+							<img src="${tag_list[5].typeImg}" style="width:290px;height:179px;" title="${tag_list[5].title}">
+							<span>[@text_cut s=tag_list[5].title len=20 append=append/]</span>
 						</a>
 					</div>
 					<div style=" position:absolute; width:246px; height:180px; margin:180px 0 0 723px;z-index:3;">
-						<a href="http://www.xinjiangnet.com.cn/xjwzt/2014Apr/2014ndzk/jpbh/201404/t20140429_3854605.shtml">
-							<img src="http://upload.xinjiangnet.com.cn/2015/0203/thumb_246_180_1422968882223.jpg" style="width:246px;height:180px;" title="王府井百货">
-							<span>王府井百货</span>
+						<a href="${tag_list[6].url}">
+							<img src="${tag_list[6].typeImg}" style="width:246px;height:180px;" title="${tag_list[6].title}">
+							<span>[@text_cut s=tag_list[6].title len=20 append=append/]</span>
 						</a>
 					</div>
+					[/@cms_content_list] 
 				</div>
 			</div>
 		</div>
