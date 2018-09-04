@@ -395,47 +395,14 @@
                     <div id="index_b_hero">
                         <div class="hero-wrap">
                             <ul class="heros clearfix">
+                                [@cms_content_list count='6' channelId='75' channelOption='1' typeId='2'] [#list tag_list as a]
                                 <li class="hero">
-                                    <a href="http://mp.weixin.qq.com/s?__biz=MzA5MTU4MjY3MA==&mid=402840078&idx=1&sn=73a52f4770bf08d2b85bb8257b883941#rd" target="_blank"
-                                        title="《疯狂动物城》观影会">
-                                        <img src="http://upload.xinjiangnet.com.cn/2016/0324/1458793949620.jpg" alt="《疯狂动物城》观影会">
-                                        <div class="shadowtit">《疯狂动物城》观影会</div>
+                                    <a href="${a.url}" target="_blank" title="${a.title}">
+                                        <img width='950' height='367' src="${a.typeImg}" alt="${a.title}">
+                                        <div class="shadowtit">[@text_cut s=a.title len=15 append=append/]</div>
                                     </a>
                                 </li>
-                                <li class="hero">
-                                    <a href="http://www.xinjiangnet.com.cn/2016/0125/1517429.shtml" target="_blank" title="牡丹怒放 喜乐咖网友新春赏花灯">
-                                        <img src="http://upload.xinjiangnet.com.cn/2016/0125/1453697372911.jpg" alt="牡丹怒放 喜乐咖网友新春赏花灯">
-                                        <div class="shadowtit">牡丹怒放 喜乐咖网友新春赏花灯</div>
-                                    </a>
-                                </li>
-                                <li class="hero">
-                                    <a href="http://mp.weixin.qq.com/s?__biz=MzA5MTU4MjY3MA==&mid=401671804&idx=1&sn=bb9095a5674af0679d7de11e86280910#rd" target="_blank"
-                                        title="" 童趣运动会 "全家总动员">
-                                        <img src="http://upload.xinjiangnet.com.cn/2016/0115/1452825378112.jpg" alt="" 童趣运动会 "全家总动员">
-                                        <div class="shadowtit">"童趣运动会"全家总动员</div>
-                                    </a>
-                                </li>
-                                <li class="hero">
-                                    <a href="http://mp.weixin.qq.com/s?__biz=MzA5MTU4MjY3MA==&mid=401215971&idx=1&sn=d3cb9baba4fa97c5b54c098a233473c2#rd" target="_blank"
-                                        title="圣诞平安夜嗨歌喽！">
-                                        <img src="http://upload.xinjiangnet.com.cn/2016/0106/1452070270372.jpg" alt="圣诞平安夜嗨歌喽！">
-                                        <div class="shadowtit">圣诞平安夜嗨歌喽！</div>
-                                    </a>
-                                </li>
-                                <li class="hero">
-                                    <a href="http://mp.weixin.qq.com/s?__biz=MzA5MTU4MjY3MA==&mid=401290419&idx=1&sn=26509e6ca09a724e9c027e3982aaa0c8#rd" target="_blank"
-                                        title="“献爱心+滑雪”冬日暖心之旅">
-                                        <img src="http://upload.xinjiangnet.com.cn/2016/0106/1452070425509.jpg" alt="“献爱心+滑雪”冬日暖心之旅">
-                                        <div class="shadowtit">“献爱心+滑雪”冬日暖心之旅</div>
-                                    </a>
-                                </li>
-                                <li class="hero">
-                                    <a href="http://mp.weixin.qq.com/s?__biz=MzA5MTU4MjY3MA==&mid=401045719&idx=1&sn=f0691990301535bfaf14ca6b2a111c92#rd" target="_blank"
-                                        title="库木塔格沙漠越野+篝火露营">
-                                        <img src="http://upload.xinjiangnet.com.cn/2016/0106/1452070564580.jpg" alt="库木塔格沙漠越野+篝火露营">
-                                        <div class="shadowtit">库木塔格沙漠越野+篝火露营</div>
-                                    </a>
-                                </li>
+                                [/#list] [/@cms_content_list]
                             </ul>
                         </div>
                         <div class="helper">

@@ -97,74 +97,7 @@
 
 	<body>
 		<!-- 头部 -->
-		<header class="head-repeat-x">
-			<!-- 顶部条 -->
-			<div class="header-topbar">
-				<!-- 带链接的顶部 -->
-				<ul class="head-top-nav" style="width:700px;">
-					<li>
-						<a href="http://www.xinjiangnet.com.cn" title="首页" class="b" target="_blank">首页</a>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/xwzx" title="新闻" target="_blank">新闻</a>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/wlmq" title="图片" target="_blank">乌鲁木齐</a>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/bxsy" title="视频" target="_blank">百姓声音</a>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/gypd/" title="访谈" target="_blank">公益</a>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/sppd/index1.html" title="专栏" target="_blank">视频</a>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/tppd/" title="图片" target="_blank">图片</a>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/ylpd/" title="娱乐" target="_blank">娱乐</a>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/typd/" title="体育" target="_blank">体育</a>
-					</li>
-					<li>
-						<a href="http://www.xinjiangnet.com.cn/gwpd/" title="购物" target="_blank">购物</a>
-					</li>
-					<li>
-						<a href="http://bbs.xinjiangnet.com.cn/" title="论坛" target="_blank">论坛</a>
-					</li>
-					<li style="z-index:1000;position:absolute; width:150px; height:26px; text-align:left;">
-						<a id="gengduo">更多></a>
-					</li>
-				</ul>
-				<script>
-					$("#gengduo").hover(function() {
-						$(this).html("<div style='width:150px;z-index;10000;position:absolute;background-color:#000;height:180px;'><div style='width:150px; height:30px;text-align:left;'><a>更多></a></div><div class='dhy'><span><a href='http://www.xinjiangnet.com.cn/qc/' target='_blank'>汽车</a></span><span><a href='http://www.xinjiangnet.com.cn/fcpd/' ' target='_blank'>房产</a></span><span><a href='http://www.xinjiangnet.com.cn/cjpd/' target='_blank'>财经</a></span><span><a href='http://www.xinjiangnet.com.cn/qfj/' target='_blank'>7坊街</a></span><span><a href='http://www.xinjiangnet.com.cn/qnw/' target='_blank'>旅游</a></span><span><a href='http://www.xinjiangnet.com.cn/xwzx/jt/' target='_blank'>交通</a></span><span><a href='http://www.xinjiangnet.com.cn/mspd/' target='_blank'>美食</a></span><span><a href='http://www.xinjiangnet.com.cn/xjhpp/' target='_blank'>好品牌</a></span><span><a href='http://www.xinjiangnet.com.cn/qzpd/' target='_blank'>亲子</a></span><span><a href='http://www.xinjiangnet.com.cn/jypd/' target='_blank'>教育</a></span><span><a href='http://www.xinjiangnet.com.cn/cgpd/' target='_blank'>出国</a></span><span><a href='http://www.xinjiangnet.com.cn/xjzjy/' target='_blank'>小记者</a></span><span><a href='http://www.xinjiangnet.com.cn/hstx/' target='_blank'>评论</a></span><span><a href='http://www.xinjiangnet.com.cn/jkpd/' target='_blank'>健康</a></span><span><a href='http://www.xinjiangnet.com.cn/yoblh/' target='_blank'>亚欧博览会</a></span><span><a href='http://www.xinjiangnet.com.cn/health/ys/' target='_blank'>养生</a></span><span><a href='http://www.xinjiangnet.com.cn/mspd/' target='_blank'>美食</a></span><span><a href='http://swzl.xinjiangnet.com.cn' target='_blank'>失物招领</a></span></div></div>");
-					}, function() {
-						$(this).html("更多");
-					})
-				</script>
-				<ul class="denglu">
-					<li>
-						<a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=login" title="登录" target="_blank">登录</a>
-					</li>
-					<li>
-						<a href="http://app.xinjiangnet.com.cn/?app=member&controller=index&action=register" title="注册" target="_blank">注册</a>
-					</li>
-				</ul>
-				<!-- 带分享的顶部   #include virtual="/include/search.shtml"   -->
-				<!-- end带分享的顶部 -->
-				<!-- end带链接的顶部 -->
-			</div>
-			<!-- end顶部条 -->
-			<!-- 不带logo的banner -->
-			<!-- end不带logo的banner -->
-			<!-- 顶部背景条, -->
-			<div class="top-block"></div>
-			<!-- end顶部背景条 -->
-		</header>
+		[#include '../content/news_header.html']
 		<!-- @end头部 -->
 		<div class="add">
 			<IMG src="http://upload.xinjiangnet.com.cn/2015/0304/1425437968799.jpg" width="980" height="90" />
@@ -186,7 +119,6 @@
 								&nbsp;&nbsp;<em>&gt;</em>
 							[/#if]
 						[/#list]
-    					
     					<em>&gt;</em> <span>正文</span>
 					</span>
 				</div>
@@ -215,7 +147,7 @@
 			<div class="box">
 				<section>
 					<ul>
-						[@cms_content_page count='3' channelId='75' titLen='20' dateFormat='yyyy-MM-dd hh:mm:ss' channelOption='1' typeId='2'] 
+						[@cms_content_page count='3' channelId=channel.id titLen='20' dateFormat='yyyy-MM-dd hh:mm:ss' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
 						<li>
 							<div class="b2">

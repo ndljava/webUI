@@ -815,19 +815,19 @@
 						</div>
 						<ul>
 							<li id="tnav1" onmouseover="x:HoverLi(1);" class="hovertab">
-								<a href="http://w.xinjiangnet.com.cn/xwzx/tstx/jrjjs/"><img src="/${res}/img/bt1.png"></a>
+								<a href="/jrjj/index.htm"><img src="/${res}/img/bt1.png"></a>
 							</li>
 							<li id="tnav2" onmouseover="x:HoverLi(2);">
-								<a href="http://w.xinjiangnet.com.cn/xwzx/tstx/ylty/"><img src="/${res}/img/bt2.png"></a>
+								<a href="/ylty/index.htm"><img src="/${res}/img/bt2.png"></a>
 							</li>
 							<li id="tnav3" onmouseover="x:HoverLi(3);">
-								<a href="http://w.xinjiangnet.com.cn/xwzx/tstx/ssy/"><img src="/${res}/img/bt3.png"></a>
+								<a href="/ssmy/index.htm"><img src="/${res}/img/bt3.png"></a>
 							</li>
 							<li id="tnav4" onmouseover="x:HoverLi(4);">
-								<a href="http://w.xinjiangnet.com.cn/xwzx/tstx/qwlq/"><img src="/${res}/img/bt4.png"></a>
+								<a href="/qwlq/index.htm"><img src="/${res}/img/bt4.png"></a>
 							</li>
 							<li id="tnav5" onmouseover="x:HoverLi(5);">
-								<a href="http://w.xinjiangnet.com.cn/xwzx/tstx/yzjx/"><img src="/${res}/img/bt5.png"></a>
+								<a href="/yzjx/index.htm"><img src="/${res}/img/bt5.png"></a>
 							</li>
 						</ul>
 					</div>
@@ -914,7 +914,7 @@
 						}
 					</style>
 					<div class="lunboItem" style="opacity:1;filter:alpha(opacity=100);">
-						[@cms_content_list count='8' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='8' channelId='182' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
 						[#if (a_index+1)%4==0]
 							<div class="asup asup2 marginNone">
@@ -940,8 +940,9 @@
 						[/@cms_content_list]
 					</div>
 					<div class="lunboItem" style="opacity:0;filter:alpha(opacity=0);display: none;">
-						[@cms_content_list count='8' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='16' channelId='182' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
+						[#if a_index>7]
 						[#if (a_index+1)%4==0]
 							<div class="asup asup2 marginNone">
 						[#else]
@@ -962,12 +963,14 @@
 								</div>
 							</div>
 						</div>
+						[/#if]
 						[/#list]
 						[/@cms_content_list]
 					</div>
 					<div class="lunboItem" style="opacity:0;filter:alpha(opacity=0);display: none;">
-						[@cms_content_list count='8' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='24' channelId='182' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
+						[#if a_index>15]
 						[#if (a_index+1)%4==0]
 							<div class="asup asup2 marginNone">
 						[#else]
@@ -988,12 +991,14 @@
 								</div>
 							</div>
 						</div>
+						[/#if]
 						[/#list]
 						[/@cms_content_list]
 					</div>
 					<div class="lunboItem" style="opacity:0;filter:alpha(opacity=0);display: none;">
-						[@cms_content_list count='8' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='32' channelId='182' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
+						[#if a_index>23]
 						[#if (a_index+1)%4==0]
 							<div class="asup asup2 marginNone">
 						[#else]
@@ -1014,12 +1019,14 @@
 								</div>
 							</div>
 						</div>
+						[/#if]
 						[/#list]
 						[/@cms_content_list]
 					</div>
 					<div class="lunboItem" style="opacity:0;filter:alpha(opacity=0);display: none;">
-						[@cms_content_list count='8' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='40' channelId='182' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
+						[#if a_index>31]
 						[#if (a_index+1)%4==0]
 							<div class="asup asup2 marginNone">
 						[#else]
@@ -1040,12 +1047,14 @@
 								</div>
 							</div>
 						</div>
+						[/#if]
 						[/#list]
 						[/@cms_content_list]
 					</div>
 					<div class="lunboItem" style="opacity:0;filter:alpha(opacity=0);display: none;">
-						[@cms_content_list count='8' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='48' channelId='182' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
+						[#if a_index>39]
 						[#if (a_index+1)%4==0]
 							<div class="asup asup2 marginNone">
 						[#else]
@@ -1066,12 +1075,14 @@
 								</div>
 							</div>
 						</div>
+						[/#if]
 						[/#list]
 						[/@cms_content_list]
 					</div>
 					<div class="lunboItem" style="opacity:0;filter:alpha(opacity=0);display: none;">
-						[@cms_content_list count='8' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='56' channelId='182' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
+						[#if a_index>47]
 						[#if (a_index+1)%4==0]
 							<div class="asup asup2 marginNone">
 						[#else]
@@ -1092,6 +1103,7 @@
 								</div>
 							</div>
 						</div>
+						[/#if]
 						[/#list]
 						[/@cms_content_list]
 					</div>
@@ -1102,7 +1114,7 @@
 				<div id="hab2" class="undis">
 					<div class="lunboItem" style="opacity:1;filter:alpha(opacity=100);">
 						<div class="a1up">
-							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='3' channelId='183' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
 							[#if a_index==0]
 							<div class="a1upleft">
@@ -1139,7 +1151,7 @@
 							[/@cms_content_list]
 						</div>
 						<div class="a1down">
-							[@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='6' channelId='183' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
 							[#if a_index>2]
 							<div class="left">
@@ -1162,9 +1174,10 @@
 					</div>
 					<div class="lunboItem" style="opacity:0;filter:alpha(opacity=0);display: none;">
 						<div class="a1up">
-							[@cms_content_list count='3' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='9' channelId='183' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
-							[#if a_index==0]
+							[#if a_index>5]
+							[#if a_index==6]
 							<div class="a1upleft">
 								<div class="tu" style=" width:475px">
 									<a href="${a.url}" target="_blank">
@@ -1195,13 +1208,14 @@
 								</div>
 							</div>
 							[/#if]
+							[/#if]
 							[/#list]
 							[/@cms_content_list]
 						</div>
 						<div class="a1down">
-							[@cms_content_list count='6' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='12' channelId='183' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
-							[#if a_index>2]
+							[#if a_index>8]
 							<div class="left">
 								<div class="tu">
 									<a href="${a.url}" target="_blank">
@@ -1227,7 +1241,7 @@
 				<div id="hab3" class="undis">
 					<div class="lunboItem" style="opacity:1;filter:alpha(opacity=100);">
 						<ul class="a1up">
-							[@cms_content_list count='9' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='9' channelId='184' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
 							[#if (a_index)%2==0]
 								<li>
@@ -1268,9 +1282,10 @@
 					</div>
 					<div class="lunboItem" style="opacity:0;filter:alpha(opacity=0);display: none;">
 						 <ul class="a1up">
-							[@cms_content_list count='9' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='18' channelId='184' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
-							[#if (a_index)%2==0]
+							[#if a_index>8]
+							[#if (a_index-9)%2==0]
 								<li>
 							[/#if]
 								<div class="a1upleft">
@@ -1300,8 +1315,9 @@
 										</div>
 									</div>
 								</div>
-							[#if (a_index+1)%2==0|| (a_index+1)==(tag_list?size)]
+							[#if (a_index-9+1)%2==0|| (a_index+1)==(tag_list?size)]
 								</li>
+							[/#if]
 							[/#if]
 							[/#list]
 							[/@cms_content_list]
@@ -1314,7 +1330,7 @@
 				<div id="hab4" class="undis">
 					<div class="lunboItem" style="opacity:1;filter:alpha(opacity=100);">
 						<div class="a1up">
-							[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='2' channelId='185' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							<div class="a1upleft">
 								<div class="tu" style="width:847px">
 									<a href="${tag_list[0].url}" target="_blank">
@@ -1344,7 +1360,7 @@
 							[/@cms_content_list]
 						</div>
 						<div class="a1down">
-							[@cms_content_list count='5' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='5' channelId='185' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
 							[#if a_index>1]
 							<div class="left">
@@ -1367,29 +1383,29 @@
 					</div>
 					<div class="lunboItem" style="opacity:0;filter:alpha(opacity=0);display: none;">
 						<div class="a1up">
-							[@cms_content_list count='2' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='7' channelId='185' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							<div class="a1upleft">
 								<div class="tu" style="width:847px">
-									<a href="${tag_list[0].url}" target="_blank">
-										<img src="${tag_list[0].typeImg}" width="847" height="347">
+									<a href="${tag_list[5].url}" target="_blank">
+										<img src="${tag_list[5].typeImg}" width="847" height="347">
 									</a>
 									<div>
 										<p class="tmbg" style=" width:847px"></p>
 										<div class="tu_bt" style="opacity:1;filter:alpha(opacity=100);">
-											<a href="${tag_list[0].url}">[@text_cut s=tag_list[0].title len=10 append=append/]</a>
+											<a href="${tag_list[5].url}">[@text_cut s=tag_list[5].title len=10 append=append/]</a>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="a1upright">
 								<div class="tu" style="margin-left:3px;">
-									<a href="${tag_list[1].url}" target="_blank">
-										<img src="${tag_list[1].typeImg}" width="580" height="347">
+									<a href="${tag_list[6].url}" target="_blank">
+										<img src="${tag_list[6].typeImg}" width="580" height="347">
 									</a>
 									<div>
 										<p class="tmbg" style="width:580px;"></p>
 										<div class="tu_bt" style="opacity:1;filter:alpha(opacity=100);">
-											<a href="${tag_list[1].url}">[@text_cut s=tag_list[1].title len=10 append=append/]</a>
+											<a href="${tag_list[6].url}">[@text_cut s=tag_list[6].title len=10 append=append/]</a>
 										</div>
 									</div>
 								</div>
@@ -1397,9 +1413,9 @@
 							[/@cms_content_list]
 						</div>
 						<div class="a1down">
-							[@cms_content_list count='5' channelId='75' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+							[@cms_content_list count='10' channelId='185' titLen='20' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 							[#list tag_list as a]
-							[#if a_index>1]
+							[#if a_index>6]
 							<div class="left">
 								<div class="tu">
 									<a href="${a.url}" target="_blank">
@@ -1424,7 +1440,7 @@
 				<!---一周精选---->
 				<div id="hab5" class="undis">
 					<div class="tu1">
-						[@cms_content_list count='1' channelId='75' titLen='22' dateFormat='MM-dd' channelOption='1' typeId='2'] 
+						[@cms_content_list count='1' channelId='186' titLen='22' dateFormat='MM-dd' channelOption='1' typeId='2'] 
 						[#list tag_list as a]
 						<a href="${a.url}" target="_blank">
 							<img src="${a.typeImg}" width="1440" height="537">
