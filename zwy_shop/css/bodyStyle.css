@@ -1,0 +1,120 @@
+@charset "utf-8";
+.bodytop {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	width: 1205px;
+}
+.bodytop div {
+	float: left;
+}
+.bodyTopleft {
+	width: 200px;
+	height: 540px;
+	border: 1px solid #FC3;
+}
+.bodyTopLeftItem {
+	width: 176px;
+	padding: 12px 10px 0px 12px;
+}
+.bodyTopLeftItem ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+.bodyTopLeftItem ul li {
+	float: left;
+	width: auto;
+	text-align: left;
+	margin-right: 6px;
+}
+.bodyTopLeftItem ul li a {
+	text-decoration: none;
+	color: #999;
+}
+.bodyTopLeftItem .bodyTopLeftItemTitle {
+	margin-bottom: 6px;
+}
+.bodyTopLeftItem .bodyTopLeftItemTitle a {
+	color: #f3930a;
+	font-size: 16px;
+	text-decoration: none;
+}
+.bodyMiddle {
+	width: 690px;
+	height: 540px;
+	margin: 0px 10px 0px 9px;
+}
+.bodyMiddle div {
+	margin-top: 10px;
+}
+.bodyMiddle div img {
+	width: 165px;
+	height: 140px;
+	margin-right: 6px;
+}
+.bodyMiddle div img:last-child {
+	margin-right: 0px;
+}
+.bodyRight {
+	width: 288px;
+	height: 530px;
+	border: thin solid #FC3;
+	margin: 10px 0px 0px 0px;
+}
+.bodyRightTop {
+	background-image: url(../img/%E7%BB%8434.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 290px;
+	height: 380px;
+	border: thin solid #FC3;
+}
+.bodyRightTopIcon {
+	background-image: url(../img/%E7%BB%8433.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 60px;
+	width: 60px;
+	margin-top: 10px;
+	margin-left:115px;
+	cursor: pointer;
+}
+.bodyRightTopLoginText {
+	margin-top: 10px;
+	margin-left: 113px;
+}
+.bodyRightTopLoginText a{
+	color: #999;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+.bodyRightTopUserInfo {
+	font-size: 14px;
+	color: #666;
+	margin-top: 14px;
+	margin-left: 44px;
+}
+.bodyRightTopUserInfoItem {
+	height: 50px;
+	width: 65px;
+}
+.bodyRightTopUserInfoItemTitle {
+	width: 80px;
+	font-size: 14px;
+	color:#666;
+}
+.bodyRightTopUserInfoItemContent{
+	width: 80px;
+	margin-top:8px;
+	font-size: 14px;
+	color:#f3cb0a;
+	text-align:center;
+}
+.bodyRightTopIntegral {
+	background-image: url(../img/%E7%BB%8432_1.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 290px;
+	height: 60px;
+}

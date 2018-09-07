@@ -1,0 +1,149 @@
+@charset "utf-8";
+/**
+ * 
+ * 
+ * 
+ * 
+ **/
+
+.headtag {
+	height: 240px;
+}
+.headtop {
+	height: 180px;
+	width: 1200px;
+}
+.headword {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #999;
+	margin-top: 14px;
+	height: 26px;
+	width: 1200px;
+}
+.headword a {
+	float: left;
+	width: 80px;
+	text-decoration: none;
+	color: #999;
+}
+.headword a:first-child {
+	margin-right: 630px;
+}
+.headsearch {
+	height: 140px;
+	width: 1200px;
+}
+.headsearch div {
+	float: left;
+}
+.headsearch_left {
+	margin-left: 5px;
+	margin-top: 34px;
+	width: 176px;
+	height: 74px;
+	left: 0px;
+}
+.headsearch_txt {
+	margin-left: 180px;
+	margin-top: 40px;
+	width: 640px;
+	height: 68px;
+}
+.headsearch_txt img {
+	margin-left: -500px;
+	margin-top: 12px;
+	float: left;
+}
+.headsearch_txt input:first-child {
+	width: 460px;
+	height: 40px;
+	font-size: 16px;
+	color: #999;
+	border-color: #f3cb0a;
+	border-style: solid;
+	border-width: 2px;
+	padding-left: 50px;
+	float: left;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+}
+.headsearch_txt input:last-child {
+	width: 80px;
+	height: 46px;
+	font-size: 18px;
+	color: #fff;
+	background-color: #f3cb0a;
+	border: 2px solid #f3cb0a;
+	float: left;
+	outline: none;
+	cursor: pointer;
+}
+.headsearch_txt .searchWord {
+	margin-top: 10px;
+}
+.headsearch_txt .searchWord font {
+	float: left;
+}
+.headsearch_txt .searchWord ul {
+	float: left;
+	list-style: none;
+	font-size: 15px;
+	color: #999;
+	margin-top: 2px;
+	margin-left: -40px;
+}
+.headsearch_txt .searchWord ul li {
+	float: left;
+	width: 60px;
+	color: #999;
+}
+.headsearch_txt .searchWord ul li a {
+	text-decoration: none;
+	color: #999;
+}
+.headsearch_right {
+	width: 100px;
+	height: 100px;
+	background-color: #f3cb0a;
+	margin-left: 60px;
+	margin-top: 20px;
+}
+.headMenu {
+	background-color: #f3cb0a;
+	height: 60px;
+	width: 100%;
+}
+.headMenuContent {
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #fff;
+	width: 1200px;
+	height: 60px;
+	text-align:left;
+}
+
+.headMenuContent ul {
+	list-style:none;
+	height:59px;
+	margin:0px;
+	padding:0px;
+}
+
+.headMenuContent ul li{
+	float:left;
+	width:120px;
+	text-align:center;
+	line-height:59px;
+}
+
+.headMenuContent ul li:hover{
+	background-color: #f3930a;
+	cursor:pointer;
+}
+
+.headMenuContent ul li:first-child{
+	width:200px;
+	margin-right:30px;
+}
