@@ -44,7 +44,16 @@
 	font-size: 18px;
 	color: #333;
 }
-
+.fnt18666 {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #666;
+}
+.fnt18999 {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #999;
+}
 .fnt20cc0000 {
 	font-family: "微软雅黑";
 	font-size: 20px;
