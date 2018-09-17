@@ -6,6 +6,9 @@
 		<title></title>
 		<link href="css/header.css" rel="stylesheet" type="text/css">
 		<link href="css/bodyStyle.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/zepto_1.1.3.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/zwy_index.js"></script>
 		<style type="text/css">
 			body {
 				margin: 0px;
@@ -69,7 +72,7 @@
 				<div class="headMenu">
 					<div class="headMenuContent">
 						<ul>
-							<li>分类</li>
+							<li onclick="location='http://www.baidu.com'">分类</li>
 							<li>首页</li>
 							<li>时尚街</li>
 							<li>小景家具</li>
@@ -319,11 +322,32 @@
 					<div class="bodyRightButtom backColor"> <img src="img/组26.png" width="290" height="140"> </div>
 				</div>
 			</div>
-			<div style="margin-top:15px;"><img src="img/组27.png" width="1200" height="100"></div>
+			<div class="scrollPagePic">
+				<div>
+					<img src="img/jrkb.png" />
+				</div>
+				<div id="pagePic">
+					<ul>
+						<li><span>春季养生:</span>1长得敌人挺好的柔荑花动态页鹤发童颜</li>
+						<li><span>x多对多:</span>儿童画三人同行</li>
+						<li><span>春季养生:</span>2长得敌人挺好的柔荑花动态页鹤发童颜</li>
+						<li><span>x多对多:</span>儿童画三人同行</li>
+						<li><span>春季养生:</span>3长得敌人挺好的柔荑花动态页鹤发童颜</li>
+						<li><span>333:</span>儿童画三人同行</li>
+						<li><span>春季养生:</span>4长得敌人挺好的柔荑花动态页鹤发童颜</li>
+						<li><span></span>儿童画三人同行</li>
+						<li><span>春季养生:</span>5长得敌人挺好的柔荑花动态页鹤发童颜</li>
+						<li><span>x多对多:</span>儿童画三人同行</li>
+					</ul>
+				</div>
+			</div>
+			<script>
+				setInterval(scrollNews, 20);
+			</script>
 			<div class="shishanjie">
 				<div class="shishanjieTitle">
 					<div></div>
-					<div>
+					<div class="fnt24999">
 						<font color="#fc25b8 ">时尚街</font>
 					</div>
 					<div></div>
@@ -486,24 +510,12 @@
 						<div></div>
 					</div>
 					<p>
-						<a href="#" target="_blank">换一批</a>
+						<a href="javascript:getRMTJ();" target="_blank">换一批</a>
 					</p>
 				</div>
 				<div class="remengtuijianContent">
 					<div class="rmtjscroll">
-						<ul id="xjjj_scroll">
-							<li>
-								<a href="#" target="_blank"><img src="img/123.png" width="140" height="140"></a>
-								<p class="fnt18666">
-									<a href="#" target="_blank">客厅家具</a>
-								</p>
-							</li>
-							<li>
-								<a href="#" target="_blank"><img src="img/123.png" width="140" height="140"></a>
-								<p class="fnt18666">
-									<a href="#" target="_blank">客厅家具</a>
-								</p>
-							</li>
+						<ul id="rmtj_scroll">
 							<li>
 								<a href="#" target="_blank"><img src="img/123.png" width="140" height="140"></a>
 								<p class="fnt18666">
@@ -531,7 +543,7 @@
 						</ul>
 					</div>
 					<div class="scrollpic2">
-						<ul id="xjjj_scroll">
+						<ul id="rmtj_scroll2">
 							<li>
 								<div>
 									<a href="#" target="_blank"><img src="img/123.png" width="140" height="140"></a>
@@ -636,8 +648,9 @@
 					</div>
 				</div>
 			</div>
-			<div style="width:100%; height:200px; background-color:#000; margin-top:20px; float:left;">
+			<div style="width:100%; height:200px; margin-top:20px; float:left;">
 			</div>
 		</div>
 	</body>
+
 </html>

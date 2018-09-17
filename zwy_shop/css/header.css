@@ -44,16 +44,19 @@
 	font-size: 18px;
 	color: #333;
 }
+
 .fnt18666 {
 	font-family: "微软雅黑";
 	font-size: 18px;
 	color: #666;
 }
+
 .fnt18999 {
 	font-family: "微软雅黑";
 	font-size: 18px;
 	color: #999;
 }
+
 .fnt20cc0000 {
 	font-family: "微软雅黑";
 	font-size: 20px;
@@ -66,16 +69,21 @@
 	color: #999;
 }
 
+.fnt24cc0000 {
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color: #cc0000;
+}
 
-/**
- * 
- * 
- * 
- * 
- **/
+.fnt30cc0000 {
+	font-family: "微软雅黑";
+	font-size: 30px;
+	color: #cc0000;
+}
 
 .headtag {
 	height: 240px;
+	background-color: #fff;
 }
 
 .headtop {
@@ -104,9 +112,14 @@
 	margin-right: 630px;
 }
 
+.headword a:hover {
+	color: #f3930a;
+}
+
 .headsearch {
 	height: 140px;
 	width: 1200px;
+	background-color: #fff;
 }
 
 .headsearch div {
@@ -189,6 +202,10 @@
 	color: #999;
 }
 
+.headsearch_txt .searchWord ul li a:hover {
+	color: #f3930a;
+}
+
 .headsearch_right {
 	width: 100px;
 	height: 100px;
@@ -234,4 +251,52 @@
 .headMenuContent ul li:first-child {
 	width: 200px;
 	margin-right: 30px;
+}
+
+.scrollPagePic {
+	background-image: url(../img/scrollback.png);
+	background-repeat: no-repeat;
+	width: 1200px;
+	height: 100px;
+	margin-top: 15px;
+}
+
+.scrollPagePic div {
+	float: left;
+}
+
+.scrollPagePic div:first-child {
+	margin-left: 40px;
+	margin-top: 12px;
+}
+
+.scrollPagePic div:last-child {
+	margin-left: 99px;
+	margin-top: 5px;
+	width: 700px;
+	height: 80px;
+	overflow: hidden;
+}
+
+.scrollPagePic div ul {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+}
+
+.scrollPagePic div ul li {
+	list-style: none;
+	text-align: left;
+	margin-top: 5px;
+	font-size: 24px;
+	color: #FFFFFF;
+}
+
+.scrollPagePic div ul li span {
+	text-align: right;
+	font-size: 24px;
+	color: #ff7d8d;
+	width: 105px;
+	margin-right: 5px;
+	display: inline-block;
 }

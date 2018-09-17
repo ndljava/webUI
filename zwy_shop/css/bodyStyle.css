@@ -1,6 +1,5 @@
 @charset "utf-8";
 /**********************************************************/
-
 .bodytop {
 	font-family: "微软雅黑";
 	font-size: 12px;
@@ -35,6 +34,9 @@
 .bodyTopLeftItem ul li a {
 	text-decoration: none;
 	color: #999;
+}
+.bodyTopLeftItem ul li a:hover {
+	color: #f3930a;
 }
 .bodyTopLeftItem .bodyTopLeftItemTitle {
 	margin-bottom: 6px;
@@ -92,6 +94,9 @@
 	color: #999;
 	font-family: "微软雅黑";
 	font-size: 14px;
+}
+.bodyRightTopLoginText a:hover {
+	color: #f3930a;
 }
 .bodyRightTopUserInfo {
 	font-size: 14px;
@@ -167,6 +172,9 @@
 	font-size: 14px;
 	color: #999;
 }
+.bodyRightTopNewsContent div a:hover {
+	color: #f3930a;
+}
 .bodyRightButtom {
 	margin-top: 13px;
 	height: 140px;
@@ -230,6 +238,9 @@
 .scrollpic ul li a {
 	text-decoration: none;
 	color: #666;
+}
+.scrollpic ul li a:hover {
+	color: #f3930a;
 }
 .scrollpic1 {
 	overflow: hidden;
@@ -324,6 +335,9 @@
 	font-size: 18px;
 	text-decoration: none;
 }
+.remengtuijianTitle p a:hover {
+	color: #f3930a;
+}
 .rmtjscroll {
 	overflow: hidden;
 	background-color: #FFF;
@@ -350,6 +364,9 @@
 	text-decoration: none;
 	color: #666;
 }
+.rmtjscroll ul li p a:hover {
+	color: #f3930a;
+}
 .scrollpic2 ul {
 	margin: 0px 0px 0px 0px;
 	padding: 0px;
@@ -369,10 +386,16 @@
 	height: 60px;
 	text-align: left;
 }
+.scrollpic2 ul li div{
+	margin-top:10px;
+}
 .scrollpic2 ul li div p a {
 	color: #666;
 	font-size: 18px;
 	text-decoration: none;
+}
+.scrollpic2 ul li div p a:hover {
+	color: #f3930a;
 }
 .scrollpic2 ul li p {
 	width: 200px;
