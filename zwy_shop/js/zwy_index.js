@@ -18,7 +18,9 @@ function scrollNews() {
 
 	_top--;
 }
-
+/**
+ * 热门推荐
+ */
 function getRMTJ() {
 	var time = getNowFormatDate();
 	var parameter = {
@@ -36,7 +38,9 @@ function getRMTJ() {
 			var LoopStr = '';
 			for(var i = 0; i < LoopImg.length; i++) {
 				//LoopStr += '<div class="swiper-slide"><a href="src/shopdetail/shopdetail.html?wareid=' + LoopImg[i].wareid + '"><img src=' + LoopImg[i].coverList[0] + '></a></div>'
-				LoopStr += '<li><a href="src/shopdetail/shopdetail.html?wareid=' + LoopImg[i].wareid + '" target="_blank"><img src="' + LoopImg[i].coverList[0] + '" width="140" height="140"></a><p class="fnt18666"><a href="src/shopdetail/shopdetail.html?wareid=' + LoopImg[i].wareid + '" target="_blank">' + LoopImg[i].warename + '</a></p></li>';
+				LoopStr += '<li><a href="src/shopdetail/shopdetail.html?wareid=' + LoopImg[i].wareid + '" target="_blank">' +
+					'<img src="' + LoopImg[i].coverList[0] + '" width="140" height="140"></a>' +
+					'<p class="fnt18666"><a href="src/shopdetail/shopdetail.html?wareid=' + LoopImg[i].wareid + '" target="_blank">' + LoopImg[i].warename + '</a></p></li>';
 			}
 
 			//$("#rmtj_scroll").empty().append(LoopStr);
@@ -59,10 +63,49 @@ function getRMTJ() {
 				//					'<p class="money"><span>￥</span><span>' + WareList[i].wareprice + '</span></p>' +
 				//					'</a>';
 
-				WareListStr += '<li><div><a href="src/shopdetail/shopdetail.html?wareid=' + WareList[i].wareid + '" target="_blank"><img src="' + WareList[i].coverList[0] + '" width="140" height="140"></a><p class="fnt18666"><a href="src/shopdetail/shopdetail.html?wareid=' + WareList[i].wareid + '" target="_blank">' + WareList[i].warename + '</a></p></div><p class="fnt20cc0000">￥' + WareList[i].wareprice + '</p><span><a href="src/shopdetail/shopdetail.html?wareid=' + WareList[i].wareid + '" target="_blank"></a></span></li>';
+				WareListStr += '<li><div><a href="src/shopdetail/shopdetail.html?wareid=' + WareList[i].wareid + '" target="_blank"><img src="' + WareList[i].coverList[0] + '" width="140" height="140"></a>' +
+					'<p class="fnt18666"><a href="src/shopdetail/shopdetail.html?wareid=' + WareList[i].wareid + '" target="_blank">' + WareList[i].warename + '</a></p></div>' +
+					'<p class="fnt20cc0000">￥' + WareList[i].wareprice + '</p><span><a href="src/shopdetail/shopdetail.html?wareid=' + WareList[i].wareid + '" target="_blank"></a></span></li>';
 			}
 			//$("#rmtj_scroll2").empty().append(WareListStr)
 			$("#rmtj_scroll2").append(WareListStr)
 		}
 	}, "POST")
+}
+
+/**
+ * 获取类别 及子类别
+ */
+function getTypeList() {
+	getData(domainName + "/mall_api/classify/getClassifyList", "", function(res) {
+		console.log(res)
+		if(res.code == 0) {
+			dataList = res.data;
+			var strctx = "";
+			for(var i = 0; i < dataList.length; i++) {
+				strctx += '<div class="bodyTopLeftItem">';
+				strctx += '<div class="bodyTopLeftItemTitle">' +
+					'<a href="#" target="_blank">' + dataList[i].categoryName + '</a>' +
+					'</div>';
+					
+				strctx += '<ul>';
+				
+				for(var j = 0; j < dataList[i].children.length; j++) {
+					strctx += '<li><a href="../search/search.html?keyword=' + dataList[i].children[j].categoryName + '" target="_blank">' + dataList[i].children[j].categoryName + '</a></li>';
+				}
+				
+				strctx += '</ul></div>';
+			}
+
+			$("#typeList").empty().append(strctx)
+
+		} else {
+
+			var str = '<div style="width:100%;margin-top:50%;">' +
+				'<div style="text-align:center;"><img src="../../img/NoSearch.png" style="width:40px;"></div>' +
+				'<div style="text-align:center;color:#999;font-size: 0.75rem;">加载失败</div>'
+			'</div>'
+			$(".main").html(str)
+		}
+	}, "post");
 }

@@ -40,7 +40,7 @@
 .jklsCotent {
 	width: 1200px;
 	height: 420px;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .jklsTitle {
@@ -83,7 +83,7 @@
 
 .jklsList ul {
 	float: left;
-	margin: 20px 0px 0px 20px;
+	margin: 0px 0px 0px 10px;
 	list-style: none;
 	padding: 0px;
 }
@@ -91,6 +91,7 @@
 .jklsList ul li {
 	float: left;
 	height: 180px;
+	width: auto;
 }
 
 .lscsContent {
@@ -282,10 +283,18 @@
 	float: left;
 	width: 216px;
 	height: 280px;
-	margin-right: 4px;
+	margin-right: 5px;
 	margin-top: 5px;
 	background-color: #FFFFFF;
 	padding: 10px;
+}
+
+.buttomContent ul li:nth-child(5) {
+	margin-right: -1px;
+}
+
+.buttomContent ul li:nth-child(10) {
+	margin-right: -1px;
 }
 
 .buttomContent ul li p {
@@ -294,11 +303,12 @@
 	margin: 10px 0px 0px 0px;
 }
 
-.buttomContent ul li p:first-child{
+.buttomContent ul li p:first-child {
 	font-size: 16px;
 	color: #666666;
 }
-.buttomContent ul li p a{
+
+.buttomContent ul li p a {
 	color: #666666;
 	text-decoration: none;
 }
@@ -307,7 +317,7 @@
 	color: #f3930a;
 }
 
-.buttomContent ul li p:last-child{
+.buttomContent ul li p:last-child {
 	margin-top: 10px;
 }
 
