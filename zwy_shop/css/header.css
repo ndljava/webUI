@@ -82,12 +82,12 @@
 }
 
 .headtag {
-	height: 240px;
+	height: 214px;
 	background-color: #fff;
 }
 
 .headtop {
-	height: 180px;
+	height: 154px;
 	width: 1200px;
 	background-color: #fff;
 }
@@ -99,6 +99,7 @@
 	margin-top: 14px;
 	height: 26px;
 	width: 1200px;
+	background-color: #EEEEEE;
 }
 
 .headword a {

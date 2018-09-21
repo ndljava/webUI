@@ -167,21 +167,44 @@
 	color: #666666;
 }
 
-.lscsList ul li p a {
+.lscsList ul li p>a {
 	color: #666666;
 	text-decoration: none;
 }
 
-.lscsList ul li p a:hover {
+.lscsList ul li p>a:hover {
 	color: #f3930a;
 }
 
-.lscsList ul li p:last-child {
+.lscsList ul li p:nth-child(3) {
 	margin-top: 20px;
 }
 
-.lscsList ul li p:last-child:first-letter {
+.lscsList ul li p:nth-child(3):first-letter{
 	font-size: 24px;
+}
+
+.lscsList ul li span {
+	margin-top: -30px;
+	margin-right: 20px;
+	float: right;
+	width: 32px;
+	height: 30px;
+}
+
+.lscsList ul li span a {
+	background-image: url(../img/buy2.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
+	display: block;
+}
+
+.lscsList ul li span a:hover {
+	background-image: url(../img/buy1.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
 }
 
 .twoGroup {

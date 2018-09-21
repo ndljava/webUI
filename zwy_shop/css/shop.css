@@ -102,6 +102,10 @@
 	width: 366px;
 }
 
+.smtjContent ul li:last-child {
+	margin-top: 25px;
+}
+
 .smtjContent ul li div {
 	height: 214px;
 	width: 85%;
@@ -337,4 +341,27 @@
 
 .qbspContent ul li div p a:hover {
 	color: #F3930A;
+}
+
+.qbspContent ul li div span {
+	margin-top: -55px;
+	margin-right: 20px;
+	float: right;
+	width: 32px;
+	height: 30px;
+}
+
+.qbspContent ul li div span a {
+	background-image: url(../img/buy2.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
+	display: block;
+}
+
+.qbspContent ul li div span a:hover {
+	background-image: url(../img/buy1.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
 }
