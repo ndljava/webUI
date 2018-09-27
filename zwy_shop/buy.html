@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/buy.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+				font-family: "微软雅黑";
+			}
+		</style>
+		<script type="text/javascript">
+			function changeTab(e) {
+				var typechangelist = document.getElementById("typechange").children;
+				for(var i = 0; i < typechangelist.length; i++) {
+					typechangelist[i].className = "";
+				}
+				e.className = "tabTypeChange";
+			}
+
+			function addNum(doc) {
+				var num = doc.parentNode.children[1].children[0];
+				console.log(doc.nextNode + "" + doc.parentNode.className + "" + num.innerHTML);
+				num.value = parseInt(num.value) + 1;
+				if(!num.value || num.value == 'NaN') num.value = 1;
+			}
+
+			function plusNum(doc) {
+				var num = doc.parentNode.children[1].children[0];
+				num.value = parseInt(num.value) - 1;
+				if(!num.value || num.value == 'NaN') num.value = 1;
+			}
+			
+			/**
+			 *  设置复选框状态
+			 * @param {Object} st
+			 * @param {Object} p
+			 */
+			function setCheckedState(st, p) {
+				var ch;
+				if(p != undefined) {
+					ch = document.getElementsByName("checkbox" + p);
+				} else {
+					ch = document.body.querySelectorAll("input[type='checkbox']");
+				}
+
+				for(var i = 0; i < ch.length; i++) {
+					ch[i].checked = st
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<div align="center">
+			<div class="pageBody">
+				<div class="headWord">
+					<ul>
+						<li>
+							<a href="#" target="_blank">欢迎来到商城</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">登录/注册</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">我的订单</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">购物车</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">联系客服</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">商城指南</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">手机商城</a>
+						</li>
+					</ul>
+				</div>
+				<div class="headMidde">
+					<div>
+						<img src="img/LOGO.png" width="176" height="74">
+					</div>
+					<div class="middwords">
+						<div>购物车</div>
+						<div onclick="location='http://www.baidu.com'">返回</div>
+						<div onclick="location='http://www.baidu.com'">首页</div>
+					</div>
+					<div class="searchBtn">
+						<input type="text" name="search" value="这大热天" />
+						<img src="img/searchlogo.png" width="24" height="24" />
+						<input name="searchBtn" type="button" value="搜索" />
+					</div>
+				</div>
+				<div class="bodyContent">
+					<div id="typechange" class="typeContent">
+						<div class="tabTypeChange" onclick="changeTab(this)">
+							全部商品
+							<div class="typeTypeNum">26</div>
+						</div>
+						<div onclick="changeTab(this)">
+							失效商品
+							<div class="typeTypeNum">8</div>
+						</div>
+					</div>
+					<div class="buyList">
+						<div class="buyTitle">
+							<table width="1200" border="0" height="40" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="222">
+										&nbsp;&nbsp;&nbsp;<input type="checkbox" name="checkbox" onclick="setCheckedState(this.checked)" id="checkbox"> &nbsp;&nbsp;全选
+									</td>
+									<td width="407">
+										<div align="center">商品详情</div>
+									</td>
+									<td width="154">
+										<div align="center">单价</div>
+									</td>
+									<td width="131">
+										<div align="center">数量</div>
+									</td>
+									<td width="149">
+										<div align="center">金额</div>
+									</td>
+									<td width="123">
+										<div align="center">操作</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="buyName">&nbsp;&nbsp;&nbsp;<input type="checkbox" onclick="setCheckedState(this.checked,1)" name="checkbox" id="checkbox"> &nbsp;&nbsp;商家:</div>
+						<div class="buyContent">
+							<table width="1200" border="0" bordercolor="#EEEEEE" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="222" height="150">
+										<div class="i_1">&nbsp;&nbsp;&nbsp;<input type="checkbox" name="checkbox1" id="checkbox"> &nbsp;&nbsp;</div>
+										<div><img src="img/PEar.png" width="120" height="120"></div>
+									</td>
+									<td width="407" height="150">
+										<p>德青源A级鲜鸡蛋32枚装 优选新鲜鸡蛋 中</p>
+										<p class="i_2">重量:12kg; &nbsp;&nbsp;&nbsp; 包装:礼盒</p>
+									</td>
+									<td align="center" width="154" height="150">
+										<p class="fnt18333">￥29.9</p>
+									</td>
+									<td width="131" height="150">
+										<div class="addNum">
+											<div onclick="plusNum(this)">-</div>
+											<div><input type="text" id="numStep" value="1" /></div>
+											<div onclick="addNum(this)">+</div>
+										</div>
+									</td>
+									<td align="center" width="149" height="150">
+										<p class="fnt18333">￥29.9</p>
+										<p class="i_3">(运费:￥6)</p>
+									</td>
+									<td align="center" width="123" height="150">
+										<p>
+											<a href="#" target="_blank">添加收藏</a>
+										</p>
+										<p>
+											<a href="#" target="_blank">删除</a>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td width="222" height="150">
+										<div class="i_1">&nbsp;&nbsp;&nbsp;<input type="checkbox" name="checkbox1" id="checkbox"> &nbsp;&nbsp;</div>
+										<div><img src="img/PEar.png" width="120" height="120"></div>
+									</td>
+									<td width="407" height="150">
+										<p>德青源A级鲜鸡蛋32枚装 优选新鲜鸡蛋 中</p>
+										<p class="i_2">重量:12kg; &nbsp;&nbsp;&nbsp; 包装:礼盒</p>
+									</td>
+									<td align="center" width="154" height="150">
+										<p class="fnt18333">￥29.9</p>
+									</td>
+									<td width="131" height="150">
+										<div class="addNum">
+											<div onclick="plusNum(this)">-</div>
+											<div><input type="text" id="numStep" value="1" /></div>
+											<div onclick="addNum(this)">+</div>
+										</div>
+									</td>
+									<td align="center" width="149" height="150">
+										<p class="fnt18333">￥29.9</p>
+										<p class="i_3">(运费:￥6)</p>
+									</td>
+									<td align="center" width="123" height="150">
+										<p>
+											<a href="#" target="_blank">添加收藏</a>
+										</p>
+										<p>
+											<a href="#" target="_blank">删除</a>
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="buyName">&nbsp;&nbsp;&nbsp;<input type="checkbox" name="checkbox" onclick="setCheckedState(this.checked,2)" id="checkbox"> &nbsp;&nbsp;商家:</div>
+						<div class="buyContent">
+							<table width="1200" border="0" bordercolor="#EEEEEE" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="222" height="150">
+										<div class="i_1">&nbsp;&nbsp;&nbsp;<input type="checkbox" name="checkbox2" id="checkbox"> &nbsp;&nbsp;</div>
+										<div><img src="img/PEar.png" width="120" height="120"></div>
+									</td>
+									<td width="407" height="150">
+										<p>德青源A级鲜鸡蛋32枚装 优选新鲜鸡蛋 中</p>
+										<p class="i_2">重量:12kg; &nbsp;&nbsp;&nbsp; 包装:礼盒</p>
+									</td>
+									<td align="center" width="154" height="150">
+										<p class="fnt18333">￥29.9</p>
+									</td>
+									<td width="131" height="150">
+										<div class="addNum">
+											<div onclick="plusNum(this)">-</div>
+											<div><input type="text" id="numStep" value="1" /></div>
+											<div onclick="addNum(this)">+</div>
+										</div>
+									</td>
+									<td align="center" width="149" height="150">
+										<p class="fnt18333">￥29.9</p>
+										<p class="i_3">(运费:￥6)</p>
+									</td>
+									<td align="center" width="123" height="150">
+										<p>
+											<a href="#" target="_blank">添加收藏</a>
+										</p>
+										<p>
+											<a href="#" target="_blank">删除</a>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td width="222" height="150">
+										<div class="i_1">&nbsp;&nbsp;&nbsp;<input type="checkbox" name="checkbox2" id="checkbox"> &nbsp;&nbsp;</div>
+										<div><img src="img/PEar.png" width="120" height="120"></div>
+									</td>
+									<td width="407" height="150">
+										<p>德青源A级鲜鸡蛋32枚装 优选新鲜鸡蛋 中</p>
+										<p class="i_2">重量:12kg; &nbsp;&nbsp;&nbsp; 包装:礼盒</p>
+									</td>
+									<td align="center" width="154" height="150">
+										<p class="fnt18333">￥29.9</p>
+									</td>
+									<td width="131" height="150">
+										<div class="addNum">
+											<div onclick="plusNum(this)">-</div>
+											<div><input type="text" id="numStep" value="1" /></div>
+											<div onclick="addNum(this)">+</div>
+										</div>
+									</td>
+									<td align="center" width="149" height="150">
+										<p class="fnt18333">￥29.9</p>
+										<p class="i_3">(运费:￥6)</p>
+									</td>
+									<td align="center" width="123" height="150">
+										<p>
+											<a href="#" target="_blank">添加收藏</a>
+										</p>
+										<p>
+											<a href="#" target="_blank">删除</a>
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="buyaction">
+							<div>
+								&nbsp;&nbsp;&nbsp;
+								<input type="checkbox" onclick="setCheckedState(this.checked)" name="checkbox" id="checkbox"> &nbsp;&nbsp;全选 &nbsp;&nbsp;&nbsp;
+								<a href="#" target="_blank">删除</a>
+								&nbsp;&nbsp;&nbsp;
+								<a href="#" target="_blank">清楚失效商品</a>
+								&nbsp;&nbsp;&nbsp;
+								<a href="#" target="_blank">收藏</a>
+								&nbsp;&nbsp;&nbsp;
+								<a href="#" target="_blank">分享</a>
+							</div>
+							<div class="pageing">
+								<div>
+									<</div>
+										<div>1</div>
+										<div class="selectBtn">2</div>
+										<div>3</div>
+										<div>4</div>
+										<div>...</div>
+										<div>10</div>
+										<div>></div>
+								</div>
+								<div class="redirection">
+									跳转 <input type="text" name="redirection" /> 页
+								</div>
+								<div class="selectNum">
+									已选择商品 <span id="selectNum1">1</span> 件 &nbsp;&nbsp;&nbsp;共计:
+									<span id="countPrice">￥0.00</span>
+									<input type="button" value="结算" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="zuijinliulang">
+						<div class="zjllTitle">最近浏览</div>
+						<div class="zjllContent">
+							<ul>
+								<li>
+									<a href="#" target="_blank"><img src="img/shafa.png" width="236" height="188"></a>
+									<p>
+										<a href="#" target="_blank">宏辉果蔬 烟台红富士苹果 12个 2.6kg 果</a>
+									</p>
+									<p class="fnt20cc0000">￥1200.00</p>
+									<span><a href="#" target="_blank"></a></span>
+								</li>
+								<li>
+									<a href="#" target="_blank"><img src="img/shafa.png" width="236" height="188"></a>
+									<p>
+										<a href="#" target="_blank">宏辉果蔬 烟台红富士苹果 12个 2.6kg 果</a>
+									</p>
+									<p class="fnt20cc0000">￥1200.00</p>
+									<span><a href="#" target="_blank"></a></span>
+								</li>
+								<li>
+									<a href="#" target="_blank"><img src="img/shafa.png" width="236" height="188"></a>
+									<p>
+										<a href="#" target="_blank">宏辉果蔬 烟台红富士苹果 12个 2.6kg 果</a>
+									</p>
+									<p class="fnt20cc0000">￥1200.00</p>
+									<span><a href="#" target="_blank"></a></span>
+								</li>
+								<li>
+									<a href="#" target="_blank"><img src="img/shafa.png" width="236" height="188"></a>
+									<p>
+										<a href="#" target="_blank">宏辉果蔬 烟台红富士苹果 12个 2.6kg 果</a>
+									</p>
+									<p class="fnt20cc0000">￥1200.00</p>
+									<span><a href="#" target="_blank"></a></span>
+								</li>
+								<li>
+									<a href="#" target="_blank"><img src="img/shafa.png" width="236" height="188"></a>
+									<p>
+										<a href="#" target="_blank">宏辉果蔬 烟台红富士苹果 12个 2.6kg 果</a>
+									</p>
+									<p class="fnt20cc0000">￥1200.00</p>
+									<span><a href="#" target="_blank"></a></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+	</body>
+
+</html>

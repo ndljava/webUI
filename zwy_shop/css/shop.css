@@ -329,9 +329,15 @@
 	padding: 0px 10px 10px 10px;
 }
 
-.qbspContent ul li div p:first-child {
-	margin: 8px 0px 18px 0px;
+.qbspContent ul li div p {
+	margin: 0px;
 	padding: 0px;
+}
+
+.qbspContent ul li div p:first-child {
+	margin: 8px 0px 0px 5px;
+	padding: 0px;
+	height: 50px;
 }
 
 .qbspContent ul li div p a {
@@ -344,8 +350,8 @@
 }
 
 .qbspContent ul li div span {
-	margin-top: -55px;
-	margin-right: 20px;
+	margin-top: -35px;
+	margin-right: 10px;
 	float: right;
 	width: 32px;
 	height: 30px;

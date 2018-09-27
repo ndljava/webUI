@@ -1,0 +1,454 @@
+@charset "utf-8";
+.fnt18333 {
+	font-size: 18px;
+	color: #333333;
+}
+
+.fnt14333 {
+	font-size: 14px;
+	color: #333333;
+}
+
+.fnt20cc0000 {
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #cc0000;
+}
+
+
+/********************计步器**********************************************************/
+
+.addNum {
+	width: 100px;
+	height: 32px;
+	border: 1px solid #999999;
+}
+
+.addNum div {
+	float: left;
+	width: 32px;
+	height: 100%;
+	text-align: center;
+	line-height: 32px;
+	cursor: pointer;
+}
+
+.addNum div input {
+	float: inherit;
+	width: 32px;
+	height: 32px;
+	border: 1px solid #999999;
+	margin-top: -1px;
+	text-align: center;
+}
+
+
+/******************************************************************************/
+
+
+/******************************************************************************/
+
+.pageBody {
+	width: 100%;
+}
+
+.headWord {
+	width: 100%;
+	height: 40px;
+	background-color: #EEEEEE;
+}
+
+.headWord ul {
+	list-style: none;
+	width: 1200px;
+}
+
+.headWord ul li {
+	float: left;
+	margin-right: 50px;
+	line-height: 40px;
+}
+
+.headWord ul li:first-child {
+	margin-right: 590px;
+}
+
+.headWord ul li:last-child {
+	margin-right: 0px;
+}
+
+.headWord ul li a {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #999;
+	text-decoration: none;
+}
+
+.headWord ul li a:hover {
+	color: #F3930A;
+}
+
+.headMidde {
+	width: 1200px;
+	height: 90px;
+}
+
+.headMidde div {
+	float: left;
+	margin-top: 25px;
+}
+
+.headMidde .middwords div:first-child {
+	margin-left: 28px;
+	font-size: 24px;
+	color: #F3CB0A;
+	margin-top: 11px;
+}
+
+.headMidde .middwords div:nth-child(2) {
+	margin-left: 25px;
+	font-size: 14px;
+	color: #999999;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+.headMidde .middwords div:nth-child(3) {
+	font-size: 14px;
+	color: #F3930A;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+.headMidde .searchBtn {
+	float: right;
+	margin-top: 30px;
+	width: 450px;
+}
+
+.headMidde .searchBtn input {
+	outline: none;
+	height: 40px;
+	border: 2px solid #F3CB0A;
+	float: left;
+}
+
+.headMidde .searchBtn input:first-child {
+	width: 300px;
+	padding-left: 60px;
+	font-size: 16px;
+	color: #999999;
+}
+
+.headMidde .searchBtn input:last-child {
+	width: 80px;
+	height: 44px;
+	border: 2px solid #F3CB0A;
+	background-color: #F3CB0A;
+	font-size: 18px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.headMidde .searchBtn img {
+	margin-left: -820px;
+	margin-top: 12px;
+}
+
+.bodyContent {
+	width: 1200px;
+}
+
+.bodyContent .typeContent {
+	width: 100%;
+	border-bottom: 1px solid #999999;
+	height: 40px;
+	margin-top: 45px;
+}
+
+.bodyContent .typeContent>div {
+	float: left;
+	padding-left: 20px;
+	width: 120px;
+	height: 40px;
+	font-size: 18px;
+	text-align: left;
+	color: #999999;
+	cursor: pointer;
+}
+
+.bodyContent .typeContent .tabTypeChange {
+	float: left;
+	padding-left: 20px;
+	width: 120px;
+	font-size: 18px;
+	text-align: left;
+	color: #CC0000;
+	border-bottom: 1px solid #CC0000;
+	cursor: pointer;
+	margin-bottom: -1px;
+}
+
+.bodyContent .typeContent .typeTypeNum {
+	font-size: 18px;
+	color: #CC0000;
+	float: right;
+}
+
+.bodyContent .buyList {
+	width: 1200px;
+	margin-top: 10px;
+}
+
+.bodyContent .buyTitle {
+	width: 1200px;
+	height: 40px;
+}
+
+.bodyContent .buyTitle td {
+	font-size: 16px;
+	color: #333333;
+}
+
+.bodyContent .buyTitle td:first-child {
+	font-size: 14px;
+	color: #333333;
+}
+
+.bodyContent .buyList .buyName {
+	height: 40px;
+	width: 1200px;
+	background-color: #fc9835;
+	text-align: left;
+	line-height: 40px;
+	color: #FFFFFF;
+	float: left;
+}
+
+.bodyContent .buyList .buyContent {
+	width: 1200px;
+	float: left;
+	border: 1px solid #EEEEEE;
+}
+
+.bodyContent .buyList .buyContent table tr td {
+	border: 1px solid #EEEEEE;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+.bodyContent .buyList .buyContent div {
+	float: left;
+}
+
+.bodyContent .buyList .buyContent .i_1 {
+	margin-top: 50px;
+}
+
+.bodyContent .buyList .buyContent .i_2 {
+	color: #999999;
+	font-size: 16px;
+	margin-top: 18px;
+}
+
+.bodyContent .buyList .buyContent .i_3 {
+	color: #999999;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.bodyContent .buyList .buyContent a {
+	color: #333333;
+	font-size: 14px;
+	margin-top: 10px;
+	text-decoration: none;
+}
+
+.bodyContent .buyList .buyContent a:hover {
+	color: #F3930A;
+}
+
+.bodyContent .buyList .buyaction {
+	float: left;
+	background-color: #EEEEEE;
+	width: 100%;
+	height: 60px;
+	margin-top: 20px;
+	text-align: left;
+	line-height: 60px;
+}
+
+.bodyContent .buyList .buyaction div {
+	float: left;
+}
+
+.bodyContent .buyList .buyaction a {
+	color: #333333;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.bodyContent .buyList .buyaction a:hover {
+	color: #F3930A;
+}
+
+.bodyContent .buyList .buyaction .pageing {
+	width: 300px;
+	height: 60px;
+	margin-left: 98px;
+	margin-top: 18px;
+}
+
+.bodyContent .buyList .buyaction .pageing div {
+	float: left;
+	margin-left: 10px;
+	border: 1px solid #d2d2d2;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	font-size: 12px;
+	color: #999999;
+	line-height: 24px;
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+
+.bodyContent .buyList .buyaction .pageing .selectBtn {
+	background-color: #F3CB0A;
+	border: 0px;
+	color: #FFFFFF;
+}
+
+.bodyContent .buyList .buyaction .pageing div:hover {
+	background-color: #F3CB0A;
+}
+
+.bodyContent .buyList .buyaction .redirection {
+	font-size: 14px;
+	color: #999;
+}
+
+.bodyContent .buyList .buyaction .redirection input {
+	width: 20px;
+	height: 20px;
+}
+
+.bodyContent .buyList .buyaction .selectNum {
+	margin-left: 30px;
+	font-size: 14px;
+	color: #999;
+}
+
+.bodyContent .buyList .buyaction .selectNum span {
+	color: #CC0000;
+}
+
+.bodyContent .buyList .buyaction .selectNum input {
+	width: 100px;
+	height: 60px;
+	color: #FFFFFF;
+	font-size: 16px;
+	background-color: #CC0000;
+	margin-left: 57px;
+	outline: none;
+	border: 0px;
+	cursor: pointer;
+}
+
+.pageBody .zuijinliulang {
+	width: 100%;
+	height: 500px;
+	background-color: #EEEEEE;
+	margin-top: 10px;
+	float: left;
+}
+
+.pageBody .zuijinliulang .zjllTitle {
+	height: 60px;
+	width: 1200px;
+	margin-top: 10px;
+	background-color: #FFFFFF;
+	line-height: 60px;
+	color: #333333;
+	font-size: 16px;
+}
+
+.pageBody .zuijinliulang .zjllContent {
+	width: 100%;
+	height: 320px;
+}
+
+.pageBody .zuijinliulang .zjllContent ul {
+	width: 1200px;
+	height: 220px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.pageBody .zuijinliulang .zjllContent ul li {
+	float: left;
+	width: 216px;
+	height: 280px;
+	margin-right: 5px;
+	margin-top: 5px;
+	background-color: #FFFFFF;
+	padding: 10px;
+}
+
+.pageBody .zuijinliulang .zjllContent ul li:nth-child(5) {
+	margin-right: -1px;
+}
+
+.pageBody .zuijinliulang .zjllContent ul li p {
+	float: left;
+	text-align: left;
+	margin: 10px 0px 0px 0px;
+}
+
+.pageBody .zuijinliulang .zjllContent ul li p:first-child {
+	font-size: 16px;
+	color: #666666;
+}
+
+.pageBody .zuijinliulang .zjllContent ul li p a {
+	color: #666666;
+	text-decoration: none;
+}
+
+.pageBody .zuijinliulang .zjllContent ul li p a:hover {
+	color: #f3930a;
+}
+
+.pageBody .zuijinliulang .zjllContent ul li p:last-child {
+	margin-top: 10px;
+	color: #CC0000;
+}
+
+.pageBody .zuijinliulang .zjllContent ul li p:last-child:first-letter {
+	font-size: 24px;
+}
+
+.pageBody .zuijinliulang .zjllContent ul li span {
+	margin-top: 10px;
+	margin-right: 15px;
+	float: right;
+	width: 32px;
+	height: 30px;
+}
+
+.pageBody .zuijinliulang .zjllContent ul li span a {
+	background-image: url(../img/buy2.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
+	display: block;
+}
+
+.pageBody .zuijinliulang .zjllContent ul li span a:hover {
+	background-image: url(../img/buy1.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
+}
