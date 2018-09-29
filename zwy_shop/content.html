@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/content.css" rel="stylesheet" type="text/css">
+		<link href="css/header.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			body {
+				margin: 0px;
+				padding: 0px;
+				font-family: "微软雅黑";
+				background-color: #eeeeee;
+			}
+		</style>
+		<script type="text/javascript">
+			var _pos = 0;
+			var _w = 80;
+
+			function rightPic() {
+				var picList = document.getElementById("picList");
+
+				_pos -= _w;
+				if((picList.children.length * _w) + _pos <= 400)
+					_pos = 400 - (picList.children.length * _w);
+
+				picList.style.left = _pos + "px";
+			}
+
+			function leftPic() {
+				var picList = document.getElementById("picList");
+
+				_pos += _w;
+				if(_pos >= 0)
+					_pos = 0;
+
+				picList.style.left = _pos + "px";
+			}
+
+			function addNum(doc) {
+				var num = doc.parentNode.children[1].children[0];
+				num.value = parseInt(num.value) + 1;
+				if(!num.value || num.value == 'NaN') num.value = 1;
+			}
+
+			function plusNum(doc) {
+				var num = doc.parentNode.children[1].children[0];
+				num.value = parseInt(num.value) - 1;
+				if(!num.value || num.value == 'NaN' || parseInt(num.value) < 1) num.value = 1;
+			}
+		</script>
+
+	</head>
+
+	<body>
+
+		<div align="center">
+			<div class="headword">
+				<a href="#" target="_blank">欢迎来到商城</a>
+				<a href="#" target="_blank">登录/注册</a>
+				<a href="#" target="_blank">我的订单</a>
+				<a href="#" target="_blank">购物车</a>
+				<a href="#" target="_blank">联系客服</a>
+				<a href="#" target="_blank">商城指南</a>
+				<a href="#" target="_blank">手机商城</a>
+			</div>
+			<div class="headtag">
+				<div class="headtop">
+					<div class="headsearch">
+						<div class="headsearch_left"> <img src="img/LOGO.png" width="176" height="74"> </div>
+						<div class="headsearch_txt">
+							<div>
+								<input name="search" type="text" value="心态好点人头还是让他忽然1" />
+								<img src="img/searchlogo.png" width="24" height="24">
+								<input name="searchBtn" type="button" value="搜索" />
+							</div>
+							<div class="searchWord">
+								<font color="#f3cb0a">热门搜索:</font>
+								<ul>
+									<li>
+										<a href="#" target="_blank">连衣裙</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">连衣裙</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">连衣</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">连衣裙</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">连衣裙</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">连衣</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">连衣裙</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="headsearch_right"> </div>
+					</div>
+				</div>
+				<div class="headMenu">
+					<div class="headMenuContent">
+						<ul>
+							<li onclick="location='http://www.baidu.com'">分类</li>
+							<li>首页</li>
+							<li>时尚街</li>
+							<li>小景家具</li>
+							<li>零食</li>
+							<li>应季水果</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="crumbs">
+				<div class="crumbs_c">
+					<div class="crumbs_l">
+						<a href="#" target="_blank">应季水果</a>>
+						<a href="#" target="_blank">水果超市</a>>
+						<a href="#" target="_blank">苹果</a>
+					</div>
+					<div class="crumbs_r">
+						<div><img src="img/dianpu/icon.png" width="30" height="30"></div>
+						<div>小迷糊水果超市</div>
+					</div>
+				</div>
+			</div>
+			<div class="topContent">
+				<div class="picMain">
+					<div class="piclist">
+						<div class="mainPic">
+							<img src="img/shopinfo/mainpic.png" width="400" height="320">
+						</div>
+						<div class="mainpicList">
+							<div onclick="leftPic();" class="arrow_l">
+								<img src="img/shopinfo/a_l.png" width="24" height="26">
+							</div>
+							<div class="picListmask">
+								<div id="picList" class="picList">
+									<a href="#" target="_blank"><img border="0" src="img/shopinfo/l_1.png" width="80" height="80"></a>
+									<a href="#" target="_blank"><img border="0" src="img/shopinfo/l_2.png" width="80" height="80"></a>
+									<a href="#" target="_blank"><img src="img/shopinfo/l_3.png" width="80" height="80"></a>
+									<a href="#" target="_blank"><img src="img/shopinfo/l_1.png" width="80" height="80"></a>
+									<a href="#" target="_blank"><img src="img/shopinfo/l_2.png" width="80" height="80"></a>
+									<a href="#" target="_blank"><img src="img/shopinfo/l_3.png" width="80" height="80"></a>
+									<a href="#" target="_blank"><img src="img/shopinfo/l_1.png" width="80" height="80"></a>
+								</div>
+							</div>
+							<div onclick="rightPic();" class="arrow_r">
+								<img src="img/shopinfo/a_r.png" width="24" height="26">
+							</div>
+						</div>
+					</div>
+					<div class="picContent">
+						<div class="picName">正品代购Coliac杨幂同款三排珍珠水晶皮鞋经典款厚底圆头女鞋单鞋</div>
+						<div class="picDesc">鞋子是工业品，不是艺术品，人手制作且是量产。标准以内的线头、灰尘、轻微溢胶等属于正常现象，要求超出现实完美主义者的亲请慎拍哦！只要不影响二次销售</div>
+						<div class="pircelist">
+							<div class="price_l">
+								<div class="p_1">
+									<span class="s_1">价  格:</span>
+									<span class="s_2">￥39.0</span>
+								</div>
+								<div class="p_2">
+									<span class="s_3">优惠券:</span>
+									<span class="s_4">满50减5元</span>
+								</div>
+							</div>
+							<div class="price_r">
+								<input type="button" value="立即购买" />
+							</div>
+						</div>
+						<div class="typeList">
+							<div class="yd">
+								<div class="ydname">运单:</div>
+								<div class="yddesc">在线支付免运费</div>
+							</div>
+							<div class="zl">
+								<div class="zlname">重量:</div>
+								<div class="zldesc">
+									<input type="button" class="input_selected" value="红玫瑰12果2.5kg" />
+									<input type="button" value="红玫瑰15果3kg" />
+								</div>
+							</div>
+							<div class="bg">
+								<div class="bgname">包裹:</div>
+								<div class="bgdesc">
+									<input type="button" class="input_selected" value="红玫瑰12果2.5kg" />
+									<input type="button" value="红玫瑰15果3kg" />
+								</div>
+							</div>
+						</div>
+						<div class="submit">
+							<div class="stepNum">
+								<div class="addNum">
+									<div onclick="plusNum(this)">-</div>
+									<div><input type="text" id="numStep" value="1" /></div>
+									<div onclick="addNum(this)">+</div>
+								</div>
+							</div>
+							<div class="addBuyBtn">
+								<input type="button" value="加入购物车" />
+							</div>
+						</div>
+						<div class="serverDesc">
+							<div>服务承诺:</div>
+							<div>&nbsp; &nbsp; &nbsp; 坏国必赔 &nbsp; &nbsp; 正品保证</div>
+						</div>
+					</div>
+				</div>
+				<div class="rightList">
+					<div class="rightTitle">相似推荐</div>
+					<div class="rightContent">
+						<ul>
+							<li>
+								<a href="#" target="_blank"><img src="img/shopinfo/1.png" width="100" height="80"></a>
+								<p>
+									<a href="#" target="_blank">宏辉果蔬烟台红红...</a>
+								</p>
+								<p class="fnt18cc0000">￥1200.00</p>
+							</li>
+							<li>
+								<a href="#" target="_blank"><img src="img/shopinfo/1.png" width="100" height="80"></a>
+								<p>
+									<a href="#" target="_blank">宏辉果蔬烟台红红...</a>
+								</p>
+								<p class="fnt18cc0000">￥1200.00</p>
+							</li>
+							<li>
+								<a href="#" target="_blank"><img src="img/shopinfo/1.png" width="100" height="80"></a>
+								<p>
+									<a href="#" target="_blank">宏辉果蔬烟台红红...</a>
+								</p>
+								<p class="fnt18cc0000">￥1200.00</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="buttomList">
+				<div class="buttomTitle">
+					店铺优品
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
