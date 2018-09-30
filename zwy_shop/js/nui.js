@@ -3,13 +3,12 @@
  * 
  */
 
-
 function StarSelect(id, starurl, num) {
 	var id = id;
 	var starUrl = starurl;
 	var num = num;
 
-	var selectIndex = 0;
+	var selectIndex = -1;
 
 	this.createStarUI = function() {
 		var ul = document.createElement("ul");
@@ -47,7 +46,9 @@ function StarSelect(id, starurl, num) {
 			if(e.target.nodeName == 'IMG') {
 				var pos = lis.indexOf(e.target.parentNode);
 				for(var j = 0; j < lis.length; j++) {
-					if(j <= pos) {
+					if(j == pos) {
+						lis[j].children[0].src = starUrl[2];
+					} else if(j < pos) {
 						lis[j].children[0].src = starUrl[0];
 					} else {
 						lis[j].children[0].src = starUrl[1];
