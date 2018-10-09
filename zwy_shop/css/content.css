@@ -71,7 +71,7 @@
 }
 
 .crumbs .crumbs_c .crumbs_r div:last-child {
-	margin-top: 4px;
+	margin-top: 0px;
 	margin-left: 20px;
 	font-size: 20px;
 	color: #333;
@@ -117,10 +117,7 @@
 	width: 24px;
 	height: 80px;
 	background-color: #FFFFFF;
-	opacity: 0.5;
 	cursor: pointer;
-	position: relative;
-	z-index: 2;
 }
 
 .topContent .picMain .piclist .mainpicList .arrow_l img {
@@ -128,18 +125,18 @@
 }
 
 .topContent .picMain .piclist .mainpicList .picListmask {
-	position: absolute;
 	overflow: hidden;
 	height: 80px;
-	width: 400px;
-	z-index: 1;
+	width: 350px;
+	margin-left: 29px;
+	position: absolute;
 }
 
 .topContent .picMain .piclist .mainpicList .picListmask .picList {
 	height: 80px;
 	width: 1000px;
 	text-align: left;
-	position: absolute;
+	position: relative;
 }
 
 .topContent .picMain .piclist .mainpicList .picListmask .picList img {
@@ -153,10 +150,7 @@
 	width: 24px;
 	height: 80px;
 	background-color: #FFFFFF;
-	opacity: 0.5;
 	cursor: pointer;
-	position: relative;
-	z-index: 2;
 }
 
 .topContent .picMain .piclist .mainpicList .arrow_r img {
@@ -184,10 +178,11 @@
 }
 
 .topContent .picMain .picContent .pircelist {
-	margin-left: 10px;
-	margin-top: 0px;
+	padding-left: 10px;
+	margin-top: 10px;
 	width: 100%;
 	height: 100px;
+	background-color: #f9f9f9;
 }
 
 .topContent .picMain .picContent .pircelist .price_l {
@@ -239,7 +234,8 @@
 	font-size: 14px;
 	color: #FFFFFF;
 	display: inline-block;
-	background-color: #CC0000;
+	background-image: url(../img/shopinfo/rect.png);
+	background-repeat: no-repeat;
 	line-height: 24px;
 	text-indent: 8px;
 }
@@ -255,6 +251,7 @@
 	margin-top: 30px;
 	background-color: #CC0000;
 	color: #FFFFFF;
+	font-size: 20px;
 	outline: none;
 	border: 0px;
 	cursor: pointer;
@@ -360,7 +357,7 @@
 }
 
 .topContent .picMain .picContent .serverDesc {
-	margin-top: 28px;
+	margin-top: 20px;
 	font-size: 16px;
 	color: #666666;
 }
@@ -531,7 +528,6 @@
 	width: 100%;
 	height: 40px;
 	background-color: #F3CB0A;
-	line-height: 40px;
 	text-align: center;
 	color: #FFFFFF;
 	font-size: 20px;
@@ -540,7 +536,7 @@
 .buttomDesc .b_left .dianping .dpContent {
 	width: 190px;
 	height: 159px;
-	text-align: left; 
+	text-align: left;
 	color: #333333;
 	font-size: 14px;
 	padding: 1px 0px 0px 10px;
@@ -640,13 +636,15 @@
 	height: 100%;
 	margin-left: 20px;
 	margin-top: 10px;
-	background-color: #FFFFFF;
+	background-color: #f9f9f9;
 }
 
 .buttomDesc .b_right .b_rightTttle {
 	width: 100%;
 	height: 40px;
 	float: left;
+	border-bottom: 1px solid #F3CB0A;
+	background-color: #FFFFFF;
 }
 
 .buttomDesc .b_right .b_rightTttle ul {
@@ -659,7 +657,7 @@
 	margin-left: -1px;
 	border: 1px solid #F3CB0A;
 	width: 150px;
-	height: 40px;
+	height: 39px;
 	color: #999;
 	font-size: 20px;
 	line-height: 40px;
@@ -681,7 +679,8 @@
 	height: 160px;
 	width: 100%;
 	border-bottom: 1px solid #D3D3D3;
-	margin-top: 20px;
+	padding-top: 20px;
+	background-color: #FFFFFF;
 }
 
 .buttomDesc .b_right .desc1 .item1 div {
@@ -689,7 +688,7 @@
 	width: 320px;
 	height: 30px;
 	color: #333333;
-	font-size: 20px;
+	font-size: 16px;
 	text-align: left;
 	padding-left: 5px;
 }
@@ -697,10 +696,12 @@
 .buttomDesc .b_right .desc1 .item1 div:first-child {
 	width: 100%;
 	height: 40px;
+	color: #666666;
 }
 
 .buttomDesc .b_right .desc1 .item2 {
 	margin-top: 10px;
+	padding-bottom: 10px;
 }
 
 .buttomDesc .xscp {
