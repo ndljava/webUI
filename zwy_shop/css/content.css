@@ -500,13 +500,13 @@
 	color: #CC0000;
 }
 
-.buttomList .buttomContentul li p:first-child:first-letter {
+.buttomList .buttomContent ul li p:first-child:first-letter {
 	font-size: 14px;
 }
 
 .buttomDesc {
 	width: 1200px;
-	height: 1250px;
+	height: auto;
 	background-color: #FFFFFF;
 }
 
@@ -518,6 +518,7 @@
 	margin-top: 10px;
 	height: 100%;
 	width: 200px;
+	background-color: #FFFFFF;
 }
 
 .buttomDesc .b_left .dianping {
@@ -539,7 +540,7 @@
 .buttomDesc .b_left .dianping .dpContent {
 	width: 190px;
 	height: 159px;
-	text-align: left;
+	text-align: left; 
 	color: #333333;
 	font-size: 14px;
 	padding: 1px 0px 0px 10px;
@@ -554,10 +555,11 @@
 
 .buttomDesc .b_left .dianping .dpContent>div>span {
 	float: left;
+	margin-left: 10px;
 }
 
-.buttomDesc .b_left .dianping .dpContent>div span:last-child {
-	margin-left: 10px;
+.buttomDesc .b_left .dianping .dpContent>div span:first-child {
+	margin-left: 0px;
 }
 
 .buttomDesc .b_left .dianping .dpContent>div:nth-child(6) {
@@ -567,4 +569,219 @@
 .buttomDesc .b_left .dianping .dpContent>div:nth-child(6) span:last-child {
 	color: #CC0000;
 	font-size: 16px;
+}
+
+.buttomDesc .b_left .dpsx {
+	margin-top: 10px;
+}
+
+.buttomDesc .b_left .dpsx .dpsxTitle {
+	height: 40px;
+	width: 200px;
+	background-color: #F3CB0A;
+	line-height: 40px;
+	color: #FFFFFF;
+	font-size: 20px;
+}
+
+.buttomDesc .b_left .dpsx ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+.buttomDesc .b_left .dpsx ul li {
+	float: left;
+	width: 198px;
+	height: 190px;
+	border-bottom: 1px solid #F3CB0A;
+	border-left: 1px solid #F3CB0A;
+	border-right: 1px solid #F3CB0A;
+	padding-top: 10px;
+}
+
+.buttomDesc .b_left .dpsx ul li:nth-child(6) {
+	margin-right: 0px;
+}
+
+.buttomDesc .b_left .dpsx ul li p {
+	margin: 0px;
+}
+
+.buttomDesc .b_left .dpsx ul li p:last-child {
+	font-size: 14px;
+	color: #333333;
+	margin-top: 5px;
+	width: 160px;
+	text-align: left;
+}
+
+.buttomDesc .b_left .dpsx ul li p a {
+	color: #333333;
+	text-decoration: none;
+}
+
+.buttomDesc .b_left .dpsx ul li p a:hover {
+	color: #f3930a;
+}
+
+.buttomDesc .b_left .dpsx ul li p:first-child {
+	font-size: 18px;
+	margin-top: 0px;
+	color: #CC0000;
+}
+
+.buttomDesc .b_left .dpsx ul li p:first-child:first-letter {
+	font-size: 14px;
+}
+
+.buttomDesc .b_right {
+	width: 980px;
+	height: 100%;
+	margin-left: 20px;
+	margin-top: 10px;
+	background-color: #FFFFFF;
+}
+
+.buttomDesc .b_right .b_rightTttle {
+	width: 100%;
+	height: 40px;
+	float: left;
+}
+
+.buttomDesc .b_right .b_rightTttle ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+.buttomDesc .b_right .b_rightTttle ul li {
+	margin-left: -1px;
+	border: 1px solid #F3CB0A;
+	width: 150px;
+	height: 40px;
+	color: #999;
+	font-size: 20px;
+	line-height: 40px;
+	float: left;
+	cursor: pointer;
+}
+
+.buttomDesc .b_right .b_rightTttle .liselected {
+	color: #FFFFFF;
+	background-color: #F3CB0A;
+}
+
+.buttomDesc .b_right .desc1 {
+	height: 100%;
+	width: 100%;
+}
+
+.buttomDesc .b_right .desc1 .item1 {
+	height: 160px;
+	width: 100%;
+	border-bottom: 1px solid #D3D3D3;
+	margin-top: 20px;
+}
+
+.buttomDesc .b_right .desc1 .item1 div {
+	float: left;
+	width: 320px;
+	height: 30px;
+	color: #333333;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.buttomDesc .b_right .desc1 .item1 div:first-child {
+	width: 100%;
+	height: 40px;
+}
+
+.buttomDesc .b_right .desc1 .item2 {
+	margin-top: 10px;
+}
+
+.buttomDesc .xscp {
+	width: 1200px;
+	height: auto;
+}
+
+.buttomDesc .xscp .xscpTitle {
+	margin-top: 0px;
+	width: 100%;
+	height: 60px;
+	font-size: 16px;
+	line-height: 60px;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+.buttomDesc .xscp .scrollpic2 ul {
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	width: 1200px;
+	display: flex;
+	flex-direction: row;
+	flex-flow: wrap;
+	justify-content: space-between;
+}
+
+.buttomDesc .xscp .scrollpic2 ul li {
+	list-style: none;
+	margin-top: 10px;
+	width: 195px;
+	height: 280px;
+	background-color: #FFF;
+	padding: 10px 20px 10px 20px;
+}
+
+.buttomDesc .xscp .scrollpic2 ul li div p {
+	width: 200px;
+	height: 60px;
+	text-align: left;
+}
+
+.buttomDesc .xscp .scrollpic2 ul li div {
+	margin-top: 10px;
+}
+
+.buttomDesc .xscp .scrollpic2 ul li div p a {
+	color: #666;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.buttomDesc .xscp .scrollpic2 ul li div p a:hover {
+	color: #f3930a;
+}
+
+.buttomDesc .xscp .scrollpic2 ul li p {
+	width: 200px;
+	height: 25px;
+	text-align: left;
+}
+
+.buttomDesc .xscp .scrollpic2 ul li span {
+	margin-top: 0px;
+	margin-right: 10px;
+	float: right;
+	width: 32px;
+	height: 30px;
+}
+
+.buttomDesc .xscp .scrollpic2 ul li span a {
+	background-image: url(../img/buy2.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
+	display: block;
+}
+
+.buttomDesc .xscp .scrollpic2 ul li span a:hover {
+	background-image: url(../img/buy1.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
 }
