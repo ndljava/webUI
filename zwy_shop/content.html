@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<meta name="viewport" content="width=device-width, initial-scale=-1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=-1" />
 		<link href="css/content.css" rel="stylesheet" type="text/css">
 		<link href="css/header.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="js/nui.js"></script>
@@ -51,6 +51,55 @@
 				var num = doc.parentNode.children[1].children[0];
 				num.value = parseInt(num.value) - 1;
 				if(!num.value || num.value == 'NaN' || parseInt(num.value) < 1) num.value = 1;
+			}
+
+			var mouseOpen = false;
+
+			function mouseAdd() {
+				mouseOpen = !mouseOpen;
+
+				var mouseRect = document.getElementById("mouseRect");
+
+				if(mouseOpen) {
+					mouseRect.style.display = 'block';
+				} else {
+					mouseRect.style.display = 'none';
+				}
+			}
+
+			function mouseAddMover(e) {
+				var space = 50;
+				var targetE = e.target;
+				var mouseRect = document.getElementById("mouseRect");
+
+				var ev = e || window.event;
+
+				var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+				var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+				var x = ev.pageX || ev.clientX + scrollX;
+				var y = ev.pageY || ev.clientY + scrollY;
+
+				x -= space;
+				y -= space;
+
+				mouseRect.style.left = x + "px";
+				mouseRect.style.top = y + "px";
+
+				if(mouseRect.offsetLeft < targetE.offsetLeft) {
+					x = targetE.offsetLeft;
+				} else if(mouseRect.offsetLeft + mouseRect.offsetWidth > targetE.offsetLeft + targetE.offsetWidth) {
+					x = targetE.offsetLeft + targetE.offsetWidth - mouseRect.offsetWidth;
+				}
+
+				if(mouseRect.offsetTop < targetE.offsetTop) {
+					y = targetE.offsetTop;
+				} else if(mouseRect.offsetTop + mouseRect.offsetHeight > targetE.offsetTop + targetE.offsetHeight) {
+					y = targetE.offsetTop + targetE.offsetHeight - mouseRect.offsetHeight;
+				}
+
+				mouseRect.style.left = x + "px";
+				mouseRect.style.top = y + "px";
+
 			}
 		</script>
 
@@ -138,7 +187,10 @@
 				<div class="picMain">
 					<div class="piclist">
 						<div class="mainPic">
-							<img src="img/shopinfo/mainpic.png" width="400" height="320">
+							<img onmouseout="mouseAddMover(event);" onmousemove="mouseAddMover(event);" src="img/shopinfo/mainpic.png" width="400" height="320">
+							<div onclick="mouseAdd()" class="mouseAdd"><img src="img/addImg.png" width="30" height="30"></div>
+							<!--<div  class="mouseMover"></div>-->
+							<div id="mouseRect" style="position: absolute;" class="mouseRect">&nbsp;</div>
 						</div>
 						<div class="mainpicList">
 							<div onclick="leftPic();" class="arrow_l">
@@ -364,16 +416,16 @@
 					</div>
 					<div class="desc1">
 						<div class="item1">
-							<div><span>品牌:</span> <span>京觅</span></div>
-							<div><span>商品名称:</span> <span>京觅</span></div>
-							<div><span>品牌:</span> <span>京觅</span></div>
-							<div><span>品牌:</span> <span>京觅</span></div>
-							<div><span>品牌:</span> <span>京觅</span></div>
-							<div><span>品牌:</span> <span>京觅</span></div>
-							<div><span>品牌:</span> <span>京觅</span></div>
-							<div><span>品牌:</span> <span>京觅</span></div>
-							<div><span>品牌:</span> <span>京觅</span></div>
-							<div><span>品牌:</span> <span>京觅</span></div>
+							<div><span>品牌</span>:<span>京觅</span></div>
+							<div><span>商品名称</span>:<span>京觅</span></div>
+							<div><span>品牌</span>:<span>京觅</span></div>
+							<div><span>品牌</span>:<span>京觅</span></div>
+							<div><span>品牌</span>:<span>京觅</span></div>
+							<div><span>品牌</span>:<span>京觅</span></div>
+							<div><span>品牌</span>:<span>京觅</span></div>
+							<div><span>品牌</span>:<span>京觅</span></div>
+							<div><span>品牌</span>:<span>京觅</span></div>
+							<div><span>品牌</span>:<span>京觅</span></div>
 						</div>
 						<div class="item2">
 							<img src="img/shopinfo/图层11.png" width="750" height="887">
