@@ -19,7 +19,7 @@
 		</style>
 		<script type="text/javascript">
 			var _pos = 0;
-			var _w = 80;
+			var _w = 82;
 
 			function rightPic() {
 				var picList = document.getElementById("picList");
@@ -58,19 +58,34 @@
 			function mouseAdd() {
 				mouseOpen = !mouseOpen;
 
+				var sbtn = document.getElementById("sbtn");
 				var mouseRect = document.getElementById("mouseRect");
+				var bigboximg = document.getElementById("bigImg");
+				var simg = bigboximg.parentNode.getElementsByTagName("img")[0];
+				mouseRect.style.left = simg.offsetLeft + "px";
+				mouseRect.style.top = simg.offsetTop + "px";
 
 				if(mouseOpen) {
 					mouseRect.style.display = 'block';
+					bigboximg.style.display = 'block';
+					sbtn.style.display = 'none';
 				} else {
+					sbtn.style.display = 'block';
 					mouseRect.style.display = 'none';
+					bigboximg.style.display = 'none';
 				}
 			}
 
 			function mouseAddMover(e) {
+				if(!mouseOpen)
+					return;
+
 				var space = 50;
 				var targetE = e.target;
+
 				var mouseRect = document.getElementById("mouseRect");
+				var bigboximg = document.getElementById("bigImg");
+				var bigimg = bigboximg.getElementsByTagName("img")[0];
 
 				var ev = e || window.event;
 
@@ -100,6 +115,33 @@
 				mouseRect.style.left = x + "px";
 				mouseRect.style.top = y + "px";
 
+				var _w = bigimg.offsetWidth / (targetE.offsetWidth + 200);
+				var _h = bigimg.offsetHeight / (targetE.offsetHeight + 120);
+
+				var _x = x - targetE.offsetLeft;
+				var _y = y - targetE.offsetTop;
+
+				bigimg.style.left = -(_x * _w) + "px";
+				bigimg.style.top = -(_y * _h) + "px";
+			}
+
+			function overImg(e) {
+
+				var picList = document.getElementById("picList").getElementsByTagName("img");
+				for(var i = 0; i < picList.length; i++) {
+					picList[i].style.border = '';
+				}
+
+				e.target.style.border = "1px solid #cc0000";
+
+				var srcimg = e.target.src;
+				var mainpics = document.getElementById("mainpics");
+
+				var path = srcimg.substring(srcimg.lastIndexOf("/"));
+				mainpics.src = srcimg.substring(0, srcimg.lastIndexOf("/")) + path.replace(/(\d)/, "$1z");
+				var bigboximg = document.getElementById("bigImg");
+				var bigimg = bigboximg.getElementsByTagName("img")[0];
+				bigimg.src = srcimg.substring(0, srcimg.lastIndexOf("/")) + path.replace(/(\d)/, "$1da");
 			}
 		</script>
 
@@ -187,10 +229,10 @@
 				<div class="picMain">
 					<div class="piclist">
 						<div class="mainPic">
-							<img onmouseout="mouseAddMover(event);" onmousemove="mouseAddMover(event);" src="img/shopinfo/mainpic.png" width="400" height="320">
-							<div onclick="mouseAdd()" class="mouseAdd"><img src="img/addImg.png" width="30" height="30"></div>
-							<!--<div  class="mouseMover"></div>-->
+							<img id="mainpics" onmouseover="mouseAdd();" onmouseout="mouseAdd();" onmousemove="mouseAddMover(event);" src="img/shopinfo/mainpic.png" width="400" height="320">
+							<div id="sbtn" class="mouseAdd"><img src="img/addImg.png" width="30" height="30"></div>
 							<div id="mouseRect" style="position: absolute;" class="mouseRect">&nbsp;</div>
+							<div id="bigImg" class="bigImg"><img src="img/shopinfo/bigimg.png" width="800" height="640"></div>
 						</div>
 						<div class="mainpicList">
 							<div onclick="leftPic();" class="arrow_l">
@@ -198,13 +240,14 @@
 							</div>
 							<div class="picListmask">
 								<div id="picList" class="picList">
-									<a href="#" target="_blank"><img border="0" src="img/shopinfo/l_1.png" width="80" height="80"></a>
-									<a href="#" target="_blank"><img border="0" src="img/shopinfo/l_2.png" width="80" height="80"></a>
-									<a href="#" target="_blank"><img src="img/shopinfo/l_3.png" width="80" height="80"></a>
-									<a href="#" target="_blank"><img src="img/shopinfo/l_1.png" width="80" height="80"></a>
-									<a href="#" target="_blank"><img src="img/shopinfo/l_2.png" width="80" height="80"></a>
-									<a href="#" target="_blank"><img src="img/shopinfo/l_3.png" width="80" height="80"></a>
-									<a href="#" target="_blank"><img src="img/shopinfo/l_1.png" width="80" height="80"></a>
+									<a href="javascript:void();" target="_blank"><img onmouseover="overImg(event);" border="0" src="img/shopinfo/scrpic/1.png" width="78" height="78"></a>
+									<a href="javascript:void();" target="_blank"><img onmouseover="overImg(event);" border="0" src="img/shopinfo/scrpic/2.png" width="78" height="78"></a>
+									<a href="javascript:void();" target="_blank"><img onmouseover="overImg(event);" border="0" src="img/shopinfo/scrpic/3.png" width="78" height="78"></a>
+									<a href="javascript:void();" target="_blank"><img onmouseover="overImg(event);" border="0" src="img/shopinfo/scrpic/4.png" width="78" height="78"></a>
+									<a href="javascript:void();" target="_blank"><img onmouseover="overImg(event);" border="0" src="img/shopinfo/scrpic/1.png" width="78" height="78"></a>
+									<a href="javascript:void();" target="_blank"><img onmouseover="overImg(event);" border="0" src="img/shopinfo/scrpic/2.png" width="78" height="78"></a>
+									<a href="javascript:void();" target="_blank"><img onmouseover="overImg(event);" border="0" src="img/shopinfo/scrpic/3.png" width="78" height="78"></a>
+									<a href="javascript:void();" target="_blank"><img onmouseover="overImg(event);" border="0" src="img/shopinfo/scrpic/4.png" width="78" height="78"></a>
 								</div>
 							</div>
 							<div onclick="rightPic();" class="arrow_r">
@@ -438,6 +481,15 @@
 							<img src="img/shopinfo/图层18.png" width="750" height="736">
 							<img src="img/shopinfo/图层19.png" width="750" height="678">
 							<img src="img/shopinfo/图层20.png" width="750" height="661">
+						</div>
+					</div>
+					<div style="display: none;" class="desc2">
+						<div class="item1">
+							<div class="plselected">全部(<span>169</span>)</div>
+							<div>好评(<span>169</span>)</div>
+							<div>有图(<span>169</span>)</div>
+							<div>追评(<span>169</span>)</div>
+							<div>差评(<span>169</span>)</div>
 						</div>
 					</div>
 				</div>

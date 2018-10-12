@@ -124,9 +124,10 @@
 .topContent .picMain .piclist .mainPic .mouseAdd {
 	width: 30px;
 	height: 30px;
-	margin: -30px 0px 0px 350px;
+	margin: -35px 0px 0px 370px;
 	position: absolute;
 	cursor: pointer;
+	pointer-events: none;
 }
 
 .topContent .picMain .piclist .mainPic .mouseRect {
@@ -151,6 +152,23 @@
 	z-index: 9;
 	margin-left: 50px;
 	margin-top: -270px;
+}
+
+.topContent .picMain .piclist .mainPic .bigImg {
+	position: absolute;
+	z-index: 9;
+	margin-top: -324px;
+	margin-left: 410px;
+	width: 400px;
+	height: 320px;
+	overflow: hidden;
+	display: none;
+}
+
+.topContent .picMain .piclist .mainPic .bigImg img {
+	position: absolute;
+	left: 0px;
+	top: 0px;
 }
 
 .topContent .picMain .piclist .mainpicList {
@@ -184,10 +202,11 @@
 	position: relative;
 }
 
-.topContent .picMain .piclist .mainpicList .picListmask .picList img {
+.topContent .picMain .piclist .mainpicList .picListmask .picList a{
 	border: 0px;
-	margin: 0px;
+	margin: 0px 3px 0px 0px;
 	padding: 0px;
+	float: left;
 }
 
 .topContent .picMain .piclist .mainpicList .arrow_r {
@@ -209,7 +228,7 @@
 
 .topContent .picMain .picContent .picName {
 	font-size: 18px;
-	color: #666666;
+	color: #333333;
 	width: 100%;
 	text-align: left;
 }
@@ -332,9 +351,9 @@
 .topContent .picMain .picContent .typeList .zl .zldesc input {
 	width: 150px;
 	height: 30px;
-	font-size: 16px;
+	font-size: 14px;
 	color: #333333;
-	background-color: #EEEEEE;
+	background-color: #FFFFFF;
 	border: 1px solid #d3d3d3;
 	outline: none;
 	margin-left: 20px;
@@ -360,10 +379,10 @@
 
 .topContent .picMain .picContent .typeList .bg .bgdesc input {
 	width: 150px;
-	height: 30px;
+	height: 30px; 
 	font-size: 16px;
 	color: #333333;
-	background-color: #EEEEEE;
+	background-color: #FFFFFF;
 	border: 1px solid #d3d3d3;
 	outline: none;
 	margin-left: 20px;
@@ -404,7 +423,7 @@
 .topContent .picMain .picContent .serverDesc {
 	margin-top: 20px;
 	font-size: 16px;
-	color: #666666;
+	color: #333333;
 }
 
 .topContent .rightList .rightTitle {
@@ -613,6 +632,7 @@
 
 .buttomDesc .b_left .dpsx {
 	margin-top: 10px;
+	padding-bottom: 10px;
 }
 
 .buttomDesc .b_left .dpsx .dpsxTitle {
@@ -703,7 +723,7 @@
 	width: 150px;
 	height: 39px;
 	color: #999;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 40px;
 	float: left;
 	cursor: pointer;
@@ -843,4 +863,37 @@
 	background-repeat: no-repeat;
 	width: 32px;
 	height: 30px;
+}
+
+.buttomDesc .b_right .desc2 {
+	height: 100%;
+	width: 100%;
+}
+
+.buttomDesc .b_right .desc2 .item1 {
+	height: 60px;
+	width: 100%;
+	border-bottom: 1px solid #D3D3D3;
+	background-color: #FFFFFF;
+}
+
+.buttomDesc .b_right .desc2 .item1 div:first-child {
+	margin-left: 40px;
+}
+
+.buttomDesc .b_right .desc2 .item1 div {
+	margin-left: 20px;
+	margin-top: 15px;
+	background-color: #D2D2D2;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 10px;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+
+.buttomDesc .b_right .desc2 .item1 .plselected {
+	background-color: #F3CB0A;
 }
