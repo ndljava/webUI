@@ -93,6 +93,14 @@
 	float: right;
 }
 
+.headerTop .headerContent .search .inp div {
+	width: 268px;
+	height: 40px;
+	font-size: 16px;
+	color: #999999;
+	margin: 12px -280px 0px 0px;
+}
+
 .headerTop .headerContent .search .inp input {
 	border: 2px solid #F3CB0A;
 	outline: none;
@@ -101,6 +109,7 @@
 	font-size: 16px;
 	color: #333333;
 	padding-left: 52px;
+	background: transparent;
 }
 
 .headerTop .headerContent .search .searchimg {
@@ -159,7 +168,30 @@
 .bodyContent .bodyTop .scsearch {
 	margin-left: 236px;
 	margin-top: 20px;
+	width: 300px;
+	height: 60px;
 	float: left;
+}
+
+.bodyContent .bodyTop .scsearch div {
+	float: left;
+	width: 280px;
+	height: 40px;
+}
+
+.bodyContent .bodyTop .scsearch div:first-child {
+	width: 210px;
+	height: 40px;
+	font-size: 14px;
+	color: #999999;
+	margin: 2px -210px 0px 0px;
+	padding-left: 0px;
+	line-height: 40px;
+	text-align: left;
+}
+
+.bodyContent .bodyTop .scsearch div:last-child {
+	margin-left: -10px;
 }
 
 .bodyContent .bodyTop .scsearch input:first-child {
@@ -170,6 +202,8 @@
 	outline: none;
 	font-size: 14px;
 	color: #333333;
+	background: transparent;
+	float: left;
 }
 
 .bodyContent .bodyTop .scsearch input:last-child {
@@ -182,6 +216,7 @@
 	cursor: pointer;
 	font-size: 14px;
 	color: #FFFFFF;
+	float: left;
 }
 
 .bodyContent .bodyTop>div:last-child {

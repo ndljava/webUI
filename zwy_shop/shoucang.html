@@ -45,7 +45,8 @@
 					</div>
 					<div class="search">
 						<div class="inp">
-							<input type="text" name="" id="" value="人挺好的一体化第一天" />
+							<div id="key1">人挺好的一体化第一天</div>
+							<input onfocus="var key1=document.getElementById('key1'); key1.style.display='none';" onblur="if(this.value!='')key1.style.display='none'; else key1.style.display='';" type="text" name="" id="" value="" />
 						</div>
 						<div class="searchimg">
 							<img src="img/searchlogo.png" width="24" height="24" />
@@ -63,8 +64,11 @@
 						<div>失效商品<span>5</span></div>
 					</div>
 					<div class="scsearch">
-						<input type="text" value="大会对人体和高度认同" />
-						<input type="button" value="搜索" />
+						<div id="key2">大会对人体和高度认同</div>
+						<div>
+							<input onfocus="var key2=document.getElementById('key2'); key2.style.display='none';" onblur="if(this.value!='')key2.style.display='none'; else key2.style.display='';"  type="text" value="" />
+							<input type="button" value="搜索" />
+						</div>
 					</div>
 					<div>
 						批量管理
