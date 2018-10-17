@@ -202,7 +202,7 @@
 	position: relative;
 }
 
-.topContent .picMain .piclist .mainpicList .picListmask .picList a{
+.topContent .picMain .piclist .mainpicList .picListmask .picList a {
 	border: 0px;
 	margin: 0px 3px 0px 0px;
 	padding: 0px;
@@ -379,7 +379,7 @@
 
 .topContent .picMain .picContent .typeList .bg .bgdesc input {
 	width: 150px;
-	height: 30px; 
+	height: 30px;
 	font-size: 16px;
 	color: #333333;
 	background-color: #FFFFFF;
@@ -894,6 +894,139 @@
 	font-size: 16px;
 }
 
+.buttomDesc .b_right .desc2 .item1 div span {
+	pointer-events: none;
+}
+
 .buttomDesc .b_right .desc2 .item1 .plselected {
 	background-color: #F3CB0A;
+}
+
+.buttomDesc .b_right .desc2 .item2 {
+	background-color: #FFFFFF;
+	width: 100%;
+}
+
+.buttomDesc .b_right .desc2 .item2>div {
+	width: 100%;
+	border-bottom: 1px solid #D3D3D3;
+}
+
+.buttomDesc .b_right .desc2 .item2 div div {
+	float: left;
+}
+
+.buttomDesc .b_right .desc2 .item2>div .item_l {
+	width: 50px;
+	padding: 10px 20px 10px 20px;
+}
+
+.buttomDesc .b_right .desc2 .item2>div .item_r {
+	width: 865px;
+	padding: 20px 25px 0px 0px;
+	text-align: left;
+}
+
+.buttomDesc .b_right .desc2 .item2>div .item_r .i_content {
+	width: 100%;
+	color: #333333;
+	font-size: 16px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.buttomDesc .b_right .desc2 .item2>div .item_r .i_space {
+	width: 92%;
+	color: #999999;
+	font-size: 14px;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.buttomDesc .b_right .desc2 .item2>div .item_r .i_space div:last-child {
+	margin-left: 70px;
+}
+
+.buttomDesc .b_right .desc2 .item2>div .item_r .i_icon {
+	width: 8%;
+	margin-top: -3px;
+	color: #F3CB0A;
+	font-size: 16px;
+}
+
+.buttomDesc .b_right .desc2 .item2>div .item_r .i_icon span {
+	display: block;
+	margin: 5px 0px 0px 35px;
+}
+
+.buttomDesc .b_right .desc2 .item2>div .item_r .i_pic {
+	margin-bottom: 10px;
+}
+
+.buttomDesc .b_right .desc2 .item2>div:last-child {
+	border-bottom: 0px;
+}
+
+.buttomDesc .b_right .desc2 .page {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	height: 50px;
+	width: 100%;
+	background-color: #FFFFFF;
+	line-height: 60px;
+	padding-top: 20px;
+}
+
+.buttomDesc .b_right .desc2 .page .pageList {
+	margin-left: 50px;
+}
+
+.buttomDesc .b_right .desc2 .page .pageList div {
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	color: #999999;
+	border: 1px solid #D2D2D2;
+	font-size: 12px;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.buttomDesc .b_right .desc2 .page .pageList .selectBtn {
+	background-color: #F3CB0A;
+	border: 0px;
+	color: #FFFFFF;
+	width: 26px;
+	height: 26px;
+}
+
+.buttomDesc .b_right .desc2 .page .pageskip {
+	display: block;
+	width: 100px;
+	height: 25px;
+	font-size: 16px;
+	color: #999999;
+	margin-left: 20px;
+	margin-top: -16px;
+}
+
+.buttomDesc .b_right .desc2 .page .pageskip input {
+	width: 25px;
+	height: 20px;
+	border: 1px solid #999999;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.buttomDesc .b_right .desc3 {
+	width: 100%;
+	text-align: left;
+	background-color: #FFFFFF;
+}
+
+.buttomDesc .b_right .desc4 {
+	width: 91.8%;
+	text-align: left;
+	background-color: #FFFFFF;
+	padding: 30px 40px 0px 40px;
 }

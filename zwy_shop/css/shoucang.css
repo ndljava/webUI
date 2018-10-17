@@ -1,0 +1,354 @@
+@charset "utf-8";
+.fnt24cc0000 {
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color: #cc0000;
+}
+
+.headwordback {
+	width: 100%;
+	background-color: #E5E5E5;
+}
+
+.headword {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #999;
+	height: 40px;
+	width: 1200px;
+	line-height: 40px;
+}
+
+.headword a {
+	float: left;
+	width: 80px;
+	text-decoration: none;
+	color: #999;
+}
+
+.headword a:first-child {
+	margin-right: 630px;
+}
+
+.headword a:hover {
+	color: #f3930a;
+}
+
+.headerTop {
+	height: 100px;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+.headerTop .headerContent {
+	height: 100px;
+	width: 1200px;
+}
+
+.headerTop .headerContent div {
+	float: left;
+}
+
+.headerTop .headerContent .logo {
+	margin-top: 25px;
+	width: 118px;
+	height: 48px;
+}
+
+.headerTop .headerContent .sclogo {
+	margin-top: 36px;
+	margin-left: 28px;
+}
+
+.headerTop .headerContent .sclogo .wdsc {
+	font-size: 24px;
+	color: #F3CB0A;
+}
+
+.headerTop .headerContent .sclogo .fh {
+	margin-left: 20px;
+	color: #999999;
+	font-size: 14px;
+}
+
+.headerTop .headerContent .sclogo .fh a {
+	text-decoration: none;
+	color: #999999;
+	font-size: 14px;
+}
+
+.headerTop .headerContent .sclogo .sy {
+	color: #F3CB0A;
+	font-size: 14px;
+}
+
+.headerTop .headerContent .sclogo .sy a {
+	text-decoration: none;
+	color: #F3CB0A;
+	font-size: 14px;
+}
+
+.headerTop .headerContent .search {
+	margin-top: 30px;
+	float: right;
+}
+
+.headerTop .headerContent .search .inp input {
+	border: 2px solid #F3CB0A;
+	outline: none;
+	width: 268px;
+	height: 40px;
+	font-size: 16px;
+	color: #333333;
+	padding-left: 52px;
+}
+
+.headerTop .headerContent .search .searchimg {
+	margin-left: -300px;
+	margin-top: 12px;
+}
+
+.headerTop .headerContent .search .searchBtn input {
+	width: 80px;
+	height: 44px;
+	font-size: 18px;
+	color: #FFFFFF;
+	border: 2px solid #F3CB0A;
+	outline: none;
+	background-color: #F3CB0A;
+	cursor: pointer;
+}
+
+.bodyContent {
+	width: 1200px;
+	height: auto;
+}
+
+.bodyContent .bodyTop {
+	height: 80px;
+	width: 1200px;
+	background-color: #FFFFFF;
+}
+
+.bodyContent .bodyTop div {
+	float: left;
+}
+
+.bodyContent .bodyTop .blist {
+	padding-top: 30px;
+}
+
+.bodyContent .bodyTop .blist div {
+	float: left;
+	font-size: 18px;
+	color: #666666;
+	margin: 0px 20px 0px 20px;
+	cursor: pointer;
+	height: 30px;
+}
+
+.bodyContent .bodyTop .blist div span {
+	margin-left: 10px;
+	pointer-events: none;
+}
+
+.bodyContent .bodyTop .blist .selectDiv {
+	color: #F3CB0A;
+}
+
+.bodyContent .bodyTop .scsearch {
+	margin-left: 236px;
+	margin-top: 20px;
+	float: left;
+}
+
+.bodyContent .bodyTop .scsearch input:first-child {
+	border: 1px solid #D2D2D2;
+	width: 210px;
+	height: 40px;
+	padding-left: 10px;
+	outline: none;
+	font-size: 14px;
+	color: #333333;
+}
+
+.bodyContent .bodyTop .scsearch input:last-child {
+	border: 1px solid #bfbfbf;
+	background-color: #bfbfbf;
+	width: 60px;
+	height: 42px;
+	margin-left: -5px;
+	outline: none;
+	cursor: pointer;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+.bodyContent .bodyTop>div:last-child {
+	font-size: 16px;
+	color: #666666;
+	float: right;
+	margin: 30px 20px auto;
+	cursor: pointer;
+}
+
+.bodyContent .bodyList {
+	width: 1200px;
+}
+
+.bodyContent .bodyList ul {
+	width: 1200px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+}
+
+.bodyContent .bodyList ul li {
+	width: 236px;
+	height: 288px;
+	margin-top: 3px;
+	background-color: #FFFFFF;
+	text-align: left;
+}
+
+
+/*.bodyContent .bodyList ul li:nth-child(5) {
+	margin: 3px 0px 0px 0px;
+}*/
+
+.bodyContent .bodyList ul li div {
+	padding: 0px 10px 10px 10px;
+}
+
+.bodyContent .bodyList ul li div p {
+	margin: 0px;
+	padding: 0px;
+}
+
+.bodyContent .bodyList ul li div p:first-child {
+	margin: 8px 0px 0px 5px;
+	padding: 0px;
+	height: 50px;
+}
+
+.bodyContent .bodyList ul li div p a {
+	color: #333333;
+	text-decoration: none;
+}
+
+.bodyContent .bodyList ul li div p a:hover {
+	color: #F3930A;
+}
+
+.bodyContent .bodyList ul li div span {
+	margin-top: -35px;
+	margin-right: 10px;
+	float: right;
+	width: 32px;
+	height: 30px;
+}
+
+.bodyContent .bodyList ul li div span a {
+	background-image: url(../img/buy2.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
+	display: block;
+}
+
+.bodyContent .bodyList ul li div span a:hover {
+	background-image: url(../img/buy1.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
+}
+
+.bodyBottom {
+	margin-top: 200px;
+	width: 1200px;
+}
+
+.bodyBottom .bottomTitle {
+	width: 1200px;
+	height: 60px;
+	background-color: #FFFFFF;
+	line-height: 60px;
+}
+
+.bodyBottom .bottomContent {
+	width: 1200px;
+	margin-bottom: 100px;
+}
+
+.bodyBottom .bottomContent ul {
+	width: 1200px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+}
+
+.bodyBottom .bottomContent ul li {
+	width: 236px;
+	height: 288px;
+	margin-top: 3px;
+	background-color: #FFFFFF;
+	text-align: left;
+}
+
+
+/*.bodyContent .bodyList ul li:nth-child(5) {
+	margin: 3px 0px 0px 0px;
+}*/
+
+.bodyBottom .bottomContent ul li div {
+	padding: 0px 10px 10px 10px;
+}
+
+.bodyBottom .bottomContent ul li div p {
+	margin: 0px;
+	padding: 0px;
+}
+
+.bodyBottom .bottomContent ul li div p:first-child {
+	margin: 8px 0px 0px 5px;
+	padding: 0px;
+	height: 50px;
+}
+
+.bodyBottom .bottomContent ul li div p a {
+	color: #333333;
+	text-decoration: none;
+}
+
+.bodyBottom .bottomContent ul li div p a:hover {
+	color: #F3930A;
+}
+
+.bodyBottom .bottomContent ul li div span {
+	margin-top: -35px;
+	margin-right: 10px;
+	float: right;
+	width: 32px;
+	height: 30px;
+}
+
+.bodyBottom .bottomContent ul li div span a {
+	background-image: url(../img/buy2.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
+	display: block;
+}
+
+.bodyBottom .bottomContent ul li div span a:hover {
+	background-image: url(../img/buy1.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 30px;
+}
