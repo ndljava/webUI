@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=-1" />
+		<title></title>
+		<link href="css/dingdang.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			body {
+				background: #eeeeee;
+				min-width: 1250px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div align="center">
+			<div class="headwordback">
+				<div class="headword">
+					<a href="#" target="_blank">欢迎来到商城</a>
+					<a href="#" target="_blank">登录/注册</a>
+					<a href="#" target="_blank">我的订单</a>
+					<a href="#" target="_blank">购物车</a>
+					<a href="#" target="_blank">联系客服</a>
+					<a href="#" target="_blank">商城指南</a>
+					<a href="#" target="_blank">手机商城</a>
+				</div>
+			</div>
+			<div class="headerTop">
+				<div class="headerContent">
+					<div class="icon">
+						<div><img src="img/qb/icon.png" width="60" height="60"></div>
+						<span id="userName">super</span>
+					</div>
+					<div class="headerList">
+						<div>首页</div>
+						<div>账户设置</div>
+						<div>消息</div>
+					</div>
+					<div class="search">
+						<div></div>
+						<div id="key1" class="key1">多人通话软碟通</div>
+						<div><input onfocus="var key1=document.getElementById('key1'); key1.style.display='none';" onblur="if(this.value!='')key1.style.display='none'; else key1.style.display='';" type="text" name="" id="" value="" /></div>
+						<div class="icon"><img src="img/searchlogo.png" /></div>
+						<div><input type="button" value="搜索"></div>
+					</div>
+				</div>
+			</div>
+			<div class="bodyContent">
+				<div class="bodyLeft">
+					<div>
+						<h4>全部功能</h4>
+					</div>
+					<ul>
+						<li>
+							<a href="#" target="_blank">我的购物车</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">所有订单</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">我的收藏</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">我的优惠券</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">评价管理</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">我的足迹</a>
+						</li>
+					</ul>
+				</div>
+				<div class="bodyRight">
+					<div id="tlist" class="r_title">
+						<div class="selectDiv">所有订单</div>
+						<div>待付款</div>
+						<div>待发货</div>
+						<div>待收货</div>
+						<div>待评价</div>
+						<div>
+							<div><img src="img/qb/4.png" width="20" height="25"></div>
+							<div>回收箱</div>
+						</div>
+					</div>
+					<div class="msearch">
+						<div></div>
+						<div id="key2" class="key2">大会对人体和高度认同</div>
+						<div>
+							<input onfocus="var key2=document.getElementById('key2'); key2.style.display='none';" onblur="if(this.value!='')key2.style.display='none'; else key2.style.display='';" type="text" value="" />
+							<input type="button" value="搜索" />
+						</div>
+					</div>
+					<div class="buy_list">
+						<table width="980" border="0" height="215" cellspacing="0" cellpadding="0">
+							<tr class="t_title" height="60" align="center">
+								<td width="480">商品名称</td>
+								<td width="120">商品操作</td>
+								<td width="120">实付款</td>
+								<td width="120">交易状态</td>
+								<td width="120">交易操作</td>
+							</tr>
+							<tr>
+								<td class="t_action" height="50" colspan="5">
+									<input onchange="setSelected(this);" name="checkbox" type="checkbox" />&nbsp;&nbsp;
+									<font size="2" color="#333333">全选</font>&nbsp;&nbsp;
+									<font size="2" color="#999999">批量确认收货</font>
+									<div>
+										<input class="dis" type="button" value="上一页" />
+										<input class="enb" type="button" value="下一页" />
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td height="235" valign="top" colspan="5">
+									<table width="980" height="215" border="0" cellspacing="0" cellpadding="0">
+										<tr bgcolor="#FC9835" height="40">
+											<td class="t_action" colspan="6">
+												<input type="checkbox" name="checkbox" id="checkbox"> &nbsp;
+												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
+											</td>
+										</tr>
+										<tr class="t_child" height="175">
+											<td width="180">
+												<a href="#" target="_blank"><img src="img/qb/pear.png" width="180" height="174"></a>
+											</td>
+											<td class="t_name" width="300">
+												<div class="fnt16333">吉普牛仔裤男春季新款商务休闲直筒男士弹力复古水洗牛仔长裤子男装</div>
+												<div class="fnt14999">重量: 4kg&nbsp;&nbsp;包装:礼盒</div>
+												<div class="fnt18333">￥29.9</div>
+												<div class="fnt18333">1</div>
+											</td>
+											<td width="120" align="center">投诉</td>
+											<td width="120" align="center">
+												<div class="fnt16333">￥29.9</div>
+												<div class="fnt14999">(含运费:￥5)</div>
+											</td>
+											<td width="120" align="center">
+												交易成功<br />
+												<a href="#" target="_blank">订单详情</a>
+											</td>
+											<td width="120" align="center">
+												<a href="#" target="_blank">还原订单</a><br />
+												<a href="#" target="_blank">删除</a>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="235" valign="top" colspan="5">
+									<table width="980" border="0" height="225" cellspacing="0" cellpadding="0">
+										<tr bgcolor="#FC9835" height="40">
+											<td class="t_action" colspan="6">
+												<input type="checkbox" name="checkbox" id="checkbox"> &nbsp;
+												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
+											</td>
+										</tr>
+										<tr class="t_child" height="175">
+											<td width="180">
+												<a href="#" target="_blank"><img src="img/qb/pear.png" width="180" height="174"></a>
+											</td>
+											<td class="t_name" width="300">
+												<div class="fnt16333">吉普牛仔裤男春季新款商务休闲直筒男士弹力复古水洗牛仔长裤子男装</div>
+												<div class="fnt14999">重量: 4kg&nbsp;&nbsp;包装:礼盒</div>
+												<div class="fnt18333">￥29.9</div>
+												<div class="fnt18333">1</div>
+											</td>
+											<td width="120" align="center">投诉</td>
+											<td width="120" align="center">
+												<div class="fnt16333">￥29.9</div>
+												<div class="fnt14999">(含运费:￥5)</div>
+											</td>
+											<td width="120" align="center">
+												交易成功<br />
+												<a href="#" target="_blank">订单详情</a>
+											</td>
+											<td width="120" align="center">
+												<a href="#" target="_blank">还原订单</a><br />
+												<a href="#" target="_blank">删除</a>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="235" valign="top" colspan="5">
+									<table width="980" border="0" height="225" cellspacing="0" cellpadding="0">
+										<tr bgcolor="#FC9835" height="40">
+											<td class="t_action" colspan="6">
+												<input type="checkbox" name="checkbox" id="checkbox"> &nbsp;
+												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
+											</td>
+										</tr>
+										<tr class="t_child" height="175">
+											<td width="180">
+												<a href="#" target="_blank"><img src="img/qb/pear.png" width="180" height="174"></a>
+											</td>
+											<td class="t_name" width="300">
+												<div class="fnt16333">吉普牛仔裤男春季新款商务休闲直筒男士弹力复古水洗牛仔长裤子男装</div>
+												<div class="fnt14999">重量: 4kg&nbsp;&nbsp;包装:礼盒</div>
+												<div class="fnt18333">￥29.9</div>
+												<div class="fnt18333">1</div>
+											</td>
+											<td width="120" align="center">投诉</td>
+											<td width="120" align="center">
+												<div class="fnt16333">￥29.9</div>
+												<div class="fnt14999">(含运费:￥5)</div>
+											</td>
+											<td width="120" align="center">
+												交易成功<br />
+												<a href="#" target="_blank">订单详情</a>
+											</td>
+											<td width="120" align="center">
+												<a href="#" target="_blank">还原订单</a><br />
+												<a href="#" target="_blank">删除</a>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="235" valign="top" colspan="5">
+									<table width="980" border="0" height="225" cellspacing="0" cellpadding="0">
+										<tr bgcolor="#FC9835" height="40">
+											<td class="t_action" colspan="6">
+												<input type="checkbox" name="checkbox" id="checkbox"> &nbsp;
+												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
+											</td>
+										</tr>
+										<tr class="t_child" height="175">
+											<td width="180">
+												<a href="#" target="_blank"><img src="img/qb/pear.png" width="180" height="174"></a>
+											</td>
+											<td class="t_name" width="300">
+												<div class="fnt16333">吉普牛仔裤男春季新款商务休闲直筒男士弹力复古水洗牛仔长裤子男装</div>
+												<div class="fnt14999">重量: 4kg&nbsp;&nbsp;包装:礼盒</div>
+												<div class="fnt18333">￥29.9</div>
+												<div class="fnt18333">1</div>
+											</td>
+											<td width="120" align="center">投诉</td>
+											<td width="120" align="center">
+												<div class="fnt16333">￥29.9</div>
+												<div class="fnt14999">(含运费:￥5)</div>
+											</td>
+											<td width="120" align="center">
+												交易成功<br />
+												<a href="#" target="_blank">订单详情</a>
+											</td>
+											<td width="120" align="center">
+												<a href="#" target="_blank">还原订单</a><br />
+												<a href="#" target="_blank">删除</a>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="r_bottom">
+						<div>
+							<input onchange="setSelected(this);" name="checkbox" type="checkbox" />&nbsp;&nbsp;
+							<font size="2" color="#333333">全选</font>&nbsp;&nbsp;
+							<font size="2" color="#999999">批量确认收货</font>
+						</div>
+						<div class="nump">
+							<div>&lt;</div>
+							<div>1</div>
+							<div class="selectBtn">2</div>
+							<div>3</div>
+							<div>4</div>
+							<div>...</div>
+							<div>10</div>
+							<div>&gt;</div>
+						</div>
+						<div class="redirection">
+							跳转 <input type="text" name="redirection" /> 页
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bodyBottom">
+				<div class="btitle">最近浏览</div>
+				<div class="bcontent">
+					<ul>
+						<li>
+							<a href="#" target="_blank"><img src="img/dianpu/图层5.png" width="236" height="190" /></a>
+							<div>
+								<p>
+									<a href="#" target="_blank">人好的幸福感很多人好的好的好的认同爱人噶</a>
+								</p>
+								<p class="fnt24cc0000">￥1200.00</p>
+								<span><a href="#" target="_blank"></a></span>
+							</div>
+						</li>
+						<li>
+							<a href="#" target="_blank"><img src="img/dianpu/图层5.png" width="236" height="190" /></a>
+							<div>
+								<p>
+									<a href="#" target="_blank">人好的幸福感很多人好的好的好的认同爱人噶</a>
+								</p>
+								<p class="fnt24cc0000">￥1200.00</p>
+								<span><a href="#" target="_blank"></a></span>
+							</div>
+						</li>
+						<li>
+							<a href="#" target="_blank"><img src="img/dianpu/图层5.png" width="236" height="190" /></a>
+							<div>
+								<p>
+									<a href="#" target="_blank">人好的幸福感很多人好的好的好的认同爱人噶</a>
+								</p>
+								<p class="fnt24cc0000">￥1200.00</p>
+								<span><a href="#" target="_blank"></a></span>
+							</div>
+						</li>
+						<li>
+							<a href="#" target="_blank"><img src="img/dianpu/图层5.png" width="236" height="190" /></a>
+							<div>
+								<p>
+									<a href="#" target="_blank">人好的幸福感很多人好的好的好的认同爱人噶</a>
+								</p>
+								<p class="fnt24cc0000">￥1200.00</p>
+								<span><a href="#" target="_blank"></a></span>
+							</div>
+						</li>
+						<li>
+							<a href="#" target="_blank"><img src="img/dianpu/图层5.png" width="236" height="190" /></a>
+							<div>
+								<p>
+									<a href="#" target="_blank">人好的幸福感很多人好的好的好的认同爱人噶</a>
+								</p>
+								<p class="fnt24cc0000">￥1200.00</p>
+								<span><a href="#" target="_blank"></a></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var tlist = document.getElementById("tlist");
+
+			for(var i = 0; i < tlist.children.length - 1; i++) {
+				tlist.children[i].addEventListener("click", changeTab);
+			}
+
+			function changeTab(e) {
+				for(var i = 0; i < tlist.children.length - 1; i++) {
+					tlist.children[i].className = '';
+				}
+				e.target.className = 'selectDiv';
+			}
+
+			function setSelected(t) {
+				var chbox = document.getElementsByName("checkbox");
+				console.log(chbox.length+"|"+t.checked);
+
+				for(var i = 0; i < chbox.length; i++) {
+					chbox[i].checked = t.checked;
+				}
+
+			}
+		</script>
+	</body>
+
+</html>
