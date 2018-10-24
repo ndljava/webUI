@@ -1,5 +1,7 @@
 /**
  * 
+ * 星计分特效
+ * 
  * 
  */
 
@@ -26,7 +28,6 @@ function StarSelect(id, starurl, num) {
 			li.style.setProperty('margin-left', '3px');
 
 			li.addEventListener("click", function(e) {
-				console.log(e + "" + i + "" + selectIndex);
 				if(e.target.nodeName == 'IMG') {
 					selectIndex = lis.indexOf(e.target.parentNode);
 				}
@@ -75,5 +76,80 @@ function StarSelect(id, starurl, num) {
 		this.createStarUI();
 	}
 
-	this.init();
+	return this.init();
+}
+
+/**
+ * 复选框
+ * [w,h],[trueimg,falseimg]
+ */
+function Ncheckbox(continer, size, img) {
+	if(!continer)
+		return;
+
+	var _w = size[0];
+	var _h = size[1];
+
+	if(size == null || _w == 0 || _h == 0) {
+		_w = 24;
+		_h = 24;
+	}
+
+	var trueimg = img[1];
+	var falseimg = img[0];
+
+	var _continer = continer;
+
+	//选中状态
+	var isSelected = false;
+
+	var cb;
+
+	this.createUi = function() {
+
+		cb.style.setProperty("width", _w + "px");
+		cb.style.setProperty("height", _h + "px");
+		cb.style.setProperty("background-image", "url(" + falseimg + ")");
+		cb.style.setProperty("border", "0px solid #000");
+		cb.style.setProperty("display", "inline-block");
+		cb.style.setProperty("cursor", "pointer");
+
+		cb.addEventListener("click", function() {
+			isSelected = !isSelected;
+
+			if(isSelected)
+				cb.style.setProperty("background-image", "url(" + trueimg + ")");
+			else
+				cb.style.setProperty("background-image", "url(" + falseimg + ")");
+
+			cb.setAttribute("checked", isSelected);
+		});
+
+		_continer.appendChild(cb);
+	}
+
+	this.getChecked = function() {
+		return isSelected;
+	}
+
+	this.setChecked = function(v) {
+		isSelected = v;
+		if(isSelected)
+			cb.style.setProperty("background-image", "url(" + trueimg + ")");
+		else
+			cb.style.setProperty("background-image", "url(" + falseimg + ")");
+
+		cb.setAttribute("checked", isSelected);
+	}
+
+	this.checkBox = function() {
+		return cb;
+	}
+
+	this.init = function() {
+		cb = document.createElement("div");
+		this.createUi();
+	}
+
+	return this.init();
 }

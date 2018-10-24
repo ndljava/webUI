@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=-1" />
 		<title></title>
 		<link href="css/dingdang.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/nui.js"></script>
 		<style type="text/css">
 			* {
 				margin: 0px;
@@ -109,7 +110,8 @@
 							</tr>
 							<tr>
 								<td class="t_action" height="50" colspan="5">
-									<input onchange="setSelected(this);" name="checkbox" type="checkbox" />&nbsp;&nbsp;
+									<div id="q1"></div>
+									<!--<input onchange="setSelected(this);" name="checkbox" type="checkbox" />-->&nbsp;&nbsp;
 									<font size="2" color="#333333">全选</font>&nbsp;&nbsp;
 									<font size="2" color="#999999">批量确认收货</font>
 									<div>
@@ -123,7 +125,8 @@
 									<table width="980" height="215" border="0" cellspacing="0" cellpadding="0">
 										<tr bgcolor="#FC9835" height="40">
 											<td class="t_action" colspan="6">
-												<input type="checkbox" name="checkbox" id="checkbox"> &nbsp;
+												<div style="float: left; margin-top: 4px;" class="d1" id="d2"></div>
+												<!--<input type="checkbox" name="checkbox" id="checkbox">-->&nbsp;
 												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
 											</td>
 										</tr>
@@ -156,10 +159,11 @@
 							</tr>
 							<tr>
 								<td height="235" valign="top" colspan="5">
-									<table width="980" border="0" height="225" cellspacing="0" cellpadding="0">
+									<table width="980" height="215" border="0" cellspacing="0" cellpadding="0">
 										<tr bgcolor="#FC9835" height="40">
 											<td class="t_action" colspan="6">
-												<input type="checkbox" name="checkbox" id="checkbox"> &nbsp;
+												<div style="float: left; margin-top: 4px;" class="d1" id="d1"></div>
+												<!--<input type="checkbox" name="checkbox" id="checkbox">-->&nbsp;
 												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
 											</td>
 										</tr>
@@ -192,10 +196,11 @@
 							</tr>
 							<tr>
 								<td height="235" valign="top" colspan="5">
-									<table width="980" border="0" height="225" cellspacing="0" cellpadding="0">
+									<table width="980" height="215" border="0" cellspacing="0" cellpadding="0">
 										<tr bgcolor="#FC9835" height="40">
 											<td class="t_action" colspan="6">
-												<input type="checkbox" name="checkbox" id="checkbox"> &nbsp;
+												<div style="float: left; margin-top: 4px;" class="d1" id="d1"></div>
+												<!--<input type="checkbox" name="checkbox" id="checkbox">-->&nbsp;
 												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
 											</td>
 										</tr>
@@ -228,10 +233,11 @@
 							</tr>
 							<tr>
 								<td height="235" valign="top" colspan="5">
-									<table width="980" border="0" height="225" cellspacing="0" cellpadding="0">
+									<table width="980" height="215" border="0" cellspacing="0" cellpadding="0">
 										<tr bgcolor="#FC9835" height="40">
 											<td class="t_action" colspan="6">
-												<input type="checkbox" name="checkbox" id="checkbox"> &nbsp;
+												<div style="float: left; margin-top: 4px;" class="d1" id="d1"></div>
+												<!--<input type="checkbox" name="checkbox" id="checkbox">-->&nbsp;
 												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
 											</td>
 										</tr>
@@ -266,7 +272,8 @@
 					</div>
 					<div class="r_bottom">
 						<div>
-							<input onchange="setSelected(this);" name="checkbox" type="checkbox" />&nbsp;&nbsp;
+							<div style="float: left;" id="q2"></div>
+							<!--<input onchange="setSelected(this);" name="checkbox" type="checkbox" />-->&nbsp;&nbsp;
 							<font size="2" color="#333333">全选</font>&nbsp;&nbsp;
 							<font size="2" color="#999999">批量确认收货</font>
 						</div>
@@ -360,13 +367,21 @@
 			}
 
 			function setSelected(t) {
-				var chbox = document.getElementsByName("checkbox");
-				console.log(chbox.length+"|"+t.checked);
-
-				for(var i = 0; i < chbox.length; i++) {
-					chbox[i].checked = t.checked;
+				for(var i = 0; i < checkboxList.length; i++) {
+					checkboxList[i].setChecked(eval(t.target.getAttribute("checked")));
 				}
+			}
 
+			var checkboxList = [];
+			checkboxList.push(new Ncheckbox(document.getElementById("q1"), [14, 14], ["img/ui/z1_m.png", "img/ui/z1_x.png"]));
+			checkboxList.push(new Ncheckbox(document.getElementById("q2"), [14, 14], ["img/ui/z1_m.png", "img/ui/z1_x.png"]));
+
+			checkboxList[0].checkBox().addEventListener("click", setSelected);
+			checkboxList[1].checkBox().addEventListener("click", setSelected);
+
+			var glist = document.getElementsByClassName("d1");
+			for(var i = 0; i < glist.length; i++) {
+				checkboxList.push(new Ncheckbox(glist[i], [14, 14], ["img/ui/z2_m.png", "img/ui/z2_x.png"]));
 			}
 		</script>
 	</body>
