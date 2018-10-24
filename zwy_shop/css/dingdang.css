@@ -74,6 +74,7 @@
 	float: left;
 	padding: 10px 0px 0px 40px;
 	width: 200px;
+	cursor: pointer;
 }
 
 .headerTop .headerContent .icon div {
@@ -138,7 +139,7 @@
 	height: 40px;
 	background: transparent;
 	outline: none;
-	border: 1px solid #D2D2D2;
+	border: 0px solid #D2D2D2;
 	padding-left: 60px;
 	font-size: 14px;
 	color: #333333;
@@ -151,7 +152,7 @@
 
 .headerTop .headerContent .search div input[type='button'] {
 	width: 60px;
-	height: 42px;
+	height: 41px;
 	background-color: #BFBFBF;
 	border: 0px;
 	font-size: 14px;
@@ -177,6 +178,8 @@
 
 .bodyContent .bodyLeft div {
 	margin: 20px 0px 0px 0px;
+	font-size: 16px;
+	color: #333333;
 }
 
 .bodyContent .bodyLeft ul li {
@@ -238,7 +241,7 @@
 	margin-left: 350px;
 	margin-top: 20px;
 	width: 64%;
-	height: 70px;
+	height: 50px;
 }
 
 .bodyContent .bodyRight .msearch div {
@@ -250,7 +253,7 @@
 .bodyContent .bodyRight .msearch div:first-child {
 	float: left;
 	width: 280px;
-	height: 40px;
+	height: 42px;
 	background-color: #FFFFFF;
 	margin-right: -270px;
 }
@@ -304,17 +307,29 @@
 	border-bottom: 1px solid #D2D2D2;
 }
 
-.bodyContent .bodyRight .buy_list .t_action {
+.bodyContent .bodyRight .buy_list .t_action{
 	padding-left: 20px;
+	padding-top: 0px;
+	height: 50px;
+}
+
+.bodyContent .bodyRight .buy_list .t_action .plqrsh {
+	width: 120px;
+	margin-left: 0px;
+	display: inline;
+	font-size: 14px;
+	color: #999999;
+	cursor: pointer;
 }
 
 .bodyContent .bodyRight .buy_list .t_action div:last-child {
-	width: 670px;
+	width: 580px;
 	float: right;
 }
 
 .bodyContent .bodyRight .buy_list .t_action div input {
 	margin-right: 40px;
+	margin-top: -10px;
 }
 
 .bodyContent .bodyRight .buy_list .t_action #q1 {
@@ -367,15 +382,21 @@
 }
 
 .bodyContent .bodyRight .buy_list .t_child .t_name div {
-	margin-top: 15px;
+	margin-top: 11px;
 	margin-left: 30px;
 	margin-right: 30px;
+}
+
+.bodyContent .bodyRight .buy_list .t_child .t_name div:first-child {
+	margin-top: 35px;
 }
 
 .bodyContent .bodyRight .buy_list .t_child td a {
 	color: #333333;
 	font-size: 16px;
 	text-decoration: none;
+	margin-top: 9px;
+	display: block;
 }
 
 .bodyContent .bodyRight .buy_list .t_child td a:hover {
@@ -398,6 +419,15 @@
 	float: left;
 	height: 60px;
 	line-height: 60px;
+}
+
+.bodyContent .bodyRight .r_bottom div .plqrsh {
+	width: 120px;
+	margin-left: 0px;
+	display: inline;
+	font-size: 14px;
+	color: #999999;
+	cursor: pointer;
 }
 
 .bodyContent .bodyRight .r_bottom .nump {
