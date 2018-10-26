@@ -1,0 +1,488 @@
+@charset "utf-8";
+.headwordback {
+	background-color: #f8f8f8;
+	width: 100%;
+}
+
+.headword {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #999;
+	height: 40px;
+	width: 1200px;
+	line-height: 40px;
+}
+
+.headword a {
+	float: left;
+	width: 80px;
+	text-decoration: none;
+	color: #999;
+}
+
+.headword a:first-child {
+	margin-right: 630px;
+}
+
+.headword a:hover {
+	color: #f3930a;
+}
+
+.headerTop {
+	width: 100%;
+	height: 100px;
+	background-color: #FFFFFF;
+}
+
+.headerTop .headerContent {
+	width: 1200px;
+	height: 100%;
+}
+
+.headerTop .headerContent div {
+	float: left;
+}
+
+.headerTop .headerContent .headerleft {
+	margin: 25px 0px 0px 0px;
+}
+
+.headerTop .headerContent .headerleft>div:last-child {
+	margin-left: 28px;
+	margin-top: 15px;
+}
+
+.headerTop .headerContent .headerleft>div:last-child div:first-child {
+	font-size: 14px;
+	color: #999999;
+	cursor: pointer;
+}
+
+.headerTop .headerContent .headerleft>div:last-child div:last-child {
+	font-size: 14px;
+	color: #F3930A;
+	cursor: pointer;
+}
+
+.headerTop .headerContent .headerright {
+	margin-left: 292px;
+}
+
+.headerTop .headerContent .headerright .keyPoint {
+	margin-top: 20px;
+	width: 75px;
+	float: left;
+}
+
+.headerTop .headerContent .headerright .keyPoint div {
+	float: none;
+}
+
+.headerTop .headerContent .headerright .keyPoint .closeDiv {
+	font-size: 18px;
+	color: #D3D3D3;
+}
+
+.headerTop .headerContent .headerright .keyPoint .openDiv {
+	font-size: 18px;
+	color: #ec5706;
+}
+
+.headerTop .headerContent .headerright .keyPoint div:last-child {
+	margin-top: 10px;
+}
+
+.headerTop .headerContent .headerright .keyLine {
+	margin-top: 20px;
+	width: 80px;
+}
+
+.headerTop .headerContent .headerright .keyLine .openleftLine {
+	margin-top: 48px;
+	margin-left: -25px;
+	width: 65px;
+	border-bottom: 2px solid #ec5706;
+	float: left;
+}
+
+.headerTop .headerContent .headerright .keyLine .closeleftLine {
+	margin-top: 48px;
+	margin-left: -25px;
+	width: 65px;
+	border-bottom: 2px solid #D3D3D3;
+	float: left;
+}
+
+.headerTop .headerContent .headerright .keyLine .openrightLine {
+	margin-top: 48px;
+	margin-right: -25px;
+	margin-left: 0px;
+	width: 65px;
+	border-bottom: 2px solid #ec5706;
+	float: left;
+}
+
+.headerTop .headerContent .headerright .keyLine .closerightLine {
+	margin-top: 48px;
+	margin-right: -25px;
+	margin-left: 0px;
+	width: 65px;
+	border-bottom: 2px solid #D3D3D3;
+	float: left;
+}
+
+.bodyContent {
+	width: 1200px;
+	height: 440px;
+	margin-top: 10px;
+	background-color: #FFFFFF;
+}
+
+.bodyContent .topTitle {
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	color: #333333;
+}
+
+.bodyContent .topContent {
+	width: 100%;
+	height: 70%;
+	margin: 0px 38px 0px 38px;
+}
+
+.bodyContent .topContent>div {
+	float: left;
+	width: 240px;
+	height: 140px;
+	padding: 0px 10px 0px 10px;
+	border: 2px solid #999999;
+	margin-right: 28px;
+	margin-top: 10px;
+}
+
+.bodyContent .topContent>div * {
+	pointer-events: none;
+}
+
+.bodyContent .topContent .selectedState {
+	border: 2px solid #ec5706;
+	background: url(../img/jiesuang/arrow.png);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+}
+
+.bodyContent .topContent>div>div:first-child {
+	width: 100%;
+	height: 50%;
+	margin: 18px 0px 0px 0px;
+	text-align: left;
+	line-height: 30px;
+	font-size: 16px;
+	color: #666666;
+}
+
+.bodyContent .topContent>div>div:last-child {
+	width: 100%;
+	height: 40%;
+	margin: 14px 0px 0px 0px;
+	text-align: left;
+}
+
+.bodyContent .topContent>div>div div:first-child {
+	width: 40%;
+	height: 40%;
+	font-size: 16px;
+	color: #666666;
+	float: left;
+}
+
+.bodyContent .topContent>div>div div:last-child {
+	width: 60%;
+	height: 40%;
+	font-size: 16px;
+	color: #666666;
+	float: left;
+}
+
+.bodyContent .topbottom {
+	margin-top: 34px;
+	margin-right: 38px;
+	float: right;
+}
+
+.bodyContent .topbottom div {
+	width: 100px;
+	height: 30px;
+	font-size: 14px;
+	color: #666666;
+	background-color: #EEEEEE;
+	line-height: 30px;
+	cursor: pointer;
+}
+
+.bottomContent {
+	margin-top: 20px;
+	width: 1200px;
+	background-color: #FFFFFF;
+}
+
+.bottomContent .btmTitle {
+	width: 100%;
+	height: 50px;
+	margin: 20px 0px 0px 0px;
+	line-height: 50px;
+	font-size: 18px;
+	color: #333333;
+}
+
+.bottomContent .btmList {
+	margin: 0px 38px 0px 38px;
+}
+
+.bottomContent .btmList .btmItem {
+	width: 100%;
+	height: 194px;
+	margin-top: 10px;
+}
+
+.bottomContent .btmList .btmItem * {
+	pointer-events: none;
+}
+
+.bottomContent .btmList .btmItem>div {
+	float: left;
+	height: 100%;
+	margin-right: 6px;
+}
+
+.bottomContent .btmList .btmItem>div>div:first-child {
+	background-color: #ec5706;
+	font-size: 14px;
+	color: #FFFFFF;
+	line-height: 30px;
+	height: 30px;
+}
+
+.bottomContent .btmList .btmItem>div .defauleItem {
+	border-left: 1px solid #EFEFEF;
+	border-right: 1px solid #EFEFEF;
+	border-bottom: 1px solid #EFEFEF;
+	height: 164px;
+}
+
+.bottomContent .btmList .btmItem>div .selectItem {
+	border-left: 1px solid #ec5706;
+	border-right: 1px solid #ec5706;
+	border-bottom: 1px solid #ec5706;
+	height: 164px;
+}
+
+.bottomContent .btmList .btmItem>div>div:last-child>div {
+	float: left;
+	width: 100%;
+}
+
+.bottomContent .btmList .btmItem>div>div:last-child>div div {
+	float: left;
+}
+
+.bottomContent .btmList .btmItem>div>div:last-child div:first-child div:first-child {
+	margin: 10px 0px 0px 20px;
+	float: left;
+}
+
+.bottomContent .btmList .btmItem>div>div:last-child div:first-child div:last-child {
+	margin: 14px 0px 0px 15px;
+	color: #333333;
+	font-size: 16px;
+	float: left;
+}
+
+.bottomContent .btmList .btmItem>div>div:last-child>div:last-child {
+	margin: 12px 0px 0px 5px;
+}
+
+.bottomContent .btmList .btmItem>div>div:last-child>div:last-child>div:first-child {
+	float: left;
+}
+
+.bottomContent .btmList .btmItem>div>div:last-child>div:last-child>div:last-child {
+	margin: 0px 0px 0px 22px;
+	width: 65%;
+}
+
+.bottomContent .btmList .btmItem>div>div:last-child>div:last-child>div:last-child>div:first-child {
+	font-size: 16px;
+	color: #333333;
+}
+
+.bottomContent .btmList .btmItem>div>div:last-child>div:last-child>div:last-child>div:last-child {
+	margin-top: 34px;
+	font-size: 14px;
+	color: #999999;
+}
+
+.bottomContent .btmList .btmItem .b_1 {
+	width: 375px;
+}
+
+.bottomContent .btmList .btmItem .b_2,
+.b_3 {
+	width: 135px;
+}
+
+.bottomContent .btmList .btmItem .b_4 {
+	width: 255px;
+}
+
+.bottomContent .btmList .btmItem>div:last-child {
+	width: 200px;
+	margin-right: 0px;
+}
+
+.bottomContent .btmList .btmItem .b_2 div:last-child div {
+	line-height: 144px;
+	font-size: 24px;
+	color: #CC0000;
+}
+
+.bottomContent .btmList .btmItem .b_3 div:last-child div {
+	line-height: 144px;
+	font-size: 24px;
+	color: #CC0000;
+}
+
+.bottomContent .btmList .btmItem .b_4 div:last-child div {
+	line-height: 144px;
+	font-size: 16px;
+	color: #666666;
+}
+
+.bottomContent .btmList .btmItem .b_5 div:last-child div {
+	line-height: 144px;
+	font-size: 24px;
+	color: #CC0000;
+}
+
+.bottomContent .bottomSeting {
+	height: 46px;
+	margin-left: 38px;
+	line-height: 46px;
+}
+
+.bottomContent .bottomSeting div {
+	float: left;
+}
+
+.bottomContent .bottomSeting div div {
+	font-size: 16px;
+	color: #666666;
+}
+
+.bottomContent .bottomSeting div div:first-child {
+	height: 18px;
+	width: 18px;
+	margin-top: 3px;
+	margin-right: 12px;
+}
+
+.bottomContent .bottomSeting div div:first-child input {
+	height: 15px;
+	width: 15px;
+}
+
+.bottomContent .bottomSeting div div:last-child {
+	margin-left: 10px;
+}
+
+.bottomContent .bottomSeting div div:last-child input {
+	outline: none;
+	border: 0px;
+	border-radius: 10px;
+	height: 30px;
+	width: 540px;
+}
+
+.bottomSubmit {
+	width: 1200px;
+	height: 180px;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	padding-top: 20px;
+}
+
+.bottomSubmit div {
+	float: left;
+}
+
+.bottomSubmit .btmsmtLeft {
+	width: 500px;
+	height: 120px;
+	border: 2px solid #CC0000;
+	margin-left: 38px;
+	padding: 20px;
+}
+
+.bottomSubmit .btmsmtLeft div {
+	font-size: 18px;
+	color: #333333;
+}
+
+.bottomSubmit .btmsmtLeft>div {
+	margin-bottom: 12px;
+}
+
+.bottomSubmit .btmsmtLeft>div>div:last-child>div {
+	font-size: 18px;
+	color: #666666;
+}
+
+.bottomSubmit .btmsmtLeft>div>div:last-child>div:first-child {
+	margin-left: 20px;
+}
+
+.bottomSubmit .btmsmtLeft>div>div:last-child>div:last-child {
+	margin-left: 50px;
+}
+
+.bottomSubmit .btmsmtLeft .sfk {
+	margin-top: 10px;
+	margin-right: -30px;
+	margin-bottom: 0px;
+	float: right;
+}
+
+.bottomSubmit .btmsmtLeft .sfk>div:first-child {
+	font-size: 24px;
+	color: #333333;
+	line-height: 60px;
+	float: left;
+}
+
+.bottomSubmit .btmsmtLeft .sfk .sfknum {
+	float: right;
+}
+
+.bottomSubmit .btmsmtLeft .sfk .sfknum div:first-child {
+	font-size: 36px;
+	color: #CC0000;
+	line-height: 50px;
+	margin-right: 30px;
+}
+
+.bottomSubmit .btmsmtLeft .sfk .sfknum>div:first-child:first-letter {
+	font-size: 24px;
+	color: #CC0000;
+}
+
+.bottomSubmit .btmsmtRight div {
+	margin: 70px 0px 0px 292px;
+	background-color: #CC0000;
+	font-size: 24px;
+	color: #FFFFFF;
+	width: 188px;
+	height: 60px;
+	line-height: 60px;
+	cursor: pointer;
+}

@@ -60,24 +60,24 @@
 					<div>
 						全部功能
 					</div>
-					<ul>
+					<ul id="leftMenu">
 						<li>
-							<a href="#" target="_blank">我的购物车</a>
+							<a href="javascript:void();" target="_blank">我的购物车</a>
 						</li>
 						<li>
-							<a href="#" target="_blank">所有订单</a>
+							<a href="javascript:void();" class="selectA" target="_blank">所有订单</a>
 						</li>
 						<li>
-							<a href="#" target="_blank">我的收藏</a>
+							<a href="javascript:void();" target="_blank">我的收藏</a>
 						</li>
 						<li>
-							<a href="#" target="_blank">我的优惠券</a>
+							<a href="javascript:void();" target="_blank">我的优惠券</a>
 						</li>
 						<li>
-							<a href="#" target="_blank">评价管理</a>
+							<a href="javascript:void();" target="_blank">评价管理</a>
 						</li>
 						<li>
-							<a href="#" target="_blank">我的足迹</a>
+							<a href="javascript:void();" target="_blank">我的足迹</a>
 						</li>
 					</ul>
 				</div>
@@ -355,6 +355,19 @@
 		</div>
 
 		<script>
+			var leftMenu = document.getElementById("leftMenu").getElementsByTagName("a");
+
+			for(var i = 0; i < leftMenu.length - 1; i++) {
+				leftMenu[i].addEventListener("click", changeMenuTab);
+			}
+
+			function changeMenuTab(e) {
+				for(var i = 0; i < leftMenu.length - 1; i++) {
+					leftMenu[i].className = '';
+				}
+				e.target.className = 'selectA';
+			}
+
 			var tlist = document.getElementById("tlist");
 
 			for(var i = 0; i < tlist.children.length - 1; i++) {
