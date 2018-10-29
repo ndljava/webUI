@@ -1,4 +1,31 @@
 @charset "utf-8";
+.addNum {
+	width: 100px;
+	height: 32px;
+	border: 1px solid #999999;
+}
+
+.addNum div {
+	float: left;
+	width: 32px;
+	height: 100%;
+	text-align: center;
+	line-height: 32px;
+	cursor: pointer;
+}
+
+.addNum div input {
+	float: inherit;
+	width: 32px;
+	height: 32px;
+	border: 1px solid #999999;
+	margin-top: -1px;
+	text-align: center;
+}
+
+
+/********************************************************************************************/
+
 .headwordback {
 	background-color: #f8f8f8;
 	width: 100%;
@@ -161,8 +188,11 @@
 	margin-top: 10px;
 }
 
-.bodyContent .topContent>div * {
-	pointer-events: none;
+.bodyContent .topContent .defauleState {
+	border: 2px solid #999999;
+	background: url(../img/jiesuang/arrow1.png);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
 }
 
 .bodyContent .topContent .selectedState {
@@ -170,6 +200,10 @@
 	background: url(../img/jiesuang/arrow.png);
 	background-repeat: no-repeat;
 	background-position: 100% 100%;
+}
+
+.bodyContent .topContent div * {
+	pointer-events: none;
 }
 
 .bodyContent .topContent>div>div:first-child {
@@ -236,6 +270,11 @@
 	color: #333333;
 }
 
+.bottomContent .btmline {
+	width: 1124px;
+	border-bottom: 2px solid #EC5706;
+}
+
 .bottomContent .btmList {
 	margin: 0px 38px 0px 38px;
 }
@@ -246,9 +285,6 @@
 	margin-top: 10px;
 }
 
-.bottomContent .btmList .btmItem * {
-	pointer-events: none;
-}
 
 .bottomContent .btmList .btmItem>div {
 	float: left;
@@ -419,7 +455,7 @@
 .bottomSubmit .btmsmtLeft {
 	width: 500px;
 	height: 120px;
-	border: 2px solid #CC0000;
+	border: 2px solid #EC5706;
 	margin-left: 38px;
 	padding: 20px;
 }

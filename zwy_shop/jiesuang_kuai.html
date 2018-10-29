@@ -180,7 +180,14 @@
 						<div class="b_3">
 							<div>数量</div>
 							<div class="selectItem">
-								<div>1</div>
+								<div style="margin-top: 55px;"></div>
+								<div>
+									<div style="margin: 0px; margin-left: 10px; width: 96px;" class="addNum">
+										<div style="margin: 0px; line-height: 32px; " onclick="plusNum(this)">-</div>
+										<div><input type="text" id="numStep" value="1" /></div>
+										<div style="margin: 0px; line-height: 32px;" onclick="addNum(this)">+</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="b_4">
@@ -222,7 +229,14 @@
 						<div class="b_3">
 							<div>数量</div>
 							<div class="selectItem">
-								<div>1</div>
+								<div style="margin-top: 55px;"></div>
+								<div>
+									<div style="margin: 0px; margin-left: 10px; width: 96px;" class="addNum">
+										<div style="margin: 0px; line-height: 32px; " onclick="plusNum(this)">-</div>
+										<div><input type="text" id="numStep" value="1" /></div>
+										<div style="margin: 0px; line-height: 32px;" onclick="addNum(this)">+</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="b_4">
@@ -264,7 +278,14 @@
 						<div class="b_3">
 							<div>数量</div>
 							<div class="selectItem">
-								<div>1</div>
+								<div style="margin-top: 55px;"></div>
+								<div>
+									<div style="margin: 0px; margin-left: 10px; width: 96px;" class="addNum">
+										<div style="margin: 0px; line-height: 32px; " onclick="plusNum(this)">-</div>
+										<div><input type="text" id="numStep" value="1" /></div>
+										<div style="margin: 0px; line-height: 32px;" onclick="addNum(this)">+</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="b_4">
@@ -337,25 +358,17 @@
 				e.target.className = "selectedState";
 			}
 
-			/**
-						var itemSelect = document.getElementById("itemSelect");
+			function addNum(doc) {
+				var num = doc.parentNode.children[1].children[0];
+				num.value = parseInt(num.value) + 1;
+				if(!num.value || num.value == 'NaN') num.value = 1;
+			}
 
-						for(var i = 0; i < itemSelect.children.length; i++) {
-							itemSelect.children[i].addEventListener("click", selectItemTab);
-						}
-
-						function selectItemTab(e) {
-							for(var i = 0; i < itemSelect.children.length; i++) {
-								for(var j = 0; j < itemSelect.children[i].children.length; j++) {
-									itemSelect.children[i].children[j].children[1].className = "defauleItem";
-								}
-							}
-
-							for(var i = 0; i < e.target.children.length; i++) {
-								e.target.children[i].children[1].className = "selectItem";
-							}
-						}
-						*/
+			function plusNum(doc) {
+				var num = doc.parentNode.children[1].children[0];
+				num.value = parseInt(num.value) - 1;
+				if(!num.value || num.value == 'NaN') num.value = 1;
+			}
 		</script>
 	</body>
 
