@@ -145,6 +145,9 @@
 							<div>186 7234 5467</div>
 						</div>
 					</div>
+					<div onclick="openDialog();">
+						<div><img src="img/jiesuang/组12.png" /></div>
+					</div>
 				</div>
 				<div class="topbottom">
 					<div>管理地址</div>
@@ -319,22 +322,99 @@
 			</div>
 		</div>
 
+		<div id="model" style="display: none;" class="model">
+		</div>
+		<div id="address" style="display: none;" class="address">
+			<div class="addTitle">
+				添加地址
+				<a href="javascript:void();" onclick="closeDialog();" target="_self"><img src="img/jiesuang/x.png" /></a>
+			</div>
+			<div class="addContent">
+				<div class="content">
+					<div>
+						<div>*</div>
+						<div>地址信息:</div>
+						<div><input type="text" placeholder="请输入省份/市区/区域/街道" /></div>
+					</div>
+					<div>
+						<div>*</div>
+						<div>详细地址:</div>
+						<div><input type="text" placeholder="请输入详细地址" /></div>
+					</div>
+					<div>
+						<div></div>
+						<div>邮政编码:</div>
+						<div><input type="text" placeholder="请输入邮政编码" /></div>
+					</div>
+					<div>
+						<div>*</div>
+						<div>收 货 人 :</div>
+						<div><input type="text" placeholder="请输入收货人姓名" /></div>
+					</div>
+					<div>
+						<div>*</div>
+						<div>手机号码:</div>
+						<div><input type="text" placeholder="+86" /></div>
+					</div>
+					<div>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<div><input type="checkbox" /></div>
+						<div class="setdef">设为默认收货地址</div>
+						<div></div>
+					</div>
+					<div>
+						<div></div>
+						<div></div>
+						<div><input type="button" value="保存" /></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="address" class="fapiao">
+			<div class="addTitle">
+				发票信息
+				<a href="javascript:void();" onclick="closeDialog();" target="_self"><img src="img/jiesuang/x.png" /></a>
+			</div>
+			<div class="addContent">
+				<div class="content">
+
+				</div>
+			</div>
+		</div>
+
 		<script>
 			var dlist = document.getElementById("dlist");
 
-			for(var i = 0; i < dlist.children.length; i++) {
+			for(var i = 0; i < dlist.children.length - 1; i++) {
 				dlist.children[i].addEventListener("click", selectTab);
 			}
 
 			function selectTab(e) {
+
+				var nopic = false;
 				for(var i = 0; i < dlist.children.length; i++) {
-					if(i == 0)
+					if(i == 0) {
 						dlist.children[i].className = "defauleState";
-					else
+						nopic = dlist.children[i] == e.target;
+					} else
 						dlist.children[i].className = "";
 				}
 
-				e.target.className = "selectedState";
+				if(nopic) {
+					e.target.className = "selectedState";
+				} else
+					e.target.className = "selectedNoPicState";
+			}
+
+			function closeDialog() {
+				document.getElementById("model").style.display = 'none';
+				document.getElementById("address").style.display = 'none';
+			}
+
+			function openDialog() {
+				document.getElementById("model").style.display = '';
+				document.getElementById("address").style.display = '';
 			}
 
 			/**
