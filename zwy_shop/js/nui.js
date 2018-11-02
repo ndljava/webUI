@@ -1,10 +1,9 @@
 /**
- * 
  * 星计分特效
- * 
- * 
+ * @param {Object} id
+ * @param {Object} starurl
+ * @param {Object} num
  */
-
 function StarSelect(id, starurl, num) {
 	var id = id;
 	var starUrl = starurl;
@@ -81,7 +80,9 @@ function StarSelect(id, starurl, num) {
 
 /**
  * 复选框
- * [w,h],[trueimg,falseimg]
+ * @param {Object} continer
+ * @param {Object} size
+ * @param {Object} img
  */
 function Ncheckbox(continer, size, img) {
 	if(!continer)
@@ -152,4 +153,43 @@ function Ncheckbox(continer, size, img) {
 	}
 
 	return this.init();
+}
+
+/**
+ *  组队列
+ */
+var group_name = [];
+
+/**
+ * 
+ * 单选框
+ * @param {Object} continer
+ * @param {Object} size
+ * @param {Object} img
+ * @param {Object} group
+ */
+function NRadio(continer, size, img, group) {
+
+	var ck = new Ncheckbox(continer, size, img);
+	
+	group_name.push(ck);
+	
+	var cb = ck.checkBox();
+	cb.className = group;
+	
+	cb.addEventListener("click", function() {
+		for(var i = 0; i < group_name.length; i++) {
+
+			if(group_name[i].checkBox().className == group) {
+				group_name[i].setChecked(false);
+			}
+
+			ck.setChecked(true);
+		}
+	});
+	
+	this.setChecked = function(v) {
+		 ck.setChecked(v);
+	}
+	
 }

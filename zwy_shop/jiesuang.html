@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=-1" />
 		<title></title>
+		<script type="text/javascript" src="js/nui.js"></script>
 		<link href="css/jiesuang.css" rel="stylesheet" type="text/css">
 		<style type="text/css">
 			* {
@@ -378,7 +379,55 @@
 			</div>
 			<div class="addContent">
 				<div class="content">
-
+					<div>
+						<div>发票记录</div>
+						<div>
+							<a href="#">删除</a> |
+							<a href="#">修改</a>
+						</div>
+					</div>
+					<div class="typeicon">
+						<div class="selectType">
+							<div class="ctitle">抬头</div>
+							<div class="ctype">个人</div>
+							<div class="cname">王小明</div>
+						</div>
+						<div>
+							<div class="ctitle">抬头</div>
+							<div class="ctype">企业</div>
+							<div class="cname">北京掌握云视传媒</div>
+						</div>
+					</div>
+					<div class="addresstext">新增地址 +</div>
+					<div class="checklist">
+						<div>
+							<div id="qy"></div>
+							<div>企业</div>
+						</div>
+						<div>
+							<div id="gr"></div>
+							<div>个人</div>
+						</div>
+					</div>
+					<div class="itemlist">
+						<div>
+							<div>*</div>
+							<div class="ct">发 票 抬 头:</div>
+							<div><input type="text" placeholder="请输入名称" /></div>
+						</div>
+						<div>
+							<div>*</div>
+							<div class="ct">纳税识别号:</div>
+							<div><input type="text" placeholder="请输入纳税识别号" /></div>
+						</div>
+					</div>
+					<div class="setDefCb">
+						<div id="defcb"></div>
+						<div>设置默认发票抬头</div>
+					</div>
+					<div>
+						<input type="button" value="确定" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -417,6 +466,13 @@
 				document.getElementById("address").style.display = '';
 			}
 
+			var qy = new NRadio(document.getElementById("qy"), [25, 24], ["img/ui/c1_m.png", "img/ui/c1_x.png"], "abc1");
+			qy.setChecked(true);
+
+			new NRadio(document.getElementById("gr"), [25, 24], ["img/ui/c1_m.png", "img/ui/c1_x.png"], "abc1");
+
+			//设置默认发票
+			new Ncheckbox(document.getElementById("defcb"), [14, 14], ["img/ui/z2_m.png", "img/ui/z2_x.png"])
 			/**
 						var itemSelect = document.getElementById("itemSelect");
 
