@@ -171,25 +171,33 @@ var group_name = [];
 function NRadio(continer, size, img, group) {
 
 	var ck = new Ncheckbox(continer, size, img);
-	
+
 	group_name.push(ck);
-	
+
 	var cb = ck.checkBox();
 	cb.className = group;
-	
+
 	cb.addEventListener("click", function() {
 		for(var i = 0; i < group_name.length; i++) {
-
 			if(group_name[i].checkBox().className == group) {
 				group_name[i].setChecked(false);
 			}
-
-			ck.setChecked(true);
 		}
+
+		ck.setChecked(true);
 	});
-	
+
 	this.setChecked = function(v) {
-		 ck.setChecked(v);
+		if(!v && group)
+			return;
+
+		for(var i = 0; i < group_name.length; i++) {
+			if(group_name[i].checkBox().className == group) {
+				group_name[i].setChecked(false);
+			}
+		}
+
+		ck.setChecked(v);
 	}
-	
+
 }

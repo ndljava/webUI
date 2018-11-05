@@ -287,7 +287,7 @@
 				</div>
 				<div class="bottomSeting">
 					<div>
-						<div><input type="checkbox" /></div>
+						<div><input onchange="openfapiaoDialog(this);" type="checkbox" /></div>
 						<div>发票 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注:</div>
 						<div><input type="text" placeholder="我要告诉买家的话" /></div>
 					</div>
@@ -372,21 +372,21 @@
 			</div>
 		</div>
 
-		<div id="address" class="fapiao">
+		<div id="fapiao" style="display: none;" class="fapiao">
 			<div class="addTitle">
 				发票信息
-				<a href="javascript:void();" onclick="closeDialog();" target="_self"><img src="img/jiesuang/x.png" /></a>
+				<a href="javascript:void();" onclick="closefapiaoDialog();" target="_self"><img src="img/jiesuang/x.png" /></a>
 			</div>
 			<div class="addContent">
 				<div class="content">
 					<div>
 						<div>发票记录</div>
 						<div>
-							<a href="#">删除</a> |
-							<a href="#">修改</a>
+							<a href="#" onclick="deleteType();">删除</a> |
+							<a href="#" onclick="updateType();">修改</a>
 						</div>
 					</div>
-					<div class="typeicon">
+					<div id="infoList" class="typeicon">
 						<div class="selectType">
 							<div class="ctitle">抬头</div>
 							<div class="ctype">个人</div>
@@ -398,7 +398,7 @@
 							<div class="cname">北京掌握云视传媒</div>
 						</div>
 					</div>
-					<div class="addresstext">新增地址 +</div>
+					<div class="addresstext" onclick="newAddress();">新增地址 +</div>
 					<div class="checklist">
 						<div>
 							<div id="qy"></div>
@@ -413,12 +413,12 @@
 						<div>
 							<div>*</div>
 							<div class="ct">发 票 抬 头:</div>
-							<div><input type="text" placeholder="请输入名称" /></div>
+							<div><input id="cname" type="text" placeholder="请输入名称" /></div>
 						</div>
 						<div>
 							<div>*</div>
 							<div class="ct">纳税识别号:</div>
-							<div><input type="text" placeholder="请输入纳税识别号" /></div>
+							<div><input id="cid" type="text" placeholder="请输入纳税识别号" /></div>
 						</div>
 					</div>
 					<div class="setDefCb">
@@ -426,7 +426,7 @@
 						<div>设置默认发票抬头</div>
 					</div>
 					<div>
-						<input type="button" value="确定" />
+						<input type="button" onclick="updateType();" value="确定" />
 					</div>
 				</div>
 			</div>
@@ -442,6 +442,7 @@
 			function selectTab(e) {
 
 				var nopic = false;
+
 				for(var i = 0; i < dlist.children.length; i++) {
 					if(i == 0) {
 						dlist.children[i].className = "defauleState";
@@ -466,32 +467,137 @@
 				document.getElementById("address").style.display = '';
 			}
 
+			/************************************************************************************************/
 			var qy = new NRadio(document.getElementById("qy"), [25, 24], ["img/ui/c1_m.png", "img/ui/c1_x.png"], "abc1");
 			qy.setChecked(true);
 
-			new NRadio(document.getElementById("gr"), [25, 24], ["img/ui/c1_m.png", "img/ui/c1_x.png"], "abc1");
+			var gr = new NRadio(document.getElementById("gr"), [25, 24], ["img/ui/c1_m.png", "img/ui/c1_x.png"], "abc1");
 
 			//设置默认发票
-			new Ncheckbox(document.getElementById("defcb"), [14, 14], ["img/ui/z2_m.png", "img/ui/z2_x.png"])
-			/**
-						var itemSelect = document.getElementById("itemSelect");
+			var cb = new Ncheckbox(document.getElementById("defcb"), [14, 14], ["img/ui/z2_m.png", "img/ui/z2_x.png"]);
+			/**************************************************************************/
 
-						for(var i = 0; i < itemSelect.children.length; i++) {
-							itemSelect.children[i].addEventListener("click", selectItemTab);
-						}
+			var datalist = [{
+				"id": 1,
+				"type": 1,
+				"name": "王小明",
+				"cid": "123456789",
+				"isdef": 1
+			}, {
+				"id": 2,
+				"type": 2,
+				"name": "北京掌握云视传媒",
+				"cid": "1234567890",
+				"isdef": 0
+			}]
 
-						function selectItemTab(e) {
-							for(var i = 0; i < itemSelect.children.length; i++) {
-								for(var j = 0; j < itemSelect.children[i].children.length; j++) {
-									itemSelect.children[i].children[j].children[1].className = "defauleItem";
-								}
-							}
+			function newAddress() {
+				document.getElementById("cid").value = '';
+				document.getElementById("cname").value = '';
 
-							for(var i = 0; i < e.target.children.length; i++) {
-								e.target.children[i].children[1].className = "selectItem";
-							}
-						}
-						*/
+				qy.setChecked(true);
+				gr.setChecked(false);
+
+				cb.setChecked(false);
+			}
+
+			var infoList = document.getElementById("infoList");
+			var currentData;
+
+			function initData() {
+				while(infoList.children.length > 0)
+					infoList.removeChild(infoList.firstChild);
+
+				var cdata = '';
+				for(var i = 0; i < datalist.length; i++) {
+					cdata += '<div did=' + datalist[i].id + '>'
+					cdata += '<div class="ctitle">抬头</div>'
+					cdata += '	<div class="ctype">' + (datalist[i].type == 1 ? '个人' : '企业') + '</div>'
+					cdata += '	<div class="cname">' + datalist[i].name + '</div>'
+					cdata += '</div>';
+				}
+
+				infoList.innerHTML = cdata;
+
+				for(var i = 0; i < infoList.children.length; i++) {
+					infoList.children[i].addEventListener("click", selectTypeTab);
+				}
+			}
+
+			initData();
+
+			function selectTypeTab(e) {
+
+				for(var i = 0; i < infoList.children.length; i++) {
+					infoList.children[i].className = "";
+					infoList.children[i].children[0].className = "ctitle";
+				}
+
+				e.target.className = "selectType";
+				e.target.children[0].className = "selectctitle";
+
+				currentData = datalist.filter(function(item, i, arr) {
+					return(item.id == e.target.getAttribute("did"));
+				});
+
+				document.getElementById("cid").value = '' + currentData[0].cid;
+				document.getElementById("cname").value = '' + currentData[0].name;
+
+				if(currentData[0].type == 1)
+					gr.setChecked(true);
+				else if(currentData[0].type == 2)
+					qy.setChecked(true);
+
+				cb.setChecked(currentData[0].isdef);
+			}
+
+			function deleteType() {
+
+				if(!currentData)
+					return;
+
+				for(let i = 0; i < datalist.length; i++) {
+					if(datalist[i].id == currentData[0].id) {
+						datalist.splice(i, 1);
+						break;
+					}
+				}
+
+				initData();
+				newAddress();
+			}
+
+			function updateType() {
+
+				currentData[0].cid = document.getElementById("cid").value;
+				currentData[0].name = document.getElementById("cname").value;
+
+				currentData[0].isdef = (cb.getChecked() ? 1 : 0);
+
+				for(let i = 0; i < datalist.length; i++) {
+					if(datalist[i].id == currentData[0].id) {
+						datalist[i] = currentData[0];
+						break;
+					}
+				}
+
+				initData();
+			}
+
+			/****************************************************************************************************/
+
+			function closefapiaoDialog() {
+				document.getElementById("model").style.display = 'none';
+				document.getElementById("fapiao").style.display = 'none';
+			}
+
+			function openfapiaoDialog(t) {
+				if(!t.checked)
+					return;
+					
+				document.getElementById("model").style.display = '';
+				document.getElementById("fapiao").style.display = '';
+			}
 		</script>
 	</body>
 
