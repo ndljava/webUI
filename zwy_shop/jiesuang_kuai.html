@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=-1" />
 		<title></title>
 		<link href="css/jiesuang.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/nui.js"></script>
 		<style type="text/css">
 			* {
 				margin: 0px;
@@ -97,60 +98,10 @@
 			<div class="bodyContent">
 				<div class="topTitle">收货地址</div>
 				<div id="dlist" class="topContent">
-					<div class="selectedState defauleState">
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div>
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室1</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div>
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室2</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div>
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室3</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div>
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室4</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div>
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室5</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div>
-						 <div><img src="img/jiesuang/组12.png"/></div>
-					</div>
+
 				</div>
 				<div class="topbottom">
-					<div>管理地址</div>
+					<div onclick="updateDialog();">管理地址</div>
 				</div>
 			</div>
 			<div class="bottomContent">
@@ -209,7 +160,7 @@
 				</div>
 				<div class="bottomSeting">
 					<div>
-						<div><input type="checkbox" /></div>
+						<div><input onchange="openfapiaoDialog(this);" type="checkbox" /></div>
 						<div>发票 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注 :</div>
 						<div><input type="text" placeholder="我要告诉买家的话" /></div>
 					</div>
@@ -299,6 +250,442 @@
 				if(!num.value || num.value == 'NaN' || parseInt(num.value) < 1) num.value = 1;
 
 				changePrice(parseInt(num.value));
+			}
+		</script>
+
+		<div id="model" style="display: none;" class="model">
+		</div>
+		<div id="address" style="display: none;" class="address">
+			<div class="addTitle">
+				添加地址
+				<a href="javascript:void();" onclick="closeDialog();" target="_self"><img src="img/jiesuang/x.png" /></a>
+			</div>
+			<div class="addContent">
+				<div class="content">
+					<div>
+						<div>*</div>
+						<div>地址信息:</div>
+						<div><input id="addresstxt" type="text" placeholder="请输入省份/市区/区域/街道" /></div>
+					</div>
+					<div>
+						<div>*</div>
+						<div>详细地址:</div>
+						<div><input id="addressdetailtxt" type="text" placeholder="请输入详细地址" /></div>
+					</div>
+					<div>
+						<div></div>
+						<div>邮政编码:</div>
+						<div><input id="post" type="text" placeholder="请输入邮政编码" /></div>
+					</div>
+					<div>
+						<div>*</div>
+						<div>收 货 人 :</div>
+						<div><input id="consignee" type="text" placeholder="请输入收货人姓名" /></div>
+					</div>
+					<div>
+						<div>*</div>
+						<div>手机号码:</div>
+						<div><input id="phone" type="text" placeholder="+86" /></div>
+					</div>
+					<div>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<div id="defconsignee"></div>
+						<div class="setdef">设为默认收货地址</div>
+						<div></div>
+					</div>
+					<div>
+						<div></div>
+						<div></div>
+						<div><input onclick="saveAddress();" type="button" value="保存" /></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="fapiao" style="display: none;" class="fapiao">
+			<div class="addTitle">
+				发票信息
+				<a href="javascript:void();" onclick="closefapiaoDialog();" target="_self"><img src="img/jiesuang/x.png" /></a>
+			</div>
+			<div class="addContent">
+				<div class="content">
+					<div>
+						<div>发票记录</div>
+						<div>
+							<a href="#" onclick="deleteType();">删除</a> |
+							<a href="#" onclick="updateType();">修改</a>
+						</div>
+					</div>
+					<div id="infoList" class="typeicon">
+						<div class="selectType">
+							<div class="ctitle">抬头</div>
+							<div class="ctype">个人</div>
+							<div class="cname">王小明</div>
+						</div>
+						<div>
+							<div class="ctitle">抬头</div>
+							<div class="ctype">企业</div>
+							<div class="cname">北京掌握云视传媒</div>
+						</div>
+					</div>
+					<div class="addresstext" onclick="newAddress();">新增地址 +</div>
+					<div class="checklist">
+						<div>
+							<div id="qy"></div>
+							<div>企业</div>
+						</div>
+						<div>
+							<div id="gr"></div>
+							<div>个人</div>
+						</div>
+					</div>
+					<div class="itemlist">
+						<div>
+							<div>*</div>
+							<div class="ct">发 票 抬 头:</div>
+							<div><input id="cname" type="text" placeholder="请输入名称" /></div>
+						</div>
+						<div>
+							<div>*</div>
+							<div class="ct">纳税识别号:</div>
+							<div><input id="cid" type="text" placeholder="请输入纳税识别号" /></div>
+						</div>
+					</div>
+					<div class="setDefCb">
+						<div id="defcb"></div>
+						<div>设置默认发票抬头</div>
+					</div>
+					<div>
+						<input type="button" onclick="updateType();" value="确定" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			/**************************************************************************/
+			//设置默认发货地址
+			var defcb = new Ncheckbox(document.getElementById("defconsignee"), [14, 14], ["img/ui/z2_m.png", "img/ui/z2_x.png"]);
+			/**************************************************************************/
+
+			var dlist = document.getElementById("dlist");
+
+			var addressData = [{
+				"id": "1",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}, {
+				"id": "2",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}, {
+				"id": "3",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}, {
+				"id": "4",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}, {
+				"id": "5",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}, {
+				"id": "6",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}];
+
+			function initAddressData(isdef) {
+
+				while(dlist.children.length > 0)
+					dlist.removeChild(dlist.firstChild);
+
+				let cdata = '';
+				for(let i = 0; i < addressData.length; i++) {
+
+					if(i == 0 && (!currentselectData || (currentselectData && currentselectData.id == addressData[i].id)))
+						cdata += '<div cid="' + addressData[i].id + '" class="selectedState defauleState">';
+					else if(i == 0)
+						cdata += '<div cid="' + addressData[i].id + '" class="defauleState">';
+					else if(currentselectData && currentselectData.id == addressData[i].id)
+						cdata += '<div cid="' + addressData[i].id + '" class="selectedState">';
+					else
+						cdata += '<div cid="' + addressData[i].id + '">';
+
+					cdata += '	<div>' + addressData[i].address + '</div>'
+					cdata += '	<hr />'
+					cdata += '	<div>'
+					cdata += '		<div>' + addressData[i].name + '</div>'
+					cdata += '		<div>' + addressData[i].phone + '</div>'
+					cdata += '	</div>'
+					cdata += '</div>'
+				}
+
+				cdata += '<div onclick="openDialog();">'
+				cdata += '	<div><img src="img/jiesuang/组12.png" /></div>'
+				cdata += '</div>'
+
+				dlist.innerHTML = cdata;
+
+				for(let i = 0; i < dlist.children.length - 1; i++) {
+					dlist.children[i].addEventListener("click", selectTab);
+				}
+
+			}
+
+			initAddressData();
+
+			var currentselectData;
+
+			function selectTab(e) {
+
+				let nopic = false;
+
+				for(let i = 0; i < dlist.children.length; i++) {
+					if(i == 0) {
+						dlist.children[i].className = "defauleState";
+						nopic = dlist.children[i] == e.target;
+					} else
+						dlist.children[i].className = "";
+
+					if(dlist.children[i].getAttribute("cid") == e.target.getAttribute("cid"))
+						currentselectData = addressData[i];
+				}
+
+				if(nopic) {
+					e.target.className = "selectedState";
+				} else
+					e.target.className = "selectedNoPicState";
+			}
+
+			function closeDialog() {
+				document.getElementById("model").style.display = 'none';
+				document.getElementById("address").style.display = 'none';
+
+				initAddressData();
+			}
+
+			function openDialog() {
+				document.getElementById("model").style.display = '';
+				document.getElementById("address").style.display = '';
+
+				document.getElementById("addresstxt").value = "";
+				document.getElementById("addressdetailtxt").value = "";
+				document.getElementById("phone").value = "";
+				document.getElementById("post").value = "";
+				document.getElementById("consignee").value = "";
+				defcb.setChecked(false);
+			}
+
+			/**
+			 * 管理地址
+			 */
+			function updateDialog() {
+				document.getElementById("model").style.display = '';
+				document.getElementById("address").style.display = '';
+
+				document.getElementById("addresstxt").value = "" + currentselectData.address;
+				document.getElementById("addressdetailtxt").value = "" + currentselectData.address;
+				document.getElementById("phone").value = "" + currentselectData.phone;
+				document.getElementById("post").value = "" + currentselectData.post;
+				document.getElementById("consignee").value = "" + currentselectData.name;
+				//document.getElementById("defconsignee").value = "" + currentselectData.defconsignee;
+				defcb.setChecked(eval(currentselectData.defconsignee));
+			}
+
+			/**
+			 * 保存地址
+			 */
+			function saveAddress() {
+
+				currentselectData.address = document.getElementById("addresstxt").value;
+				currentselectData.addresstxt = document.getElementById("addressdetailtxt").value;
+				currentselectData.phone = document.getElementById("phone").value;
+				currentselectData.post = document.getElementById("post").value;
+				currentselectData.name = document.getElementById("consignee").value;
+				currentselectData.defconsignee = (defcb.getChecked() ? 1 : 0);
+
+				for(let i = 0; i < addressData.length; i++) {
+					if(addressData[i].id == currentselectData.id) {
+						addressData[i] = currentselectData;
+					}
+				}
+			}
+
+			/************************************************************************************************/
+			var qy = new NRadio(document.getElementById("qy"), [25, 24], ["img/ui/c1_m.png", "img/ui/c1_x.png"], "abc1");
+			qy.setChecked(true);
+
+			var gr = new NRadio(document.getElementById("gr"), [25, 24], ["img/ui/c1_m.png", "img/ui/c1_x.png"], "abc1");
+
+			//设置默认发票
+			var cb = new Ncheckbox(document.getElementById("defcb"), [14, 14], ["img/ui/z2_m.png", "img/ui/z2_x.png"]);
+			/**************************************************************************/
+
+			var datalist = [{
+				"id": 1,
+				"type": 1,
+				"name": "王小明",
+				"cid": "123456789",
+				"isdef": 1
+			}, {
+				"id": 2,
+				"type": 2,
+				"name": "北京掌握云视传媒",
+				"cid": "1234567890",
+				"isdef": 0
+			}]
+
+			function newAddress() {
+				document.getElementById("cid").value = '';
+				document.getElementById("cname").value = '';
+
+				qy.setChecked(true);
+				gr.setChecked(false);
+
+				cb.setChecked(false);
+
+				currentData = null;
+			}
+
+			var infoList = document.getElementById("infoList");
+			var currentData;
+
+			function initData() {
+				while(infoList.children.length > 0)
+					infoList.removeChild(infoList.firstChild);
+
+				var cdata = '';
+				for(var i = 0; i < datalist.length; i++) {
+					cdata += '<div did=' + datalist[i].id + '>'
+					cdata += '<div class="ctitle">抬头</div>'
+					cdata += '	<div class="ctype">' + (datalist[i].type == 1 ? '个人' : '企业') + '</div>'
+					cdata += '	<div class="cname">' + datalist[i].name + '</div>'
+					cdata += '</div>';
+				}
+
+				infoList.innerHTML = cdata;
+
+				for(var i = 0; i < infoList.children.length; i++) {
+					infoList.children[i].addEventListener("click", selectTypeTab);
+				}
+			}
+
+			initData();
+
+			function selectTypeTab(e) {
+
+				for(var i = 0; i < infoList.children.length; i++) {
+					infoList.children[i].className = "";
+					infoList.children[i].children[0].className = "ctitle";
+				}
+
+				e.target.className = "selectType";
+				e.target.children[0].className = "selectctitle";
+
+				currentData = datalist.filter(function(item, i, arr) {
+					return(item.id == e.target.getAttribute("did"));
+				});
+
+				document.getElementById("cid").value = '' + currentData[0].cid;
+				document.getElementById("cname").value = '' + currentData[0].name;
+
+				if(currentData[0].type == 1)
+					gr.setChecked(true);
+				else if(currentData[0].type == 2)
+					qy.setChecked(true);
+
+				cb.setChecked(currentData[0].isdef);
+			}
+
+			function deleteType() {
+
+				if(!currentData)
+					return;
+
+				for(let i = 0; i < datalist.length; i++) {
+					if(datalist[i].id == currentData[0].id) {
+						datalist.splice(i, 1);
+						break;
+					}
+				}
+
+				currentData = null;
+
+				initData();
+				newAddress();
+			}
+
+			function updateType() {
+
+				let isneew = false
+				if(!currentData && datalist.length < 5) {
+					currentData = [];
+					currentData[0] = {};
+					currentData[0].id = datalist.length + 1;
+
+					isneew = true;
+				}
+
+				currentData[0].cid = document.getElementById("cid").value;
+				currentData[0].name = document.getElementById("cname").value;
+				currentData[0].type = (gr.getChecked() ? 1 : 2);
+				currentData[0].isdef = (cb.getChecked() ? 1 : 0);
+
+				if(!isneew) {
+					for(let i = 0; i < datalist.length; i++) {
+						if(datalist[i].id == currentData[0].id) {
+							datalist[i] = currentData[0];
+							break;
+						}
+					}
+				} else {
+					datalist.push(currentData[0]);
+				}
+
+				initData();
+			}
+
+			/****************************************************************************************************/
+
+			function closefapiaoDialog() {
+				document.getElementById("model").style.display = 'none';
+				document.getElementById("fapiao").style.display = 'none';
+			}
+
+			function openfapiaoDialog(t) {
+				if(!t.checked)
+					return;
+
+				document.getElementById("model").style.display = '';
+				document.getElementById("fapiao").style.display = '';
+
+				document.getElementById("fapiao").style.top = (document.body.offsetHeight - document.getElementById("fapiao").clientHeight) / 2 + "px";
 			}
 		</script>
 	</body>

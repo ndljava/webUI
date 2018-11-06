@@ -98,60 +98,10 @@
 			<div class="bodyContent">
 				<div class="topTitle">收货地址</div>
 				<div id="dlist" class="topContent">
-					<div class="selectedState defauleState">
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div>
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室1</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div>
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室2</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div>
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室3</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div>
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室4</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div>
-						<div>北京市朝阳区百子湾街道金长安大厦c座2702室5</div>
-						<hr />
-						<div>
-							<div>王小明 </div>
-							<div>186 7234 5467</div>
-						</div>
-					</div>
-					<div onclick="openDialog();">
-						<div><img src="img/jiesuang/组12.png" /></div>
-					</div>
+
 				</div>
 				<div class="topbottom">
-					<div>管理地址</div>
+					<div onclick="updateDialog();">管理地址</div>
 				</div>
 			</div>
 			<div class="bottomContent">
@@ -323,8 +273,7 @@
 			</div>
 		</div>
 
-		<div id="model" style="display: none;" class="model">
-		</div>
+		<div id="model" style="display: none;" class="model"></div>
 		<div id="address" style="display: none;" class="address">
 			<div class="addTitle">
 				添加地址
@@ -335,38 +284,38 @@
 					<div>
 						<div>*</div>
 						<div>地址信息:</div>
-						<div><input type="text" placeholder="请输入省份/市区/区域/街道" /></div>
+						<div><input id="addresstxt" type="text" placeholder="请输入省份/市区/区域/街道" /></div>
 					</div>
 					<div>
 						<div>*</div>
 						<div>详细地址:</div>
-						<div><input type="text" placeholder="请输入详细地址" /></div>
+						<div><input id="addressdetailtxt" type="text" placeholder="请输入详细地址" /></div>
 					</div>
 					<div>
 						<div></div>
 						<div>邮政编码:</div>
-						<div><input type="text" placeholder="请输入邮政编码" /></div>
+						<div><input id="post" type="text" placeholder="请输入邮政编码" /></div>
 					</div>
 					<div>
 						<div>*</div>
 						<div>收 货 人 :</div>
-						<div><input type="text" placeholder="请输入收货人姓名" /></div>
+						<div><input id="consignee" type="text" placeholder="请输入收货人姓名" /></div>
 					</div>
 					<div>
 						<div>*</div>
 						<div>手机号码:</div>
-						<div><input type="text" placeholder="+86" /></div>
+						<div><input id="phone" type="text" placeholder="+86" /></div>
 					</div>
 					<div>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<div><input type="checkbox" /></div>
+						<div id="defconsignee"></div>
 						<div class="setdef">设为默认收货地址</div>
 						<div></div>
 					</div>
 					<div>
 						<div></div>
 						<div></div>
-						<div><input type="button" value="保存" /></div>
+						<div><input onclick="saveAddress();" type="button" value="保存" /></div>
 					</div>
 				</div>
 			</div>
@@ -433,22 +382,118 @@
 		</div>
 
 		<script>
+			/**************************************************************************/
+			//设置默认发货地址
+			var defcb = new Ncheckbox(document.getElementById("defconsignee"), [14, 14], ["img/ui/z2_m.png", "img/ui/z2_x.png"]);
+			/**************************************************************************/
+
 			var dlist = document.getElementById("dlist");
 
-			for(var i = 0; i < dlist.children.length - 1; i++) {
-				dlist.children[i].addEventListener("click", selectTab);
+			var addressData = [{
+				"id": "1",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}, {
+				"id": "2",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}, {
+				"id": "3",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}, {
+				"id": "4",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}, {
+				"id": "5",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}, {
+				"id": "6",
+				"name": "王小明",
+				"address": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"addresstxt": "北京市朝阳区百子湾街道金长安大厦c座2702室5",
+				"post": "01001",
+				"phone": "186 7234 5467",
+				"defconsignee": "1",
+			}];
+
+			function initAddressData(isdef) {
+
+				while(dlist.children.length > 0)
+					dlist.removeChild(dlist.firstChild);
+
+				let cdata = '';
+				for(let i = 0; i < addressData.length; i++) {
+
+					if(i == 0 && (!currentselectData || (currentselectData && currentselectData.id == addressData[i].id)))
+						cdata += '<div cid="' + addressData[i].id + '" class="selectedState defauleState">';
+					else if(i == 0)
+						cdata += '<div cid="' + addressData[i].id + '" class="defauleState">';
+					else if(currentselectData && currentselectData.id == addressData[i].id)
+						cdata += '<div cid="' + addressData[i].id + '" class="selectedState">';
+					else
+						cdata += '<div cid="' + addressData[i].id + '">';
+
+					cdata += '	<div>' + addressData[i].address + '</div>'
+					cdata += '	<hr />'
+					cdata += '	<div>'
+					cdata += '		<div>' + addressData[i].name + '</div>'
+					cdata += '		<div>' + addressData[i].phone + '</div>'
+					cdata += '	</div>'
+					cdata += '</div>'
+				}
+
+				cdata += '<div onclick="openDialog();">'
+				cdata += '	<div><img src="img/jiesuang/组12.png" /></div>'
+				cdata += '</div>'
+
+				dlist.innerHTML = cdata;
+
+				for(let i = 0; i < dlist.children.length - 1; i++) {
+					dlist.children[i].addEventListener("click", selectTab);
+				}
+
 			}
+
+			initAddressData();
+
+			var currentselectData;
 
 			function selectTab(e) {
 
-				var nopic = false;
+				let nopic = false;
 
-				for(var i = 0; i < dlist.children.length; i++) {
+				for(let i = 0; i < dlist.children.length; i++) {
 					if(i == 0) {
 						dlist.children[i].className = "defauleState";
 						nopic = dlist.children[i] == e.target;
 					} else
 						dlist.children[i].className = "";
+
+					if(dlist.children[i].getAttribute("cid") == e.target.getAttribute("cid"))
+						currentselectData = addressData[i];
 				}
 
 				if(nopic) {
@@ -460,11 +505,55 @@
 			function closeDialog() {
 				document.getElementById("model").style.display = 'none';
 				document.getElementById("address").style.display = 'none';
+
+				initAddressData();
 			}
 
 			function openDialog() {
 				document.getElementById("model").style.display = '';
 				document.getElementById("address").style.display = '';
+
+				document.getElementById("addresstxt").value = "";
+				document.getElementById("addressdetailtxt").value = "";
+				document.getElementById("phone").value = "";
+				document.getElementById("post").value = "";
+				document.getElementById("consignee").value = "";
+				defcb.setChecked(false);
+			}
+
+			/**
+			 * 管理地址
+			 */
+			function updateDialog() {
+				document.getElementById("model").style.display = '';
+				document.getElementById("address").style.display = '';
+
+				document.getElementById("addresstxt").value = "" + currentselectData.address;
+				document.getElementById("addressdetailtxt").value = "" + currentselectData.address;
+				document.getElementById("phone").value = "" + currentselectData.phone;
+				document.getElementById("post").value = "" + currentselectData.post;
+				document.getElementById("consignee").value = "" + currentselectData.name;
+				//document.getElementById("defconsignee").value = "" + currentselectData.defconsignee;
+				defcb.setChecked(eval(currentselectData.defconsignee));
+			}
+
+			/**
+			 * 保存地址
+			 */
+			function saveAddress() {
+
+				currentselectData.address = document.getElementById("addresstxt").value;
+				currentselectData.addresstxt = document.getElementById("addressdetailtxt").value;
+				currentselectData.phone = document.getElementById("phone").value;
+				currentselectData.post = document.getElementById("post").value;
+				currentselectData.name = document.getElementById("consignee").value;
+				currentselectData.defconsignee = (defcb.getChecked() ? 1 : 0);
+
+				for(let i = 0; i < addressData.length; i++) {
+					if(addressData[i].id == currentselectData.id) {
+						addressData[i] = currentselectData;
+					}
+				}
 			}
 
 			/************************************************************************************************/
@@ -499,6 +588,8 @@
 				gr.setChecked(false);
 
 				cb.setChecked(false);
+
+				currentData = null;
 			}
 
 			var infoList = document.getElementById("infoList");
@@ -563,22 +654,37 @@
 					}
 				}
 
+				currentData = null;
+
 				initData();
 				newAddress();
 			}
 
 			function updateType() {
 
+				let isneew = false
+				if(!currentData && datalist.length < 8) {
+					currentData = [];
+					currentData[0] = {};
+					currentData[0].id = datalist.length + 1;
+
+					isneew = true;
+				}
+
 				currentData[0].cid = document.getElementById("cid").value;
 				currentData[0].name = document.getElementById("cname").value;
-
+				currentData[0].type = (gr.getChecked() ? 1 : 2);
 				currentData[0].isdef = (cb.getChecked() ? 1 : 0);
 
-				for(let i = 0; i < datalist.length; i++) {
-					if(datalist[i].id == currentData[0].id) {
-						datalist[i] = currentData[0];
-						break;
+				if(!isneew) {
+					for(let i = 0; i < datalist.length; i++) {
+						if(datalist[i].id == currentData[0].id) {
+							datalist[i] = currentData[0];
+							break;
+						}
 					}
+				} else {
+					datalist.push(currentData[0]);
 				}
 
 				initData();
@@ -594,9 +700,11 @@
 			function openfapiaoDialog(t) {
 				if(!t.checked)
 					return;
-					
+
 				document.getElementById("model").style.display = '';
 				document.getElementById("fapiao").style.display = '';
+
+				document.getElementById("fapiao").style.top = (document.body.offsetHeight - document.getElementById("fapiao").clientHeight) / 2 + "px";
 			}
 		</script>
 	</body>

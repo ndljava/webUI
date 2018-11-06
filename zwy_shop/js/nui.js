@@ -200,4 +200,8 @@ function NRadio(continer, size, img, group) {
 		ck.setChecked(v);
 	}
 
+	this.getChecked = function() {
+		return ck.getChecked();
+	}
+
 }

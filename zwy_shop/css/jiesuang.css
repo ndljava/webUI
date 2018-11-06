@@ -634,10 +634,12 @@
 
 .fapiao {
 	width: 1000px;
-	height: 640px;
+	height: 700px;
 	left: 18%;
 	top: 5%;
 	position: absolute;
+	display: inline-block;
+	padding-bottom: 20px;
 }
 
 .fapiao .addTitle {
@@ -661,22 +663,23 @@
 }
 
 .fapiao .addContent .content {
-	float: left;
 	margin-top: 22px;
 	margin-left: 58px;
 	width: 90%;
+	position: absolute;
 }
 
 .fapiao .addContent .content>div:first-child>div:first-child {
 	font-size: 18px;
 	color: #EC5706;
-	float: left;
+	display:inline-block;
 }
 
 .fapiao .addContent .content>div:first-child>div:last-child {
 	font-size: 16px;
 	color: #666666;
-	float: right;
+	display: inline-block;
+	margin-left: 730px;
 }
 
 .fapiao .addContent .content>div:first-child>div:last-child a {
@@ -690,17 +693,19 @@
 }
 
 .fapiao .addContent .content .typeicon {
-	margin-top: 40px;
+	margin-top: 14px;
 	margin-left: 10px;
-	height: 132px;
+	position: relative;
+	display: inline-block;
 }
 
 .fapiao .addContent .content .typeicon>div {
-	float: left;
+	display: inline-block;
 	width: 200px;
 	height: 100px;
 	border: 1px solid #bfbfbf;
 	margin-right: 20px;
+	margin-top: 10px;
 }
 
 .fapiao .addContent .content .typeicon>div * {
@@ -740,32 +745,34 @@
 }
 
 .fapiao .addContent .content .addresstext {
-	float: left;
 	margin-left: 87px;
 	font-size: 18px;
 	color: #2b9fe1;
 	width: 100%;
-	height: 40px;
+	height: 28px;
 	cursor: pointer;
+	position: relative;
+	margin-top: 32px;
 }
 
 .fapiao .addContent .content .checklist {
-	height: 75px;
+	height: 45px;
 	margin-left: 208px;
 	margin-top: 12px;
+	position: relative;
 }
 
 .fapiao .addContent .content .checklist>div {
 	width: 170px;
-	float: left;
+	display: inline-block;
 }
 
 .fapiao .addContent .content .checklist>div div {
 	height: 45px;
 	margin-right: 10px;
-	float: left;
 	font-size: 24px;
 	color: #333333;
+	display: inline-block;
 }
 
 .fapiao .addContent .content .checklist>div div:first-child {
