@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=-1" />
+		<title></title>
+		<link href="css/jiesuang_zhifu.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			body {
+				background: #eeeeee;
+				min-width: 1250px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div align="center">
+			<div class="headwordback">
+				<div class="headword">
+					<a href="#" target="_blank">欢迎来到商城</a>
+					<a href="#" target="_blank">登录/注册</a>
+					<a href="#" target="_blank">我的订单</a>
+					<a href="#" target="_blank">购物车</a>
+					<a href="#" target="_blank">联系客服</a>
+					<a href="#" target="_blank">商城指南</a>
+					<a href="#" target="_blank">手机商城</a>
+				</div>
+			</div>
+			<div class="headerTop">
+				<div class="headerContent">
+					<div class="headerleft">
+						<div>
+							<img src="img/LOGO1.png" width="114" height="48">
+						</div>
+						<div onclick="location='http://www.baidu.com'">
+							<div>返回</div>
+							<div>首页</div>
+						</div>
+					</div>
+					<div class="headerright">
+						<div class="keyPoint">
+							<div class="openDiv">选择商品</div>
+							<div>
+								<img src="img/jiesuang/d1.png" width="28" height="28">
+							</div>
+						</div>
+						<div class="keyLine">
+							<div class="openleftLine"></div>
+							<div class="openrightLine"></div>
+						</div>
+						<div class="keyPoint">
+							<div class="openDiv">提交订单</div>
+							<div>
+								<img src="img/jiesuang/d1.png" width="28" height="28">
+							</div>
+						</div>
+						<div class="keyLine">
+							<div class="openleftLine"></div>
+							<div class="closerightLine"></div>
+						</div>
+						<div class="keyPoint">
+							<div class="closeDiv">支付订单</div>
+							<div>
+								<img src="img/jiesuang/d2.png" width="28" height="28">
+							</div>
+						</div>
+						<div class="keyLine">
+							<div class="closeleftLine"></div>
+							<div class="closerightLine"></div>
+						</div>
+						<div class="keyPoint">
+							<div class="closeDiv">确认收货</div>
+							<div>
+								<img src="img/jiesuang/d2.png" width="28" height="28">
+							</div>
+						</div>
+						<div class="keyLine">
+							<div class="closeleftLine"></div>
+							<div class="closerightLine"></div>
+						</div>
+						<div class="keyPoint">
+							<div class="closeDiv">评价</div>
+							<div>
+								<img src="img/jiesuang/d2.png" width="28" height="28">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bodyContent">
+				<div class="syt">
+					<div class="syttitle">收银台</div>
+					<div class="sytctx">
+						<div class="sytlabel">收款:</div>
+						<div class="sytvalue">￥29.90</div>
+					</div>
+				</div>
+				<div class="fkfs">
+					<div class="fkfstitle">付款方式</div>
+					<div id="itemlist" class="fkfsitem">
+						<div>
+							<div><img src="img/jiesuang/s1.png" width="30" height="30"></div>
+							<div class="fname">中国银行</div>
+							<div class="uid">**** 1980</div>
+						</div>
+						<div>
+							<div><img src="img/jiesuang/s1.png" width="30" height="30"></div>
+							<div class="fname">中国工商银行</div>
+							<div class="uid">**** 1980</div>
+						</div>
+					</div>
+					<div class="otherType">
+						<div>添加银行卡</div>
+						<div>其他支付方式</div>
+					</div>
+					<div class="inputPassword">
+						<div>请输入密码:</div>
+						<div id="inpass" class="passwordTxt">
+							<input type="password" maxlength="1" />
+							<input type="password" maxlength="1" />
+							<input type="password" maxlength="1" />
+							<input type="password" maxlength="1" />
+							<input type="password" maxlength="1" />
+							<input type="password" maxlength="1" />
+						</div>
+						<div>
+							<a href="#">忘记密码</a>
+						</div>
+					</div>
+					<div>
+						<input type="button" onclick="submitFun()" value="确定" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function setSelectState(o) {
+
+				o.style.border = '2px solid #cc0000';
+
+				itemchild = o.getElementsByTagName("div");
+				for(let i = 0; i < itemchild.length; i++) {
+					itemchild[i].style.color = '#CC0000';
+				}
+
+				let value = document.createElement("div");
+				value.className = "num";
+				value.style.color = '#CC0000';
+				value.innerText = "支付:29.90元";
+
+				o.children[0].children[0].src = "img/jiesuang/s2.png";
+				o.appendChild(value);
+			}
+
+			var itemlist = document.getElementById("itemlist");
+
+			for(let i = 0; i < itemlist.children.length; i++) {
+				if(i == 0) {
+					setSelectState(itemlist.children[i]);
+				}
+
+				itemlist.children[i].addEventListener("click", changeTab);
+			}
+
+			function changeTab(e) {
+
+				for(let i = 0; i < itemlist.children.length; i++) {
+					itemlist.children[i].style.border = '2px solid #d3d3d3';
+					itemlist.children[i].children[0].children[0].src = "img/jiesuang/s1.png";
+
+					if(itemlist.children[i].children.length > 3) {
+						itemlist.children[i].removeChild(itemlist.children[i].children[3]);
+					}
+				}
+
+				let itemchild = itemlist.getElementsByTagName("div");
+				for(let i = 0; i < itemchild.length; i++) {
+					itemchild[i].style.color = '#666666';
+				}
+
+				e.target.style.border = '2px solid #cc0000';
+
+				itemchild = e.target.getElementsByTagName("div");
+				for(let i = 0; i < itemchild.length; i++) {
+					itemchild[i].style.color = '#CC0000';
+				}
+
+				let value = document.createElement("div");
+				value.className = "num";
+				value.style.color = '#CC0000';
+				value.innerText = "支付:29.90元";
+
+				e.target.children[0].children[0].src = "img/jiesuang/s2.png";
+				e.target.appendChild(value);
+			}
+
+			/******************************************************************************/
+
+			function submitFun() {
+
+				var pass = [];
+				var inpass = document.getElementById("inpass");
+				for(let i = 0; i < inpass.children.length; i++) {
+					pass.push(inpass.children[i].value);
+				}
+
+				console.log(pass.join(","));
+			}
+		</script>
+
+	</body>
+
+</html>

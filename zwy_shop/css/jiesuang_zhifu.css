@@ -1,0 +1,316 @@
+@charset "utf-8";
+.headwordback {
+	background-color: #f8f8f8;
+	width: 100%;
+}
+
+.headword {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #999;
+	height: 40px;
+	width: 1200px;
+	line-height: 40px;
+}
+
+.headword a {
+	float: left;
+	width: 80px;
+	text-decoration: none;
+	color: #999;
+}
+
+.headword a:first-child {
+	margin-right: 630px;
+}
+
+.headword a:hover {
+	color: #f3930a;
+}
+
+.headerTop {
+	width: 100%;
+	height: 100px;
+	background-color: #FFFFFF;
+}
+
+.headerTop .headerContent {
+	width: 1200px;
+	height: 100%;
+}
+
+.headerTop .headerContent div {
+	float: left;
+}
+
+.headerTop .headerContent .headerleft {
+	margin: 25px 0px 0px 0px;
+}
+
+.headerTop .headerContent .headerleft>div:last-child {
+	margin-left: 28px;
+	margin-top: 15px;
+}
+
+.headerTop .headerContent .headerleft>div:last-child div:first-child {
+	font-size: 14px;
+	color: #999999;
+	cursor: pointer;
+}
+
+.headerTop .headerContent .headerleft>div:last-child div:last-child {
+	font-size: 14px;
+	color: #F3930A;
+	cursor: pointer;
+}
+
+.headerTop .headerContent .headerright {
+	margin-left: 292px;
+}
+
+.headerTop .headerContent .headerright .keyPoint {
+	margin-top: 20px;
+	width: 75px;
+	float: left;
+}
+
+.headerTop .headerContent .headerright .keyPoint div {
+	float: none;
+}
+
+.headerTop .headerContent .headerright .keyPoint .closeDiv {
+	font-size: 18px;
+	color: #D3D3D3;
+}
+
+.headerTop .headerContent .headerright .keyPoint .openDiv {
+	font-size: 18px;
+	color: #ec5706;
+}
+
+.headerTop .headerContent .headerright .keyPoint div:last-child {
+	margin-top: 10px;
+}
+
+.headerTop .headerContent .headerright .keyLine {
+	margin-top: 20px;
+	width: 80px;
+}
+
+.headerTop .headerContent .headerright .keyLine .openleftLine {
+	margin-top: 48px;
+	margin-left: -25px;
+	width: 65px;
+	border-bottom: 2px solid #ec5706;
+	float: left;
+}
+
+.headerTop .headerContent .headerright .keyLine .closeleftLine {
+	margin-top: 48px;
+	margin-left: -25px;
+	width: 65px;
+	border-bottom: 2px solid #D3D3D3;
+	float: left;
+}
+
+.headerTop .headerContent .headerright .keyLine .openrightLine {
+	margin-top: 48px;
+	margin-right: -25px;
+	margin-left: 0px;
+	width: 65px;
+	border-bottom: 2px solid #ec5706;
+	float: left;
+}
+
+.headerTop .headerContent .headerright .keyLine .closerightLine {
+	margin-top: 48px;
+	margin-right: -25px;
+	margin-left: 0px;
+	width: 65px;
+	border-bottom: 2px solid #D3D3D3;
+	float: left;
+}
+
+.bodyContent {
+	width: 1200px;
+	display: inline-block;
+}
+
+.syt {
+	display: inline-block;
+	height: 180px;
+	width: 100%;
+	margin-top: 10px;
+	background: #FFF;
+}
+
+.syttitle {
+	font-size: 24px;
+	color: #333;
+	margin-top: 16px;
+	text-align: center;
+}
+
+.sytctx {
+	display: block;
+	margin-top: 53px;
+}
+
+.sytlabel {
+	font-size: 30px;
+	color: #666;
+	display: inline;
+}
+
+.sytvalue {
+	font-size: 48px;
+	color: #cc0000;
+	display: inline-block;
+	margin-left: 25px;
+}
+
+.sytvalue:first-letter {
+	font-size: 30px;
+	color: #cc0000;
+}
+
+.fkfs {
+	display: inline-block;
+	width: 1200px;
+	margin-top: 10px;
+	background-color: #FFF;
+}
+
+.fkfstitle {
+	font-size: 24px;
+	color: #333;
+	margin-top: 20px;
+	height: 60px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d3d3d3;
+}
+
+.fkfsitem {
+	display: block;
+	margin-left: 150px;
+}
+
+.fkfsitem>div {
+	width: 900px;
+	height: 64px;
+	margin-top: 20px;
+	border: 2px solid #D3D3D3;
+	line-height: 64px;
+	color: #666666;
+	font-size: 18px;
+}
+
+.fkfsitem>div div {
+	pointer-events: none;
+}
+
+.fkfsitem>div>div:first-child {
+	margin: 10px 0px 0px 22px;
+}
+
+.fkfsitem div {
+	float: left;
+}
+
+.fkfsitem>div .fname {
+	margin-left: 20px;
+	width: 110px;
+	text-align: left;
+}
+
+.fkfsitem>div .uid {
+	margin-left: 28px;
+}
+
+.fkfsitem>div .num {
+	margin-right: 30px;
+	float: right;
+}
+
+.otherType {
+	margin-left: 220px;
+}
+
+.otherType>div {
+	margin-top: 20px;
+	margin-right: 120px;
+	border: 2px solid #D3D3D3;
+	color: #2B9FE1;
+	font-size: 20px;
+	width: 320px;
+	height: 64px;
+	line-height: 64px;
+	float: left;
+	cursor: pointer;
+}
+
+.inputPassword {
+	margin-left: 312px;
+	margin-top: 50px;
+	height: 45px;
+	display: inline-block;
+	position: relative;
+}
+
+.inputPassword>div {
+	position: relative;
+	display: inline-block;
+}
+
+.inputPassword>div:first-child {
+	font-size: 24px;
+	color: #666666;
+}
+
+.inputPassword .passwordTxt {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.inputPassword .passwordTxt input {
+	border: 1px solid #D3D3D3;
+	width: 40px;
+	height: 40px;
+	margin-left: 10px;
+	display: inline-block;
+	line-height: 40px;
+	outline: none;
+	text-align: center;
+	font-size: 24px;
+	color: #333333;
+}
+
+.inputPassword>div:last-child {
+	margin-left: 30px;
+}
+
+.inputPassword>div:last-child a {
+	color: #D2D2D2;
+	text-decoration: none;
+}
+
+.inputPassword>div:last-child a:hover {
+	color: #F3930A;
+}
+
+.fkfs>div:last-child {
+	margin-top: 60px;
+	margin-left: 312px;
+}
+
+.fkfs>div:last-child input {
+	outline: none;
+	background-color: #EC5706;
+	border: 0px;
+	width: 120px;
+	height: 40px;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-size: 20px;
+}
