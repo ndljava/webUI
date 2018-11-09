@@ -56,7 +56,7 @@
 			</div>
 			<div class="bodyContent">
 				<div class="shdzTitle">收货地址</div>
-				<div class="shdzlist">
+				<div id="dlist" class="shdzlist">
 					<div class="shdzlistTitle">
 						<div class="t_1">区域</div>
 						<div class="t_2">详细地址</div>
@@ -83,7 +83,7 @@
 				</div>
 				<div class="addAddress">
 					<div class="newaddress">新建地址 +</div>
-					<div  class="addressItems">
+					<div class="addressItems">
 						<div>
 							<div>*</div>
 							<div>地址信息:</div>
@@ -186,29 +186,35 @@
 					dlist.removeChild(dlist.firstChild);
 
 				let cdata = '';
+
+				cdata += '<div class="shdzlistTitle">';
+				cdata += '	<div class="t_1">区域</div>';
+				cdata += '	<div class="t_2">详细地址</div>';
+				cdata += '	<div class="t_3">邮编</div>';
+				cdata += '	<div class="t_4">收货人</div>';
+				cdata += '	<div class="t_5">电话</div>';
+				cdata += '	<div class="t_6">操作</div>';
+				cdata += '	<div class="t_7">默认</div>';
+				cdata += '</div>';
+
 				for(let i = 0; i < addressData.length; i++) {
 
-					if(i == 0 && (!currentselectData || (currentselectData && currentselectData.id == addressData[i].id)))
-						cdata += '<div cid="' + addressData[i].id + '" class="selectedState defauleState">';
-					else if(i == 0)
-						cdata += '<div cid="' + addressData[i].id + '" class="defauleState">';
-					else if(currentselectData && currentselectData.id == addressData[i].id)
-						cdata += '<div cid="' + addressData[i].id + '" class="selectedState">';
-					else
-						cdata += '<div cid="' + addressData[i].id + '">';
-
-					cdata += '	<div>' + addressData[i].address + '</div>'
-					cdata += '	<hr />'
-					cdata += '	<div>'
-					cdata += '		<div>' + addressData[i].name + '</div>'
-					cdata += '		<div>' + addressData[i].phone + '</div>'
-					cdata += '	</div>'
-					cdata += '</div>'
+					cdata += '<div class="shdzlistContent">';
+					cdata += '	<div class="c_1"><span>' + addressData[i].address + '</span></div>';
+					cdata += '	<div class="c_2"><span>' + addressData[i].addresstxt + '</span></div>';
+					cdata += '	<div class="c_3"><span>' + addressData[i].post + '</span></div>';
+					cdata += '	<div class="c_4"><span>' + addressData[i].name + '</span></div>';
+					cdata += '	<div class="c_5"><span>' + addressData[i].phone + '</span></div>';
+					cdata += '	<div class="c_6">';
+					cdata += '		<a href="#" target="_blank">删除</a> |';
+					cdata += '		<a href="#" target="_blank">修改</a>';
+					cdata += '	</div>';
+					cdata += '	<div class="c_7">';
+					cdata += '		<a href="#" target="_blank">默认地址</a>';
+					cdata += '	</div>';
+					cdata += '</div>';
+					
 				}
-
-				cdata += '<div onclick="openDialog();">'
-				cdata += '	<div><img src="img/jiesuang/组12.png" /></div>'
-				cdata += '</div>'
 
 				dlist.innerHTML = cdata;
 
@@ -243,22 +249,13 @@
 					e.target.className = "selectedNoPicState";
 			}
 
-			function closeDialog() {
-				document.getElementById("model").style.display = 'none';
-				document.getElementById("address").style.display = 'none';
-
-				initAddressData();
-			}
-
-			function openDialog() {
-				document.getElementById("model").style.display = '';
-				document.getElementById("address").style.display = '';
-
+			function newAddress() {
 				document.getElementById("addresstxt").value = "";
 				document.getElementById("addressdetailtxt").value = "";
 				document.getElementById("phone").value = "";
 				document.getElementById("post").value = "";
 				document.getElementById("consignee").value = "";
+
 				defcb.setChecked(false);
 			}
 
@@ -266,8 +263,6 @@
 			 * 管理地址
 			 */
 			function updateDialog() {
-				document.getElementById("model").style.display = '';
-				document.getElementById("address").style.display = '';
 
 				document.getElementById("addresstxt").value = "" + currentselectData.address;
 				document.getElementById("addressdetailtxt").value = "" + currentselectData.address;

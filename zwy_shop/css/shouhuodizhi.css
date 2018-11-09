@@ -229,11 +229,13 @@
 .bodyContent .shdzlistContent .c_1 {
 	width: 128px;
 	padding: 0px 55px 0px 55px;
+	text-align: left;
 }
 
 .bodyContent .shdzlistContent .c_2 {
 	width: 198px;
 	padding: 0px 50px 0px 50px;
+	text-align: left;
 }
 
 .bodyContent .shdzlistContent .c_3 {

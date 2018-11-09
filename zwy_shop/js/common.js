@@ -74,7 +74,7 @@ function getData(url,data,okCallback,method,loadText) {
 				+'<div style="text-align:center;"><img src="../../img/NoSearch.png" style="width:40px;margin:0 auto;"></div>'
 				+'<div style="text-align:center;color:#999;font-size: 0.75rem;margin-top:10px;">加载失败</div>'
 			'</div>'
-			$("body").html(str)    
+			//$("body").html(str)    
 			$.toast("数据获取失败", 1000, 'success top');    	
 			return false;		
 	    },
