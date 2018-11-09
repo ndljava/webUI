@@ -89,7 +89,7 @@
 						<div>待收货</div>
 						<div>待评价</div>
 						<div>
-							<div><img src="img/qb/4.png" width="20" height="25"></div>
+							<div><img src="img/qb/d4.png" width="20" height="25"></div>
 							<div>回收箱</div>
 						</div>
 					</div>
@@ -129,7 +129,8 @@
 											<td class="t_action" colspan="6">
 												<div style="float: left; margin-top: 4px;" class="d1" id="d2"></div>
 												<!--<input type="checkbox" name="checkbox" id="checkbox">-->&nbsp;
-												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
+												<font size="3" color="#FFFFFF">订单号:12345678998765432</font>
+												<div onclick="deleteItem();" class="deleteicon" id="deleteicon" style="display: none;"><img src="img/qb/d1.png" width="20" height="25" /></div>
 											</td>
 										</tr>
 										<tr class="t_child" height="175">
@@ -167,6 +168,7 @@
 												<div style="float: left; margin-top: 4px;" class="d1" id="d1"></div>
 												<!--<input type="checkbox" name="checkbox" id="checkbox">-->&nbsp;
 												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
+												<div onclick="deleteItem();" class="deleteicon" id="deleteicon" style="display: none;"><img src="img/qb/d1.png" width="20" height="25" /></div>
 											</td>
 										</tr>
 										<tr class="t_child" height="175">
@@ -204,6 +206,7 @@
 												<div style="float: left; margin-top: 4px;" class="d1" id="d1"></div>
 												<!--<input type="checkbox" name="checkbox" id="checkbox">-->&nbsp;
 												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
+												<div onclick="deleteItem();" class="deleteicon" id="deleteicon" style="display: none;"><img src="img/qb/d1.png" width="20" height="25" /></div>
 											</td>
 										</tr>
 										<tr class="t_child" height="175">
@@ -241,6 +244,7 @@
 												<div style="float: left; margin-top: 4px;" class="d1" id="d1"></div>
 												<!--<input type="checkbox" name="checkbox" id="checkbox">-->&nbsp;
 												<font size="3" color="#FFFFFF">订单号:&nbsp;12345678998765432</font>
+												<div onclick="deleteItem();" class="deleteicon" id="deleteicon" style="display: none;"><img src="img/qb/d1.png" width="20" height="25" /></div>
 											</td>
 										</tr>
 										<tr class="t_child" height="175">
@@ -370,20 +374,54 @@
 
 			var tlist = document.getElementById("tlist");
 
-			for(var i = 0; i < tlist.children.length - 1; i++) {
+			for(var i = 0; i < tlist.children.length; i++) {
 				tlist.children[i].addEventListener("click", changeTab);
 			}
 
 			function changeTab(e) {
-				for(var i = 0; i < tlist.children.length - 1; i++) {
+				for(let i = 0; i < tlist.children.length; i++) {
 					tlist.children[i].className = '';
 				}
+
+				if(tlist.children[5] == e.target) {
+					tlist.children[5].children[0].children[0].src = "img/qb/d5.png";
+				} else {
+					tlist.children[5].children[0].children[0].src = "img/qb/d4.png";
+				}
+
+				let delicon = document.getElementsByClassName("deleteicon");
+				for(let i = 0; i < delicon.length; i++) {
+					if(tlist.children[5] == e.target)
+						delicon[i].style.display = '';
+					else
+						delicon[i].style.display = 'none';
+				}
+
 				e.target.className = 'selectDiv';
 			}
 
-			function setSelected(t) {
+			function setSelected(e) {
+
+				let isselect = eval(e.target.getAttribute("checked"));
 				for(var i = 0; i < checkboxList.length; i++) {
-					checkboxList[i].setChecked(eval(t.target.getAttribute("checked")));
+					checkboxList[i].setChecked(isselect);
+				}
+
+				let td = document.getElementsByClassName("t_child");
+				let color = "#efefef";
+				for(let i = 0; i < td.length; i++) {
+					if(isselect) {
+						color = "#ec5706";
+					} else {
+						color = "#efefef";
+					}
+
+					td[i].children[0].style.borderColor = color;
+					td[i].children[1].style.borderColor = color;
+					td[i].children[2].style.borderColor = color;
+					td[i].children[3].style.borderColor = color;
+					td[i].children[4].style.borderColor = color;
+					td[i].children[5].style.borderColor = color;
 				}
 			}
 
@@ -395,8 +433,43 @@
 			checkboxList[1].checkBox().addEventListener("click", setSelected);
 
 			var glist = document.getElementsByClassName("d1");
+			var cb;
 			for(var i = 0; i < glist.length; i++) {
-				checkboxList.push(new Ncheckbox(glist[i], [14, 14], ["img/ui/z2_m.png", "img/ui/z2_x.png"]));
+				cb = new Ncheckbox(glist[i], [14, 14], ["img/ui/z2_m.png", "img/ui/z2_x.png"]);
+				checkboxList.push(cb);
+
+				cb.checkBox().addEventListener("click", setOneSelected);
+			}
+
+			function setOneSelected(e) {
+
+				let isselect = eval(e.target.getAttribute("checked"));
+
+				let tagName = e.target.parentNode;
+				while(tagName.nodeName != "TABLE") {
+					tagName = tagName.parentNode;
+				}
+
+				let td = tagName.getElementsByClassName("t_child");
+				let color = "#efefef";
+				for(let i = 0; i < td.length; i++) {
+					if(isselect) {
+						color = "#ec5706";
+					} else {
+						color = "#efefef";
+					}
+
+					td[i].children[0].style.borderColor = color;
+					td[i].children[1].style.borderColor = color;
+					td[i].children[2].style.borderColor = color;
+					td[i].children[3].style.borderColor = color;
+					td[i].children[4].style.borderColor = color;
+					td[i].children[5].style.borderColor = color;
+				}
+			}
+
+			function deleteItem(t) {
+
 			}
 		</script>
 	</body>

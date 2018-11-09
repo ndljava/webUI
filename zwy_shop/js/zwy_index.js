@@ -5,7 +5,7 @@ var _top = -71;
 
 function scrollNews() {
 	var pagepic = document.getElementById("pagePic");
-
+	
 	if(_top < -70) {
 		if(_top < -120) {
 			_top = 0;

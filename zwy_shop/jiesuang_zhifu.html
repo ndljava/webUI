@@ -17,7 +17,6 @@
 				min-width: 1250px;
 			}
 		</style>
-
 	</head>
 
 	<body>
@@ -139,6 +138,7 @@
 					</div>
 				</div>
 			</div>
+			<div style="height: 60px;"></div>
 		</div>
 
 		<script>
@@ -206,8 +206,8 @@
 
 			function submitFun() {
 
-				var pass = [];
-				var inpass = document.getElementById("inpass");
+				let pass = [];
+				let inpass = document.getElementById("inpass");
 				for(let i = 0; i < inpass.children.length; i++) {
 					pass.push(inpass.children[i].value);
 				}
